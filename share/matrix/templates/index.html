@@ -9,18 +9,18 @@
 </head>
 <body>
 
-<h1>yaml-test-suite Framework Matrix (<a href="https://github.com/yaml/yaml-test-suite">Github</a>)</h1>
+<h1>YAML Framework Matrix (<a href="https://github.com/yaml/yaml-test-suite">Github</a>)</h1>
 
 <table class="matrix">
 <thead>
-<tr class="headline"><th colspan="2">Frameworks<br>Tests</th>
+<tr class="headline"><th class="testid"></td><th class="testname">Frameworks<br>Tests</th>
 [%loop .framework_names %]
-<td class="[%= fullname %]">[%= lang %]<br>[%= name %]<br>[%= type %]</td>
+<td class="result [%= fullname %]">[%= lang %]<br>[%= name %]<br>[%= type %]</td>
 [%/loop %]
 </tr>
 
 <tr class="overview">
-<td></td>
+<td>ID</td>
 <td>
 <span class="ok">&nbsp;</span>ok <span class="json_ok">&nbsp;</span>json_ok<br>
 <span class="diff">&nbsp;</span>diff <span class="json_diff">&nbsp;</span>json_diff<br>
@@ -28,7 +28,7 @@
 <span class="error">&nbsp;</span>error<br>
 </td>
 [%loop .framework_headers %]
-<td class="[%= fullname %]">
+<td class="result [%= fullname %]">
 [%if ok %]<span class="ok">&nbsp;</span>[%= ok %][%/if %]
 [%if json_ok %]<span class="json_ok">&nbsp;</span>[%= json_ok %][%/if %]
 <br>
@@ -46,14 +46,9 @@
 
 <tbody>
 </tr>
-[%loop .tests break="30" %]
-[%if __break__ %]<tr class="headline"><td colspan="2"></td>
-[%loop .framework_names %]
-<td class="[%= fullname %]">[%= lang %]<br>[%= name %]<br>[%= type %]</td>
-[%/loop %]
-</tr>[%/if %]
+[%loop .tests %]
 <tr>
-<td class="testname"><tt><a href="#[%= id %]">[%= id %]</tt></a></td>
+<td class="testid"><tt><a href="#[%= id %]">[%= id %]</tt></a></td>
 <td id="[%= id %]" class="testname"><a href="details-[%= id %].html">[%= title %]</a></td>
 [%loop frameworks %]
 <td class="result [%= id %]
