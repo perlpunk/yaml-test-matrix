@@ -1,6 +1,9 @@
 div.framework h3 {
     margin: 3px;
 }
+table.matrix td.hide, table.matrix th.hide {
+    display: none;
+}
 table.matrix {
     border: 1px solid #bbb;
     border-collapse: collapse;
@@ -138,4 +141,9 @@ div.framework {
 div.framework:target, div.framework:hover {
     border: 4px solid #ff9922;
     margin: 2px;
+}
+
+div.selector {
+    float: left;
+    display: block;
 }

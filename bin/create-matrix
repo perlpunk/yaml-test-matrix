@@ -70,6 +70,7 @@ sub gather_data {
 sub create_html {
     mkdir "matrix/html";
     mkdir "matrix/html/css";
+    mkdir "matrix/html/js";
     my @tests;
 
     my @framework_names = map {
@@ -81,7 +82,7 @@ sub create_html {
         }
         elsif ($lang eq 'ruby' and $name eq 'json') {
             $type = $name;
-            $name = "";
+            $name = "yaml";
         }
         elsif ($lang eq 'perl6') {
             $type = $name;
@@ -148,6 +149,21 @@ sub create_html {
         };
     }
 
+    my %selectors;
+    for my $fw (@framework_names) {
+        push @{ $selectors{ $fw->{type} } }, $fw;
+    }
+    my @selectors = map {
+        +{
+            type => $_,
+            frameworks => $selectors{ $_ }
+        },
+    } sort {
+        $selectors{ $a }->[0]->{type}
+            cmp
+        $selectors{ $b }->[0]->{type}
+    } keys %selectors;
+
     my $htc = HTML::Template::Compiled->new(
         filename => "index.html",
         path => "$Bin/../share/matrix/templates",
@@ -157,6 +173,7 @@ sub create_html {
         framework_names => \@framework_names,
         framework_headers => \@framework_headers,
         tests => \@tests,
+        selectors => \@selectors,
     );
 
     open my $fh, ">", "matrix/html/index.html" or die $!;
@@ -166,6 +183,8 @@ sub create_html {
 
     copy ("share/matrix/css/yaml.css", "matrix/html/css");
     copy ("share/matrix/css/matrix.css", "matrix/html/css");
+    copy ("share/matrix/js/jquery-3.1.1.min.js", "matrix/html/js");
+    copy ("share/matrix/js/matrix.js", "matrix/html/js");
 }
 
 sub create_details {

@@ -5,11 +5,28 @@
 <title>YAML Framework Matrix</title>
 <link rel="stylesheet" type="text/css" href="css/yaml.css">
 <link rel="stylesheet" type="text/css" href="css/matrix.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/matrix.js"></script>
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1>YAML Framework Matrix (<a href="https://github.com/yaml/yaml-test-suite">Github</a>)</h1>
+
+[%loop .selectors %]
+<div class="selector">
+<input type="checkbox" name="type-[%= type %]" value="1" id="type-[%= type %]"
+checked="checked" onchange="toggle_type('[%= type %]')">
+<label for="type-[%= type %]" ><b>[%= type %]</b></label><br>
+[%loop frameworks %]
+<input type="checkbox" name="" value="1" id="fw-select-[%= fullname %]"
+class="selector-[%= type %] selector-[%= lang %]" data-fw="[%= fullname %]"
+checked="checked" onchange="toggle_framework('[%= fullname %]')">
+<label for="fw-select-[%= fullname %]" >[%= lang %] [%= name %]</label><br>
+[%/loop %]
+</div>
+[%/loop %]
+<p style="clear: both;"></p>
 
 <table class="matrix">
 <thead>
