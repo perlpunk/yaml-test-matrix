@@ -147,3 +147,24 @@ div.selector {
     float: left;
     display: block;
 }
+
+#github {
+    float: right;
+    margin:  5px;
+    padding: 5px 10px 5px 10px;
+    background-color: #c0ffee; /* for ingy */
+    box-shadow: 2px 2px 4px 1px grey;
+    border-radius: 5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#github span.link span.info {
+    display: none;
+    position: absolute;
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid #333;
+    padding: 3px;
+}
+#github span.link:hover span.info {
+    display: inline;
+}
