@@ -101,6 +101,14 @@ sub create_html {
             $type = $name;
             $name = "yaml";
         }
+        elsif ($lang eq 'cpp') {
+            $lang = "C++";
+            $name = "yaml";
+            $type = "event";
+        }
+        if ($type !~ m/^(json|event)/) {
+            $type = "native";
+        }
         {
             lang => $lang,
             name => $name,

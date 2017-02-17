@@ -26,6 +26,8 @@ my @frameworks = qw/
 
     libyaml-event
 
+    cpp-event
+
     nimyaml-event
 
     perl5-pegex-event
@@ -170,6 +172,12 @@ for my $file (sort @files) {
             $tests{ $id }->{minimal_events} = \@test_events;
             $tests{ $id }->{transformed_events} = \@events;
         }
+        elsif ($framework eq "cpp-event") {
+            @test_events = minimal_events("cpp", @test_events);
+            @events = map { cpp_event_to_event($_) } @events;
+            $tests{ $id }->{minimal_events} = \@test_events;
+            $tests{ $id }->{transformed_events} = \@events;
+        }
         my $ok = 1;
         for my $i (0 .. $#events) {
             my $event = $events[ $i ];
@@ -213,6 +221,9 @@ DumpFile("$Bin/../matrix/$framework.yaml", {
 
 sub minimal_events {
     my ($type, @events) = @_;
+    my %anchor_map;
+    my $anchor_count = 0;
+
     for my $event (@events) {
         if ($event =~ m/^\+DOC ---/) {
             $event = '+DOC';
@@ -234,13 +245,40 @@ sub minimal_events {
             elsif ($type eq 'nimyaml' and $event =~ s/^ ['>|"](.*)//) {
                 $ev .= qq{ :$1};
             }
+            elsif ($type eq "cpp" and $event =~ s/^ ['>|"](.*)//) {
+                $ev .= qq{ :$1};
+            }
             else {
                 $ev .= $event;
             }
             $event = $ev;
         }
+
+        if ($type eq "cpp") {
+            if ($event =~ m/^(\+MAP|\+SEQ|=VAL|=ALI) (&|\*)(\S+)(.*)/) {
+                my $ev = $1;
+                my $ali = $2;
+                my $name = $3;
+                my $rest = $4;
+
+                my $index = $anchor_map{ $name };
+                if ($ali eq '&') {
+                    $anchor_count++;
+                    $index = $anchor_count;
+                    $anchor_map{ $name } = $index;
+                }
+                $event = "$ev $ali$index$rest";
+            }
+        }
     }
     return @events;
+}
+
+sub cpp_event_to_event {
+    my ($event) = @_;
+    $event =~ s/^\+MAP \{\}/+MAP/;
+    $event =~ s/^\+SEQ \[\]/+SEQ/;
+    return $event;
 }
 
 sub py_event_to_event {

@@ -1,4 +1,5 @@
 ALL_VIEWS := \
+	cpp-event \
 	js-yaml-json \
 	java-json \
 	libyaml-event \
