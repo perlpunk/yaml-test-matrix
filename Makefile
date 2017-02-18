@@ -2,6 +2,7 @@ ALL_VIEWS := \
 	cpp-event \
 	js-yaml-json \
 	java-json \
+	java-event \
 	libyaml-event \
 	nimyaml-event \
 	perl5-pegex-event \

@@ -23,6 +23,7 @@ my @frameworks = qw/
     js-yaml-json
 
     java-json
+    java-event
 
     libyaml-event
 
@@ -178,6 +179,10 @@ for my $file (sort @files) {
             $tests{ $id }->{minimal_events} = \@test_events;
             $tests{ $id }->{transformed_events} = \@events;
         }
+        elsif ($framework eq "java-event") {
+            @events = map { java_event_to_event($_) } @events;
+            $tests{ $id }->{transformed_events} = \@events;
+        }
         my $ok = 1;
         for my $i (0 .. $#events) {
             my $event = $events[ $i ];
@@ -275,6 +280,12 @@ sub minimal_events {
 }
 
 sub cpp_event_to_event {
+    my ($event) = @_;
+    $event =~ s/^\+MAP \{\}/+MAP/;
+    $event =~ s/^\+SEQ \[\]/+SEQ/;
+    return $event;
+}
+sub java_event_to_event {
     my ($event) = @_;
     $event =~ s/^\+MAP \{\}/+MAP/;
     $event =~ s/^\+SEQ \[\]/+SEQ/;
@@ -389,65 +400,6 @@ sub _py_match_string {
         return 1;
     }
     return;
-}
-
-sub nim_event_to_event {
-    my (@events) = @_;
-    my @new;
-    while (my $event = shift @events) {
-        while (@events and $events[0] !~ m/^yaml\w+\(/) {
-            my $next = shift @events;
-            $event .= "\n$next";
-        }
-        if ($event eq "yamlStartDoc()") {
-            $event = "+DOC";
-        }
-        elsif ($event eq "yamlEndDoc()") {
-            $event = "-DOC";
-        }
-        elsif ($event =~ s/^yamlStartMap\(//) {
-            $event = "+MAP";
-        }
-        elsif ($event =~ s/^yamlEndMap\(//) {
-            $event = "-MAP";
-        }
-        elsif ($event =~ s/^yamlStartSeq\(//) {
-            $event = "+SEQ";
-        }
-        elsif ($event =~ s/^yamlEndSeq\(//) {
-            $event = "-SEQ";
-        }
-        elsif ($event =~ m/^yamlAlias\(aliasTarget=(\d+)\)/) {
-            my $target = $1;
-            $event = "=ALI *$target";
-        }
-        elsif ($event =~ s/^yamlScalar\(//) {
-            my ($tag, $anchor);
-            if ($event =~ s/^tag=(\S+), //) {
-                if ($1 ne '?' and $1 ne '!') {
-                    $tag = $1;
-                }
-            }
-            if ($event =~ s/^anchor=(\S+), //) {
-                $anchor = $1;
-            }
-            $event =~ s/\t/\\t/g;
-            $event =~ s/\n/\\n/g;
-            if ($event =~ s/^content="([^"]*)"\)//) {
-                my $content = $1;
-                $event = "=VAL";
-                if (defined $anchor) {
-                    $event .= " &$anchor";
-                }
-                if (defined $tag) {
-                    $event .= " $tag";
-                }
-                $event .= " :$1";
-            }
-        }
-        push @new, $event;
-    }
-    return @new;
 }
 
 sub usage {
