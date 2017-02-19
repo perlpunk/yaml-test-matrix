@@ -15,7 +15,10 @@ GetOptions(
     "path=s" => \my $path,
     "help|h" => \my $help,
     "list|l" => \my $list,
+    "all|a" => \my $all,
     "verbose|v+" => \my $verbose,
+    "data-dir=s" => \my $datadir,
+    "framework|f=s" => \my $framework,
 );
 $verbose ||= 0;
 
@@ -57,27 +60,44 @@ my @frameworks = qw/
 
 /;
 
-if ($list) {
-    say for @frameworks;
-    exit;
-}
-
-usage() if $help;
-usage() if @ARGV < 1;
-
-my ($framework) = @ARGV;
-
-my $data = "$Bin/../data";
-
+$datadir //= "$Bin/../data";
 my %tests;
-
-my $start = time;
-my $end;
-
-
-
 my %frameworks;
 @frameworks{ @frameworks } = (1) x @frameworks;
+
+if ($help) {
+    usage();
+}
+elsif ($list) {
+    say for @frameworks;
+}
+elsif ($all) {
+    for my $fw (@frameworks) {
+        run_tests(
+            framework => $fw,
+            data => $datadir,
+        );
+    }
+}
+elsif ($framework) {
+    run_tests(
+        framework => $framework,
+        data => $datadir,
+    );
+}
+else {
+    usage();
+}
+
+sub run_tests {
+    my %args = @_;
+    my $framework = $args{framework};
+    say "-" x 80;
+    say "Running $framework";
+    my $data = $args{data};
+
+    my $start = time;
+    my $end;
 
 my ($sum_ok, $sum_diff, $sum_na, $sum_err) = (0) x 4;
 my $out = "$data/out";
@@ -223,6 +243,8 @@ DumpFile("$Bin/../matrix/$framework.yaml", {
     date => time,
     time => $end - $start,
 });
+
+}
 
 sub minimal_events {
     my ($type, @events) = @_;
@@ -408,17 +430,21 @@ sub usage {
 Usage:
 
 Run in docker:
-    YAML_EDITOR=/path/to/yaml-editor-repo $0 <framework>
+    $0 --framework <framework>
 
 Specify a script:
-    $0 <framework> --path /path/to/framework
+    $0 --framework <framework> --path /path/to/framework
 
 Options:
+--framework, -f framework (see -l)
+--list, -l      List supported frameworks
 --path          /path/to/framework
                 If no --path is given, it will run the tests in docker.
 --verbose, -v   Increase verbosity:
                 -v  Print the first differing lines of event output
                 -vv Dump events and expected events
+--data-dir      /path/tp/yaml-test-suite/data
+--all, -a       Run all frameworks
 EOM
     exit 1;
 }

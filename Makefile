@@ -23,11 +23,12 @@ ALL_VIEWS := \
 
 
 #------------------------------------------------------------------------------
-build: $(ALL_VIEWS)
+build: data matrix
+	time ./bin/run-framework-tests --all
+	./bin/create-matrix
 
 $(ALL_VIEWS): data matrix
-	@bash -c "printf '%.0s-' {1..80}; echo";
-	time ./bin/run-framework-tests $@
+	time ./bin/run-framework-tests --framework $@
 	./bin/create-matrix
 
 matrix:
