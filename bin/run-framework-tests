@@ -191,9 +191,7 @@ for my $file (sort @files) {
         my @orig_events = @test_events;
         if ($framework =~ /^(pyyaml|ruamel)-event$/) {
             @test_events = minimal_events($1, @test_events);
-            @events = map { py_event_to_event($_) } @events;
             $tests{ $id }->{minimal_events} = \@test_events;
-            $tests{ $id }->{transformed_events} = \@events;
         }
         elsif ($framework eq "cpp-event") {
             @test_events = minimal_events("cpp", @test_events);
@@ -321,116 +319,6 @@ sub java_event_to_event {
     $event =~ s/^\+MAP \{\}/+MAP/;
     $event =~ s/^\+SEQ \[\]/+SEQ/;
     return $event;
-}
-
-sub py_event_to_event {
-    my ($event) = @_;
-    if ($event eq "StreamStartEvent()") {
-        $event = "+STR";
-    }
-    elsif ($event eq "StreamEndEvent()") {
-        $event = "-STR";
-    }
-    elsif ($event eq "DocumentStartEvent()") {
-        $event = "+DOC";
-    }
-    elsif ($event eq "DocumentEndEvent()") {
-        $event = "-DOC";
-    }
-    elsif ($event =~ s/^MappingStartEvent\(//) {
-        my $ev = '+MAP';
-        if (defined(my $anchor = _py_match_anchor($event))) {
-            if (_py_match_string($anchor)) {
-                $ev .= " &$anchor";
-            }
-        }
-        if (defined(my $tag = _py_match_tag($event))) {
-            if (_py_match_string($tag)) {
-                $ev .= " <$tag>";
-            }
-        }
-        $event = $ev;
-    }
-    elsif ($event eq "MappingEndEvent()") {
-        $event = "-MAP";
-    }
-    elsif ($event =~ s/^SequenceStartEvent\(//) {
-        my $ev = "+SEQ";
-        if (defined(my $anchor = _py_match_anchor($event))) {
-            if (_py_match_string($anchor)) {
-                $ev .= " &$anchor";
-            }
-        }
-        if (defined(my $tag = _py_match_tag($event))) {
-            if (_py_match_string($tag)) {
-                $ev .= " <$tag>";
-            }
-        }
-        $event = $ev;
-    }
-    elsif ($event eq "SequenceEndEvent()") {
-        $event = "-SEQ";
-    }
-
-    elsif ($event =~ s/^AliasEvent\(//) {
-        my $ev = "=ALI";
-        if (defined(my $anchor = _py_match_anchor($event))) {
-            if (_py_match_string($anchor)) {
-                $ev .= " *$anchor";
-            }
-        }
-        $event = $ev;
-    }
-    elsif ($event =~ s/^ScalarEvent\(//) {
-        my $ev = "=VAL";
-        if (defined(my $anchor = _py_match_anchor($event))) {
-            if (_py_match_string($anchor)) {
-                $ev .= " &$anchor";
-            }
-        }
-        if (defined(my $tag = _py_match_tag($event))) {
-            if (_py_match_string($tag)) {
-                $ev .= " <$tag>";
-            }
-        }
-        if ($event =~ s/^implicit=\(\w+, \w+\), //) {
-        }
-        if ($event =~ s/^value=(.*)\)//) {
-            my $value = $1;
-            if (_py_match_string($value)) {
-                $ev .= " :$value";
-            }
-        }
-        $event = $ev;
-    }
-
-    return $event;
-}
-
-sub _py_match_anchor {
-    if ($_[0] =~ s/^anchor=(\S+)(, |\))//) {
-        return "$1";
-    }
-    return;
-}
-sub _py_match_tag {
-    if ($_[0] =~ s/^tag=(\S+)(, |\))//) {
-        return "$1";
-    }
-    return;
-}
-
-sub _py_match_string {
-    if ($_[0] =~ m/^u'((?:\\'|[^'])+)'/) {
-        $_[0] = "$1";
-        $_[0] =~ s/\\'/'/g;
-        return 1;
-    }
-    if ($_[0] =~ m/^u"([^"]+)"/) {
-        $_[0] = "$1";
-        return 1;
-    }
-    return;
 }
 
 sub usage {
