@@ -250,17 +250,30 @@ DumpFile("$Bin/../matrix/$framework.yaml", {
 
 sub minimal_events {
     my ($type, @events) = @_;
+    my %args;
+    if ($type =~ m/^(pyyaml|ruamel|cpp)$/) {
+        $args{no_explicit_doc} = 1;
+        $args{no_quoting_style} = 1;
+    }
+    if ($type eq 'cpp') {
+        $args{anchors_to_numbers} = 1;
+    }
+    _minimal_events(\%args, @events);
+}
+
+sub _minimal_events {
+    my ($args, @events) = @_;
     my %anchor_map;
     my $anchor_count = 0;
 
     for my $event (@events) {
-        if ($event =~ m/^\+DOC ---/) {
+        if ($args->{no_explicit_doc} and $event =~ m/^\+DOC ---/) {
             $event = '+DOC';
         }
-        elsif ($event =~ m/^-DOC \.\.\./) {
+        elsif ($args->{no_explicit_doc} and $event =~ m/^-DOC \.\.\./) {
             $event = '-DOC';
         }
-        elsif ($event =~ s/^=VAL//) {
+        elsif ($args->{no_quoting_style} and $event =~ s/^=VAL//) {
             my $ev = '=VAL';
             if ($event =~ s/^ &(\S+)//) {
                 $ev .= " &$1";
@@ -268,14 +281,8 @@ sub minimal_events {
             if ($event =~ s/^ (<.*?>)//) {
                 $ev .= " $1";
             }
-            if ($type =~ /^(pyyaml|ruamel)$/ and $event =~ s/^ ["'>|](.*)//) {
+            if ($event =~ s/^ ["'>|](.*)//) {
                 $ev .= " :$1";
-            }
-            elsif ($type eq 'nimyaml' and $event =~ s/^ ['>|"](.*)//) {
-                $ev .= qq{ :$1};
-            }
-            elsif ($type eq "cpp" and $event =~ s/^ ['>|"](.*)//) {
-                $ev .= qq{ :$1};
             }
             else {
                 $ev .= $event;
@@ -283,7 +290,7 @@ sub minimal_events {
             $event = $ev;
         }
 
-        if ($type eq "cpp") {
+        if ($args->{anchors_to_numbers}) {
             if ($event =~ m/^(\+MAP|\+SEQ|=VAL|=ALI) (&|\*)(\S+)(.*)/) {
                 my $ev = $1;
                 my $ali = $2;
