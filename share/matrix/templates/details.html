@@ -29,15 +29,20 @@
 <pre>[%= $result.got_data %]</pre>
 
 [%elsif $result.diff %]<span class="diff">&nbsp;</span>diff<br>
-[%if $result.transformed_events %]
+
+[%if $result.minimal_events %]
 Minimal Events:
 <pre>[%loop $result.minimal_events POST_CHOMP=0 %]
 [%= _ %][%/loop %]</pre>
+[%/if %]
+
+[%if $result.transformed_events %]
 Transformed Events:
 <pre>[%loop $result.transformed_events POST_CHOMP=0 %]
 [%= _ %][%/loop %]</pre>
-Original Events:
 [%/if %]
+
+Got Events:
 <pre>[%loop $result.got_events POST_CHOMP=0 %]
 [%= _ %][%/loop %]</pre>
 
