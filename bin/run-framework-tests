@@ -63,7 +63,6 @@ my @frameworks = qw/
 /;
 
 $datadir //= "$Bin/../data";
-my %tests;
 my %frameworks;
 @frameworks{ @frameworks } = (1) x @frameworks;
 
@@ -93,6 +92,7 @@ else {
 
 sub run_tests {
     my %args = @_;
+    my %tests;
     my $framework = $args{framework};
     say "-" x 80;
     say "Running $framework";
