@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>List of Frameworks - YAML Framework Matrix</title>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+<link rel="stylesheet" type="text/css" href="css/matrix.css">
+<link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
+</head>
+<body>
+
+<h2><a href="index.html">YAML Framework Matrix</a></h2>
+<h3>Frameworks</h3>
+
+<div id="framework-info">
+
+<table class="framework-list">
+<tr>
+<th>ID</th><th>Language</th><th>Repo</th><th>Name</th><th>Output</th>
+<th>Version</th><th>Commit</th><th>Commit Date</th>
+<th>Run</th><th>Runtime</th>
+</tr>
+[%each .framework_info %]
+<tr>
+<th>[%= __key__ %]</th>
+[%if __value__ %][%with __value__ %]
+<td>[%= language_name %]</td>
+<td>[%= provider %]</td>
+<td><a href="[%= link %]">[%= reponame %]</a></td>
+<td>[%= output_name %]</td>
+<td>[%= version %]</td>
+<td><a href="[%= commit_link %]">[%= commit_short %]</a></td>
+<td>[%= cdate %]</td>
+<td>[%= run_date %]</th>
+<td class="number">[%= runtime %]s</td>
+[%/with %]
+[%else %]
+<td colspan="7">-</td>
+[%/if %]
+</tr>
+[%/each %]
+</table>
+
+</div>
+
+
+
+</body>
+</html>

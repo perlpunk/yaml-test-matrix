@@ -8,10 +8,12 @@ use YAML::XS qw/ LoadFile /;
 use IO::All;
 use File::Copy qw/ copy /;
 use HTML::Template::Compiled;
+use POSIX qw/ strftime /;
 
 my %tests;
 my %frameworks;
 my @frameworks;
+my %framework_info;
 my %htc_args = (
     tagstyle => [qw/ -classic -comment -jsp +tt /],
     default_escape => 'HTML',
@@ -36,6 +38,10 @@ sub gather_data {
         push @frameworks, $fw;
         my $data = LoadFile($file);
         my $testdata = $data->{tests};
+        my $info = $data->{info};
+        $info->{run} = $data->{date};
+        $info->{runtime} = $data->{time};
+        $framework_info{ $fw } = info2html($info);
 
         for my $test (keys %$testdata) {
             my $results = $testdata->{ $test };
@@ -174,22 +180,39 @@ sub create_html {
         $selectors{ $b }->[0]->{type}
     } keys %selectors;
 
-    my $htc = HTML::Template::Compiled->new(
-        filename => "index.html",
-        path => "$Bin/../share/matrix/templates",
-        %htc_args,
-    );
-    $htc->param(
-        framework_names => \@framework_names,
-        framework_headers => \@framework_headers,
-        tests => \@tests,
-        selectors => \@selectors,
-    );
+    {
+        my $htc = HTML::Template::Compiled->new(
+            filename => "index.html",
+            path => "$Bin/../share/matrix/templates",
+            %htc_args,
+        );
+        $htc->param(
+            framework_names => \@framework_names,
+            framework_headers => \@framework_headers,
+            tests => \@tests,
+            selectors => \@selectors,
+        );
 
-    open my $fh, ">", "matrix/html/index.html" or die $!;
-    print $fh $htc->output;
-    close $fh;
-    say "Created matrix/html/index.html";
+        open my $fh, ">", "matrix/html/index.html" or die $!;
+        print $fh $htc->output;
+        close $fh;
+        say "Created matrix/html/index.html";
+    }
+    {
+        my $htc = HTML::Template::Compiled->new(
+            filename => "frameworks.html",
+            path => "$Bin/../share/matrix/templates",
+            %htc_args,
+        );
+        $htc->param(
+            framework_info => \%framework_info,
+        );
+
+        open my $fh, ">", "matrix/html/frameworks.html" or die $!;
+        print $fh $htc->output;
+        close $fh;
+        say "Created matrix/html/frameworks.html";
+    }
 
     copy ("share/matrix/css/yaml.css", "matrix/html/css");
     copy ("share/matrix/css/matrix.css", "matrix/html/css");
@@ -227,3 +250,47 @@ sub create_details {
     close $fh;
 }
 
+sub info2html {
+    my ($info) = @_;
+    return unless $info;
+    $info->{run_date} = strftime("%Y-%m-%d %H:%M GMT", gmtime $info->{run});
+    return $info unless $info->{commit};
+
+    my $link;
+    my $commitlink;
+    $info->{commit_short} = substr($info->{commit}, 0, 8);
+    my $provider = $info->{provider} // '';
+    if ($provider eq 'github') {
+        $link = "https://github.com/$info->{reponame}";
+        $commitlink =
+            "https://github.com/$info->{reponame}/commit/$info->{commit}";
+    }
+    elsif ($provider eq 'bitbucket') {
+        $link = "https://bitbucket.org/$info->{reponame}";
+        $commitlink =
+            "https://bitbucket.org/$info->{reponame}/commits/$info->{commit}";
+    }
+    $info->{link} = $link;
+    $info->{commit_link} = $commitlink;
+
+    $info->{language_name} = {
+        cpp => "C++",
+        c => "C",
+        haskell => "Haskell",
+        java => "Java",
+        js => "Javascript",
+        nim => "Nim",
+        perl5 => "Perl 5",
+        perl6 => "Perl 6",
+        python => "Python",
+        ruby => "Ruby",
+    }->{ $info->{language} };
+
+    $info->{output_name} = {
+        event => "Event Stream",
+        json => "JSON",
+        native => "Native Data",
+    }->{ $info->{output} };
+
+    return $info;
+}

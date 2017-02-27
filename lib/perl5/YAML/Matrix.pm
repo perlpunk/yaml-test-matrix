@@ -10,7 +10,7 @@ our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
     generate_expected_output
-    normalize_json
+    normalize_json load_csv
 /;
 
 sub minimal_events_for_framework {
@@ -118,5 +118,34 @@ sub normalize_json {
     $json = $coder->encode($data);
     return $json;
 }
+
+# CSV to List of Hashes
+my $separator = ",";
+sub load_csv {
+    my ($id_field, $arg) = @_;
+    my $header;
+    my @lines;
+    if (ref $arg eq 'ARRAY') {
+        @lines = @$arg;
+        $header = shift @lines;
+    }
+    else {
+        open my $fh, "<", $arg or die $!;
+        chomp($header = <$fh>);
+        chomp(@lines = <$fh>);
+    }
+    my @headers = split m/$separator/, $header;
+
+    my %result;
+    for my $line (@lines) {
+        my @fields = split m/$separator/, $line;
+        my %row;
+        @row{ @headers } = @fields;
+        my $id = $row{ $id_field };
+        $result{ $id } = \%row;
+    }
+    return \%result;
+}
+
 
 1;

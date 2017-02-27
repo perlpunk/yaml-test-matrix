@@ -16,7 +16,7 @@ use YAML::Matrix qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
     generate_expected_output
-    normalize_json
+    normalize_json load_csv
 /;
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
@@ -102,6 +102,7 @@ sub run_tests {
 
 my ($sum_ok, $sum_diff, $sum_na, $sum_err) = (0) x 4;
 my $out = "$matrixdir/tmp";
+my %info;
 if ($frameworks{ $framework }) {
     mkdir $out;
     if ($path) {
@@ -129,6 +130,43 @@ if ($frameworks{ $framework }) {
     }
     print "\n";
     $end = time;
+    unless ($path) {
+        my $cmd = qq{docker run -i --rm --user $<}
+            . qq{ $docker_user/yaml-editor}
+            . q{ cat /yaml-emitters.csv /yaml-frameworks.csv};
+        my @lines = qx{$cmd};
+        if ($? == 0) {
+            chomp @lines;
+            my @emitters;
+            my @frameworks;
+            while (my $line = shift @lines) {
+                if ($line =~ m/^repo,/) {
+                    push @frameworks, $line, @lines;
+                    last;
+                }
+                push @emitters, $line;
+            }
+            my $emitters    = load_csv("id", \@emitters);
+            my $frameworks  = load_csv("repo", \@frameworks);
+            my $emitter = $emitters->{ $framework };
+            my $repo = $emitter->{reponame};
+            my $framework_info = $frameworks->{ $repo };
+            @info{qw/
+                id output language name reponame provider
+                version commit cdate
+            /} = (
+                $emitter->{id}, $emitter->{output},
+                @$framework_info{qw/
+                    language name repo provider version commit cdate
+                /}
+            );
+            say "Info: $emitter->{id} $framework_info->{version} $framework_info->{cdate}";
+            if ($verbose) {
+                print YAML::XS::Dump \%info;
+            }
+            print "\n";
+        }
+    }
 }
 else {
     die "Framework $framework not supported";
@@ -256,6 +294,7 @@ DumpFile("$matrixdir/data/$framework.yaml", {
     tests => \%tests,
     date => time,
     time => $end - $start,
+    info => \%info,
 });
 
 }
