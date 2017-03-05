@@ -14,6 +14,8 @@ use File::Path qw/ rmtree /;
 use YAML::Matrix qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
+    generate_expected_output
+    normalize_json
 /;
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
@@ -72,6 +74,8 @@ my @frameworks = qw/
 
 my %frameworks;
 @frameworks{ @frameworks } = (1) x @frameworks;
+
+write_expected_output();
 
 if ($help) {
     usage();
@@ -167,12 +171,8 @@ for my $file (sort @files) {
         my $got_json = $got_data;
         $tests{ $id }->{got_json} = $got_json;
         if (-f "$data/$id/in.json") {
-            my $exp_json = io->file("$data/$id/in.json")->slurp;
-            require Mojo::JSON;
-            my $exp_data = Mojo::JSON::decode_json($exp_json);
-            $exp_json = Mojo::JSON::encode_json($exp_data);
-            my $got_data = eval { Mojo::JSON::decode_json($got_json) };
-            $got_json = Mojo::JSON::encode_json($got_data);
+            my $exp_json = io->file("$matrixdir/expected/$id/in.json")->slurp;
+            $got_json = normalize_json($got_json);
             if ($got_json eq $exp_json) {
                 $tests{ $id }->{json_ok} = 1;
                 $sum_ok++;
@@ -195,11 +195,15 @@ for my $file (sort @files) {
         my @events = @got;
         my @orig_events = @test_events;
         if ($framework =~ /^(pyyaml|ruamel)-event$/) {
-            @test_events = minimal_events_for_framework($1, @test_events);
+            @test_events = io
+                ->file("$matrixdir/expected/$id/minimal.$1.event")
+                ->chomp->slurp;
             $tests{ $id }->{minimal_events} = \@test_events;
         }
         elsif ($framework eq "cpp-event") {
-            @test_events = minimal_events_for_framework("cpp", @test_events);
+            @test_events = io
+                ->file("$matrixdir/expected/$id/minimal.cpp.event")
+                ->chomp->slurp;
             @events = cpp_event_to_event(@events);
             $tests{ $id }->{minimal_events} = \@test_events;
             $tests{ $id }->{transformed_events} = \@events;
@@ -274,4 +278,21 @@ Options:
 --all, -a       Run all frameworks
 EOM
     exit 1;
+}
+
+sub write_expected_output {
+    say "Generating minimal events and normalized JSON...";
+    mkdir "$matrixdir/expected";
+    my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($datadir)->all;
+    for my $dir (@dirs) {
+        my %expected = generate_expected_output($dir);
+        my $id = basename $dir;
+        my $out = "$matrixdir/expected/$id";
+        mkdir $out;
+        for my $file (sort keys %expected) {
+            io("$out/$file")->print($expected{ $file });
+        }
+    }
+    say "Done ";
+    exit;
 }

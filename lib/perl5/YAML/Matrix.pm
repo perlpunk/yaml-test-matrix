@@ -2,11 +2,15 @@ package YAML::Matrix;
 use strict;
 use warnings;
 use 5.010;
+use File::Basename qw/ basename /;
+use IO::All;
 
 use base 'Exporter';
 our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
+    generate_expected_output
+    normalize_json
 /;
 
 sub minimal_events_for_framework {
@@ -83,6 +87,35 @@ sub cpp_event_to_event {
 sub java_event_to_event {
     my (@events) = @_;
     return cpp_event_to_event(@events);
+}
+
+sub generate_expected_output {
+    my ($dir) = @_;
+    my $id = basename $dir;
+    print "#$id\r";
+    my %expected;
+
+    my @test_events = io->file("$dir/test.event")->chomp->slurp;
+    for my $fw (qw/ pyyaml ruamel cpp /) {
+        my @minimal = minimal_events_for_framework($fw, @test_events);
+        $expected{"minimal.$fw.event"} = join '', map { "$_\n" } @minimal;
+    }
+
+    if (-f "$dir/in.json") {
+        my $exp_json = io->file("$dir/in.json")->slurp;
+        $exp_json = normalize_json($exp_json);
+        $expected{"in.json"} = $exp_json;
+    }
+#    warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\%expected], ['expected']);
+    return %expected;
+}
+
+sub normalize_json {
+    my ($json) = @_;
+    require Mojo::JSON;
+    my $data = eval { Mojo::JSON::decode_json($json) };
+    $json = Mojo::JSON::encode_json($data);
+    return $json;
 }
 
 1;
