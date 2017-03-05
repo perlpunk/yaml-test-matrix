@@ -11,8 +11,8 @@ framework="$1"
 
 cd /yaml-test-suite-data
 
-if [[ ! -d out ]]; then
-    echo "/yaml-test-suite-data/out does not exist"
+if [[ ! -d /matrix/tmp ]]; then
+    echo "/matrix/tmp does not exist"
     exit 1
 fi
 
@@ -22,10 +22,10 @@ for id in [A-Z0-9]*
 do
     [[ ! -f $id/in.yaml ]] && continue
     echo -n "Running $id"$'\r'
-    # echo "timeout 3 $framework < $id/in.yaml > out/$id.error 2>&1"
-    timeout 3 $framework < $id/in.yaml > out/$id.error 2>&1
+    # echo "timeout 3 $framework < $id/in.yaml > /matrix/tmp/$id.error 2>&1"
+    timeout 3 $framework < $id/in.yaml > /matrix/tmp/$id.error 2>&1
     if [[ $? -eq 0 ]]; then
-        mv out/$id.error out/$id.ok
+        mv /matrix/tmp/$id.error /matrix/tmp/$id.ok
     fi
     [[ -f core ]] && rm core
 done
