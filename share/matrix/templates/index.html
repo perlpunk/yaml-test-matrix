@@ -82,13 +82,13 @@ checked="checked" onchange="toggle_framework('[%= fullname %]')">
 [%loop .tests %]
 <tr>
 <td class="testid"><tt><a href="#[%= id %]">[%= id %]</tt></a></td>
-<td id="[%= id %]" class="testname"><a href="details-[%= id %].html">[%= title %]</a></td>
+<td id="[%= id %]" class="testname"><a href="details/[%= id %].html">[%= title %]</a></td>
 [%loop frameworks %]
 <td class="result [%= id %]
 [%if ok %]ok[%elsif error %]error[%elsif json_ok %]json_ok[%elsif diff
 %]diff[%elsif json_diff %]json_diff[%elsif na %]na[%/if %]
 ">
-<a href="details-[%= test %].html#[%= id %]">[%if ok %]ok[%elsif error %]error[%elsif json_ok %]ok[%elsif diff
+<a href="details/[%= test %].html#[%= id %]">[%if ok %]ok[%elsif error %]error[%elsif json_ok %]ok[%elsif diff
 %]diff[%elsif json_diff %]diff[%elsif na %]n/a[%/if %]</a>
 
 </td>

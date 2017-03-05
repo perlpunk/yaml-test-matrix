@@ -25,7 +25,7 @@ gather_data();
 create_html();
 
 sub gather_data {
-    my @files = map { "$_" } grep { m/\.yaml$/ } io->dir("matrix")->all_files;
+    my @files = map { "$_" } grep { m/\.yaml$/ } io->dir("matrix/data")->all_files;
 
     for my $file (sort @files) {
         unless ($file =~ m{/([A-Z0-9-]+)\.yaml}i) {
@@ -69,6 +69,7 @@ sub gather_data {
 
 sub create_html {
     mkdir "matrix/html";
+    mkdir "matrix/html/details";
     mkdir "matrix/html/css";
     mkdir "matrix/html/js";
     my @tests;
@@ -140,7 +141,7 @@ sub create_html {
         };
         create_details($test);
     }
-    say "Created detail pages matrix/html/details-<id>.html";
+    say "Created detail pages matrix/html/details/<id>.html";
     my @framework_headers;
     for my $fw (@framework_names) {
         push @framework_headers, {
@@ -209,7 +210,7 @@ sub create_details {
         json => $json,
         events => $events,
     );
-    open my $fh, ">", "matrix/html/details-$id.html" or die $!;
+    open my $fh, ">", "matrix/html/details/$id.html" or die $!;
     print $fh $htc->output;
     close $fh;
 }
