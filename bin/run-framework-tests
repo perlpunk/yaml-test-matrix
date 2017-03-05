@@ -124,7 +124,7 @@ if ($frameworks{ $framework }) {
         }
     }
     else {
-        my $cmd = q{docker run -i --rm}
+        my $cmd = qq{docker run -i --rm --user $<}
             . q{ -v $PWD/data:/yaml-test-suite-data}
             . q{ -v $PWD/bin:/matrix}
             . qq{ $docker_user/yaml-editor /matrix/run-framework-tests-docker.sh $framework};

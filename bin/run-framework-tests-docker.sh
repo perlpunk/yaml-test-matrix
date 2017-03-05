@@ -31,4 +31,3 @@ do
 done
 echo "Done        "
 
-chmod -R go+w out
