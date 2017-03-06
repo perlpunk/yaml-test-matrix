@@ -108,6 +108,11 @@ sub create_html {
             $name = "yaml";
             $type = "event";
         }
+        elsif ($lang eq 'luajit') {
+            $lang = "lua";
+            $name = "yaml";
+            $type = "json";
+        }
         if ($type !~ m/^(json|event)/) {
             $type = "native";
         }

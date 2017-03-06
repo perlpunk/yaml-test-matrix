@@ -35,41 +35,28 @@ $datadir //= "$Bin/../data";
 $matrixdir //= "$Bin/../matrix";
 
 my @frameworks = qw/
-    js-yaml-json
-
+    cpp-event
     java-json
     java-event
-
+    js-yaml-json
     libyaml-event
-
-    cpp-event
-
+    luajit-json
     nimyaml-event
-
     perl5-pegex-event
-
     perl5-pm-pl
     perl5-pm-json
-
     perl5-pp-event
-
     perl5-syck-pl
     perl5-syck-json
-
     perl5-tiny-pl
     perl5-tiny-json
-
     perl5-xs-pl
     perl5-xs-json
-
     perl6-json
     perl6-p6
-
     pyyaml-event
     ruamel-event
-
     ruby-json
-
 /;
 
 my %frameworks;
