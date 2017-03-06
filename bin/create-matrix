@@ -17,6 +17,7 @@ my %htc_args = (
     default_escape => 'HTML',
     loop_context_vars => 1,
     post_chomp => 2,
+    use_expressions => 1,
 );
 
 my $datadir = "$Bin/../data";
@@ -137,6 +138,9 @@ sub create_html {
         for my $fw (@framework_names) {
             my $results = $frameworks->{ $fw->{fullname} };
             $results->{test} = $test;
+            if (exists $results->{got_json}) {
+                $results->{got_json_lines} = [split m/\n/, $results->{got_json} ];
+            }
             push @frameworks, $results;
         }
         push @tests, {
@@ -199,8 +203,10 @@ sub create_details {
     my $events = io->file("$datadir/$id/test.event")->slurp;
 
     my $json;
-    if (-f "$datadir/$id/in.json") {
-        $json = io->file("$datadir/$id/in.json")->slurp;
+    my $json_lines;
+    if (-f "matrix/expected/$id/in.json") {
+        $json = io->file("matrix/expected/$id/in.json")->slurp;
+        $json_lines = [ split m/\n/, $json ];
     }
 
     my $htc = HTML::Template::Compiled->new(
@@ -213,6 +219,7 @@ sub create_details {
         test => $tests{ $id },
         yaml => $yaml,
         json => $json,
+        json_lines => $json_lines,
         events => $events,
     );
     open my $fh, ">", "matrix/html/details/$id.html" or die $!;

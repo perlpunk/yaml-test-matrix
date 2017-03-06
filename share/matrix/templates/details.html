@@ -14,7 +14,9 @@
 
 <div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>[%= .yaml %]</pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>[%= .events %]</pre></div>
-<div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3><pre>[%= .json %]</pre></div>
+<div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
+<pre>[%loop .json_lines %][%= _ %]<br>[%/loop %]</pre>
+</div>
 <hr style="clear: both;">
 [%each .test.frameworks %]
 <div class="framework" id="[%= __key__ %]">
@@ -23,7 +25,9 @@
 [%if $result.ok %]<span class="ok">&nbsp;</span>ok
 [%elsif $result.json_ok %]<span class="json_ok">&nbsp;</span>json_ok
 [%elsif $result.json_diff %]<span class="json_diff">&nbsp;</span>json_diff
-<pre>[%= $result.got_json %]</pre>
+<pre>[%loop $result.got_json_lines %]<span
+class="[%if expr="__index__ == $result.diff_line" %]diff_line[%/if %]">[%= _ %]</span>
+[%/loop %]</pre>
 [%elsif $result.error %]<span class="error">&nbsp;</span>error <pre>[%= $result.msg %]</pre>
 [%elsif $result.na %]<span class="na">&nbsp;</span>n/a
 <pre>[%= $result.got_data %]</pre>

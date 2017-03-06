@@ -112,9 +112,10 @@ sub generate_expected_output {
 
 sub normalize_json {
     my ($json) = @_;
-    require Mojo::JSON;
-    my $data = eval { Mojo::JSON::decode_json($json) };
-    $json = Mojo::JSON::encode_json($data);
+    require JSON::XS;
+    my $coder = JSON::XS->new->ascii->pretty->allow_nonref->canonical;
+    my $data = $coder->decode($json);
+    $json = $coder->encode($data);
     return $json;
 }
 

@@ -11,6 +11,7 @@ Getopt::Long::Configure ("bundling");
 use File::Basename qw/ basename /;
 use IO::All;
 use File::Path qw/ rmtree /;
+use List::Util qw/ min /;
 use YAML::Matrix qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
@@ -160,12 +161,29 @@ for my $file (sort @files) {
         if (-f "$data/$id/in.json") {
             my $exp_json = io->file("$matrixdir/expected/$id/in.json")->slurp;
             $got_json = normalize_json($got_json);
-            if ($got_json eq $exp_json) {
+            $tests{ $id }->{got_json} = $got_json;
+            my $got_json_lines = [split m/\n/, $got_json ];
+            my $exp_json_lines = [split m/\n/, $exp_json ];
+            my $ok = 1;
+            my $diff_line;
+            for my $i (0 .. $#$got_json_lines) {
+                if ($got_json_lines->[ $i ] ne $exp_json_lines->[ $i ]) {
+                    $ok = 0;
+                    $diff_line = $i;
+                    last;
+                }
+            }
+            if ($ok and @$got_json_lines != @$exp_json_lines) {
+                $ok = 0;
+                $diff_line = min(scalar @$got_json_lines, scalar @$exp_json_lines);
+            }
+            if ($ok) {
                 $tests{ $id }->{json_ok} = 1;
                 $sum_ok++;
             }
             else {
                 $tests{ $id }->{json_diff} = 1;
+                $tests{ $id }->{diff_line} = $diff_line;
                 $sum_diff++;
             }
         }
