@@ -294,5 +294,4 @@ sub write_expected_output {
         }
     }
     say "Done ";
-    exit;
 }
