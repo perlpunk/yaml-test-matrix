@@ -47,8 +47,9 @@ Transformed Events:
 [%/if %]
 
 Got Events:
-<pre>[%loop $result.got_events POST_CHOMP=0 %]
-[%= _ %][%/loop %]</pre>
+<pre>[%loop $result.got_events POST_CHOMP=0 %]<span
+class="[%if expr="__index__ == $result.diff_line" %]diff_line[%/if %]">[%= _ %]</span>
+[%/loop %]</pre>
 
 [%else %]
 <pre>[%= $result escape=dump|html %]</pre>

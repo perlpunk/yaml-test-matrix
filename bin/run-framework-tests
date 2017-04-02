@@ -256,6 +256,7 @@ for my $file (sort @files) {
             $tests{ $id }->{transformed_events} = \@events;
         }
         my $ok = 1;
+        my $diff_line;
         for my $i (0 .. $#events) {
             my $event = $events[ $i ];
             my $exp = $test_events[ $i ];
@@ -263,8 +264,13 @@ for my $file (sort @files) {
                 $verbose and
                     warn "$id line ${\($i + 1)}: <$event> ne <$exp>\n";
                 $ok = 0;
+                $diff_line = $i;
                 last;
             }
+        }
+        if ($ok and @events != @test_events) {
+            $ok = 0;
+            $diff_line = min(scalar @events, scalar @test_events);
         }
         if ($ok) {
             $tests{ $id }->{ok} = 1;
@@ -277,8 +283,8 @@ for my $file (sort @files) {
                 warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@orig_events], ['orig_events']);
             }
             $tests{ $id }->{diff} = 1;
+            $tests{ $id }->{diff_line} = $diff_line;
             $sum_diff++;
-#                $tests{ $id }->{exp_events} = \@test_events;
             $tests{ $id }->{got_events} = \@got;
         }
     }
