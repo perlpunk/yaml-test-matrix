@@ -1,0 +1,62 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use 5.010;
+
+use YAML::XS;
+use Data::Dumper;
+use FindBin '$Bin';
+
+my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
+my ($fw, $count) = @ARGV;
+$count //= 1;
+
+my $fw_test = {
+    "perl5-pegex-parse-bench" => "perl5-pegex-event",
+    "perl5-pp-parse-bench"    => "perl5-pp-event",
+    "perl5-xs-load-bench"     => "perl5-xs-pl",
+    "perl5-syck-load-bench"   => "perl5-syck-pl",
+    "perl5-tiny-load-bench"   => "perl5-tiny-pl",
+    "perl5-pm-load-bench"     => "perl5-pm-pl",
+    "pyyaml-parse-bench"      => "pyyaml-event",
+    "ruamel-parse-bench"      => "ruamel-event",
+    "ruby-load-bench"         => "ruby-json",
+}->{ $fw } or die "$fw not supported";
+
+my $benchdir = "$Bin/../matrix/bench";
+mkdir $benchdir;
+
+my $data = YAML::XS::LoadFile("$Bin/../matrix/data/$fw_test.yaml");
+my $tests = $data->{tests};
+my @bench;
+for my $id (sort keys %$tests) {
+    next if $tests->{ $id }->{error};
+    push @bench, $id;
+}
+
+open my $fh, ">", "$benchdir/$fw-input.txt" or die $!;
+print $fh map { "/yaml-test-suite-data/$_/in.yaml\n" } @bench;
+close $fh;
+
+my %bench = (
+    count => scalar @bench,
+    files => \@bench,
+    iterations => $count,
+);
+my $cmd = q{docker run -i --rm}
+    . q{ -v $PWD/data:/yaml-test-suite-data}
+    . q{ -v $PWD/../YAML/yaml-editor:/yaml-editor}
+    . qq{ $docker_user/yaml-editor}
+    . qq{ /yaml-editor/sbin/$fw $count < $benchdir/$fw-input.txt }
+;
+say "Running $cmd";
+chomp(my @out = qx{$cmd});
+$bench{runtime} = $out[0];
+$bench{bench} = sprintf "%.5f", $bench{runtime} / $bench{count} / $count;
+
+say "$count iterations";
+say "$bench{count} files";
+say "$bench{runtime} ms";
+say "$bench{bench} ms / file";
+
+YAML::XS::DumpFile("$benchdir/$fw-data.yaml", \%bench);
