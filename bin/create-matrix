@@ -77,6 +77,7 @@ sub gather_data {
 sub create_html {
     mkdir "matrix/html";
     mkdir "matrix/html/details";
+    mkdir "matrix/html/img";
     mkdir "matrix/html/css";
     mkdir "matrix/html/js";
     my @tests;
@@ -214,6 +215,7 @@ sub create_html {
         say "Created matrix/html/frameworks.html";
     }
 
+    copy ("share/matrix/img/gnome-help.png", "matrix/html/img");
     copy ("share/matrix/css/yaml.css", "matrix/html/css");
     copy ("share/matrix/css/matrix.css", "matrix/html/css");
     copy ("share/matrix/js/jquery-3.1.1.min.js", "matrix/html/js");
