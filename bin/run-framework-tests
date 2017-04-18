@@ -53,12 +53,12 @@ my @frameworks = qw/
     perl5-tiny-json
     perl5-xs-pl
     perl5-xs-json
-    perl6-json
-    perl6-p6
     pyyaml-event
     ruamel-event
     ruby-json
 /;
+#    perl6-json
+#    perl6-p6
 
 my %frameworks;
 @frameworks{ @frameworks } = (1) x @frameworks;
