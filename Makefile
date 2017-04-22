@@ -24,7 +24,7 @@ ALL_VIEWS := \
 
 #------------------------------------------------------------------------------
 build: data matrix
-	time ./bin/run-framework-tests --all
+	./bin/run-framework-tests --all
 	./bin/create-matrix
 
 $(ALL_VIEWS): data matrix
