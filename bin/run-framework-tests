@@ -47,6 +47,8 @@ my @frameworks = qw/
     perl5-pm-pl
     perl5-pm-json
     perl5-pp-event
+    perl5-pp-json
+    perl5-pp-pl
     perl5-syck-pl
     perl5-syck-json
     perl5-tiny-pl
