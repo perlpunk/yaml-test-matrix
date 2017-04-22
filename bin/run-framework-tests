@@ -104,6 +104,28 @@ sub run_tests {
 
 my ($sum_ok, $sum_diff, $sum_na, $sum_err) = (0) x 4;
 my $out = "$matrixdir/tmp";
+my $framework_info;
+my $emitters;
+{
+    my $cmd = qq{docker run -i --rm --user $<}
+        . qq{ $docker_user/yaml-editor}
+        . q{ cat /yaml-emitters.csv /yaml-frameworks.csv};
+    my @lines = qx{$cmd};
+    if ($? == 0) {
+        chomp @lines;
+        my @emitters;
+        my @frameworks;
+        while (my $line = shift @lines) {
+            if ($line =~ m/^repo,/) {
+                push @frameworks, $line, @lines;
+                last;
+            }
+            push @emitters, $line;
+        }
+        $emitters = load_csv("id", \@emitters);
+        $framework_info  = load_csv("repo", \@frameworks);
+    }
+}
 my %info;
 if ($frameworks{ $framework }) {
     mkdir $out;
@@ -133,36 +155,20 @@ if ($frameworks{ $framework }) {
     print "\n";
     $end = time;
     unless ($path) {
-        my $cmd = qq{docker run -i --rm --user $<}
-            . qq{ $docker_user/yaml-editor}
-            . q{ cat /yaml-emitters.csv /yaml-frameworks.csv};
-        my @lines = qx{$cmd};
-        if ($? == 0) {
-            chomp @lines;
-            my @emitters;
-            my @frameworks;
-            while (my $line = shift @lines) {
-                if ($line =~ m/^repo,/) {
-                    push @frameworks, $line, @lines;
-                    last;
-                }
-                push @emitters, $line;
-            }
-            my $emitters    = load_csv("id", \@emitters);
-            my $frameworks  = load_csv("repo", \@frameworks);
+        if ($framework_info) {
             my $emitter = $emitters->{ $framework };
             my $repo = $emitter->{reponame};
-            my $framework_info = $frameworks->{ $repo };
+            my $info = $framework_info->{ $repo };
             @info{qw/
                 id output language name reponame provider
                 version commit cdate
             /} = (
                 $emitter->{id}, $emitter->{output},
-                @$framework_info{qw/
+                @$info{qw/
                     language name repo provider version commit cdate
                 /}
             );
-            say "Info: $emitter->{id} $framework_info->{version} $framework_info->{cdate}";
+            say "Info: $emitter->{id} $info->{version} $info->{cdate}";
             if ($verbose) {
                 print YAML::XS::Dump \%info;
             }
