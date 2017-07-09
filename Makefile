@@ -25,6 +25,7 @@ ALL_VIEWS := \
 #------------------------------------------------------------------------------
 build: data matrix
 	./bin/run-framework-tests --all
+	./bin/compare-framework-tests --all
 	./bin/create-matrix
 
 $(ALL_VIEWS): data matrix

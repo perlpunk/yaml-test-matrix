@@ -11,12 +11,9 @@ Getopt::Long::Configure ("bundling");
 use File::Basename qw/ basename /;
 use IO::All;
 use File::Path qw/ rmtree /;
-use List::Util qw/ min /;
 use YAML::Matrix qw/
-    minimal_events minimal_events_for_framework
-    cpp_event_to_event java_event_to_event
     generate_expected_output
-    normalize_json load_csv
+    load_csv
 /;
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
@@ -102,43 +99,26 @@ sub run_tests {
     my $start = time;
     my $end;
 
-my ($sum_ok, $sum_diff, $sum_na, $sum_err) = (0) x 4;
-my $out = "$matrixdir/tmp";
-my $framework_info;
-my $emitters;
-{
-    my $cmd = qq{docker run -i --rm --user $<}
-        . qq{ $docker_user/yaml-editor}
-        . q{ cat /yaml-emitters.csv /yaml-frameworks.csv};
-    my @lines = qx{$cmd};
-    if ($? == 0) {
-        chomp @lines;
-        my @emitters;
-        my @frameworks;
-        while (my $line = shift @lines) {
-            if ($line =~ m/^repo,/) {
-                push @frameworks, $line, @lines;
-                last;
-            }
-            push @emitters, $line;
-        }
-        $emitters = load_csv("id", \@emitters);
-        $framework_info  = load_csv("repo", \@frameworks);
+    my $out = "$matrixdir/tmp";
+    my ($framework_info, $emitters) = gather_framework_info();
+
+    my %info;
+    if (not $frameworks{ $framework }) {
+        die "Framework $framework not supported";
     }
-}
-my %info;
-if ($frameworks{ $framework }) {
+
     mkdir $out;
     if ($path) {
         my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($data)->all;
         for my $dir (sort @dirs) {
             my $id = basename $dir;
             my $in_yaml = "$dir/in.yaml";
-            my $cmd = "timeout 3 $path < $in_yaml > $out/$id.error 2>&1";
+            my $cmd = "timeout 3 $path < $in_yaml > $out/$id.stdout 2>$out/$id.stderr";
             print "Running $id\r";
             system $cmd;
-            unless ($?) {
-                rename "$out/$id.error", "$out/$id.ok" or die $!;
+            if ($?) {
+                my $now = time;
+                utime $now, $now, "$out/$id.error";
             }
         }
     }
@@ -175,142 +155,43 @@ if ($frameworks{ $framework }) {
             print "\n";
         }
     }
-}
-else {
-    die "Framework $framework not supported";
-}
 
-my @files = map { "$_" } grep { m{/\w+\.(error|ok)$} } io->dir("$matrixdir/tmp")->all;
-say "Comparing results...";
-for my $file (sort @files) {
-    my @got = io->file($file)->chomp->slurp;
-    if (@got > 200) {
-        @got = (@got[0 .. 200], "----- 8< -----");
-    }
-    $file = basename $file;
-    my ($id, $status) = split m/\./, $file;
-    my @test_events = io->file("$data/$id/test.event")->chomp->slurp;
-    my ($title) = io->file("$data/$id/===")->chomp->slurp;
-    print "Comparing results for $id...\r";
-    my $got_data = (join "\n", @got) . "\n";
-    $tests{ $id }->{got_data} = $got_data;
-    if ($status eq 'error') {
-        $tests{ $id }->{error} = 1;
-        $sum_err++;
-        my $msg = $got_data;
-        $msg =~ s/\bat \S+ line .*//s;
-        $tests{ $id }->{msg} = $msg;
-    }
-    elsif ($framework =~ m/-json$/) {
-        my $got_json = $got_data;
-        $tests{ $id }->{got_json} = $got_json;
-        if (-f "$data/$id/in.json") {
-            my $exp_json = io->file("$matrixdir/expected/$id/in.json")->slurp;
-            $got_json = normalize_json($got_json);
-            $tests{ $id }->{got_json} = $got_json;
-            my $got_json_lines = [split m/\n/, $got_json ];
-            my $exp_json_lines = [split m/\n/, $exp_json ];
-            my $ok = 1;
-            my $diff_line;
-            for my $i (0 .. $#$got_json_lines) {
-                if ($got_json_lines->[ $i ] ne $exp_json_lines->[ $i ]) {
-                    $ok = 0;
-                    $diff_line = $i;
-                    last;
-                }
-            }
-            if ($ok and @$got_json_lines != @$exp_json_lines) {
-                $ok = 0;
-                $diff_line = min(scalar @$got_json_lines, scalar @$exp_json_lines);
-            }
-            if ($ok) {
-                $tests{ $id }->{json_ok} = 1;
-                $sum_ok++;
-            }
-            else {
-                $tests{ $id }->{json_diff} = 1;
-                $tests{ $id }->{diff_line} = $diff_line;
-                $sum_diff++;
-            }
+    my @files = map { "$_" } grep { m{/\w+\.(error|stdout|stderr)$} }
+        io->dir("$matrixdir/tmp")->all;
+    say "Reading results...";
+    for my $file (sort @files) {
+        my @got = io->file($file)->chomp->slurp;
+
+        $file = basename $file;
+        my ($id, $suffix) = split m/\./, $file;
+
+        if ($suffix eq 'error') {
+            $tests{ $id }->{error} = 1;
+            next;
+        }
+        if (@got > 200) {
+            @got = (@got[0 .. 200], "----- 8< -----");
+        }
+        my $got_data = (join "\n", @got) . "\n";
+        if (@got) {
+            $tests{ $id }->{ $suffix } = $got_data;
         }
         else {
-            $tests{ $id }->{na} = 1;
-            $sum_na++;
+            $tests{ $id }->{ $suffix } = '';
         }
-    }
-    elsif ($framework =~ m/-(pl|p6)$/) {
-        $tests{ $id }->{na} = 1;
-        $sum_na++;
-    }
-    else {
-        my @events = @got;
-        my @orig_events = @test_events;
-        if ($framework =~ /^(pyyaml|ruamel)-event$/) {
-            @test_events = io
-                ->file("$matrixdir/expected/$id/minimal.$1.event")
-                ->chomp->slurp;
-            $tests{ $id }->{minimal_events} = \@test_events;
-        }
-        elsif ($framework eq "cpp-event") {
-            @test_events = io
-                ->file("$matrixdir/expected/$id/minimal.cpp.event")
-                ->chomp->slurp;
-            @events = cpp_event_to_event(@events);
-            $tests{ $id }->{minimal_events} = \@test_events;
-            $tests{ $id }->{transformed_events} = \@events;
-        }
-        elsif ($framework eq "java-event") {
-            @events = java_event_to_event(@events);
-            $tests{ $id }->{transformed_events} = \@events;
-        }
-        my $ok = 1;
-        my $diff_line;
-        for my $i (0 .. $#events) {
-            my $event = $events[ $i ];
-            my $exp = $test_events[ $i ];
-            if ($event ne $exp) {
-                $verbose and
-                    warn "$id line ${\($i + 1)}: <$event> ne <$exp>\n";
-                $ok = 0;
-                $diff_line = $i;
-                last;
-            }
-        }
-        if ($ok and @events != @test_events) {
-            $ok = 0;
-            $diff_line = min(scalar @events, scalar @test_events);
-        }
-        if ($ok) {
-            $tests{ $id }->{ok} = 1;
-            $sum_ok++;
-        }
-        else {
-            if ($verbose >= 2) {
-                warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@events], ['events']);
-                warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@test_events], ['test_events']);
-                warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@orig_events], ['orig_events']);
-            }
-            $tests{ $id }->{diff} = 1;
-            $tests{ $id }->{diff_line} = $diff_line;
-            $sum_diff++;
-            $tests{ $id }->{got_events} = \@got;
-        }
-    }
-    $tests{ $id }->{title} = $title;
-}
-print "Done                         \n";
-printf "ok: %d diff: %d n/a: %d error: %d\n",
-    $sum_ok, $sum_diff, $sum_na, $sum_err;
-rmtree $out;
 
-mkdir "$matrixdir/data";
-say "Saving tests into $matrixdir/data/$framework.yaml";
-DumpFile("$matrixdir/data/$framework.yaml", {
-    tests => \%tests,
-    date => time,
-    time => $end - $start,
-    info => \%info,
-});
+    }
+    print "Done\n";
+    rmtree $out;
+
+    mkdir "$matrixdir/data";
+    say "Saving tests into $matrixdir/data/$framework-out.yaml";
+    DumpFile("$matrixdir/data/$framework-out.yaml", {
+        tests => \%tests,
+        date => time,
+        time => $end - $start,
+        info => \%info,
+    });
 
 }
 
@@ -330,9 +211,7 @@ Options:
 --list, -l      List supported frameworks
 --path          /path/to/framework
                 If no --path is given, it will run the tests in docker.
---verbose, -v   Increase verbosity:
-                -v  Print the first differing lines of event output
-                -vv Dump events and expected events
+--verbose, -v   Increase verbosity
 --data-dir      /path/tp/yaml-test-suite/data
 --all, -a       Run all frameworks
 EOM
@@ -354,3 +233,26 @@ sub write_expected_output {
     }
     say "Done ";
 }
+
+sub gather_framework_info {
+    my $cmd = qq{docker run -i --rm --user $<}
+        . qq{ $docker_user/yaml-editor}
+        . q{ cat /yaml-emitters.csv /yaml-frameworks.csv};
+    my @lines = qx{$cmd};
+    if ($? == 0) {
+        chomp @lines;
+        my @emitters;
+        my @frameworks;
+        while (my $line = shift @lines) {
+            if ($line =~ m/^repo,/) {
+                push @frameworks, $line, @lines;
+                last;
+            }
+            push @emitters, $line;
+        }
+        my $emitters = load_csv("id", \@emitters);
+        my $framework_info  = load_csv("repo", \@frameworks);
+        return ($framework_info, $emitters);
+    }
+}
+

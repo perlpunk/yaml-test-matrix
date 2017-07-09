@@ -1,0 +1,271 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use 5.010;
+use Data::Dumper;
+use FindBin '$Bin';
+use lib "$Bin/../lib/perl5";
+use YAML::XS qw/ LoadFile DumpFile /;
+use Getopt::Long;
+Getopt::Long::Configure ("bundling");
+use File::Basename qw/ basename /;
+use IO::All;
+use List::Util qw/ min /;
+use YAML::Matrix qw/
+    minimal_events minimal_events_for_framework
+    cpp_event_to_event java_event_to_event
+    generate_expected_output
+    normalize_json load_csv
+/;
+
+my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
+
+GetOptions(
+    "help|h" => \my $help,
+    "list|l" => \my $list,
+    "all|a" => \my $all,
+    "verbose|v+" => \my $verbose,
+    "data-dir=s" => \my $datadir,
+    "matrix-dir=s" => \my $matrixdir,
+    "framework|f=s" => \my $framework,
+);
+$verbose ||= 0;
+$datadir //= "$Bin/../data";
+$matrixdir //= "$Bin/../matrix";
+
+my @frameworks = qw/
+    cpp-event
+    java-json
+    java-event
+    js-yaml-json
+    libyaml-event
+    luajit-json
+    nimyaml-event
+    perl5-pegex-event
+    perl5-pm-pl
+    perl5-pm-json
+    perl5-pp-event
+    perl5-pp-json
+    perl5-pp-pl
+    perl5-syck-pl
+    perl5-syck-json
+    perl5-tiny-pl
+    perl5-tiny-json
+    perl5-xs-pl
+    perl5-xs-json
+    pyyaml-event
+    ruamel-event
+    ruby-json
+/;
+#    perl6-json
+#    perl6-p6
+
+my %frameworks;
+@frameworks{ @frameworks } = (1) x @frameworks;
+
+write_expected_output();
+
+if ($help) {
+    usage();
+}
+elsif ($list) {
+    say for @frameworks;
+}
+elsif ($all) {
+    for my $fw (@frameworks) {
+        compare_tests(
+            framework => $fw,
+            data => $datadir,
+        );
+    }
+}
+elsif ($framework) {
+    compare_tests(
+        framework => $framework,
+        data => $datadir,
+    );
+}
+else {
+    usage();
+}
+
+sub compare_tests {
+    my %args = @_;
+    my $framework = $args{framework};
+    say "-" x 80;
+    say "Running $framework";
+    my $data = $args{data};
+
+    my ($sum_ok, $sum_diff, $sum_na, $sum_err) = (0) x 4;
+    if ($frameworks{ $framework }) {
+    }
+    else {
+        die "Framework $framework not supported";
+    }
+    say "Comparing results...";
+
+    my $test_info = LoadFile("$matrixdir/data/$framework-out.yaml");
+    my $tests = $test_info->{tests};
+    for my $id (sort keys %$tests) {
+        my $out = $tests->{ $id };
+        print "Comparing results for $id...\r";
+        my ($title) = io->file("$data/$id/===")->chomp->slurp;
+        $tests->{ $id }->{title} = $title;
+        my $error = $out->{error};
+        my $stdout = delete $out->{stdout} // '';
+        my $stderr = delete $out->{stderr} // '';
+
+        my @got = split m/\n/, $stdout;
+        my @test_events = io->file("$data/$id/test.event")->chomp->slurp;
+        my $got_data = $stdout . $stderr;
+        $tests->{ $id }->{got_data} = $got_data;
+        if ($error) {
+            $sum_err++;
+            my $msg = $got_data;
+            $tests->{ $id }->{msg} = $msg;
+            next;
+        }
+
+        if ($framework =~ m/-json$/) {
+            my $got_json = $got_data;
+            $tests->{ $id }->{got_json} = $got_json;
+            if (not -f "$data/$id/in.json") {
+                $tests->{ $id }->{na} = 1;
+                $sum_na++;
+                next;
+            }
+            my $exp_json = io->file("$matrixdir/expected/$id/in.json")->slurp;
+            $got_json = normalize_json($got_json);
+            $tests->{ $id }->{got_json} = $got_json;
+            my $got_json_lines = [split m/\n/, $got_json ];
+            my $exp_json_lines = [split m/\n/, $exp_json ];
+            my $ok = 1;
+            my $diff_line;
+            for my $i (0 .. $#$got_json_lines) {
+                if ($got_json_lines->[ $i ] ne $exp_json_lines->[ $i ]) {
+                    $ok = 0;
+                    $diff_line = $i;
+                    last;
+                }
+            }
+            if ($ok and @$got_json_lines != @$exp_json_lines) {
+                $ok = 0;
+                $diff_line = min(scalar @$got_json_lines, scalar @$exp_json_lines);
+            }
+            if ($ok) {
+                $tests->{ $id }->{json_ok} = 1;
+                $sum_ok++;
+            }
+            else {
+                $tests->{ $id }->{json_diff} = 1;
+                $tests->{ $id }->{diff_line} = $diff_line;
+                $sum_diff++;
+            }
+        }
+        elsif ($framework =~ m/-(pl|p6)$/) {
+            $tests->{ $id }->{na} = 1;
+            $sum_na++;
+        }
+        else {
+            my @events = @got;
+            my @orig_events = @test_events;
+            if ($framework =~ /^(pyyaml|ruamel)-event$/) {
+                @test_events = io
+                    ->file("$matrixdir/expected/$id/minimal.$1.event")
+                    ->chomp->slurp;
+                $tests->{ $id }->{minimal_events} = \@test_events;
+            }
+            elsif ($framework eq "cpp-event") {
+                @test_events = io
+                    ->file("$matrixdir/expected/$id/minimal.cpp.event")
+                    ->chomp->slurp;
+                @events = cpp_event_to_event(@events);
+                $tests->{ $id }->{minimal_events} = \@test_events;
+                $tests->{ $id }->{transformed_events} = \@events;
+            }
+            elsif ($framework eq "java-event") {
+                @events = java_event_to_event(@events);
+                $tests->{ $id }->{transformed_events} = \@events;
+            }
+            my $ok = 1;
+            my $diff_line;
+            for my $i (0 .. $#events) {
+                my $event = $events[ $i ];
+                my $exp = $test_events[ $i ];
+                if ($event ne $exp) {
+                    $verbose and
+                        warn "$id line ${\($i + 1)}: <$event> ne <$exp>\n";
+                    $ok = 0;
+                    $diff_line = $i;
+                    last;
+                }
+            }
+            if ($ok and @events != @test_events) {
+                $ok = 0;
+                $diff_line = min(scalar @events, scalar @test_events);
+            }
+            if ($ok) {
+                $tests->{ $id }->{ok} = 1;
+                $sum_ok++;
+            }
+            else {
+                if ($verbose >= 2) {
+                    warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@events], ['events']);
+                    warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@test_events], ['test_events']);
+                    warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\@orig_events], ['orig_events']);
+                }
+                $tests->{ $id }->{diff} = 1;
+                $tests->{ $id }->{diff_line} = $diff_line;
+                $sum_diff++;
+                $tests->{ $id }->{got_events} = \@got;
+            }
+        }
+    }
+    print "Done                         \n";
+    printf "ok: %d diff: %d n/a: %d error: %d\n",
+        $sum_ok, $sum_diff, $sum_na, $sum_err;
+
+    say "Saving tests into $matrixdir/data/$framework.yaml";
+    DumpFile("$matrixdir/data/$framework.yaml", $test_info);
+
+}
+
+sub usage {
+    say <<"EOM";
+
+Usage:
+
+Run in docker:
+    $0 --framework <framework>
+
+Specify a script:
+    $0 --framework <framework> --path /path/to/framework
+
+Options:
+--framework, -f framework (see -l)
+--list, -l      List supported frameworks
+--verbose, -v   Increase verbosity:
+                -v  Print the first differing lines of event output
+                -vv Dump events and expected events
+--data-dir      /path/to/yaml-test-suite/data
+--all, -a       Run all frameworks
+EOM
+    exit 1;
+}
+
+sub write_expected_output {
+    say "Generating minimal events and normalized JSON...";
+    mkdir "$matrixdir/expected";
+    my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($datadir)->all;
+    for my $dir (@dirs) {
+        my %expected = generate_expected_output($dir);
+        my $id = basename $dir;
+        my $out = "$matrixdir/expected/$id";
+        mkdir $out;
+        for my $file (sort keys %expected) {
+            io("$out/$file")->print($expected{ $file });
+        }
+    }
+    say "Done ";
+}
+

@@ -28,7 +28,7 @@ gather_data();
 create_html();
 
 sub gather_data {
-    my @files = map { "$_" } grep { m/\.yaml$/ } io->dir("matrix/data")->all_files;
+    my @files = map { "$_" } grep { not m/-out/ } grep { m/\.yaml$/ } io->dir("matrix/data")->all_files;
 
     for my $file (sort @files) {
         unless ($file =~ m{/([A-Z0-9-]+)\.yaml}i) {
