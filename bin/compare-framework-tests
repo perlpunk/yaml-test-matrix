@@ -108,6 +108,10 @@ sub compare_tests {
     my $tests = $test_info->{tests};
     for my $id (sort keys %$tests) {
         my $out = $tests->{ $id };
+        if (-f "$data/$id/error") {
+            delete $tests->{ $id };
+            next;
+        }
         print "Comparing results for $id...\r";
         my ($title) = io->file("$data/$id/===")->chomp->slurp;
         $tests->{ $id }->{title} = $title;
