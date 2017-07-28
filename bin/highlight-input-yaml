@@ -15,6 +15,13 @@ my @dirs = grep { m{/[0-9A-Z]{4}$} } map { "$_" } io->dir('data')->all;
 my @valid = grep { not -f "$_/error" } @dirs;
 my @invalid = grep { -f "$_/error" } @dirs;
 
+my %tags;
+for my $tagdir (io->dir('data/tags')->all) {
+    for my $id (io->dir($tagdir)->all) {
+        my $tag = basename $tagdir;
+        push @{ $tags{ basename $id } }, basename $tag;
+    }
+}
 
 my $html = <<"EOM";
 <html>
@@ -24,6 +31,17 @@ my $html = <<"EOM";
 <style>
 body {
     font-family: Arial;
+}
+table.highlight {
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 4px 1px grey;
+}
+table.highlight tr th, table.highlight tr td {
+    border: 1px solid #bbb;
+    background-color: white;
+    padding: 2px 3px 2px 3px;
+
 }
 td.error {
     background-color: #ff7777;
@@ -53,18 +71,18 @@ span.folded { font-weight: bold; color: magenta; }
 span.doc_start { font-weight: bold; }
 span.doc_end { font-weight: bold; }
 span.block_scalar_content { color: #aa7700; }
+span.tab { background-color: lightblue; }
 span.error { background-color: #ff8888; }
 
 pre {
     background-color: white;
-    border: 2px solid #ccc;
     padding: 2px;
 }
 pre.error {
-    border: 2px solid red;
+    border: 1px solid red;
 }
 pre.diff {
-    border: 2px solid #ff9900;
+    border: 1px solid #ff9900;
 }
 </style>
 </head>
@@ -137,10 +155,16 @@ sub highlight_test {
     $title = decode_utf8($title);
     $title = encode_entities($title);
     my $high = YAML::PP::Highlight->htmlcolored($tokens);
-    $html .= qq{<tr><td style="width: 30em;" valign="top" >$id - $title</td>\n};
+    my $taglist = join ', ', @{ $tags{ $id } || [] };
+    $html .= <<"EOM";
+<tr><td style="width: 30em;" valign="top" ><b>$id - $title</b><br>
+Tags: $taglist<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/$id.tml">View source</a><br>
+</td>
+<td valign="top"><pre class="$class">$high</pre>
+</td></tr>
+EOM
 #    $html .= qq{<tr><td valign="top"><pre>$yaml</pre></td>\n};
-    $html .= qq{<td valign="top"><pre class="$class">$high</pre>};
-    $html .= qq{</td></tr>\n};
     return $html;
 
 }
