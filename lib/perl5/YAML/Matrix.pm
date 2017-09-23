@@ -32,6 +32,9 @@ sub minimal_events {
     my $anchor_count = 0;
 
     for my $event (@events) {
+        if ($event =~ m/^\+DOC/) {
+            $anchor_count = 0;
+        }
         if ($args->{no_explicit_doc} and $event =~ m/^\+DOC ---/) {
             $event = '+DOC';
         }
