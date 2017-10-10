@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>YAML Test Matrix Overview</title>
 <meta charset='utf-8'>
-<title>YAML Framework Matrix</title>
 <link rel="stylesheet" type="text/css" href="css/yaml.css">
 <link rel="stylesheet" type="text/css" href="css/matrix.css">
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/matrix.js"></script>
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -27,77 +25,78 @@ test them interactively in vim</span>
 </span>
 </div>
 
-<h1>YAML Framework Matrix</h1>
+<h2>YAML Test Matrix</h2>
 
-[%loop .selectors %]
-<div class="selector">
-<input type="checkbox" name="type-[%= type %]" value="1" id="type-[%= type %]"
-checked="checked" onchange="toggle_type('[%= type %]')">
-<label for="type-[%= type %]" ><b>[%= type %]</b></label><br>
-[%loop frameworks %]
-<input type="checkbox" name="" value="1" id="fw-select-[%= fullname %]"
-class="selector-[%= type %] selector-[%= lang %]" data-fw="[%= fullname %]"
-checked="checked" onchange="toggle_framework('[%= fullname %]')">
-<label for="fw-select-[%= fullname %]" >[%= lang %] [%= name %]</label><br>
-[%/loop %]
-</div>
-[%/loop %]
-<p style="clear: both;"></p>
+<div class="content">
+<p>
+This Matrix combines all tests from <a
+href="https://github.com/yaml/yaml-test-suite">yaml-test-suite</a> and all
+frameworks from <a
+href="https://github.com/ingydotnet/yaml-editor">yaml-editor</a>.
+</p>
+<p>
+The YAML Test Suite currently targets YAML Version 1.2.
 
-<table class="matrix">
-<thead>
-<tr class="headline"><th class="testid"></td><th class="testname"><a
-href="frameworks.html">Frameworks</a><br>Tests</th>
-[%loop .framework_names %]
-<td class="result [%= fullname %]">[%= lang %]<br>[%= name %]<br>[%= type %]</td>
-[%/loop %]
-</tr>
+Note that this list is not meant as a "Best Of" list, as some frameworks
+implement 1.1 or 1.0 only, and the test suite contains a lot of edge cases
+that don't play such an important role in real world examples.
 
-<tr class="overview">
-<td>ID</td>
-<td>
-<span class="ok">&nbsp;</span>ok <span class="json_ok">&nbsp;</span>json_ok<br>
-<span class="diff">&nbsp;</span>diff <span class="json_diff">&nbsp;</span>json_diff<br>
-<span class="na">&nbsp;</span>n/a<br>
-<span class="error">&nbsp;</span>error<br>
-</td>
-[%loop .framework_headers %]
-<td class="result [%= fullname %]">
-[%if ok %]<span class="ok">&nbsp;</span>[%= ok %][%/if %]
-[%if json_ok %]<span class="json_ok">&nbsp;</span>[%= json_ok %][%/if %]
-<br>
-[%if diff %]<span class="diff">&nbsp;</span>[%= diff %][%/if %]
-[%if json_diff %]<span class="json_diff">&nbsp;</span>[%= json_diff %][%/if %]
-<br>
-[%if na %]<span class="na">&nbsp;</span>[%= na %][%/if %]
-<br>
-[%if error %]<span class="error">&nbsp;</span>[%= error %][%/if %]
-<br>
-</td>
-[%/loop %]
-</tr>
-</thead>
+It is suited to identify which problems each framework has and what to avoid.
+</p>
+<p>
+Valid test results for each framework: <a href="valid.html">Valid tests</a><br>
+Invalid test results for each framework: (no page available yet)<br>
+</p>
 
-<tbody>
-</tr>
-[%loop .tests %]
+<div id="framework-info">
+<table class="framework-list">
 <tr>
-<td class="testid"><tt><a href="#[%= id %]">[%= id %]</tt></a></td>
-<td id="[%= id %]" class="testname"><a href="details/[%= id %].html">[%= title %]</a></td>
-[%loop frameworks %]
-<td class="result [%= id %]
-[%if ok %]ok[%elsif error %]error[%elsif json_ok %]json_ok[%elsif diff
-%]diff[%elsif json_diff %]json_diff[%elsif na %]na[%/if %]
-">
-<a href="details/[%= test %].html#[%= id %]">[%if ok %]ok[%elsif error %]error[%elsif json_ok %]ok[%elsif diff
-%]diff[%elsif json_diff %]diff[%elsif na %]n/a[%/if %]</a>
-
-</td>
-[%/loop frameworks %]
+<th></th>
+<th colspan="6"><a href="valid.html">Valid ([%= .sum_valid %])</a></th>
+<th colspan="3">Invalid ([%= .sum_invalid %])</th>
 </tr>
-[%/loop .tests %]
-</tbody>
+<tr>
+<th colspan="2"><a href="frameworks.html">Frameworks</a></th>
+<th></th>
+<th>ok</th>
+<th>n/a</th>
+<th>diff</th>
+<th>error</th>
+<th></th>
+<th>correct</th>
+<th>incorrect</th>
+</tr>
+[%loop .overview %]
+<tr>
+<th>[%= framework %]</th>
+<td>[%= framework_info.language_name %] [%= framework_info.name %]</td>
+<td class="percentage" style="min-width: 260px;">
+[%loop percentage_valid %]<span
+    class="overview_status color_[%= status %] bar_[%= border %]"
+    style="min-width: [%= width %]px; max-width: [%= width %]px;"
+    title="[%= percent %]%"
+>&nbsp;</span>[%/loop percentage_valid %]
+</td>
+<td>[%= ok %][%= json_ok %]</td>
+<td>[%= na %]</td>
+<td>[%= diff %][%= json_diff %]</td>
+<td>[%= error %]</td>
+<td class="percentage" style="min-width: 260px;">
+[%loop percentage_invalid %]<span
+    class="overview_status color_[%= status %] bar_[%= border %]"
+    style="min-width: [%= width %]px; max-width: [%= width %]px;"
+    title="[%= percent %]%"
+></span>[%/loop percentage_valid %]
+</td>
+<td>[%= invalid_correct %]</td>
+<td>[%= invalid_incorrect %]</td>
+</tr>
+[%/loop .overview %]
+
 </table>
+</div>
+
+</div>
 
 </body>
 </html>

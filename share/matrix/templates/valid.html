@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset='utf-8'>
+<title>YAML Test Matrix</title>
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+<link rel="stylesheet" type="text/css" href="css/matrix.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/matrix.js"></script>
+<link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
+</head>
+<body>
+
+<h2><a href="../index.html">YAML Test Matrix</a></h2>
+
+[%loop .selectors %]
+<div class="selector">
+<input type="checkbox" name="type-[%= type %]" value="1" id="type-[%= type %]"
+checked="checked" onchange="toggle_type('[%= type %]')">
+<label for="type-[%= type %]" ><b>[%= type %]</b></label><br>
+[%loop frameworks %]
+<input type="checkbox" name="" value="1" id="fw-select-[%= fullname %]"
+class="selector-[%= type %] selector-[%= lang %]" data-fw="[%= fullname %]"
+checked="checked" onchange="toggle_framework('[%= fullname %]')">
+<label for="fw-select-[%= fullname %]" >[%= lang %] [%= name %]</label><br>
+[%/loop %]
+</div>
+[%/loop %]
+<p style="clear: both;"></p>
+
+<table class="matrix">
+<thead>
+<tr class="headline"><th class="testid"></td><th class="testname"><a
+href="frameworks.html">Frameworks</a><br>Tests</th>
+[%loop .framework_names %]
+<td class="result [%= fullname %]">[%= lang %]<br>[%= name %]<br>[%= type %]</td>
+[%/loop %]
+</tr>
+
+<tr class="overview">
+<td>ID</td>
+<td>
+<span class="status_box color_ok">&nbsp;</span>ok <span class="status_box color_json_ok">&nbsp;</span>json_ok<br>
+<span class="status_box color_diff">&nbsp;</span>diff <span class="status_box color_json_diff">&nbsp;</span>json_diff<br>
+<span class="status_box color_na">&nbsp;</span>n/a<br>
+<span class="status_box color_error">&nbsp;</span>error<br>
+</td>
+[%loop .framework_headers %]
+<td class="result [%= fullname %]">
+[%if ok %]<span class="status_box color_ok">&nbsp;</span>[%= ok %][%/if %]
+[%if json_ok %]<span class="status_box color_json_ok">&nbsp;</span>[%= json_ok %][%/if %]
+<br>
+[%if diff %]<span class="status_box color_diff">&nbsp;</span>[%= diff %][%/if %]
+[%if json_diff %]<span class="status_box color_json_diff">&nbsp;</span>[%= json_diff %][%/if %]
+<br>
+[%if na %]<span class="status_box color_na">&nbsp;</span>[%= na %][%/if %]
+<br>
+[%if error %]<span class="status_box color_error">&nbsp;</span>[%= error %][%/if %]
+<br>
+</td>
+[%/loop %]
+</tr>
+</thead>
+
+<tbody>
+</tr>
+[%loop .tests %]
+<tr>
+<td class="testid"><tt><a href="#[%= id %]">[%= id %]</tt></a></td>
+<td id="[%= id %]" class="testname"><a href="details/[%= id %].html">[%= title %]</a></td>
+[%loop frameworks %]
+<td class="result [%= id %]
+[%if ok %]color_ok[%elsif error %]color_error[%elsif json_ok %]color_json_ok[%elsif diff
+%]color_diff[%elsif json_diff %]color_json_diff[%elsif na %]color_na[%/if %]
+"><a class="invisible" href="details/[%= test %].html#[%= id %]">&nbsp;</a>
+</td>
+[%/loop frameworks %]
+</tr>
+[%/loop .tests %]
+</tbody>
+</table>
+
+</body>
+</html>
+

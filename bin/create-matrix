@@ -14,6 +14,7 @@ my %tests;
 my %frameworks;
 my @frameworks;
 my %framework_info;
+my %overview;
 my %htc_args = (
     tagstyle => [qw/ -classic -comment -jsp +tt /],
     default_escape => 'HTML',
@@ -22,10 +23,14 @@ my %htc_args = (
     use_expressions => 1,
 );
 
+my @status = (qw/ ok json_ok diff json_diff na error correct/);
+
 my $datadir = "$Bin/../data";
 gather_data();
 
 create_html();
+
+create_overview();
 
 sub gather_data {
     my @files = map { "$_" } grep { not m/-out/ } grep { m/\.yaml$/ } io->dir("matrix/data")->all_files;
@@ -43,30 +48,26 @@ sub gather_data {
         $info->{runtime} = $data->{time};
         $framework_info{ $fw } = info2html($info);
 
-        for my $test (keys %$testdata) {
+        for my $test (sort keys %$testdata) {
             my $results = $testdata->{ $test };
+            if ($results->{invalid}) {
+                for (qw/ invalid_correct invalid_incorrect /) {
+                    if ($results->{ $_ }) {
+                        $overview{ $fw }->{ $_ }++;
+                    }
+                }
+                next;
+            }
             my $title = $results->{title};
             $tests{ $test }->{id} = $test;
             $tests{ $test }->{title} = $title;
             $tests{ $test }->{frameworks}->{ $fw } = $results;
             $tests{ $test }->{frameworks}->{ $fw }->{id} = $fw;
-            if ($results->{ok}) {
-                $frameworks{ $fw }->{ok}++;
-            }
-            elsif ($results->{json_ok}) {
-                $frameworks{ $fw }->{json_ok}++;
-            }
-            elsif ($results->{diff}) {
-                $frameworks{ $fw }->{diff}++;
-            }
-            elsif ($results->{json_diff}) {
-                $frameworks{ $fw }->{json_diff}++;
-            }
-            elsif ($results->{na}) {
-                $frameworks{ $fw }->{na}++;
-            }
-            elsif ($results->{error}) {
-                $frameworks{ $fw }->{error}++;
+            for my $status (@status) {
+                if ($results->{ $status }) {
+                    $frameworks{ $fw }->{ $status }++;
+                    $overview{ $fw }->{ $status }++;
+                }
             }
             $frameworks{ $fw }->{count}++;
 
@@ -182,7 +183,7 @@ sub create_html {
 
     {
         my $htc = HTML::Template::Compiled->new(
-            filename => "index.html",
+            filename => "valid.html",
             path => "$Bin/../share/matrix/templates",
             %htc_args,
         );
@@ -193,10 +194,10 @@ sub create_html {
             selectors => \@selectors,
         );
 
-        open my $fh, ">", "matrix/html/index.html" or die $!;
+        open my $fh, ">", "matrix/html/valid.html" or die $!;
         print $fh $htc->output;
         close $fh;
-        say "Created matrix/html/index.html";
+        say "Created matrix/html/valid.html";
     }
     {
         my $htc = HTML::Template::Compiled->new(
@@ -218,6 +219,101 @@ sub create_html {
     copy ("share/matrix/css/matrix.css", "matrix/html/css");
     copy ("share/matrix/js/jquery-3.1.1.min.js", "matrix/html/js");
     copy ("share/matrix/js/matrix.js", "matrix/html/js");
+}
+
+sub create_overview {
+
+    my @overview;
+    my ($sum_valid, $sum_invalid) = (0, 0);
+    for my $fw (sort {
+        my @parts_a = split m/-/, $a;
+        my @parts_b = split m/-/, $b;
+        $parts_a[-1] cmp $parts_b[-1] ||
+        $a cmp $b
+    } keys %overview) {
+        my $data = $overview{ $fw };
+        my %row;
+        $row{framework} = $fw;
+        $row{framework_info} = $framework_info{ $fw };
+        my $total_valid = 0;
+        my $total_invalid = 0;
+        for my $status (qw/
+            ok json_ok diff json_diff na error
+            invalid_correct invalid_incorrect /) {
+            my $count = $data->{ $status };
+            $row{ $status } = $count;
+            $count ||= 0;
+            $total_valid += $count unless $status =~ m/invalid/;
+            $total_invalid += $count if $status =~ m/invalid/;
+        }
+        my @percentage_valid;
+        my @percentage_invalid;
+        my @status_percentage_valid;
+        my @status_percentage_invalid;
+        if ($fw =~ m/-event$/) {
+            @status_percentage_valid = qw/ ok diff error /;
+            @status_percentage_invalid = qw/ invalid_correct invalid_incorrect /;
+        }
+        elsif ($fw =~ m/-json$/) {
+            @status_percentage_valid = qw/ json_ok na json_diff error /;
+            @status_percentage_invalid = qw/ invalid_correct invalid_incorrect /;
+        }
+        else {
+            @status_percentage_valid = qw/ na error /;
+            @status_percentage_invalid = qw/ invalid_correct invalid_incorrect /;
+        }
+        for my $i (0 .. $#status_percentage_valid) {
+            my $status = $status_percentage_valid[ $i ];
+            my $percent = sprintf "%.2f",
+                ($data->{ $status } || 0) / $total_valid * 100;
+            my $border = ( $i == 0 )
+                    ? 'left'
+                    : ($i == $#status_percentage_valid)
+                        ? 'right'
+                        : 'middle';
+            push @percentage_valid, {
+                status => $status,
+                percent => $percent,
+                border => $border,
+                width => $percent * 2.5,
+            };
+        }
+        for my $i (0 .. $#status_percentage_invalid) {
+            my $status = $status_percentage_invalid[ $i ];
+            my $percent = sprintf "%.2f",
+                ($data->{ $status } || 0) / $total_invalid * 100;
+            my $border = ( $i == 0 )
+                    ? 'left'
+                    : ($i == $#status_percentage_invalid)
+                        ? 'right'
+                        : 'middle';
+            push @percentage_invalid, {
+                status => $status,
+                percent => $percent,
+                border => $border,
+                width => $percent * 2.5,
+            };
+        }
+        $row{percentage_valid} = \@percentage_valid;
+        $row{percentage_invalid} = \@percentage_invalid;
+        $sum_valid = $total_valid;
+        $sum_invalid = $total_invalid;
+        push @overview, \%row;
+    }
+    my $htc = HTML::Template::Compiled->new(
+        filename => "index.html",
+        path => "$Bin/../share/matrix/templates",
+        %htc_args,
+    );
+    $htc->param(
+        overview => \@overview,
+        sum_valid => $sum_valid,
+        sum_invalid => $sum_invalid,
+    );
+    open my $fh, ">", "matrix/html/index.html" or die $!;
+    print $fh $htc->output;
+    close $fh;
+    say "Created matrix/html/index.html";
 }
 
 sub create_details {

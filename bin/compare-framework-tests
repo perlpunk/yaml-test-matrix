@@ -109,7 +109,16 @@ sub compare_tests {
     for my $id (sort keys %$tests) {
         my $out = $tests->{ $id };
         if (-f "$data/$id/error") {
-            delete $tests->{ $id };
+            $out->{invalid} = 1;
+            my $error = $out->{error};
+            $out->{invalid_correct} = 0;
+            $out->{invalid_incorrect} = 0;
+            if ($error) {
+                $out->{invalid_correct} = 1;
+            }
+            else {
+                $out->{invalid_incorrect} = 1;
+            }
             next;
         }
         print "Comparing results for $id...\r";
