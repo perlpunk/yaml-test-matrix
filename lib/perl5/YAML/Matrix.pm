@@ -16,12 +16,10 @@ our @EXPORT_OK = qw/
 sub minimal_events_for_framework {
     my ($type, @events) = @_;
     my %args;
-    if ($type =~ m/^(pyyaml|ruamel|cpp)$/) {
-        $args{no_explicit_doc} = 1;
-        $args{no_quoting_style} = 1;
-    }
     if ($type eq 'cpp') {
         $args{anchors_to_numbers} = 1;
+        $args{no_explicit_doc} = 1;
+        $args{no_quoting_style} = 1;
     }
     minimal_events(\%args, @events);
 }
@@ -99,7 +97,7 @@ sub generate_expected_output {
     my %expected;
 
     my @test_events = io->file("$dir/test.event")->chomp->slurp;
-    for my $fw (qw/ pyyaml ruamel cpp /) {
+    for my $fw (qw/ cpp /) {
         my @minimal = minimal_events_for_framework($fw, @test_events);
         $expected{"minimal.$fw.event"} = join '', map { "$_\n" } @minimal;
     }

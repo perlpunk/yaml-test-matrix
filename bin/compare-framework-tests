@@ -182,13 +182,7 @@ sub compare_tests {
         else {
             my @events = @got;
             my @orig_events = @test_events;
-            if ($framework =~ /^(pyyaml|ruamel)-event$/) {
-                @test_events = io
-                    ->file("$matrixdir/expected/$id/minimal.$1.event")
-                    ->chomp->slurp;
-                $tests->{ $id }->{minimal_events} = \@test_events;
-            }
-            elsif ($framework eq "cpp-event") {
+            if ($framework eq "cpp-event") {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.cpp.event")
                     ->chomp->slurp;
