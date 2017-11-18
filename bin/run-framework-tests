@@ -53,7 +53,11 @@ my @frameworks = qw/
     perl5-xs-pl
     perl5-xs-json
     pyyaml-event
+    pyyaml-json
+    pyyaml-py
     ruamel-event
+    ruamel-json
+    ruamel-py
     ruby-json
 /;
 #    perl6-json

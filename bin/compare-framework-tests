@@ -54,7 +54,11 @@ my @frameworks = qw/
     perl5-xs-pl
     perl5-xs-json
     pyyaml-event
+    pyyaml-json
+    pyyaml-py
     ruamel-event
+    ruamel-json
+    ruamel-py
     ruby-json
 /;
 #    perl6-json
@@ -175,7 +179,7 @@ sub compare_tests {
                 $sum_diff++;
             }
         }
-        elsif ($framework =~ m/-(pl|p6)$/) {
+        elsif ($framework =~ m/-(pl|p6|py)$/) {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
         }
