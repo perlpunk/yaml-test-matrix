@@ -22,17 +22,17 @@
 <div class="framework" id="[%= __key__ %]">
 <h3><a href="#[%= __key__ %]">[%= __key__ %]</a></h3>
 [%set_var result value=__value__ %]
-[%if $result.ok %]<span class="ok">&nbsp;</span>ok
-[%elsif $result.json_ok %]<span class="json_ok">&nbsp;</span>json_ok
-[%elsif $result.json_diff %]<span class="json_diff">&nbsp;</span>json_diff
+[%if $result.ok %]<span class="status_box color_ok">&nbsp;</span>ok
+[%elsif $result.json_ok %]<span class="status_box color_json_ok">&nbsp;</span>json_ok
+[%elsif $result.json_diff %]<span class="status_box color_json_diff">&nbsp;</span>json_diff
 <pre>[%loop $result.got_json_lines %]<span
 class="[%if expr="__index__ == $result.diff_line" %]diff_line[%/if %]">[%= _ %]</span>
 [%/loop %]</pre>
-[%elsif $result.error %]<span class="error">&nbsp;</span>error <pre>[%= $result.msg %]</pre>
-[%elsif $result.na %]<span class="na">&nbsp;</span>n/a
+[%elsif $result.error %]<span class="status_box color_error">&nbsp;</span>error <pre>[%= $result.msg %]</pre>
+[%elsif $result.na %]<span class="status_box color_na">&nbsp;</span>n/a
 <pre>[%= $result.got_data %]</pre>
 
-[%elsif $result.diff %]<span class="diff">&nbsp;</span>diff<br>
+[%elsif $result.diff %]<span class="status_box color_diff">&nbsp;</span>diff<br>
 
 [%if $result.minimal_events %]
 Minimal Events:
