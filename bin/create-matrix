@@ -47,6 +47,10 @@ sub gather_data {
         $info->{run} = $data->{date};
         $info->{runtime} = $data->{time};
         $framework_info{ $fw } = info2html($info);
+        # issue with yaml-editor build process
+        if ($framework_info{ $fw }->{version}) {
+            $framework_info{ $fw }->{version} =~ s/-dirty$//;
+        }
 
         for my $test (sort keys %$testdata) {
             my $results = $testdata->{ $test };
