@@ -227,6 +227,11 @@ sub create_html {
 
 sub create_overview {
 
+    my $git_cmd = 'cd data; git log -1 --pretty="format:%h %ad %s" --date=short';
+    chomp(my $data_commit = qx{$git_cmd});
+    my ($sha, $date, $msg) = split ' ', $data_commit, 3;
+
+
     my @overview;
     my ($sum_valid, $sum_invalid) = (0, 0);
     for my $fw (sort {
@@ -313,6 +318,11 @@ sub create_overview {
         overview => \@overview,
         sum_valid => $sum_valid,
         sum_invalid => $sum_invalid,
+        data_commit => {
+            sha => $sha,
+            date => $date,
+            msg => $msg,
+        },
     );
     open my $fh, ">", "matrix/html/index.html" or die $!;
     print $fh $htc->output;
