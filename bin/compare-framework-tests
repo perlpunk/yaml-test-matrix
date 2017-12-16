@@ -144,7 +144,7 @@ sub compare_tests {
         }
 
         if ($framework =~ m/-json$/) {
-            my $got_json = $got_data;
+            my $got_json = $stdout;
             $tests->{ $id }->{got_json} = $got_json;
             if (not -f "$data/$id/in.json") {
                 $tests->{ $id }->{na} = 1;
