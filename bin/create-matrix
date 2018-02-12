@@ -9,6 +9,7 @@ use IO::All;
 use File::Copy qw/ copy /;
 use HTML::Template::Compiled;
 use POSIX qw/ strftime /;
+use Encode;
 
 my %tests;
 my %frameworks;
@@ -332,8 +333,8 @@ sub create_overview {
 
 sub create_details {
     my ($id) = @_;
-    my $yaml = io->file("$datadir/$id/in.yaml")->slurp;
-    my $events = io->file("$datadir/$id/test.event")->slurp;
+    my $yaml = io->file("$datadir/$id/in.yaml")->encoding('utf-8')->slurp;
+    my $events = io->file("$datadir/$id/test.event")->encoding('utf-8')->slurp;
 
     my $json;
     my $json_lines;
@@ -356,7 +357,7 @@ sub create_details {
         events => $events,
     );
     open my $fh, ">", "matrix/html/details/$id.html" or die $!;
-    print $fh $htc->output;
+    print $fh encode_utf8 $htc->output;
     close $fh;
 }
 

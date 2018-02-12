@@ -6,6 +6,7 @@ use Data::Dumper;
 use FindBin '$Bin';
 use lib "$Bin/../lib/perl5";
 use YAML::XS qw/ LoadFile DumpFile /;
+use Encode;
 use Getopt::Long;
 Getopt::Long::Configure ("bundling");
 use File::Basename qw/ basename /;
@@ -133,7 +134,7 @@ sub compare_tests {
         my $stderr = delete $out->{stderr} // '';
 
         my @got = split m/\n/, $stdout;
-        my @test_events = io->file("$data/$id/test.event")->chomp->slurp;
+        my @test_events = io->file("$data/$id/test.event")->encoding('utf-8')->chomp->slurp;
         my $got_data = $stdout . $stderr;
         $tests->{ $id }->{got_data} = $got_data;
         if ($error) {
@@ -144,6 +145,7 @@ sub compare_tests {
         }
 
         if ($framework =~ m/-json$/) {
+#            my $got_json = encode_utf8 $stdout;
             my $got_json = $stdout;
             $tests->{ $id }->{got_json} = $got_json;
             if (not -f "$data/$id/in.json") {
@@ -151,7 +153,7 @@ sub compare_tests {
                 $sum_na++;
                 next;
             }
-            my $exp_json = io->file("$matrixdir/expected/$id/in.json")->slurp;
+            my $exp_json = decode_utf8 io->file("$matrixdir/expected/$id/in.json")->slurp;
             $got_json = normalize_json($got_json);
             $tests->{ $id }->{got_json} = $got_json;
             my $got_json_lines = [split m/\n/, $got_json ];
@@ -189,7 +191,7 @@ sub compare_tests {
             if ($framework eq "cpp-event") {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.cpp.event")
-                    ->chomp->slurp;
+                    ->encoding('utf-8')->chomp->slurp;
                 @events = cpp_event_to_event(@events);
                 $tests->{ $id }->{minimal_events} = \@test_events;
                 $tests->{ $id }->{transformed_events} = \@events;

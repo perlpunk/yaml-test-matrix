@@ -6,6 +6,7 @@ use Data::Dumper;
 use FindBin '$Bin';
 use lib "$Bin/../lib/perl5";
 use YAML::XS qw/ DumpFile /;
+use Encode;
 use Getopt::Long;
 Getopt::Long::Configure ("bundling");
 use File::Basename qw/ basename /;
@@ -164,7 +165,10 @@ sub run_tests {
         io->dir("$matrixdir/tmp")->all;
     say "Reading results...";
     for my $file (sort @files) {
-        my @got = io->file($file)->chomp->slurp;
+        open my $fh, "<", $file or die $!;
+        my $got = do { local $/; <$fh> };
+        my $dec = decode_utf8($got);
+        my @got = split m/\n/, $dec;
 
         $file = basename $file;
         my ($id, $suffix) = split m/\./, $file;

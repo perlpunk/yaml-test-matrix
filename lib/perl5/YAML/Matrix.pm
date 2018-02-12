@@ -4,6 +4,7 @@ use warnings;
 use 5.010;
 use File::Basename qw/ basename /;
 use IO::All;
+use Encode;
 
 use base 'Exporter';
 our @EXPORT_OK = qw/
@@ -103,7 +104,7 @@ sub generate_expected_output {
     }
 
     if (-f "$dir/in.json") {
-        my $exp_json = io->file("$dir/in.json")->slurp;
+        my $exp_json = decode_utf8 io->file("$dir/in.json")->slurp;
         $exp_json = normalize_json($exp_json);
         $expected{"in.json"} = $exp_json;
     }
