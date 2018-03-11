@@ -338,8 +338,8 @@ sub create_details {
 
     my $json;
     my $json_lines;
-    if (-f "matrix/expected/$id/in.json") {
-        $json = io->file("matrix/expected/$id/in.json")->slurp;
+    if (-f "$datadir/$id/in.json") {
+        $json = io->file("$datadir/$id/in.json")->slurp;
         $json_lines = [ split m/\n/, $json ];
     }
 

@@ -145,7 +145,6 @@ sub compare_tests {
         }
 
         if ($framework =~ m/-json$/) {
-#            my $got_json = encode_utf8 $stdout;
             my $got_json = $stdout;
             $tests->{ $id }->{got_json} = $got_json;
             if (not -f "$data/$id/in.json") {
@@ -153,8 +152,15 @@ sub compare_tests {
                 $sum_na++;
                 next;
             }
-            my $exp_json = decode_utf8 io->file("$matrixdir/expected/$id/in.json")->slurp;
-            $got_json = normalize_json($got_json);
+            my $tmpfile = "/tmp/yaml-test-matrix-tmp-$id.json";
+            open my $fh, ">", $tmpfile or die $!;
+            print $fh encode_utf8 $got_json;
+            close $fh;
+            my $got_json2 = qx{jq --sort-keys . < $tmpfile 2>&1};
+            unlink $tmpfile;
+            $got_json = decode_utf8 $got_json2;
+
+            my $exp_json = decode_utf8 io->file("$data/$id/in.json")->slurp;
             $tests->{ $id }->{got_json} = $got_json;
             my $got_json_lines = [split m/\n/, $got_json ];
             my $exp_json_lines = [split m/\n/, $exp_json ];
