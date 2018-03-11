@@ -30,7 +30,7 @@ GetOptions(
     "framework|f=s" => \my $framework,
 );
 $verbose ||= 0;
-$datadir //= "$Bin/../data";
+$datadir //= "$Bin/../yaml-test-suite/data";
 $matrixdir //= "$Bin/../matrix";
 
 my @frameworks = qw/

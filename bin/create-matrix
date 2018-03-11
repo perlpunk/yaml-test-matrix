@@ -26,7 +26,7 @@ my %htc_args = (
 
 my @status = (qw/ ok json_ok diff json_diff na error correct/);
 
-my $datadir = "$Bin/../data";
+my $datadir = "$Bin/../yaml-test-suite/data";
 gather_data();
 
 create_html();

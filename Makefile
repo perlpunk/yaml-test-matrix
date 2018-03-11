@@ -35,6 +35,9 @@ $(ALL_VIEWS): data matrix
 matrix:
 	mkdir -p $@
 
+yaml-test-suite:
+	git clone https://github.com/yaml/yaml-test-suite -b $@ $@
+
 data:
 	git clone https://github.com/yaml/yaml-test-suite -b $@ $@
 
