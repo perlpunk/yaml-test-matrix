@@ -36,6 +36,7 @@ $matrixdir //= "$Bin/../matrix";
 
 my @frameworks = qw/
     cpp-event
+    hs-yaml-event
     java-json
     java-event
     js-yaml-json
