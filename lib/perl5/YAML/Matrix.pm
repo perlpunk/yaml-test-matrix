@@ -11,7 +11,7 @@ our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
     generate_expected_output
-    normalize_json load_csv
+    normalize_json load_csv gather_tags
 /;
 
 sub minimal_events_for_framework {
@@ -89,6 +89,25 @@ sub cpp_event_to_event {
 sub java_event_to_event {
     my (@events) = @_;
     return cpp_event_to_event(@events);
+}
+
+sub gather_tags {
+    my ($dir) = @_;
+    my %tags;
+    opendir my $dh, $dir or die $!;
+    my @tags = grep { -d "$dir/$_" and not m/^\./ } readdir $dh;
+    closedir $dh;
+    for my $tag (@tags) {
+        my $tagdir = "$dir/$tag";
+        opendir my $dh, $tagdir or die $!;
+        my @ids = grep { -l "$tagdir/$_" and m/^[A-Z0-9]{4}$/ } readdir $dh;
+        closedir $dh;
+        for my $id (@ids) {
+            $tags{ $id } ||= [];
+            push @{ $tags{ $id } }, $tag;
+        }
+    }
+    return \%tags;
 }
 
 sub generate_expected_output {
