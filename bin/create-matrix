@@ -63,6 +63,7 @@ sub gather_data {
         for my $test (sort keys %$testdata) {
             my $results = $testdata->{ $test };
             my $tags = $id2tag->{ $test } || [];
+            @$tags = sort @$tags;
             if ($results->{invalid}) {
                 for (qw/ invalid_correct invalid_incorrect /) {
                     if ($results->{ $_ }) {
@@ -76,6 +77,7 @@ sub gather_data {
             $tests{ $test }->{title} = $title;
             $tests{ $test }->{frameworks}->{ $fw } = $results;
             $tests{ $test }->{frameworks}->{ $fw }->{id} = $fw;
+            $tests{ $test }->{tags} = $tags;
             for my $status (@status) {
                 if ($results->{ $status }) {
                     $frameworks{ $fw }->{ $status }++;
@@ -83,6 +85,9 @@ sub gather_data {
                     for my $tag (@$tags) {
                         $overview{ $fw }->{tags}->{ $status }->{ $tag }++;
                     }
+                    my $by_status = $tests{ $test }->{framework_by_status}->{ $status } ||= [];
+                    push @{ $by_status }, { framework => $fw, results => $results };
+
                 }
             }
             $frameworks{ $fw }->{count}++;
@@ -353,6 +358,21 @@ sub create_details {
         $json = io->file("$datadir/$id/in.json")->slurp;
         $json_lines = [ split m/\n/, $json ];
     }
+    my $test = $tests{ $id };
+    my $by_status = $test->{framework_by_status};
+    my @ordered_by_status;
+    for my $status (qw/ ok json_ok diff json_diff error na invalid_correct invalid_incorrect /) {
+        my $list = $by_status->{ $status };
+        my @states;
+        for my $item (@$list) {
+            if ($item->{results}->{ $status }) {
+                $item->{results}->{status} = $status;
+            }
+            push @states, $item;
+        }
+        push @ordered_by_status, \@states;
+    }
+    $test->{ordered_by_status} = \@ordered_by_status;
 
     my $htc = HTML::Template::Compiled->new(
         filename => "details.html",
@@ -361,7 +381,7 @@ sub create_details {
     );
     $htc->param(
         id => $id,
-        test => $tests{ $id },
+        test => $test,
         yaml => $yaml,
         json => $json,
         json_lines => $json_lines,

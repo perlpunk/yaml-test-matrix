@@ -9,8 +9,13 @@
 </head>
 <body>
 
-<h2><a href="../index.html">YAML Test Matrix</a></h2>
-<h3>Test <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id %].tml">#[%= .id %]</a> - [%= .test.title %]</h3>
+<h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
+<h2><tt>--- <a
+href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id
+%].tml">&test-[%= id %]</a><br>
+&nbsp;&nbsp;Title: [%= .test.title %]</br>
+&nbsp;&nbsp;Tags: [ [%loop .test.tags join=", " %][%= _ %][%/loop %]
+]</tt></h2>
 
 <div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>[%= .yaml %]</pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>[%= .events %]</pre></div>
@@ -18,21 +23,24 @@
 <pre>[%loop .json_lines %][%= _ %]<br>[%/loop %]</pre>
 </div>
 <hr style="clear: both;">
-[%each .test.frameworks %]
-<div class="framework" id="[%= __key__ %]">
-<h3><a href="#[%= __key__ %]">[%= __key__ %]</a></h3>
-[%set_var result value=__value__ %]
-[%if $result.ok %]<span class="status_box color_ok">&nbsp;</span>ok
-[%elsif $result.json_ok %]<span class="status_box color_json_ok">&nbsp;</span>json_ok
-[%elsif $result.json_diff %]<span class="status_box color_json_diff">&nbsp;</span>json_diff
+[%loop .test.ordered_by_status %]
+[%loop _ %]
+
+[%set_var result value=results %]
+<div class="framework framework_box_[%= $result.status %]" id="[%= framework %]">
+<h3><a href="#[%= __key__ %]">[%= framework %]</a></h3>
+<span class="status_box color_[%= $result.status %]">&nbsp;</span>[%= $result.status %]
+[%if $result.ok %]
+[%elsif $result.json_ok %]
+[%elsif $result.json_diff %]
 <pre>[%loop $result.got_json_lines %]<span
 class="[%if expr="__index__ == $result.diff_line" %]diff_line[%/if %]">[%= _ %]</span>
 [%/loop %]</pre>
-[%elsif $result.error %]<span class="status_box color_error">&nbsp;</span>error <pre>[%= $result.msg %]</pre>
-[%elsif $result.na %]<span class="status_box color_na">&nbsp;</span>n/a
+[%elsif $result.error %]<pre>[%= $result.msg %]</pre>
+[%elsif $result.na %]
 <pre>[%= $result.got_data %]</pre>
 
-[%elsif $result.diff %]<span class="status_box color_diff">&nbsp;</span>diff<br>
+[%elsif $result.diff %]<br>
 
 [%if $result.minimal_events %]
 Minimal Events:
@@ -56,7 +64,12 @@ class="[%if expr="__index__ == $result.diff_line" %]diff_line[%/if %]">[%= _ %]<
 [%/if %]
 </div>
 
-[%/each .test.frameworks %]
+
+[%/loop %]
+[%if _# %]<hr style="clear: both;">[%/if %]
+[%/loop %]
+
+
 </body>
 </html>
 
