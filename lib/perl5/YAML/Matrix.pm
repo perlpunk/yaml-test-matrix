@@ -11,7 +11,7 @@ our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
     cpp_event_to_event java_event_to_event
     generate_expected_output
-    normalize_json load_csv gather_tags
+    load_csv gather_tags
 /;
 
 sub minimal_events_for_framework {
@@ -123,22 +123,21 @@ sub generate_expected_output {
     }
 
     if (-f "$dir/in.json") {
-        my $exp_json = decode_utf8 io->file("$dir/in.json")->slurp;
-        $exp_json = normalize_json($exp_json);
+        my $exp_json = decode_utf8 scalar qx{jq --sort-keys . < $dir/in.json 2>&1};
         $expected{"in.json"} = $exp_json;
     }
 #    warn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\%expected], ['expected']);
     return %expected;
 }
 
-sub normalize_json {
-    my ($json) = @_;
-    require JSON::XS;
-    my $coder = JSON::XS->new->ascii->pretty->allow_nonref->canonical;
-    my $data = eval { $coder->decode($json) };
-    $json = $coder->encode($data);
-    return $json;
-}
+# sub normalize_json {
+#     my ($json) = @_;
+#     require JSON::XS;
+#     my $coder = JSON::XS->new->ascii->pretty->allow_nonref->canonical;
+#     my $data = eval { $coder->decode($json) };
+#     $json = $coder->encode($data);
+#     return $json;
+# }
 
 # CSV to List of Hashes
 my $separator = ",";

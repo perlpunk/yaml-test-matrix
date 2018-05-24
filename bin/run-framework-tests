@@ -68,8 +68,6 @@ my @frameworks = qw/
 my %frameworks;
 @frameworks{ @frameworks } = (1) x @frameworks;
 
-write_expected_output();
-
 if ($help) {
     usage();
 }
@@ -225,22 +223,6 @@ Options:
 --all, -a       Run all frameworks
 EOM
     exit 1;
-}
-
-sub write_expected_output {
-    say "Generating minimal events and normalized JSON...";
-    mkdir "$matrixdir/expected";
-    my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($datadir)->all;
-    for my $dir (@dirs) {
-        my %expected = generate_expected_output($dir);
-        my $id = basename $dir;
-        my $out = "$matrixdir/expected/$id";
-        mkdir $out;
-        for my $file (sort keys %expected) {
-            io("$out/$file")->print($expected{ $file });
-        }
-    }
-    say "Done ";
 }
 
 sub gather_framework_info {
