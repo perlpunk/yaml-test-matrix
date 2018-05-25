@@ -13,7 +13,7 @@ use File::Basename qw/ basename /;
 use IO::All;
 use List::Util qw/ min /;
 use YAML::Matrix qw/
-    minimal_events minimal_events_for_framework
+    minimal_events
     cpp_event_to_event java_event_to_event
     generate_expected_output
     load_csv

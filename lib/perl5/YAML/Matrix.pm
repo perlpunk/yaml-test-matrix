@@ -116,7 +116,7 @@ sub generate_expected_output {
     print "#$id\r";
     my %expected;
 
-    my @test_events = io->file("$dir/test.event")->chomp->slurp;
+    my @test_events = io->file("$dir/test.event")->chomp->encoding('utf-8')->slurp;
     for my $fw (qw/ cpp /) {
         my @minimal = minimal_events_for_framework($fw, @test_events);
         $expected{"minimal.$fw.event"} = join '', map { "$_\n" } @minimal;

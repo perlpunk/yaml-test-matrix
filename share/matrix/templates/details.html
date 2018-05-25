@@ -28,7 +28,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id
 
 [%set_var result value=results %]
 <div class="framework framework_box_[%= $result.status %]" id="[%= framework %]">
-<h3><a href="#[%= __key__ %]">[%= framework %]</a></h3>
+<h3><a href="#[%= framework %]">[%= framework %]</a></h3>
 <span class="status_box color_[%= $result.status %]">&nbsp;</span>[%= $result.status %]
 [%if $result.ok %]
 [%elsif $result.json_ok %]
