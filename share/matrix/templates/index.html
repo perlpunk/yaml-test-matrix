@@ -70,7 +70,7 @@ Invalid test results for each framework: (no page available yet)<br>
 <tr>
 <th>[%= framework %]</th>
 <td>[%= framework_info.language_name %] [%= framework_info.name %]</td>
-<td class="percentage" style="min-width: 260px;">
+<td class="percentage" style="min-width: [%= .width_valid %]260px;">
 [%loop percentage_valid %]<span
     class="overview_status color_[%= status %] bar_[%= border %]"
     style="min-width: [%= width %]px; max-width: [%= width %]px;"
@@ -81,7 +81,7 @@ Invalid test results for each framework: (no page available yet)<br>
 <td>[%= na %]</td>
 <td>[%= diff %][%= json_diff %]</td>
 <td>[%= error %]</td>
-<td class="percentage" style="min-width: 260px;">
+<td class="percentage" style="min-width: [%= .width_invalid %]px;">
 [%loop percentage_invalid %]<span
     class="overview_status color_[%= status %] bar_[%= border %]"
     style="min-width: [%= width %]px; max-width: [%= width %]px;"

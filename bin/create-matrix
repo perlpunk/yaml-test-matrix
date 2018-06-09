@@ -251,6 +251,7 @@ sub create_overview {
 
     my @overview;
     my ($sum_valid, $sum_invalid) = (0, 0);
+    my $factor = 1.7;
     for my $fw (sort {
         my @parts_a = split m/-/, $a;
         my @parts_b = split m/-/, $b;
@@ -291,7 +292,7 @@ sub create_overview {
         for my $i (0 .. $#status_percentage_valid) {
             my $status = $status_percentage_valid[ $i ];
             my $percent = sprintf "%.2f",
-                ($data->{ $status } || 0) / $total_valid * 100;
+                ($data->{ $status } || 0);
             my $border = ( $i == 0 )
                     ? 'left'
                     : ($i == $#status_percentage_valid)
@@ -301,13 +302,13 @@ sub create_overview {
                 status => $status,
                 percent => $percent,
                 border => $border,
-                width => $percent * 2.5,
+                width => $percent * $factor,
             };
         }
         for my $i (0 .. $#status_percentage_invalid) {
             my $status = $status_percentage_invalid[ $i ];
             my $percent = sprintf "%.2f",
-                ($data->{ $status } || 0) / $total_invalid * 100;
+                ($data->{ $status } || 0);
             my $border = ( $i == 0 )
                     ? 'left'
                     : ($i == $#status_percentage_invalid)
@@ -317,7 +318,7 @@ sub create_overview {
                 status => $status,
                 percent => $percent,
                 border => $border,
-                width => $percent * 2.5,
+                width => $percent * $factor,
             };
         }
         $row{percentage_valid} = \@percentage_valid;
@@ -335,6 +336,8 @@ sub create_overview {
         overview => \@overview,
         sum_valid => $sum_valid,
         sum_invalid => $sum_invalid,
+        width_valid => $sum_valid * $factor + 10,
+        width_invalid => $sum_invalid * $factor + 10,
         data_commit => {
             sha => $sha,
             date => $date,
