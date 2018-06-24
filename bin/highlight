@@ -1,0 +1,197 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use 5.010;
+use Data::Dumper;
+use FindBin '$Bin';
+
+use YAML::PP;
+use YAML::PP::Highlight;
+use Encode;
+use IO::All;
+use File::Basename qw/ basename /;
+use HTML::Template::Compiled;
+use JSON::PP;
+
+my $yaml_test_suite = "$Bin/../yaml-test-suite/data";
+my @dirs = grep { m{/[0-9A-Z]{4}$} } map { "$_" } io->dir($yaml_test_suite)->all;
+my @valid = grep { not -f "$_/error" } @dirs;
+my @invalid = grep { -f "$_/error" } @dirs;
+
+my %tags_by_id;
+my %all_tags;
+for my $tagdir (io->dir("$yaml_test_suite/tags")->all) {
+    for my $id (io->dir($tagdir)->all) {
+        my $tag = basename $tagdir;
+        $all_tags{ $tag } = 1;
+        push @{ $tags_by_id{ basename $id } }, basename $tag;
+    }
+}
+
+my $matrix_dir = "matrix";
+my $sheet_dir = "$matrix_dir/html/sheet";
+mkdir $sheet_dir;
+
+$ENV{YAML_PP_RESERVED_DIRECTIVE} = 'ignore';
+my $ypp = YAML::PP->new(
+    boolean => 'JSON::PP',
+);
+my $coder = JSON::PP->new->ascii->pretty->allow_nonref->canonical;
+
+my %htc_args = (
+    tagstyle => [qw/ -classic -comment -jsp +tt /],
+    default_escape => 'HTML',
+    loop_context_vars => 1,
+    post_chomp => 2,
+    use_expressions => 1,
+    path => "$Bin/../share/matrix/templates",
+);
+
+generate_valid();
+
+sub generate_valid {
+
+    my @highlighted_valid;
+    my %tests_json;
+    for my $test (sort @valid) {
+        my $highlighted = highlight($test, 0);
+        my $json_data = {
+            id => $highlighted->{id},
+            in_yaml => $highlighted->{in_yaml},
+            in_json => $highlighted->{in_json},
+            test_event => $highlighted->{test_event},
+            tags => $highlighted->{tags},
+        };
+        $tests_json{ $highlighted->{id} } = $json_data;
+        push @highlighted_valid, $highlighted;
+    }
+    print "\n";
+    my $json_data_string = $coder->encode({
+        tests => \%tests_json,
+        tags => \%all_tags,
+    });
+
+    my $htc = HTML::Template::Compiled->new(
+        filename => "highlight.html",
+        %htc_args,
+    );
+    $htc->param(
+        tests => \@highlighted_valid,
+        json_data => $json_data_string,
+    );
+    my $out = $htc->output;
+    io->file("$sheet_dir/valid.html")->encoding('utf-8')->print($out);
+
+
+    my $data_js = <<"EOM";
+var data = $json_data_string;
+var alltests = data.tests;
+var tags = data.tags;
+var tags_search = {};
+var testcount = Object.keys(alltests).length;
+EOM
+    io->file("$matrix_dir/html/js/data.js")->encoding('utf-8')->print($data_js);
+
+}
+
+sub highlight {
+    my ($dir, $invalid) = @_;
+    my $id = basename $dir;
+    my $file = "$dir/in.yaml";
+    my %test;
+
+    $test{id} = $id;
+
+    my $title = io->file("$dir/===")->encoding('utf-8')->slurp;
+    $test{title} = $title;
+
+    my @yaml = io->file("$dir/in.yaml")->encoding('utf-8')->slurp;
+    my $yaml = join '', @yaml;
+    $test{in_yaml} = $yaml;
+
+    my @events = io->file("$dir/test.event")->encoding('utf-8')->slurp;
+    my $test_event = join '', @events;
+    $test{test_event} = $test_event;
+
+    my $indent = -1;
+    for my $event (@events) {
+        if ($event =~ m/\A\-/) {
+            $indent--;
+        }
+        my ($text, $eol) = $event =~ m/\A(.*?)( *\n)\z/;
+        my @tokens = (
+            { name => 'PLAIN', value => $text },
+            { name => 'EOL', value => $eol },
+        );
+        my $html = YAML::PP::Highlight->htmlcolored(\@tokens);
+        my $data = {
+            indent => $indent / 2,
+            html => $html,
+        };
+        if ($event =~ m/\A\+/) {
+            $indent++;
+        }
+        $event = $data;
+    }
+    $test{events} = \@events;
+
+    print "\r$id";
+    my $json = -f "$dir/in.json"
+        ? io->file("$dir/in.json")->encoding('utf-8')->slurp
+        : undef;
+    $test{in_json} = $json;
+
+    my $class = "ok";
+    my @docs;
+    eval {
+        @docs = $ypp->load_string($yaml);
+    };
+    my $error = $@ || '';
+    my $tokens = $ypp->loader->parser->tokens;
+    if ($error) {
+        # YAML::PP can't parse it, just display it without highlighting
+        @$tokens = ();
+        for my $line (@yaml) {
+            my ($text, $eol) = $line =~ m/\A(.*?)( *\n)\z/;
+            my @tokens = (
+                { name => 'PLAIN', value => $text },
+                { name => 'EOL', value => $eol },
+            );
+            push @$tokens, @tokens;
+        }
+    }
+    else {
+        my $out = join '', map { $_->{value} } @$tokens;
+        if ($out ne $yaml) {
+            warn "$id diff";
+        }
+    }
+    my $high = YAML::PP::Highlight->htmlcolored($tokens);
+    $test{yaml} = $high;
+
+    my $json_tokens = '';
+    if (defined $json) {
+        my @docs = split m/(?=^(?:[\{\[0-9"'-]|null|true|false))/m, $json;
+        for my $doc (@docs) {
+
+            my @docs = eval {
+                $ypp->load_string($doc);
+            };
+            my $error = $@ || '';
+            my $tokens = $ypp->loader->parser->tokens;
+            my $diff = 0;
+            if ($error) {
+                die "Error parsing $id in-json: >>$doc<<";
+            }
+            my $high = YAML::PP::Highlight->htmlcolored($tokens);
+            $json_tokens .= $high;
+
+        }
+    }
+    $test{json} = $json_tokens;
+
+    my $taglist = $tags_by_id{ $id } || [];
+    $test{tags} = $taglist;
+
+    return \%test;
+}

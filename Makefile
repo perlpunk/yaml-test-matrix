@@ -27,6 +27,7 @@ build: data matrix
 	./bin/run-framework-tests --all
 	./bin/compare-framework-tests --all
 	./bin/create-matrix
+	./bin/highlight
 
 $(ALL_VIEWS): data matrix
 	time ./bin/run-framework-tests --framework $@

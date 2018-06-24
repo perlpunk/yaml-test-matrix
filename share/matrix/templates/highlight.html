@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>YAML Test Suite Highlighted</title>
+<link rel="stylesheet" type="text/css" href="../css/yaml.css">
+<link rel="stylesheet" type="text/css" href="../css/sheet.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/sheet.js"></script>
+</head>
+<body>
+
+<table class="highlight">
+<tr><td id="td-info"></td><th>in-yaml</th><th>in-json</th><th>test-event</th></tr>
+<tr>
+<td>
+<form onsubmit="filter_tests(); return false;">
+<input id="search-tags" type="text" name="search-tags" placeholder="tag">
+</form>
+</td>
+<th>
+<form onsubmit="filter_tests(); return false;">
+<input id="search-yaml" type="text" name="search-yaml" placeholder="search">
+</form>
+</th>
+<th>
+<form onsubmit="filter_tests(); return false;">
+<input id="search-json" type="text" name="search-json" placeholder="search">
+</form>
+</th>
+<th>
+<form onsubmit="filter_tests(); return false;">
+<input id="search-events" type="text" name="search-events" placeholder="search">
+</form>
+</th>
+</tr>
+[%loop .tests %]
+<tr id="tr-title-[%= id %]"><td class="title" colspan="4"><a href="#[%= id %]">#</a><a name="[%= id %]">&nbsp;</a>[%= id %] - [%= title %]</td></tr>
+<tr id="tr-content-[%= id %]">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+[%loop tags join=", " %][%= _ %][%/loop tags %]<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id %].tml">Source</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box">[%= yaml escape=0 %]</pre></div></td>
+<td valign="top" class="json"><div class="json"><pre class="box">[%= json escape=0 %]</pre></div></td>
+<td valign="top" class="events" style="">
+<div class="events"><pre class="box"><div class="events">[%loop events %]<span style="padding-left: [%= indent %]em;">[%= html escape=0 %]</span>[%/loop %]</pre></div>
+</td>
+[%comment %]
+[%/comment %]
+</tr>
+[%/loop %]
+
+</table>
+
+</body>
+</html>

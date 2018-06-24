@@ -238,8 +238,11 @@ sub create_html {
 
     copy ("share/matrix/css/yaml.css", "matrix/html/css");
     copy ("share/matrix/css/matrix.css", "matrix/html/css");
+    copy ("share/matrix/css/sheet.css", "matrix/html/css");
+    copy ("share/matrix/css/yaml-tokens.css", "matrix/html/css");
     copy ("share/matrix/js/jquery-3.1.1.min.js", "matrix/html/js");
     copy ("share/matrix/js/matrix.js", "matrix/html/js");
+    copy ("share/matrix/js/sheet.js", "matrix/html/js");
 }
 
 sub create_overview {
