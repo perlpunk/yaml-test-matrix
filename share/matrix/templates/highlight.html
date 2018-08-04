@@ -40,7 +40,8 @@
 <tr id="tr-content-[%= id %]">
 <td valign="top" class="info"><div class="info"><b>Tags:</b><br>
 [%loop tags join=", " %][%= _ %][%/loop tags %]<br>
-<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id %].tml">Source</a>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id %].tml">Source</a><br>
+<a href="../details/[%= id %].html">Test Results</a>
 </div></td>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box">[%= yaml escape=0 %]</pre></div></td>
 <td valign="top" class="json"><div class="json"><pre class="box">[%= json escape=0 %]</pre></div></td>
