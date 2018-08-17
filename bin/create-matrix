@@ -222,7 +222,7 @@ sub create_html {
     }
     {
         my $htc = HTML::Template::Compiled->new(
-            filename => "frameworks.html",
+            filename => "processors.html",
             path => "$Bin/../share/matrix/templates",
             %htc_args,
         );
@@ -230,10 +230,10 @@ sub create_html {
             framework_info => \%framework_info,
         );
 
-        open my $fh, ">", "matrix/html/frameworks.html" or die $!;
+        open my $fh, ">", "matrix/html/processors.html" or die $!;
         print $fh $htc->output;
         close $fh;
-        say "Created matrix/html/frameworks.html";
+        say "Created matrix/html/processors.html";
     }
 
     copy ("share/matrix/css/yaml.css", "matrix/html/css");
