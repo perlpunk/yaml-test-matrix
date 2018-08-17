@@ -47,23 +47,28 @@ my %htc_args = (
     path => "$Bin/../share/matrix/templates",
 );
 
-generate_valid();
+generate_valid('valid', @valid);
+generate_valid('invalid', @invalid);
 
 sub generate_valid {
+    my ($type, @tests) = @_;
 
-    my @highlighted_valid;
+    my @highlighted;
     my %tests_json;
-    for my $test (sort @valid) {
+    for my $test (sort @tests) {
         my $highlighted = highlight($test, 0);
         my $json_data = {
             id => $highlighted->{id},
             in_yaml => $highlighted->{in_yaml},
-            in_json => $highlighted->{in_json},
-            test_event => $highlighted->{test_event},
+            $type eq 'valid'
+            ? (
+                in_json => $highlighted->{in_json},
+                test_event => $highlighted->{test_event},
+            ) : (),
             tags => $highlighted->{tags},
         };
         $tests_json{ $highlighted->{id} } = $json_data;
-        push @highlighted_valid, $highlighted;
+        push @highlighted, $highlighted;
     }
     print "\n";
     my $json_data_string = $coder->encode({
@@ -76,11 +81,12 @@ sub generate_valid {
         %htc_args,
     );
     $htc->param(
-        tests => \@highlighted_valid,
+        tests => \@highlighted,
         json_data => $json_data_string,
+        type => $type,
     );
     my $out = $htc->output;
-    io->file("$sheet_dir/valid.html")->encoding('utf-8')->print($out);
+    io->file("$sheet_dir/$type.html")->encoding('utf-8')->print($out);
 
 
     my $data_js = <<"EOM";
@@ -90,7 +96,7 @@ var tags = data.tags;
 var tags_search = {};
 var testcount = Object.keys(alltests).length;
 EOM
-    io->file("$matrix_dir/html/js/data.js")->encoding('utf-8')->print($data_js);
+    io->file("$matrix_dir/html/js/data-$type.js")->encoding('utf-8')->print($data_js);
 
 }
 
