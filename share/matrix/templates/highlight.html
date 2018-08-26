@@ -15,7 +15,7 @@
 <tr>
 <td id="td-info"></td>
 <th>in-yaml</th>
-[%if expr="type eq 'valid'" %]
+[%if expr=".type eq 'valid'" %]
 <th>in-json</th>
 <th>test-event</th>
 [%/if %]
@@ -31,7 +31,7 @@
 <input id="search-yaml" type="text" name="search-yaml" placeholder="search">
 </form>
 </th>
-[%if expr="type eq 'valid'" %]
+[%if expr=".type eq 'valid'" %]
 <th>
 <form onsubmit="filter_tests(); return false;">
 <input id="search-json" type="text" name="search-json" placeholder="search">
@@ -53,7 +53,7 @@
 <a href="../details/[%= id %].html">Test Results</a>
 </div></td>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box">[%= yaml escape=0 %]</pre></div></td>
-[%if expr="type eq 'valid'" %]
+[%if expr=".type eq 'valid'" %]
 <td valign="top" class="json"><div class="json"><pre class="box">[%= json escape=0 %]</pre></div></td>
 <td valign="top" class="events" style="">
 <div class="events"><pre class="box"><div class="events">[%loop events %]<span style="padding-left: [%= indent %]em;">[%= html escape=0 %]</span>[%/loop %]</pre></div>
