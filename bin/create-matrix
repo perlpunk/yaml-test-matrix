@@ -105,7 +105,17 @@ sub create_html {
 
     my @framework_names = map {
         my ($lang, $name, $type) = split /-/, $_;
-        if ($lang eq 'libyaml') {
+        if ($_ eq 'js-event') {
+            $name = 'yaml';
+            $lang = 'js';
+            $type = 'event';
+        }
+        elsif ($_ eq 'js-json') {
+            $name = 'yaml';
+            $lang = 'js';
+            $type = 'json';
+        }
+        elsif ($lang eq 'libyaml') {
             $name = $lang;
             $lang = 'C';
             $type = 'event';

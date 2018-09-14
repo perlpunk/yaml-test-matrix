@@ -41,6 +41,8 @@ my @frameworks = qw/
     java-json
     java-event
     js-yaml-json
+    js-event
+    js-json
     libyaml-event
     luajit-json
     nimyaml-event
