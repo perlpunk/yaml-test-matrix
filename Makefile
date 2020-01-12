@@ -37,7 +37,7 @@ matrix:
 	mkdir -p $@
 
 yaml-test-suite:
-	git clone https://github.com/yaml/yaml-test-suite -b $@ $@
+	git clone https://github.com/yaml/yaml-test-suite $@
 
 data:
 	git clone https://github.com/yaml/yaml-test-suite -b $@ $@
