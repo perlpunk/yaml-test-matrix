@@ -1,0 +1,35 @@
+#!/usr/bin/env perl
+# Normalize test suite data because not all libs support all output
+
+use strict;
+use warnings;
+use 5.010;
+use Data::Dumper;
+use FindBin '$Bin';
+use lib "$Bin/../lib/perl5";
+use File::Basename qw/ basename /;
+use IO::All;
+use YAML::Matrix qw/
+    generate_expected_output
+/;
+
+my $datadir = "$Bin/../yaml-test-suite/data";
+my $matrixdir = "$Bin/../matrix";
+
+write_expected_output();
+
+sub write_expected_output {
+    say "Generating minimal events and normalized JSON...";
+    mkdir "$matrixdir/expected";
+    my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($datadir)->all;
+    for my $dir (@dirs) {
+        my %expected = generate_expected_output($dir);
+        my $id = basename $dir;
+        my $out = "$matrixdir/expected/$id";
+        mkdir $out;
+        for my $file (sort keys %expected) {
+            io("$out/$file")->encoding('utf-8')->print($expected{ $file });
+        }
+    }
+    say "Done ";
+}

@@ -19,9 +19,8 @@
 <span class="info">Code to run tests for all supported processors and create matrix HTML</span>
 </span>
 <span class="link">
-<a href="https://github.com/ingydotnet/yaml-editor">yaml-editor</a><br>
-<span class="info">Code to create Docker image for all supported processors and
-test them interactively in vim</span>
+<a href="https://github.com/yaml/yaml-runtimes">yaml-runtimes</a><br>
+<span class="info">Code to create Docker image for all supported processors</span>
 </span>
 </div>
 
@@ -32,7 +31,7 @@ test them interactively in vim</span>
 This Matrix combines all tests from <a
 href="https://github.com/yaml/yaml-test-suite">yaml-test-suite</a> and all
 processors from <a
-href="https://github.com/ingydotnet/yaml-editor">yaml-editor</a>.
+href="https://github.com/yaml/yaml-runtimes">yaml-runtimes</a>.
 </p>
 <p>
 The YAML Test Suite currently targets YAML Version 1.2.
@@ -79,7 +78,10 @@ It is suited to identify which problems each processors has and what to avoid.
 <th>correct</th>
 <th>incorrect</th>
 </tr>
-[%loop .overview %]
+[%each .overview %]
+[%set_var info value=__value__ %]
+<tr><th colspan="10" class="sub">[%= __key__ %] - [%= info.descr %]</th></tr>
+[%loop info.views %]
 <tr>
 <th>[%= framework %]</th>
 <td>[%= framework_info.language_name %] [%= framework_info.name %]</td>
@@ -104,7 +106,8 @@ It is suited to identify which problems each processors has and what to avoid.
 <td>[%= invalid_correct %]</td>
 <td>[%= invalid_incorrect %]</td>
 </tr>
-[%/loop .overview %]
+[%/loop views %]
+[%/each .overview %]
 
 </table>
 </div>

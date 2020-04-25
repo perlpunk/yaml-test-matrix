@@ -28,69 +28,35 @@ GetOptions(
     "verbose|v+" => \my $verbose,
     "data-dir=s" => \my $datadir,
     "matrix-dir=s" => \my $matrixdir,
-    "framework|f=s" => \my $framework,
+    "view|f=s" => \my $view,
 );
 $verbose ||= 0;
 $datadir //= "$Bin/../yaml-test-suite/data";
 $matrixdir //= "$Bin/../matrix";
 
-my @frameworks = qw/
-    cpp-event
-    hs-yaml-event
-    hs-yaml-json
-    java-json
-    java-event
-    js-yaml-json
-    js-event
-    js-json
-    libyaml-event
-    luajit-json
-    nimyaml-event
-    perl5-pegex-event
-    perl5-pm-pl
-    perl5-pm-json
-    perl5-pp-event
-    perl5-pp-json
-    perl5-pp-pl
-    perl5-syck-pl
-    perl5-syck-json
-    perl5-tiny-pl
-    perl5-tiny-json
-    perl5-xs-pl
-    perl5-xs-json
-    pyyaml-event
-    pyyaml-json
-    pyyaml-py
-    ruamel-event
-    ruamel-json
-    ruamel-py
-    ruby-json
-/;
-#    perl6-json
-#    perl6-p6
+my @views = io->file("$Bin/../views.txt")->chomp->slurp;
 
-my %frameworks;
-@frameworks{ @frameworks } = (1) x @frameworks;
+my %views;
+@views{ @views } = (1) x @views;
 
-write_expected_output();
 
 if ($help) {
     usage();
 }
 elsif ($list) {
-    say for @frameworks;
+    say for @views;
 }
 elsif ($all) {
-    for my $fw (@frameworks) {
+    for my $fw (@views) {
         compare_tests(
-            framework => $fw,
+            view => $fw,
             data => $datadir,
         );
     }
 }
-elsif ($framework) {
+elsif ($view) {
     compare_tests(
-        framework => $framework,
+        view => $view,
         data => $datadir,
     );
 }
@@ -100,20 +66,21 @@ else {
 
 sub compare_tests {
     my %args = @_;
-    my $framework = $args{framework};
+    my $view = $args{view};
     say "-" x 80;
-    say "Running $framework";
+    say "Running $view";
     my $data = $args{data};
 
     my ($sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror) = (0) x 5;
-    if ($frameworks{ $framework }) {
+    my $outfile = "$matrixdir/data/$view-out.yaml";
+    if ($views{ $view }) {
     }
     else {
-        die "Framework $framework not supported";
+        die "view $view not supported";
     }
     say "Comparing results...";
 
-    my $test_info = LoadFile("$matrixdir/data/$framework-out.yaml");
+    my $test_info = LoadFile($outfile);
     my $tests = $test_info->{tests};
     for my $id (sort keys %$tests) {
         my $out = $tests->{ $id };
@@ -142,7 +109,7 @@ sub compare_tests {
         my $got_data = $stdout . $stderr;
         $tests->{ $id }->{got_data} = $got_data;
 
-        if ($framework =~ m/-json$/ and not -f "$data/$id/in.json") {
+        if ($view =~ m/\.json$/ and not -f "$data/$id/in.json") {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
             if ($error) {
@@ -162,7 +129,7 @@ sub compare_tests {
             next;
         }
 
-        if ($framework =~ m/-json$/) {
+        if ($view =~ m/\.json$/) {
             my $got_json = $stdout;
             $tests->{ $id }->{got_json} = $got_json;
             my $tmpfile = "/tmp/yaml-test-matrix-tmp-$id.json";
@@ -202,14 +169,14 @@ sub compare_tests {
                 $sum_diff++;
             }
         }
-        elsif ($framework =~ m/-(pl|p6|py)$/) {
+        elsif ($view =~ m/\.(perl|p6|py)$/) {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
         }
         else {
             my @events = @got;
             my @orig_events = @test_events;
-            if ($framework eq "cpp-event") {
+            if ($view eq "cpp-yamlcpp.event") {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.cpp.event")
                     ->encoding('utf-8')->chomp->slurp;
@@ -217,7 +184,7 @@ sub compare_tests {
                 $tests->{ $id }->{minimal_events} = \@test_events;
                 $tests->{ $id }->{transformed_events} = \@events;
             }
-            elsif ($framework eq "java-event") {
+            elsif ($view eq "java-snakeyaml.event") {
                 @events = java_event_to_event(@events);
                 $tests->{ $id }->{transformed_events} = \@events;
             }
@@ -259,8 +226,8 @@ sub compare_tests {
     printf "ok: %d diff: %d n/a: %d error: %d n/a+error: %d\n",
         $sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror;
 
-    say "Saving tests into $matrixdir/data/$framework.yaml";
-    DumpFile("$matrixdir/data/$framework.yaml", $test_info);
+    say "Saving tests into $matrixdir/data/$view.yaml";
+    DumpFile("$matrixdir/data/$view.yaml", $test_info);
 
 }
 
@@ -270,36 +237,21 @@ sub usage {
 Usage:
 
 Run in docker:
-    $0 --framework <framework>
+    $0 --view <view>
 
 Specify a script:
-    $0 --framework <framework> --path /path/to/framework
+    $0 --view <view> --path /path/to/view
 
 Options:
---framework, -f framework (see -l)
---list, -l      List supported frameworks
+--view, -f      view (see -l)
+--list, -l      List supported views
 --verbose, -v   Increase verbosity:
                 -v  Print the first differing lines of event output
                 -vv Dump events and expected events
 --data-dir      /path/to/yaml-test-suite/data
---all, -a       Run all frameworks
+--all, -a       Run all views
 EOM
     exit 1;
 }
 
-sub write_expected_output {
-    say "Generating minimal events and normalized JSON...";
-    mkdir "$matrixdir/expected";
-    my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($datadir)->all;
-    for my $dir (@dirs) {
-        my %expected = generate_expected_output($dir);
-        my $id = basename $dir;
-        my $out = "$matrixdir/expected/$id";
-        mkdir $out;
-        for my $file (sort keys %expected) {
-            io("$out/$file")->encoding('utf-8')->print($expected{ $file });
-        }
-    }
-    say "Done ";
-}
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 #set -x
 
@@ -7,7 +7,7 @@ if [[ ! -d /yaml-test-suite-data ]]; then
     exit 1
 fi
 
-framework="$1"
+view="$1"
 
 cd /yaml-test-suite-data
 
@@ -22,9 +22,9 @@ for id in [A-Z0-9]*
 do
     [[ ! -f $id/in.yaml ]] && continue
     echo -n "Running $id"$'\r'
-    # echo "timeout 3 $framework < $id/in.yaml > /matrix/tmp/$id.error 2>&1"
+    # echo "timeout 3 $view < $id/in.yaml > /matrix/tmp/$id.error 2>&1"
     touch /matrix/tmp/$id.error
-    timeout 3 $framework < $id/in.yaml > /matrix/tmp/$id.stdout 2>/matrix/tmp/$id.stderr
+    timeout 3 $view < $id/in.yaml > /matrix/tmp/$id.stdout 2>/matrix/tmp/$id.stderr
     if [[ $? -eq 0 ]]; then
         rm /matrix/tmp/$id.error
     fi

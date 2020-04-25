@@ -27,67 +27,34 @@ GetOptions(
     "verbose|v+" => \my $verbose,
     "data-dir=s" => \my $datadir,
     "matrix-dir=s" => \my $matrixdir,
-    "framework|f=s" => \my $framework,
+    "view|f=s" => \my $view,
 );
 $verbose ||= 0;
 $datadir //= "$Bin/../yaml-test-suite/data";
 $matrixdir //= "$Bin/../matrix";
 
-my @frameworks = qw/
-    cpp-event
-    hs-yaml-event
-    hs-yaml-json
-    java-json
-    java-event
-    js-yaml-json
-    js-event
-    js-json
-    libyaml-event
-    luajit-json
-    nimyaml-event
-    perl5-pegex-event
-    perl5-pm-pl
-    perl5-pm-json
-    perl5-pp-event
-    perl5-pp-json
-    perl5-pp-pl
-    perl5-syck-pl
-    perl5-syck-json
-    perl5-tiny-pl
-    perl5-tiny-json
-    perl5-xs-pl
-    perl5-xs-json
-    pyyaml-event
-    pyyaml-json
-    pyyaml-py
-    ruamel-event
-    ruamel-json
-    ruamel-py
-    ruby-json
-/;
-#    perl6-json
-#    perl6-p6
+my @views = io->file("$Bin/../views.txt")->chomp->slurp;
 
-my %frameworks;
-@frameworks{ @frameworks } = (1) x @frameworks;
+my %views;
+@views{ @views } = (1) x @views;
 
 if ($help) {
     usage();
 }
 elsif ($list) {
-    say for @frameworks;
+    say for @views;
 }
 elsif ($all) {
-    for my $fw (@frameworks) {
+    for my $fw (@views) {
         run_tests(
-            framework => $fw,
+            view => $fw,
             data => $datadir,
         );
     }
 }
-elsif ($framework) {
+elsif ($view) {
     run_tests(
-        framework => $framework,
+        view => $view,
         data => $datadir,
     );
 }
@@ -98,21 +65,23 @@ else {
 sub run_tests {
     my %args = @_;
     my %tests;
-    my $framework = $args{framework};
+    my $view = $args{view};
     say "-" x 80;
-    say "Running $framework";
+    say "Running $view";
     my $data = $args{data};
 
     my $start = time;
     my $end;
 
     my $out = "$matrixdir/tmp";
-    my ($framework_info, $emitters) = gather_framework_info();
+    my ($emitters) = gather_framework_info();
 
-    my %info;
-    if (not $frameworks{ $framework }) {
-        die "Framework $framework not supported";
+    my $info = $emitters->{ $view };
+    my ($lib, $format) = $view =~ m/^(.+)\.(.+)$/;
+    if (not $emitters->{ $view }) {
+        die "view $view not supported";
     }
+    my $bin = "$lib-$format";
 
     mkdir $out;
     if ($path) {
@@ -134,33 +103,19 @@ sub run_tests {
             . qq{ -v $datadir:/yaml-test-suite-data}
             . qq{ -v $Bin:/matrix/bin}
             . qq{ -v $matrixdir/tmp:/matrix/tmp}
-            . qq{ $docker_user/yaml-editor}
-            . qq{ /matrix/bin/run-framework-tests-docker.sh $framework};
+            . qq{ $docker_user/alpine-runtime-all}
+            . qq{ /matrix/bin/run-framework-tests-docker.sh /yaml/bin/$bin};
         say "Running $cmd";
         system $cmd;
     }
     print "\n";
     $end = time;
     unless ($path) {
-        if ($framework_info) {
-            my $emitter = $emitters->{ $framework };
-            my $repo = $emitter->{reponame};
-            my $info = $framework_info->{ $repo };
-            @info{qw/
-                id output language name reponame provider
-                version commit cdate
-            /} = (
-                $emitter->{id}, $emitter->{output},
-                @$info{qw/
-                    language name repo provider version commit cdate
-                /}
-            );
-            say "Info: $emitter->{id} $info->{version} $info->{cdate}";
-            if ($verbose) {
-                print YAML::XS::Dump \%info;
-            }
-            print "\n";
+        say "Info: $info->{id} $info->{version}";
+        if ($verbose) {
+            print YAML::XS::Dump $info;
         }
+        print "\n";
     }
 
     my @files = map { "$_" } grep { m{/\w+\.(error|stdout|stderr)$} }
@@ -169,6 +124,13 @@ sub run_tests {
     for my $file (sort @files) {
         open my $fh, "<", $file or die $!;
         my $got = do { local $/; <$fh> };
+        # We don't yet have '+MAP {}' and '+SEQ []'
+        if ($format eq 'event') {
+            $got =~ s/^\+MAP \{\}/+MAP/mg;
+            $got =~ s/^\+SEQ \[\]/+SEQ/mg;
+            # HsYAML outputs '=COMMENT'
+            $got =~ s/^=COMMENT .*\n//gm;
+        }
         my $dec = decode_utf8($got);
         my @got = split m/\n/, $dec;
 
@@ -195,12 +157,12 @@ sub run_tests {
     rmtree $out;
 
     mkdir "$matrixdir/data";
-    say "Saving tests into $matrixdir/data/$framework-out.yaml";
-    DumpFile("$matrixdir/data/$framework-out.yaml", {
+    say "Saving tests into $matrixdir/data/$view-out.yaml";
+    DumpFile("$matrixdir/data/$view-out.yaml", {
         tests => \%tests,
         date => time,
         time => $end - $start,
-        info => \%info,
+        info => $info,
     });
 
 }
@@ -211,42 +173,32 @@ sub usage {
 Usage:
 
 Run in docker:
-    $0 --framework <framework>
+    $0 --view <view>
 
 Specify a script:
-    $0 --framework <framework> --path /path/to/framework
+    $0 --view <view> --path /path/to/view
 
 Options:
---framework, -f framework (see -l)
---list, -l      List supported frameworks
---path          /path/to/framework
+--view, -f      view (see -l)
+--list, -l      List supported views
+--path          /path/to/view
                 If no --path is given, it will run the tests in docker.
 --verbose, -v   Increase verbosity
 --data-dir      /path/tp/yaml-test-suite/data
---all, -a       Run all frameworks
+--all, -a       Run all views
 EOM
     exit 1;
 }
 
 sub gather_framework_info {
     my $cmd = qq{docker run -i --rm --user $<}
-        . qq{ $docker_user/yaml-editor}
-        . q{ cat /yaml-emitters.csv /yaml-frameworks.csv};
+        . qq{ $docker_user/alpine-runtime-all}
+        . q{ cat /yaml/info/views.csv};
     my @lines = qx{$cmd};
     if ($? == 0) {
         chomp @lines;
-        my @emitters;
-        my @frameworks;
-        while (my $line = shift @lines) {
-            if ($line =~ m/^repo,/) {
-                push @frameworks, $line, @lines;
-                last;
-            }
-            push @emitters, $line;
-        }
-        my $emitters = load_csv("id", \@emitters);
-        my $framework_info  = load_csv("repo", \@frameworks);
-        return ($framework_info, $emitters);
+        my $views = load_csv("view", \@lines);
+        return $views;
     }
 }
 

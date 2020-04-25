@@ -1,7 +1,7 @@
 # YAML Test Framework Matrix
 
 This matrix makes use of the [YAML Test Suite](https://github.com/yaml/yaml-test-suite)
-and the [YAML Editor](https://github.com/yaml/yaml-editor).
+and the [YAML Runtimes](https://github.com/yaml/yaml-runtimes).
 
 Its output is currently saved in the
 [gh-pages branch](https://github.com/yaml/yaml-test-suite/tree/gh-pages)
@@ -43,7 +43,7 @@ at the same time.
 ## Matrix
 
 Now the matrix takes all test cases from yaml-test-suite and runs them
-through the various frameworks in the yaml-editor Docker container.
+through the various frameworks in the yaml-runtimes Docker container.
 
 It checks if the program died, or if the result matches the expected
 output.
@@ -52,5 +52,5 @@ It does some transformations as not all frameworks support all features.
 ## Adding frameworks
 
 If you want to see a new framework in the matrix, it has to be added to
-the YAML Editor. Please create an [issue](https://github.com/yaml/yaml-editor/issues)
-or [pull request](https://github.com/yaml/yaml-editor/pulls) there.
+the YAML Editor. Please create an [issue](https://github.com/yaml/yaml-runtimes/issues)
+or [pull request](https://github.com/yaml/yaml-runtimes/pulls) there.

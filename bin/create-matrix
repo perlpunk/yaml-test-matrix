@@ -44,10 +44,11 @@ sub gather_data {
     my @files = map { "$_" } grep { not m/-out/ } grep { m/\.yaml$/ } io->dir("matrix/data")->all_files;
 
     for my $file (sort @files) {
-        unless ($file =~ m{/([A-Z0-9-]+)\.yaml}i) {
+        unless ($file =~ m{/([A-Z0-9.-]+)\.yaml$}i) {
             next;
         }
         my $fw = $1;
+        $fw =~ s/\./-/;
         push @frameworks, $fw;
         my $data = LoadFile($file);
         my $testdata = $data->{tests};
@@ -55,10 +56,6 @@ sub gather_data {
         $info->{run} = $data->{date};
         $info->{runtime} = $data->{time};
         $framework_info{ $fw } = info2html($info);
-        # issue with yaml-editor build process
-        if ($framework_info{ $fw }->{version}) {
-            $framework_info{ $fw }->{version} =~ s/-dirty$//;
-        }
 
         for my $test (sort keys %$testdata) {
             my $results = $testdata->{ $test };
@@ -104,54 +101,8 @@ sub create_html {
     my @tests;
 
     my @framework_names = map {
-        my ($lang, $name, $type) = split /-/, $_;
-        if ($_ eq 'js-event') {
-            $name = 'yaml';
-            $lang = 'js';
-            $type = 'event';
-        }
-        elsif ($_ eq 'js-json') {
-            $name = 'yaml';
-            $lang = 'js';
-            $type = 'json';
-        }
-        elsif ($lang eq 'libyaml') {
-            $name = $lang;
-            $lang = 'C';
-            $type = 'event';
-        }
-        elsif ($lang eq 'ruby' and $name eq 'json') {
-            $type = $name;
-            $name = "yaml";
-        }
-        elsif ($lang eq 'perl6') {
-            $type = $name;
-            $name = "yamlish";
-        }
-        elsif ($lang =~ /^(pyyaml|ruamel)$/) {
-            $type = $name;
-            $name = $lang;
-            $lang = "python";
-        }
-        elsif ($lang eq 'java') {
-            $type = $name;
-            $name = "snake";
-        }
-        elsif ($lang eq 'nimyaml') {
-            $lang = "nim";
-            $type = $name;
-            $name = "yaml";
-        }
-        elsif ($lang eq 'cpp') {
-            $lang = "C++";
-            $name = "yaml";
-            $type = "event";
-        }
-        elsif ($lang eq 'luajit') {
-            $lang = "lua";
-            $name = "yaml";
-            $type = "json";
-        }
+        my ($lang, $name, $type) = split /[.-]/, $_;
+#        $_ = "$lang-$name-$type";
         if ($type !~ m/^(json|event)/) {
             $type = "native";
         }
@@ -262,7 +213,10 @@ sub create_overview {
     my ($sha, $date, $msg) = split ' ', $data_commit, 3;
 
 
-    my @overview;
+    my %overviews = (
+        event => { descr => 'Compare parsing events' },
+        json => { descr => 'Compare loaded data with JSON' },
+    );
     my ($sum_valid, $sum_invalid) = (0, 0);
     my $factor = 1.7;
     for my $fw (sort {
@@ -275,6 +229,8 @@ sub create_overview {
         my %row;
         $row{framework} = $fw;
         $row{framework_info} = $framework_info{ $fw };
+        my $format = $row{framework_info}->{format};
+        next if $format !~ m/json|event/;
         my $total_valid = 0;
         my $total_invalid = 0;
         for my $status (qw/
@@ -304,8 +260,9 @@ sub create_overview {
         }
         for my $i (0 .. $#status_percentage_valid) {
             my $status = $status_percentage_valid[ $i ];
+            my $num = $data->{ $status } || 0;
             my $percent = sprintf "%.2f",
-                ($data->{ $status } || 0);
+                $num / $total_valid * 100;
             my $border = ( $i == 0 )
                     ? 'left'
                     : ($i == $#status_percentage_valid)
@@ -315,13 +272,14 @@ sub create_overview {
                 status => $status,
                 percent => $percent,
                 border => $border,
-                width => $percent * $factor,
+                width => $num * $factor,
             };
         }
         for my $i (0 .. $#status_percentage_invalid) {
             my $status = $status_percentage_invalid[ $i ];
+            my $num = $data->{ $status } || 0;
             my $percent = sprintf "%.2f",
-                ($data->{ $status } || 0);
+                $num / $total_invalid * 100;
             my $border = ( $i == 0 )
                     ? 'left'
                     : ($i == $#status_percentage_invalid)
@@ -331,14 +289,14 @@ sub create_overview {
                 status => $status,
                 percent => $percent,
                 border => $border,
-                width => $percent * $factor,
+                width => $num * $factor,
             };
         }
         $row{percentage_valid} = \@percentage_valid;
         $row{percentage_invalid} = \@percentage_invalid;
         $sum_valid = $total_valid;
         $sum_invalid = $total_invalid;
-        push @overview, \%row;
+        push @{ $overviews{ $format }->{views} }, \%row;
     }
     my $htc = HTML::Template::Compiled->new(
         filename => "index.html",
@@ -346,7 +304,7 @@ sub create_overview {
         %htc_args,
     );
     $htc->param(
-        overview => \@overview,
+        overview => \%overviews,
         sum_valid => $sum_valid,
         sum_invalid => $sum_invalid,
         width_valid => $sum_valid * $factor + 10,
@@ -370,8 +328,8 @@ sub create_details {
 
     my $json;
     my $json_lines;
-    if (-f "$datadir/$id/in.json") {
-        $json = io->file("$datadir/$id/in.json")->slurp;
+    if (-f "matrix/expected/$id/in.json") {
+        $json = io->file("matrix/expected/$id/in.json")->slurp;
         $json_lines = [ split m/\n/, $json ];
     }
     my $test = $tests{ $id };
@@ -412,44 +370,23 @@ sub info2html {
     my ($info) = @_;
     return unless $info;
     $info->{run_date} = strftime("%Y-%m-%d %H:%M GMT", gmtime $info->{run});
-    return $info unless $info->{commit};
-
-    my $link;
-    my $commitlink;
-    $info->{commit_short} = substr($info->{commit}, 0, 8);
-    my $provider = $info->{provider} // '';
-    if ($provider eq 'github') {
-        $link = "https://github.com/$info->{reponame}";
-        $commitlink =
-            "https://github.com/$info->{reponame}/commit/$info->{commit}";
-    }
-    elsif ($provider eq 'bitbucket') {
-        $link = "https://bitbucket.org/$info->{reponame}";
-        $commitlink =
-            "https://bitbucket.org/$info->{reponame}/commits/$info->{commit}";
-    }
-    $info->{link} = $link;
-    $info->{commit_link} = $commitlink;
+    return $info unless $info->{id};
 
     $info->{language_name} = {
-        cpp => "C++",
-        c => "C",
         haskell => "Haskell",
-        java => "Java",
-        js => "Javascript",
         lua => "Lua",
         nim => "Nim",
-        perl5 => "Perl 5",
-        perl6 => "Perl 6",
         python => "Python",
         ruby => "Ruby",
-    }->{ $info->{language} };
+    }->{ $info->{lang} } || $info->{lang};
 
     $info->{output_name} = {
         event => "Event Stream",
         json => "JSON",
         native => "Native Data",
-    }->{ $info->{output} };
+        py => "Native Data",
+        perl => "Native Data",
+    }->{ $info->{format} };
 
     return $info;
 }

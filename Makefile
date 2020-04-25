@@ -24,6 +24,7 @@ ALL_VIEWS := \
 
 #------------------------------------------------------------------------------
 build: data matrix
+	./bin/expected
 	./bin/run-framework-tests --all
 	./bin/compare-framework-tests --all
 	./bin/create-matrix
@@ -42,6 +43,12 @@ yaml-test-suite:
 data:
 	git clone https://github.com/yaml/yaml-test-suite -b $@ $@
 
+gh-pages:
+	-git branch --track $@ origin/$@
+	git worktree add --force $@ gh-pages
+
+update-gh-pages:
+	rsync -a --delete --stats matrix/html/* gh-pages/
 
 clean:
 	rm -fr data matrix

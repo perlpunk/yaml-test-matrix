@@ -16,8 +16,8 @@
 
 <table class="yaml">
 <tr>
-<th>ID</th><th>Language</th><th>Name</th><th>Repo</th><th>URL</th><th>Output</th>
-<th>Version</th><th>Commit</th><th>Commit Date</th>
+<th>ID</th><th>Language</th><th>Name</th><th>Homepage</th><th>Output</th>
+<th>Version</th>
 <th>Run</th><th>Runtime</th>
 </tr>
 [%each .framework_info %]
@@ -26,12 +26,9 @@
 [%if __value__ %][%with __value__ %]
 <td>[%= language_name %]</td>
 <td>[%= name %]</td>
-<td>[%= provider %]</td>
-<td><a href="[%= link %]">[%= reponame %]</a></td>
+<td><a href="[%= homepage %]">[%= homepage %]</a></td>
 <td>[%= output_name %]</td>
 <td>[%= version %]</td>
-<td><a href="[%= commit_link %]">[%= commit_short %]</a></td>
-<td>[%= cdate %]</td>
 <td>[%= run_date %]</th>
 <td class="number">[%= runtime %]s</td>
 [%/with %]
