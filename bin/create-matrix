@@ -17,6 +17,7 @@ use YAML::Matrix qw/
 /;
 
 my %tests;
+my %invalid;
 my %frameworks;
 my @frameworks;
 my %framework_info;
@@ -30,6 +31,7 @@ my %htc_args = (
 );
 
 my @status = (qw/ ok json_ok diff json_diff na error correct/);
+my @status_invalid = (qw/ invalid_correct invalid_incorrect /);
 
 my $datadir = "$Bin/../yaml-test-suite/data";
 
@@ -61,33 +63,41 @@ sub gather_data {
             my $results = $testdata->{ $test };
             my $tags = $id2tag->{ $test } || [];
             @$tags = sort @$tags;
+
+            my $tests = \%tests;
+            my @states = @status;
             if ($results->{invalid}) {
+                $tests = \%invalid;
+                @states = @status_invalid;
                 for (qw/ invalid_correct invalid_incorrect /) {
                     if ($results->{ $_ }) {
-                        $overview{ $fw }->{ $_ }++;
+#                        $overview{ $fw }->{ $_ }++;
                     }
                 }
-                next;
+                $frameworks{ $fw }->{invalid}->{count}++;
             }
+            else {
+                $frameworks{ $fw }->{count}++;
+            }
+
             my $title = $results->{title};
-            $tests{ $test }->{id} = $test;
-            $tests{ $test }->{title} = $title;
-            $tests{ $test }->{frameworks}->{ $fw } = $results;
-            $tests{ $test }->{frameworks}->{ $fw }->{id} = $fw;
-            $tests{ $test }->{tags} = $tags;
-            for my $status (@status) {
+            $tests->{ $test }->{id} = $test;
+            $tests->{ $test }->{title} = $title;
+            $tests->{ $test }->{frameworks}->{ $fw } = $results;
+            $tests->{ $test }->{frameworks}->{ $fw }->{id} = $fw;
+            $tests->{ $test }->{tags} = $tags;
+            for my $status (@states) {
                 if ($results->{ $status }) {
                     $frameworks{ $fw }->{ $status }++;
                     $overview{ $fw }->{ $status }++;
                     for my $tag (@$tags) {
                         $overview{ $fw }->{tags}->{ $status }->{ $tag }++;
                     }
-                    my $by_status = $tests{ $test }->{framework_by_status}->{ $status } ||= [];
+                    my $by_status = $tests->{ $test }->{framework_by_status}->{ $status } ||= [];
                     push @{ $by_status }, { framework => $fw, results => $results };
 
                 }
             }
-            $frameworks{ $fw }->{count}++;
 
         }
     }
@@ -99,6 +109,7 @@ sub create_html {
     mkdir "matrix/html/css";
     mkdir "matrix/html/js";
     my @tests;
+    my @tests_invalid;
 
     my @framework_names = map {
         my ($lang, $name, $type) = split /[.-]/, $_;
@@ -120,24 +131,32 @@ sub create_html {
     } @framework_names;
 
 
-    for my $test (sort { $tests{ $a }->{title} cmp $tests{ $b }->{title}} keys %tests) {
-        my $data = $tests{ $test };
-        my $frameworks = $data->{frameworks};
-        my @frameworks;
-        for my $fw (@framework_names) {
-            my $results = $frameworks->{ $fw->{fullname} };
-            $results->{test} = $test;
-            if (exists $results->{got_json}) {
-                $results->{got_json_lines} = [split m/\n/, $results->{got_json} ];
+    my %types = (
+        valid   => [\%tests, \@tests ],
+        invalid => [ \%invalid, \@tests_invalid ],
+    );
+    for my $type (sort keys %types) {
+        my $tests = $types{ $type }->[0];
+        my $test_list = $types{ $type }->[1];
+        for my $test (sort { $tests->{ $a }->{title} cmp $tests->{ $b }->{title}} keys %$tests) {
+            my $data = $tests->{ $test };
+            my $frameworks = $data->{frameworks};
+            my @frameworks;
+            for my $fw (@framework_names) {
+                my $results = $frameworks->{ $fw->{fullname} };
+                $results->{test} = $test;
+                if (exists $results->{got_json}) {
+                    $results->{got_json_lines} = [split m/\n/, $results->{got_json} ];
+                }
+                push @frameworks, $results;
             }
-            push @frameworks, $results;
+            push @$test_list, {
+                id => $data->{id},
+                title => $data->{title},
+                frameworks => \@frameworks,
+            };
+            create_details($type => $test);
         }
-        push @tests, {
-            id => $data->{id},
-            title => $data->{title},
-            frameworks => \@frameworks,
-        };
-        create_details($test);
     }
     say "Created detail pages matrix/html/details/<id>.html";
     my @framework_headers;
@@ -163,23 +182,25 @@ sub create_html {
         $selectors{ $b }->[0]->{type}
     } keys %selectors;
 
-    {
+    for my $type (sort keys %types) {
         my $htc = HTML::Template::Compiled->new(
             filename => "valid.html",
             path => "$Bin/../share/matrix/templates",
             %htc_args,
         );
+        my $list = $types{ $type }->[1]->[0];
         $htc->param(
             framework_names => \@framework_names,
             framework_headers => \@framework_headers,
-            tests => \@tests,
+            tests => $types{ $type }->[1],
             selectors => \@selectors,
+            $type => 1,
         );
 
-        open my $fh, ">", "matrix/html/valid.html" or die $!;
+        open my $fh, ">", "matrix/html/$type.html" or die $!;
         print $fh $htc->output;
         close $fh;
-        say "Created matrix/html/valid.html";
+        say "Created matrix/html/$type.html";
     }
     {
         my $htc = HTML::Template::Compiled->new(
@@ -322,7 +343,7 @@ sub create_overview {
 }
 
 sub create_details {
-    my ($id) = @_;
+    my ($type, $id) = @_;
     my $yaml = io->file("$datadir/$id/in.yaml")->encoding('utf-8')->slurp;
     my $events = io->file("$datadir/$id/test.event")->encoding('utf-8')->slurp;
 
@@ -332,10 +353,18 @@ sub create_details {
         $json = io->file("matrix/expected/$id/in.json")->slurp;
         $json_lines = [ split m/\n/, $json ];
     }
-    my $test = $tests{ $id };
+    my $test;
+    my @states = qw/ ok json_ok diff json_diff error na invalid_correct invalid_incorrect /;
+    if ($type eq 'invalid') {
+        $test = $invalid{ $id };
+        @states = qw/ invalid_incorrect invalid_correct /;
+    }
+    else {
+        $test = $tests{ $id };
+    }
     my $by_status = $test->{framework_by_status};
     my @ordered_by_status;
-    for my $status (qw/ ok json_ok diff json_diff error na invalid_correct invalid_incorrect /) {
+    for my $status (@states) {
         my $list = $by_status->{ $status };
         my @states;
         for my $item (@$list) {

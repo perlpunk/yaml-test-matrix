@@ -84,6 +84,8 @@ sub compare_tests {
     my $tests = $test_info->{tests};
     for my $id (sort keys %$tests) {
         my $out = $tests->{ $id };
+        my ($title) = io->file("$data/$id/===")->chomp->slurp;
+        $tests->{ $id }->{title} = $title;
         if (-f "$data/$id/error") {
             $out->{invalid} = 1;
             my $error = $out->{error};
@@ -98,8 +100,6 @@ sub compare_tests {
             next;
         }
         print "Comparing results for $id...\r";
-        my ($title) = io->file("$data/$id/===")->chomp->slurp;
-        $tests->{ $id }->{title} = $title;
         my $error = $out->{error};
         my $stdout = delete $out->{stdout} // '';
         my $stderr = delete $out->{stderr} // '';
