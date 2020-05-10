@@ -16,7 +16,7 @@ use YAML::Matrix qw/
     minimal_events
     cpp_event_to_event java_event_to_event
     generate_expected_output
-    load_csv
+    load_csv gather_tags
 /;
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
@@ -35,6 +35,7 @@ $datadir //= "$Bin/../yaml-test-suite/data";
 $matrixdir //= "$Bin/../matrix";
 
 my @views = io->file("$Bin/../views.txt")->chomp->slurp;
+my $id2tag = gather_tags("$datadir/tags");
 
 my %views;
 @views{ @views } = (1) x @views;
@@ -86,6 +87,8 @@ sub compare_tests {
         my $out = $tests->{ $id };
         my ($title) = io->file("$data/$id/===")->chomp->slurp;
         $tests->{ $id }->{title} = $title;
+        my $tag_list = $id2tag->{ $id };
+        my %tags = map { $_ => 1 } @$tag_list;
         if (-f "$data/$id/error") {
             $out->{invalid} = 1;
             my $error = $out->{error};
@@ -109,6 +112,24 @@ sub compare_tests {
         my $got_data = $stdout . $stderr;
         $tests->{ $id }->{got_data} = $got_data;
 
+        if ($error) {
+            my $msg = $got_data;
+            $tests->{ $id }->{msg} = $msg;
+
+            if ($view =~ m/^perl-tiny/) {
+                # YAML::Tiny doesn't support those features
+                my @t = grep { $_ } @tags{qw/ alias anchor flow tag /};
+                if (@t) {
+                    $tests->{ $id }->{naerror} = 1;
+                    $tests->{ $id }->{na} = 1;
+                    delete $out->{error};
+                    $sum_naerror++;
+                    $sum_na++;
+                    next;
+                }
+            }
+
+        }
         if ($view =~ m/\.json$/ and not -f "$data/$id/in.json") {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
@@ -116,16 +137,12 @@ sub compare_tests {
                 $tests->{ $id }->{naerror} = 1;
                 $sum_naerror++;
                 delete $out->{error};
-                my $msg = $got_data;
-                $tests->{ $id }->{msg} = $msg;
             }
             next;
         }
 
         if ($error) {
             $sum_err++;
-            my $msg = $got_data;
-            $tests->{ $id }->{msg} = $msg;
             next;
         }
 
@@ -149,7 +166,7 @@ sub compare_tests {
             my $ok = 1;
             my $diff_line;
             for my $i (0 .. $#$got_json_lines) {
-                if ($got_json_lines->[ $i ] ne $exp_json_lines->[ $i ]) {
+                if (($got_json_lines->[ $i ] // '') ne ($exp_json_lines->[ $i ] // '')) {
                     $ok = 0;
                     $diff_line = $i;
                     last;
