@@ -71,6 +71,10 @@ seq:
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:2: error: invalid anchor indent for sequence
 &amp;anchor
  ^~~~~~
++STR
++DOC ---
++MAP
+=VAL :seq
 </pre>
  </div>
 
@@ -87,6 +91,10 @@ seq:
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: could not find expected &#39;:&#39;
++STR
++DOC ---
++MAP
+=VAL :seq
 </pre>
  </div>
 
@@ -105,6 +113,10 @@ seq:
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC ---
++MAP
+=VAL :seq
 </pre>
  </div>
 
@@ -141,6 +153,13 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 9, posCharOffset = 9, posLine = 3, posColumn = 0} (Unexpected &#39;&amp;&#39;)
++STR
++DOC ---
++MAP
+=VAL :seq
+=VAL :
+-MAP
+-DOC
 </pre>
  </div>
 
@@ -232,6 +251,14 @@ YAMLException: can not read a block mapping entry; a multiline key may not be an
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC ---
++MAP
+=VAL :seq
+=VAL :
+=VAL :
+=VAL :
+-MAP
 </pre>
  </div>
 
@@ -268,7 +295,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:363: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:482: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x560c9f4c7f97
+	[C]: at 0x5641a4179f97
 </pre>
  </div>
 
@@ -282,6 +309,11 @@ Got       : EOL
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC ---
++MAP
+=VAL :seq
+=VAL :
 </pre>
  </div>
 
@@ -447,6 +479,10 @@ could not find expected &#39;:&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 1:
     - a
     ^
++STR
++DOC ---
++MAP
+=VAL :seq
 </pre>
  </div>
 
@@ -558,6 +594,10 @@ could not find expected &#39;:&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 1:
     - a
     ^ (line: 4)
++STR
++DOC ---
++MAP
+=VAL :seq
 </pre>
  </div>
 

@@ -159,6 +159,9 @@ scalar2
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:7: error: missing explicit document end marker before directive(s)
 %YAML 1.2
       ^~~
++STR
++DOC ---
+=VAL :scalar1
 </pre>
  </div>
 
@@ -181,6 +184,9 @@ scalar2
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC ---
+=VAL :scalar1
 </pre>
  </div>
 
@@ -207,6 +213,10 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 22, posCharOffset = 22, posLine = 3, posColumn = 0} (Unexpected &#39;%&#39;)
++STR
++DOC ---
+=VAL :scalar1
+-DOC
 </pre>
  </div>
 
@@ -244,6 +254,9 @@ YAMLException: end of the stream or a document separator is expected at line 3, 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC ---
+=VAL :scalar1
 </pre>
  </div>
 
@@ -278,7 +291,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:310: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:481: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x56241a8f6f97
+	[C]: at 0x55b984135f97
 </pre>
  </div>
 
@@ -292,6 +305,9 @@ Got       : YAML_DIRECTIVE
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;%YAML 1.2&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC ---
+=VAL :scalar1
 </pre>
  </div>
 

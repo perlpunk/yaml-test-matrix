@@ -13,7 +13,7 @@
 <h2><tt>--- <a
 href="https://github.com/yaml/yaml-test-suite/blob/master/test/P2EQ.tml">&test-P2EQ</a><br>
 &nbsp;&nbsp;Title: Invalid sequene item on same line as previous item</br>
-&nbsp;&nbsp;Tags: [ error, sequence ]</tt></h2>
+&nbsp;&nbsp;Tags: [ error, flow, mapping, sequence ]</tt></h2>
 
 <div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
 - { y: z }- invalid
@@ -76,6 +76,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/P2EQ.tml">&test-P
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:11: error: block sequence on the same line as a previous item
 - { y: z }- invalid
           ^
++STR
++DOC ---
++SEQ
 </pre>
  </div>
 
@@ -92,6 +95,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/P2EQ.tml">&test-P
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: block sequence entries are not allowed in this context
++STR
++DOC ---
++SEQ
 </pre>
  </div>
 
@@ -100,6 +106,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/P2EQ.tml">&test-P
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception:
 yaml-cpp: error at line 2, column 11: illegal block entry
++STR
++DOC
++SEQ
 </pre>
  </div>
 
@@ -118,6 +127,9 @@ yaml-cpp: error at line 2, column 11: illegal block entry
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC ---
++SEQ
 </pre>
  </div>
 
@@ -151,6 +163,13 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 14, posCharOffset = 14, posLine = 2, posColumn = 10} (Expected start of line)
++STR
++DOC ---
++SEQ
++MAP
+=VAL :y
+=VAL :z
+-MAP
 </pre>
  </div>
 
@@ -233,6 +252,14 @@ YAMLException: bad indentation of a sequence entry at line 2, column 11:
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC ---
++SEQ
++MAP
+=VAL :y
+=VAL :z
+-MAP
+-SEQ
 </pre>
  </div>
 
@@ -269,7 +296,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:482: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55f60af10f97
+	[C]: at 0x55e9433dcf97
 </pre>
  </div>
 
@@ -279,6 +306,13 @@ stack traceback:
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/buildutils/nimyaml_event.nim(8) nimyaml_event
 /tmp/NimYAML-0.13.1/yaml/stream.nim(223) finished
 Error: unhandled exception: Illegal token (expected &#39;:&#39;, comment or line end): ltSeqItemInd [YamlStreamError]
++STR
++DOC ---
++SEQ
++MAP
+=VAL :y
+=VAL :z
+-MAP
 </pre>
  </div>
 
@@ -411,6 +445,9 @@ yaml.scanner.ScannerError: sequence entries are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 11:
     - { y: z }- invalid
               ^
++STR
++DOC ---
++SEQ
 </pre>
  </div>
 
@@ -512,6 +549,9 @@ ruamel.yaml.scanner.ScannerError: sequence entries are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 11:
     - { y: z }- invalid
               ^ (line: 2)
++STR
++DOC ---
++SEQ
 </pre>
  </div>
 

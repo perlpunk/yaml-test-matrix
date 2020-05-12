@@ -86,6 +86,12 @@ invalid item
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:5:1: error: missing document start
 invalid item
 ^~~~~~~~~~~~
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
+-DOC
 </pre>
  </div>
 
@@ -95,6 +101,9 @@ invalid item
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:5:1: error: missing document start
 invalid item
 ^~~~~~~~~~~~
+[
+  &quot;sequence item&quot;
+]
 </pre>
  </div>
 
@@ -102,6 +111,12 @@ invalid item
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: did not find expected &lt;document start&gt;
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
+-DOC
 </pre>
  </div>
 
@@ -115,6 +130,11 @@ invalid item
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
 </pre>
  </div>
 
@@ -143,6 +163,12 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 22, posCharOffset = 22, posLine = 5, posColumn = 0} (Unexpected &#39;i&#39;)
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
+-DOC
 </pre>
  </div>
 
@@ -185,6 +211,9 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:489)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
 	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+[
+  &quot;sequence item&quot;
+]
 </pre>
  </div>
 
@@ -215,6 +244,11 @@ YAMLException: end of the stream or a document separator is expected at line 5, 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
 </pre>
  </div>
 
@@ -249,7 +283,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:310: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:481: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x556b9ddb1f97
+	[C]: at 0x559113c88f97
 </pre>
  </div>
 
@@ -259,6 +293,11 @@ stack traceback:
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/buildutils/nimyaml_event.nim(8) nimyaml_event
 /tmp/NimYAML-0.13.1/yaml/stream.nim(223) finished
 Error: unhandled exception: Unexpected token (expected document end): ltScalarPart [YamlStreamError]
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
 </pre>
  </div>
 
@@ -272,6 +311,11 @@ Got       : PLAIN
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;invalid item&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
 </pre>
  </div>
 
@@ -422,6 +466,12 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
   in &quot;&lt;unicode string&gt;&quot;, line 5, column 1:
     invalid item
     ^
++STR
++DOC ---
++SEQ
+=VAL :sequence item
+-SEQ
+-DOC
 </pre>
  </div>
 
@@ -445,6 +495,9 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
   in &quot;&lt;unicode string&gt;&quot;, line 5, column 1:
     invalid item
     ^
+[
+  &quot;sequence item&quot;
+]
 </pre>
  </div>
 
@@ -468,6 +521,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
   in &quot;&lt;unicode string&gt;&quot;, line 5, column 1:
     invalid item
     ^
+[&#39;sequence item&#39;]
 </pre>
  </div>
 

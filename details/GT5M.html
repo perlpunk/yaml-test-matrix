@@ -51,6 +51,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/GT5M.tml">&test-G
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:2: error: invalid anchor indent for sequence
 &amp;node
  ^~~~
++STR
++DOC
++SEQ
 </pre>
  </div>
 
@@ -67,6 +70,10 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/GT5M.tml">&test-G
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: could not find expected &#39;:&#39;
++STR
++DOC
++SEQ
+=VAL :item1
 </pre>
  </div>
 
@@ -85,6 +92,10 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/GT5M.tml">&test-G
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC
++SEQ
+=VAL :item1
 </pre>
  </div>
 
@@ -121,6 +132,12 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 8, posCharOffset = 8, posLine = 2, posColumn = 0} (Unexpected &#39;&amp;&#39;)
++STR
++DOC
++SEQ
+=VAL :item1
+-SEQ
+-DOC
 </pre>
  </div>
 
@@ -209,6 +226,11 @@ YAMLException: end of the stream or a document separator is expected at line 2, 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC
++SEQ
+=VAL :item1
+-SEQ
 </pre>
  </div>
 
@@ -245,7 +267,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:482: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55efdb377f97
+	[C]: at 0x5590e295ff97
 </pre>
  </div>
 
@@ -255,6 +277,10 @@ stack traceback:
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/buildutils/nimyaml_event.nim(8) nimyaml_event
 /tmp/NimYAML-0.13.1/yaml/stream.nim(223) finished
 Error: unhandled exception: Unexpected token (expected block sequence indicator) [YamlStreamError]
++STR
++DOC
++SEQ
+=VAL :item1
 </pre>
  </div>
 
@@ -268,6 +294,10 @@ Got       : ANCHOR
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;&amp;node&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC
++SEQ
+=VAL :item1
 </pre>
  </div>
 
@@ -433,6 +463,10 @@ could not find expected &#39;:&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 3, column 1:
     - item2
     ^
++STR
++DOC
++SEQ
+=VAL :item1
 </pre>
  </div>
 
@@ -540,6 +574,10 @@ could not find expected &#39;:&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 3, column 1:
     - item2
     ^ (line: 3)
++STR
++DOC
++SEQ
+=VAL :item1
 </pre>
  </div>
 

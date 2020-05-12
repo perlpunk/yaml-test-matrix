@@ -113,6 +113,10 @@ are invalid
 ^~~~~
   more spaces at the beginning
 ~~
++STR
++DOC ---
++MAP
+=VAL :block scalar
 </pre>
  </div>
 
@@ -131,6 +135,11 @@ are invalid
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: did not find expected key
++STR
++DOC ---
++MAP
+=VAL :block scalar
+=VAL |
 </pre>
  </div>
 
@@ -139,6 +148,11 @@ are invalid
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception:
 yaml-cpp: error at line 4, column 3: end of map not found
++STR
++DOC
++MAP
+=VAL :block scalar
+=VAL :
 </pre>
  </div>
 
@@ -152,6 +166,11 @@ yaml-cpp: error at line 4, column 3: end of map not found
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC ---
++MAP
+=VAL :block scalar
+=VAL |
 </pre>
  </div>
 
@@ -183,6 +202,10 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 71, posCharOffset = 71, posLine = 6, posColumn = 0} (leading empty lines contain more spaces than the first non-empty line in scalar: &quot;   \nmore spaces at the beginning\nare invalid\n&quot;)
++STR
++DOC ---
++MAP
+=VAL :block scalar
 </pre>
  </div>
 
@@ -265,6 +288,12 @@ YAMLException: bad indentation of a mapping entry at line 4, column 3:
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC ---
++MAP
+=VAL :block scalar
+=VAL |
+-MAP
 </pre>
  </div>
 
@@ -301,7 +330,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:482: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x565118dc0f97
+	[C]: at 0x55791b5fbf97
 </pre>
  </div>
 
@@ -314,6 +343,11 @@ Message   : Bad indendation in MAP
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 202
 YAML      : &quot;more spaces at the beginning\n&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC ---
++MAP
+=VAL :block scalar
+=VAL |
 </pre>
  </div>
 
@@ -421,6 +455,11 @@ expected &lt;block end&gt;, but found &#39;&lt;scalar&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       more spaces at the beginning
       ^
++STR
++DOC ---
++MAP
+=VAL :block scalar
+=VAL |
 </pre>
  </div>
 
@@ -510,6 +549,11 @@ expected &lt;block end&gt;, but found &#39;&lt;scalar&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       more spaces at the beginning
       ^ (line: 4)
++STR
++DOC ---
++MAP
+=VAL :block scalar
+=VAL |
 </pre>
  </div>
 

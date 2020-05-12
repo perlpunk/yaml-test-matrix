@@ -56,6 +56,14 @@ top2
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: invalid value after mapping
 top2
 ^~~~
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
+-MAP
 </pre>
  </div>
 
@@ -72,6 +80,13 @@ top2
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: could not find expected &#39;:&#39;
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
 </pre>
  </div>
 
@@ -89,6 +104,13 @@ top2
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
 </pre>
  </div>
 
@@ -129,6 +151,16 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 19, posCharOffset = 19, posLine = 3, posColumn = 0} (Unexpected &#39;t&#39;)
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
+-MAP
+-MAP
+-DOC
 </pre>
  </div>
 
@@ -221,6 +253,14 @@ YAMLException: can not read a block mapping entry; a multiline key may not be an
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
+-MAP
 </pre>
  </div>
 
@@ -258,7 +298,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:363: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:482: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55d9022c3f97
+	[C]: at 0x564ce07bdf97
 </pre>
  </div>
 
@@ -268,6 +308,14 @@ stack traceback:
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/buildutils/nimyaml_event.nim(8) nimyaml_event
 /tmp/NimYAML-0.13.1/yaml/stream.nim(223) finished
 Error: unhandled exception: Missing mapping value indicator (`:`) [YamlStreamError]
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
+-MAP
 </pre>
  </div>
 
@@ -281,6 +329,14 @@ Got       : EOL
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
+-MAP
 </pre>
  </div>
 
@@ -446,6 +502,13 @@ could not find expected &#39;:&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 1:
     
     ^
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
 </pre>
  </div>
 
@@ -561,6 +624,13 @@ could not find expected &#39;:&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 1:
     
     ^ (line: 4)
++STR
++DOC
++MAP
+=VAL :top1
++MAP
+=VAL :key1
+=VAL :val1
 </pre>
  </div>
 

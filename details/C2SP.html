@@ -32,6 +32,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/C2SP.tml">&test-C
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:2: error: invalid multiline flow sequence key 
 ]: 42
  ^
++STR
 </pre>
  </div>
 
@@ -48,6 +49,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/C2SP.tml">&test-C
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: mapping values are not allowed in this context
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 
@@ -56,6 +62,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/C2SP.tml">&test-C
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception:
 yaml-cpp: error at line 2, column 2: illegal map value
++STR
 </pre>
  </div>
 
@@ -74,6 +81,11 @@ yaml-cpp: error at line 2, column 2: illegal map value
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 
@@ -107,6 +119,11 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 5, posCharOffset = 5, posLine = 2, posColumn = 1} (Expected start of line)
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 
@@ -185,6 +202,9 @@ YAMLException: end of the stream or a document separator is expected at line 2, 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC
++MAP
 </pre>
  </div>
 
@@ -219,7 +239,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:310: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:487: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x563233d39f97
+	[C]: at 0x55aef2403f97
 </pre>
  </div>
 
@@ -229,6 +249,11 @@ stack traceback:
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/buildutils/nimyaml_event.nim(8) nimyaml_event
 /tmp/NimYAML-0.13.1/yaml/stream.nim(223) finished
 Error: unhandled exception: Unexpected token (expected document end): ltMapValInd [YamlStreamError]
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 
@@ -242,6 +267,11 @@ Got       : COLON
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;: 42\n&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 
@@ -398,6 +428,11 @@ yaml.scanner.ScannerError: mapping values are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 2:
     ]: 42
      ^
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 
@@ -485,6 +520,11 @@ ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 2:
     ]: 42
      ^ (line: 2)
++STR
++DOC
++SEQ
+=VAL :23
+-SEQ
 </pre>
  </div>
 

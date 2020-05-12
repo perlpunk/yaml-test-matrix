@@ -13,7 +13,7 @@
 <h2><tt>--- <a
 href="https://github.com/yaml/yaml-test-suite/blob/master/test/BS4K.tml">&test-BS4K</a><br>
 &nbsp;&nbsp;Title: Comment between plain scalar lines</br>
-&nbsp;&nbsp;Tags: [ error ]</tt></h2>
+&nbsp;&nbsp;Tags: [ error, scalar ]</tt></h2>
 
 <div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>word1  # comment
 word2
@@ -87,6 +87,10 @@ word2
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: missing document start
 word2
 ^~~~~
++STR
++DOC
+=VAL :word1
+-DOC
 </pre>
  </div>
 
@@ -96,6 +100,7 @@ word2
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: missing document start
 word2
 ^~~~~
+&quot;word1&quot;
 </pre>
  </div>
 
@@ -103,6 +108,10 @@ word2
   <div class="framework framework_box_invalid_correct" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parse error: did not find expected &lt;document start&gt;
++STR
++DOC
+=VAL :word1
+-DOC
 </pre>
  </div>
 
@@ -116,6 +125,9 @@ word2
    at Program.ConvertToLibYamlStyleAnnotatedEventStream(TextReader textReader, TextWriter textWriter)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
++STR
++DOC
+=VAL :word1
 </pre>
  </div>
 
@@ -142,6 +154,10 @@ Aborted (core dumped)
   <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 17, posCharOffset = 17, posLine = 2, posColumn = 0} (Unexpected &#39;w&#39;)
++STR
++DOC
+=VAL :word1
+-DOC
 </pre>
  </div>
 
@@ -184,6 +200,7 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:489)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
 	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+&quot;word1&quot;
 </pre>
  </div>
 
@@ -214,6 +231,9 @@ YAMLException: end of the stream or a document separator is expected at line 2, 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>undefined
++STR
++DOC
+=VAL :word1
 </pre>
  </div>
 
@@ -248,7 +268,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:310: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:481: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55d01b443f97
+	[C]: at 0x5650e9cd3f97
 </pre>
  </div>
 
@@ -262,6 +282,9 @@ Got       : PLAIN
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 386
 YAML      : &quot;word2&quot;
   at /yaml/bin/perl-pp-event line 25.
++STR
++DOC
+=VAL :word1
 </pre>
  </div>
 
@@ -412,6 +435,10 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
     word2
     ^
++STR
++DOC
+=VAL :word1
+-DOC
 </pre>
  </div>
 
@@ -435,6 +462,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
     word2
     ^
+&quot;word1&quot;
 </pre>
  </div>
 
@@ -458,6 +486,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
     word2
     ^
+&#39;word1&#39;
 </pre>
  </div>
 
