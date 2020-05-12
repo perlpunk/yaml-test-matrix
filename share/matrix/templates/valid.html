@@ -45,6 +45,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect<br>
 [%else %]
 <span class="status_box color_ok">&nbsp;</span>ok <span class="status_box color_json_ok">&nbsp;</span>json_ok<br>
+<span class="status_box color_ni">&nbsp;</span>n/i<br>
 <span class="status_box color_diff">&nbsp;</span>diff <span class="status_box color_json_diff">&nbsp;</span>json_diff<br>
 <span class="status_box color_na">&nbsp;</span>n/a<br>
 <span class="status_box color_error">&nbsp;</span>error<br>
@@ -58,6 +59,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
 [%else %]
 [%if ok %]<span class="status_box color_ok">&nbsp;</span>[%= ok %][%/if %]
 [%if json_ok %]<span class="status_box color_json_ok">&nbsp;</span>[%= json_ok %][%/if %]<br>
+[%if ni %]<span class="status_box color_ni">&nbsp;</span>[%= ni %][%/if %]<br>
 [%if diff %]<span class="status_box color_diff">&nbsp;</span>[%= diff %][%/if %]
 [%if json_diff %]<span class="status_box color_json_diff">&nbsp;</span>[%= json_diff %][%/if %]<br>
 [%if na %]<span class="status_box color_na">&nbsp;</span>[%= na %][%/if %]<br>
@@ -76,7 +78,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
 <td id="[%= id %]" class="testname"><a href="details/[%= id %].html">[%= title %]</a></td>
 [%loop frameworks %]
 <td class="result [%= id %]
-[%if invalid_correct %]color_invalid_correct[%elsif invalid_incorrect %]color_invalid_incorrect[%elsif ok %]color_ok[%elsif error %]color_error[%elsif json_ok %]color_json_ok[%elsif diff
+[%if invalid_correct %]color_invalid_correct[%elsif invalid_incorrect %]color_invalid_incorrect[%elsif ni %]color_ni[%elsif ok %]color_ok[%elsif error %]color_error[%elsif json_ok %]color_json_ok[%elsif diff
 %]color_diff[%elsif json_diff %]color_json_diff[%elsif na %]color_na[%/if %]
 "><a class="invisible" href="details/[%= test %].html#[%= id %]">&nbsp;</a>
 </td>

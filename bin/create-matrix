@@ -5,6 +5,8 @@ use 5.010;
 use Data::Dumper;
 use FindBin '$Bin';
 use YAML::XS qw/ LoadFile /;
+use YAML::PP;
+use YAML::PP::Highlight;
 use IO::All;
 use File::Copy qw/ copy /;
 use HTML::Template::Compiled;
@@ -30,10 +32,15 @@ my %htc_args = (
     use_expressions => 1,
 );
 
-my @status = (qw/ ok json_ok diff json_diff na error correct/);
+my @status = (qw/ ok json_ok diff json_diff na error ni correct/);
 my @status_invalid = (qw/ invalid_correct invalid_incorrect /);
 
 my $datadir = "$Bin/../yaml-test-suite/data";
+
+my $ypp = YAML::PP->new;
+my $not_implemented = $ypp->load_file("ni.yaml");
+my $tokens = $ypp->loader->parser->tokens;
+my $highlighted = YAML::PP::Highlight->htmlcolored($tokens);
 
 my $id2tag = gather_tags("$datadir/tags");
 gather_data();
@@ -255,7 +262,7 @@ sub create_overview {
         my $total_valid = 0;
         my $total_invalid = 0;
         for my $status (qw/
-            ok json_ok diff json_diff na error
+            ok json_ok diff json_diff na error ni
             invalid_correct invalid_incorrect /) {
             my $count = $data->{ $status };
             $row{ $status } = $count;
@@ -268,11 +275,11 @@ sub create_overview {
         my @status_percentage_valid;
         my @status_percentage_invalid;
         if ($fw =~ m/-event$/) {
-            @status_percentage_valid = qw/ ok diff error /;
+            @status_percentage_valid = qw/ ok ni diff error /;
             @status_percentage_invalid = qw/ invalid_correct invalid_incorrect /;
         }
         elsif ($fw =~ m/-json$/) {
-            @status_percentage_valid = qw/ json_ok na json_diff error /;
+            @status_percentage_valid = qw/ json_ok ni json_diff error na /;
             @status_percentage_invalid = qw/ invalid_correct invalid_incorrect /;
         }
         else {
@@ -326,6 +333,7 @@ sub create_overview {
     );
     $htc->param(
         overview => \%overviews,
+        not_implemented => $highlighted,
         sum_valid => $sum_valid,
         sum_invalid => $sum_invalid,
         width_valid => $sum_valid * $factor + 10,
@@ -354,7 +362,7 @@ sub create_details {
         $json_lines = [ split m/\n/, $json ];
     }
     my $test;
-    my @states = qw/ ok json_ok diff json_diff error na invalid_correct invalid_incorrect /;
+    my @states = qw/ ok json_ok diff json_diff error na ni invalid_correct invalid_incorrect /;
     if ($type eq 'invalid') {
         $test = $invalid{ $id };
         @states = qw/ invalid_incorrect invalid_correct /;

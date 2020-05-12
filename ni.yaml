@@ -1,0 +1,19 @@
+---
+c-libyaml.event:        [ empty-key ]
+dotnet-yamldotnet.json: [ local-tag ]
+java-snakeyaml.event:   [ empty-key ]
+java-snakeyaml.json:    [ empty-key, local-tag ]
+js-jsyaml.json:         [ local-tag ]
+js-yaml.event:          [ duplicate-key ]
+perl-pplibyaml.event:   [ empty-key ]
+perl-pplibyaml.json:    [ empty-key ]
+perl-pplibyaml.perl:    [ empty-key ]
+perl-tiny.json:         &tiny [ alias, anchor, complex-key, empty-key,
+                          explicit-key, flow, tag ]
+perl-tiny.perl:         *tiny
+perl-xs.json:           [ empty-key ]
+perl-xs.perl:           [ empty-key ]
+py-pyyaml.event:        [ empty-key ]
+py-pyyaml.json:         [ empty-key ]
+py-pyyaml.py:           [ empty-key ]
+

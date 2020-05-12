@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="css/yaml.css">
 <link rel="stylesheet" type="text/css" href="css/matrix.css">
+<link rel="stylesheet" type="text/css" href="css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -65,23 +66,24 @@ It is suited to identify which problems each processors has and what to avoid.
 <table class="yaml">
 <tr>
 <th></th>
-<th colspan="6"><a href="valid.html">Valid ([%= .sum_valid %])</a></th>
+<th colspan="7"><a href="valid.html">Valid ([%= .sum_valid %])</a></th>
 <th colspan="3"><a href="invalid.html">Invalid ([%= .sum_invalid %])</a></th>
 </tr>
 <tr>
 <th colspan="2"><a href="processors.html">Processors</a></th>
 <th></th>
-<th>ok</th>
-<th>n/a</th>
-<th>diff</th>
-<th>error</th>
+<th><a href="#legend-columns" title="Parse ok">ok</a></th>
+<th><a href="#legend-columns" title="Not implemented">n/i</a></th>
+<th><a href="#legend-columns" title="Parse diff">diff</a></th>
+<th><a href="#legend-columns" title="Parse error">error</a></th>
+<th><a href="#legend-columns" title="Not applicable">n/a</a></th>
 <th></th>
-<th>correct</th>
-<th>incorrect</th>
+<th><a href="#legend-columns" title="Correctly identified as invalid">correct</a></th>
+<th><a href="#legend-columns" title="Parsed incorrectly as valid">incorrect</a></th>
 </tr>
 [%each .overview %]
 [%set_var info value=__value__ %]
-<tr><th colspan="10" class="sub">[%= __key__ %] - [%= info.descr %]</th></tr>
+<tr><th colspan="11" class="sub">[%= __key__ %] - [%= info.descr %]</th></tr>
 [%loop info.views %]
 <tr>
 <th>[%= framework %]</th>
@@ -94,9 +96,10 @@ It is suited to identify which problems each processors has and what to avoid.
 >&nbsp;</span>[%/loop percentage_valid %]
 </td>
 <td>[%= ok %][%= json_ok %]</td>
-<td>[%= na %]</td>
+<td>[%= ni %]</td>
 <td>[%= diff %][%= json_diff %]</td>
 <td>[%= error %]</td>
+<td>[%= na %]</td>
 <td class="percentage" style="min-width: [%= .width_invalid %]px;">
 [%loop percentage_invalid %]<span
     class="overview_status color_[%= status %] bar_[%= border %]"
@@ -111,13 +114,111 @@ It is suited to identify which problems each processors has and what to avoid.
 [%/each .overview %]
 
 </table>
-</div>
 
 Generated with <a
 href="https://github.com/yaml/yaml-test-suite">yaml-test-suite</a>/data
 Commit <a href="https://github.com/yaml/yaml-test-suite/commit/[%=
 .data_commit.sha %]">[%= .data_commit.sha %]
 [%= .data_commit.date %] [%= .data_commit.msg %]</a>
+</div>
+
+<div id="legend">
+<h3>Legend</h3>
+
+
+<div id="legend-columns">
+<h4>Columns</h4>
+<table>
+<tr><th colspan="2">events</td></tr>
+<tr><td><span class="status_box color_ok"               >&nbsp;</span>ok</td><td>Events matched</td></tr>
+<tr><td><span class="status_box color_ni"               >&nbsp;</span>n/i</td><td>This feature is not implemented in this library</td></tr>
+<tr><td><span class="status_box color_diff"             >&nbsp;</span>diff</td><td>Event output differs</td></tr>
+<tr><td><span class="status_box color_error"            >&nbsp;</span>error</td><td>Parsing was aborted with an error</td></tr>
+<tr><td><span class="status_box color_na"               >&nbsp;</span>n/a</td><td>No data to compare for this test</td></tr>
+<tr><td><span class="status_box color_invalid_correct"  >&nbsp;</span>invalid_correct</td><td>Input was correctly detected as invalid</td></tr>
+<tr><td><span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect</td><td>Input was accepted although it is invalid</td></tr>
+<tr><th colspan="2">json</td></tr>
+<tr><td><span class="status_box color_json_ok"          >&nbsp;</span>ok</td><td>Loaded data is equal to JSON</td></tr>
+<tr><td><span class="status_box color_ni"               >&nbsp;</span>n/i</td><td>This feature is not implemented in this library</td></tr>
+<tr><td><span class="status_box color_json_diff"        >&nbsp;</span>diff</td><td>Loaded data differs</td></tr>
+<tr><td><span class="status_box color_error"            >&nbsp;</span>error</td><td>Parsing/Loading was aborted with an error</td></tr>
+<tr><td><span class="status_box color_na"               >&nbsp;</span>n/a</td><td>No data to compare for this test</td></tr>
+<tr><td><span class="status_box color_invalid_correct"  >&nbsp;</span>invalid_correct</td><td>Input was correctly detected as invalid</td></tr>
+<tr><td><span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect</td><td>Input was accepted although it is invalid</td></tr>
+</table>
+</div>
+
+<div id="ni">
+<h4>Which processors don't implement which features?</h4>
+<br><br><br>
+<pre>
+[%= .not_implemented escape=0 %]
+</pre>
+</div>
+
+
+
+<div id="legend-tags">
+<h4>n/i - Not implemented</h4>
+<br>
+<table>
+<tr><td><b>complex-key</b>:<br> The test uses non-scalar keys, for example
+a mapping or a sequence.
+</td><td>
+<pre>---
+? <span class="focus">key: value</span>
+: value
+---
+<span class="focus">[a, list]</span>: value</pre>
+</td></tr>
+<tr><td><b>duplicate-key</b>:<br> The test has a duplicate key, which is valid YAML
+<i>syntax</i>, so the parser should accept it, but it should be an error when
+loaded.
+</td><td>
+<pre><span class="focus">a</span>: 1
+<span class="focus">a</span>: 2</pre>
+</td></tr>
+<tr><td><b>empty-key</b>:<br> The test uses an empty node as a key. For example
+n libyaml/PyYAML this wasn't implemented deliberately, although it was already
+part of YAML 1.1. And many implementations used or ported from those libraries.
+</td><td>
+<pre>key: 1
+<span class="focus">:</span> 2</pre>
+</td></tr>
+<tr><td><b>explicit-key</b>:<br> The test uses '?' to mark a key as explicit:
+</td><td>
+<pre>---
+<span class="focus">?</span> |
+  some multiline
+  key
+: value
+---
+<span class="focus">?</span> a: mapping
+: as a key</pre>
+</td></tr>
+<tr><td><b>flow</b>:<br> The test uses flow style collections.
+</td><td>
+<pre>---
+mapping: <span class="focus">{</span> a: 1, b: 2 <span class="focus">}</span>
+sequence: <span class="focus">[</span> a, b, c <span class="focus">]</span></pre>
+</td></tr>
+<tr><td><b>local-tag</b>:<br> The test uses a local tag with one exclamation mark.
+This is accepted by most parsers, but some libraries cannot load it into an
+object, or have no option to ignore such tags:
+</td><td>
+<pre>---
+some: <span class="focus">!local</span> tag</pre>
+</td></tr>
+<tr><td><b>unknown-tag</b>:<br> The test uses a tag with the standard namespace '!!',
+but it is not part of the YAML 1.2 Core schema. A library should ideally be
+able to optionally ignore them or abort loading. Parsing should pass without an error.
+</td><td>
+<pre>---
+some: <span class="focus">!!nonsense</span> tag</pre>
+</td></tr>
+
+</table>
+</div>
 
 </div>
 

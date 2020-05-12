@@ -36,8 +36,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/[%= id
 <pre>[%loop $result.got_json_lines %]<span
 class="[%if expr="__index__ == $result.diff_line" %]diff_line[%/if %]">[%= _ %]</span>
 [%/loop %]</pre>
+[%elsif $result.ni %]<pre>[%= $result.msg %]</pre>
 [%elsif $result.invalid_incorrect %]<pre>[%= $result.stderr %][%= $result.stdout %]</pre>
-[%elsif $result.invalid_correct %]<pre>[%= $result.stderr %]</pre>
+[%elsif $result.invalid_correct %]<pre>[%= $result.stderr %][%= $result.stdout %]</pre>
 [%elsif $result.error %]<pre>[%= $result.msg %]</pre>
 [%elsif $result.na %]
 <pre>[%= $result.got_data %]</pre>

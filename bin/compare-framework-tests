@@ -20,6 +20,7 @@ use YAML::Matrix qw/
 /;
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
+my $not_implemented = LoadFile("ni.yaml");
 
 GetOptions(
     "help|h" => \my $help,
@@ -72,7 +73,7 @@ sub compare_tests {
     say "Running $view";
     my $data = $args{data};
 
-    my ($sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror) = (0) x 5;
+    my ($sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror, $sum_ni) = (0) x 6;
     my $outfile = "$matrixdir/data/$view-out.yaml";
     if ($views{ $view }) {
     }
@@ -115,21 +116,8 @@ sub compare_tests {
         if ($error) {
             my $msg = $got_data;
             $tests->{ $id }->{msg} = $msg;
-
-            if ($view =~ m/^perl-tiny/) {
-                # YAML::Tiny doesn't support those features
-                my @t = grep { $_ } @tags{qw/ alias anchor flow tag /};
-                if (@t) {
-                    $tests->{ $id }->{naerror} = 1;
-                    $tests->{ $id }->{na} = 1;
-                    delete $out->{error};
-                    $sum_naerror++;
-                    $sum_na++;
-                    next;
-                }
-            }
-
         }
+
         if ($view =~ m/\.json$/ and not -f "$data/$id/in.json") {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
@@ -139,6 +127,19 @@ sub compare_tests {
                 delete $out->{error};
             }
             next;
+        }
+        if ($error) {
+            my $ignore = $not_implemented->{ $view } || [];
+            if (@$ignore) {
+                my @t = grep { $tags{ $_ } } @$ignore;
+                if (@t) {
+                    $tests->{ $id }->{ni} = 1;
+                    delete $out->{error};
+                    $sum_ni++;
+                    next;
+                }
+            }
+
         }
 
         if ($error) {
@@ -240,8 +241,8 @@ sub compare_tests {
         }
     }
     print "Done                         \n";
-    printf "ok: %d diff: %d n/a: %d error: %d n/a+error: %d\n",
-        $sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror;
+    printf "ok: %d diff: %d n/a: %d error: %d n/a+error: %d n/i: %d\n",
+        $sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror, $sum_ni;
 
     say "Saving tests into $matrixdir/data/$view.yaml";
     DumpFile("$matrixdir/data/$view.yaml", $test_info);
