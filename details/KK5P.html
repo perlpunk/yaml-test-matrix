@@ -189,31 +189,35 @@ found unhashable key
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &quot;complex1&quot;: {
-    ? [
-      &quot;a&quot;
-    ] : null
+    ? : null
   },
   &quot;complex2&quot;: {
-    ? [
-      &quot;a&quot;
-    ] : &quot;b&quot;
+    ? : &quot;b&quot;
   },
   &quot;complex3&quot;: {
-    ? [
-      &quot;a&quot;
-    ] : &quot;b\n&quot;
+    ? : &quot;b\n&quot;
   },
   &quot;complex4&quot;: {
     ? &quot;a\n&quot; : null
   },
   &quot;complex5&quot;: {
-    ? [
-      &quot;a&quot;
-    ] : [
+    ? : [
       &quot;b&quot;
     ]
   }
 }
+stdin:2:5: error: JSON does not allow sequences as keys
+  ? - a
+    ^
+stdin:4:5: error: JSON does not allow sequences as keys
+  ? - a
+    ^
+stdin:7:5: error: JSON does not allow sequences as keys
+  ? - a
+    ^
+stdin:15:5: error: JSON does not allow sequences as keys
+  ? - a
+    ^
 </pre>
 
  </div>
@@ -431,19 +435,19 @@ stack traceback:
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
    &quot;complex1&quot; : {
-      &quot;ARRAY(0x55b29c8d6950)&quot; : null
+      &quot;ARRAY(0x55b3700e1950)&quot; : null
    },
    &quot;complex2&quot; : {
-      &quot;ARRAY(0x55b29c8ca100)&quot; : &quot;b&quot;
+      &quot;ARRAY(0x55b3700d5100)&quot; : &quot;b&quot;
    },
    &quot;complex3&quot; : {
-      &quot;ARRAY(0x55b29c8d6ae8)&quot; : &quot;b\n&quot;
+      &quot;ARRAY(0x55b3700e1ae8)&quot; : &quot;b\n&quot;
    },
    &quot;complex4&quot; : {
       &quot;a\n&quot; : null
    },
    &quot;complex5&quot; : {
-      &quot;ARRAY(0x55b29c8d69c8)&quot; : [
+      &quot;ARRAY(0x55b3700e19c8)&quot; : [
          &quot;b&quot;
       ]
    }

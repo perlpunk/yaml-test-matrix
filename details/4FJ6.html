@@ -237,22 +237,12 @@ TypeError: unhashable type: &#39;list&#39;
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[
   {
-    ? [
-      &quot;a&quot;,
-      [
-        {
-          ? [
-            [
-              &quot;b&quot;,
-              &quot;c&quot;
-            ]
-          ] : &quot;d&quot;
-        },
-        &quot;e&quot;
-      ]
-    ] : 23
+    ? : 23
   }
 ]
+stdin:3:3: error: JSON does not allow sequences as keys
+  [ a, [ [[b,c]]: d, e]]: 23
+  ^
 </pre>
 
  </div>
@@ -408,7 +398,7 @@ YAML      : &quot;: d, e]]: 23\n&quot;
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[
    {
-      &quot;ARRAY(0x55cf285e50f8)&quot; : 23
+      &quot;ARRAY(0x559cd1c39118)&quot; : 23
    }
 ]
 </pre>

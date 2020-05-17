@@ -176,13 +176,14 @@ found unhashable key
     &quot;sun&quot;: &quot;yellow&quot;
   },
   {
-    ? {
-      &quot;earth&quot;: &quot;blue&quot;
-    } : {
+    ? : {
       &quot;moon&quot;: &quot;white&quot;
     }
   }
 ]
+stdin:2:5: error: JSON does not allow mappings as keys
+- ? earth: blue
+    ^
 </pre>
 
  </div>
@@ -349,7 +350,7 @@ stack traceback:
       &quot;sun&quot; : &quot;yellow&quot;
    },
    {
-      &quot;HASH(0x55f8eafca8f0)&quot; : {
+      &quot;HASH(0x55fecb9e1938)&quot; : {
          &quot;moon&quot; : &quot;white&quot;
       }
    }

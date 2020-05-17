@@ -216,17 +216,18 @@ expected the node content, but found &#39;:&#39;
   ],
   [
     {
-      null: &quot;empty key entry&quot;
+      &quot;&quot;: &quot;empty key entry&quot;
     }
   ],
   [
     {
-      ? {
-        &quot;JSON&quot;: &quot;like&quot;
-      } : &quot;adjacent&quot;
+      ? : &quot;adjacent&quot;
     }
   ]
 ]
+stdin:3:5: error: JSON does not allow mappings as keys
+- [ {JSON: like}:adjacent ]
+    ^
 </pre>
 
  </div>

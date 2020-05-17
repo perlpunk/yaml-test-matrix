@@ -207,14 +207,14 @@ found unhashable key
  <hr style="clear: both;">    <div class="framework framework_box_na" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  ? {
-    &quot;first&quot;: &quot;Sammy&quot;,
-    &quot;last&quot;: &quot;Sosa&quot;
-  } : {
+  ? : {
     &quot;hr&quot;: 65,
     &quot;avg&quot;: 0.278
   }
 }
+stdin:1:1: error: JSON does not allow mappings as keys
+{ first: Sammy, last: Sosa }:
+^
 </pre>
 
  </div>
@@ -341,7 +341,7 @@ YAML      : &quot;:&quot;
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;HASH(0x558a3c329948)&quot; : {
+   &quot;HASH(0x563d57b22950)&quot; : {
       &quot;avg&quot; : 0.278,
       &quot;hr&quot; : 65
    }

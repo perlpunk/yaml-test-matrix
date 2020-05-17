@@ -154,10 +154,11 @@ found unhashable key
  <hr style="clear: both;">    <div class="framework framework_box_na" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  ? [
-    &quot;flow&quot;
-  ] : &quot;block&quot;
+  ? : &quot;block&quot;
 }
+stdin:1:1: error: JSON does not allow sequences as keys
+[flow]: block
+^
 </pre>
 
  </div>
@@ -284,7 +285,7 @@ YAML      : &quot;: block\n&quot;
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x56299f78f968)&quot; : &quot;block&quot;
+   &quot;ARRAY(0x56379004f948)&quot; : &quot;block&quot;
 }
 </pre>
 
