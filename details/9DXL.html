@@ -105,7 +105,12 @@ matches %: 20
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="hs-hsyaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="hs-hsyaml-json">
 <h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
@@ -150,27 +155,7 @@ matches %: 20
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="c-libfyaml-json">
-<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
-class="">{</span>
-<span
-class="">  &quot;Mapping&quot;: &quot;Document&quot;</span>
-<span
-class="">}</span>
-<span
-class="diff_line">&quot;&quot;</span>
-<span
-class="">{</span>
-<span
-class="">  &quot;matches %&quot;: 20</span>
-<span
-class="">}</span>
-</pre>
- </div>
-
-
-  <div class="framework framework_box_json_diff" id="perl-syck-json">
+ <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>
@@ -234,29 +219,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:310: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:481: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x558cb9044f97
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pplibyaml-perl">
-<h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    found incompatible YAML document
-
-was found at , line: 5, column: 1
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-xs-perl">
-<h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::XS::Load Error: The problem:
-
-    found incompatible YAML document
-
-was found at document: 3, line: 5, column: 1
+	[C]: at 0x55cfca961f97
 </pre>
  </div>
 
@@ -307,6 +270,20 @@ undef
  </div>
 
 
+  <div class="framework framework_box_na" id="perl-pplibyaml-perl">
+<h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;Mapping&#39; =&gt; &#39;Document&#39;
+}
+undef
+{
+  &#39;matches %&#39; =&gt; 20
+}
+</pre>
+
+ </div>
+
+
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
@@ -330,6 +307,20 @@ undef
 undef
 {
   &#39;matches %&#39; =&gt; &#39;20&#39;
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-xs-perl">
+<h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;Mapping&#39; =&gt; &#39;Document&#39;
+}
+undef
+{
+  &#39;matches %&#39; =&gt; 20
 }
 </pre>
 

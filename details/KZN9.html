@@ -221,13 +221,11 @@ expected the node content, but found &#39;:&#39;
   ],
   [
     {
-      ? : &quot;adjacent&quot;
-    }
   ]
 ]
-stdin:3:5: error: JSON does not allow mappings as keys
+stdin:3:5: error: Non scalar keys are not allowed in JSON emit mode
 - [ {JSON: like}:adjacent ]
-    ^
+    ^~~~~~~~~~~~
 </pre>
 
  </div>
@@ -348,7 +346,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:482: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x561c5c7e9f97
+	[C]: at 0x55c04e8dbf97
 </pre>
 
  </div>
