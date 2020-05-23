@@ -83,7 +83,15 @@ It is suited to identify which problems each processors has and what to avoid.
 </tr>
 [%each .overview %]
 [%set_var info value=__value__ %]
-<tr><th colspan="11" class="sub">[%= __key__ %] - [%= info.descr %]</th></tr>
+<tr><th colspan="3" class="sub">[%= __key__ %] - [%= info.descr %]</th>
+[%loop info.valid_columns %]
+<th class="sub"><span class="status_box color_[%= _ %]"></th>
+[%/loop info.valid_columns %]
+<th class="sub"></th>
+[%loop info.invalid_columns %]
+<th class="sub"><span class="status_box color_[%= _ %]"></th>
+[%/loop info.invalid_columns %]
+</tr>
 [%loop info.views %]
 <tr>
 <th>[%= framework %]</th>
@@ -179,13 +187,14 @@ loaded.
 <span class="focus">a</span>: 2</pre>
 </td></tr>
 <tr><td><b>empty-key</b>:<br> The test uses an empty node as a key. For example
-n libyaml/PyYAML this wasn't implemented deliberately, although it was already
+in libyaml/PyYAML this wasn't implemented deliberately, although it was already
 part of YAML 1.1. And many implementations used or ported from those libraries.
+Use of empty keys is discouraged and might be removed in the next YAML version.
 </td><td>
 <pre>key: 1
 <span class="focus">:</span> 2</pre>
 </td></tr>
-<tr><td><b>explicit-key</b>:<br> The test uses '?' to mark a key as explicit:
+<tr><td><b>explicit-key</b>:<br> The test uses '?' to mark a key as explicit.
 </td><td>
 <pre>---
 <span class="focus">?</span> |
@@ -204,7 +213,7 @@ sequence: <span class="focus">[</span> a, b, c <span class="focus">]</span></pre
 </td></tr>
 <tr><td><b>local-tag</b>:<br> The test uses a local tag with one exclamation mark.
 This is accepted by most parsers, but some libraries cannot load it into an
-object, or have no option to ignore such tags:
+object, or have no option to ignore such tags.
 </td><td>
 <pre>---
 some: <span class="focus">!local</span> tag</pre>

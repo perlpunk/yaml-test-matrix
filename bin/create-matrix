@@ -242,8 +242,16 @@ sub create_overview {
 
 
     my %overviews = (
-        event => { descr => 'Compare parsing events' },
-        json => { descr => 'Compare loaded data with JSON' },
+        event => {
+            descr => 'Compare parsing events',
+            valid_columns => [qw/ ok ni diff error na /],
+            invalid_columns => [qw/ invalid_correct invalid_incorrect /],
+        },
+        json => {
+            descr => 'Compare loaded data with JSON',
+            valid_columns => [qw/ json_ok ni json_diff error na /],
+            invalid_columns => [qw/ invalid_correct invalid_incorrect /],
+        },
     );
     my ($sum_valid, $sum_invalid) = (0, 0);
     my $factor = 1.7;
