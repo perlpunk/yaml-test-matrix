@@ -130,6 +130,9 @@ sub run_tests {
             $got =~ s/^\+SEQ \[\]/+SEQ/mg;
             # HsYAML outputs '=COMMENT'
             $got =~ s/^=COMMENT .*\n//gm;
+            if ($view eq 'perl-refparser.event') {
+                $got =~ s/<SPC>$/ /gm;
+            }
         }
         my $dec = decode_utf8($got);
         my @got = split m/\n/, $dec;

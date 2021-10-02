@@ -19,6 +19,7 @@ perl-pp.perl
 perl-pplibyaml.event
 perl-pplibyaml.json
 perl-pplibyaml.perl
+perl-refparser.event
 perl-syck.json
 perl-syck.perl
 perl-tiny.json
