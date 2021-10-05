@@ -14,7 +14,7 @@ use IO::All;
 use List::Util qw/ min /;
 use YAML::Matrix qw/
     minimal_events
-    cpp_event_to_event java_event_to_event
+    hsyaml_event_to_event
     generate_expected_output
     load_csv gather_tags
 /;
@@ -198,13 +198,23 @@ sub compare_tests {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.cpp.event")
                     ->encoding('utf-8')->chomp->slurp;
-                @events = cpp_event_to_event(@events);
                 $tests->{ $id }->{minimal_events} = \@test_events;
                 $tests->{ $id }->{transformed_events} = \@events;
             }
-            elsif ($view eq "java-snakeyaml.event") {
-                @events = java_event_to_event(@events);
-                $tests->{ $id }->{transformed_events} = \@events;
+            # These don't output flow collection information yet
+            elsif ($view eq "dotnet-yamldotnet.event"
+                or $view eq "c-libfyaml.event"
+                or $view eq "nim-nimyaml.event"
+                or $view eq "hs-hsyaml.event"
+                or $view eq "js-yaml.event") {
+                @test_events = io
+                    ->file("$matrixdir/expected/$id/minimal.flow.event")
+                    ->encoding('utf-8')->chomp->slurp;
+                $tests->{ $id }->{minimal_events} = \@test_events;
+                if ($view eq "hs-hsyaml.event") {
+                    @events = hsyaml_event_to_event(@events);
+                    $tests->{ $id }->{transformed_events} = \@events;
+                }
             }
             my $ok = 1;
             my $diff_line;

@@ -124,10 +124,7 @@ sub run_tests {
     for my $file (sort @files) {
         open my $fh, "<", $file or die $!;
         my $got = do { local $/; <$fh> };
-        # We don't yet have '+MAP {}' and '+SEQ []'
         if ($format eq 'event') {
-            $got =~ s/^\+MAP \{\}/+MAP/mg;
-            $got =~ s/^\+SEQ \[\]/+SEQ/mg;
             # HsYAML outputs '=COMMENT'
             $got =~ s/^=COMMENT .*\n//gm;
             if ($view eq 'perl-refparser.event') {

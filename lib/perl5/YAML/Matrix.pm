@@ -9,7 +9,7 @@ use Encode;
 use base 'Exporter';
 our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
-    cpp_event_to_event java_event_to_event
+    hsyaml_event_to_event
     generate_expected_output
     load_csv gather_tags
 /;
@@ -21,6 +21,9 @@ sub minimal_events_for_framework {
         $args{anchors_to_numbers} = 1;
         $args{no_explicit_doc} = 1;
         $args{no_quoting_style} = 1;
+    }
+    elsif ($type eq 'flow') {
+        $args{no_flow_indicator} = 1;
     }
     minimal_events(\%args, @events);
 }
@@ -57,8 +60,12 @@ sub minimal_events {
             $event = $ev;
         }
 
+        if ($args->{no_flow_indicator}) {
+            $event =~ s/^\+MAP \{\}/+MAP/mg;
+            $event =~ s/^\+SEQ \[\]/+SEQ/mg;
+        }
         if ($args->{anchors_to_numbers}) {
-            if ($event =~ m/^(\+MAP|\+SEQ|=VAL|=ALI) (&|\*)(\S+)(.*)/) {
+            if ($event =~ m/^(\+MAP(?: \{\})?|\+SEQ(?: \[\])?|=VAL|=ALI) (&|\*)(\S+)(.*)/) {
                 my $ev = $1;
                 my $ali = $2;
                 my $name = $3;
@@ -77,18 +84,15 @@ sub minimal_events {
     return @events;
 }
 
-sub cpp_event_to_event {
+# HsYaml outputs {}[] with special logic: implicit flow mappings in flow
+# sequences `[ key: value ]` don't get a {}, so we remove all
+sub hsyaml_event_to_event {
     my (@events) = @_;
     for my $event (@events) {
         $event =~ s/^\+MAP \{\}/+MAP/;
         $event =~ s/^\+SEQ \[\]/+SEQ/;
     }
     return @events;
-}
-
-sub java_event_to_event {
-    my (@events) = @_;
-    return cpp_event_to_event(@events);
 }
 
 sub gather_tags {
@@ -117,9 +121,9 @@ sub generate_expected_output {
     my %expected;
 
     my @test_events = io->file("$dir/test.event")->chomp->encoding('utf-8')->slurp;
-    for my $fw (qw/ cpp /) {
-        my @minimal = minimal_events_for_framework($fw, @test_events);
-        $expected{"minimal.$fw.event"} = join '', map { "$_\n" } @minimal;
+    for my $typw (qw/ cpp flow /) {
+        my @minimal = minimal_events_for_framework($typw, @test_events);
+        $expected{"minimal.$typw.event"} = join '', map { "$_\n" } @minimal;
     }
 
     if (-f "$dir/in.json") {
