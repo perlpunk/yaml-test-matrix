@@ -206,12 +206,13 @@ sub compare_tests {
                 or $view eq "c-libfyaml.event"
                 or $view eq "nim-nimyaml.event"
                 or $view eq "hs-hsyaml.event"
+                or $view eq "perl-pp.event"
                 or $view eq "js-yaml.event") {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.flow.event")
                     ->encoding('utf-8')->chomp->slurp;
                 $tests->{ $id }->{minimal_events} = \@test_events;
-                if ($view eq "hs-hsyaml.event") {
+                if ($view eq "hs-hsyaml.event" or $view eq 'perl-pp.event') {
                     @events = hsyaml_event_to_event(@events);
                     $tests->{ $id }->{transformed_events} = \@events;
                 }
