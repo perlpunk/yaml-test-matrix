@@ -203,7 +203,6 @@ sub compare_tests {
             }
             # These don't output flow collection information yet
             elsif ($view eq "dotnet-yamldotnet.event"
-                or $view eq "c-libfyaml.event"
                 or $view eq "nim-nimyaml.event"
                 or $view eq "hs-hsyaml.event"
                 or $view eq "perl-pp.event"
