@@ -80,20 +80,6 @@ scalar2
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="nim-nimyaml-event">
-<h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-=VAL :scalar1 %YAML 1.2
--DOC
-+DOC ---
-=VAL :scalar2
--DOC
--STR
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-event">
 <h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -355,6 +341,18 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
 	[C]: at 0x55c7c3d60f97
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="nim-nimyaml-event">
+<h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/tmp/NimYAML-0.16.0/yaml/stream.nim(134) nimyaml_event
+/tmp/NimYAML-0.16.0/yaml/stream.nim(106) next
+Error: unhandled exception: Unexpected token (expected document end): Indentation [YamlStreamError]
++STR
++DOC ---
+=VAL :scalar1
 </pre>
  </div>
 
