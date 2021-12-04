@@ -12,17 +12,21 @@ Getopt::Long::Configure ("bundling");
 use File::Basename qw/ basename /;
 use IO::All;
 use File::Path qw/ rmtree /;
+use YAML::PP;
 use YAML::Matrix qw/
     generate_expected_output
     load_csv
 /;
+
+my $yp = YAML::PP->new( schema => [qw/ + Merge /] );
+my $list = $yp->load_file("$Bin/../list.yaml");
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
 
 GetOptions(
     "path=s" => \my $path,
     "help|h" => \my $help,
-    "list|l" => \my $list,
+    "list|l" => \my $listviews,
     "all|a" => \my $all,
     "verbose|v+" => \my $verbose,
     "data-dir=s" => \my $datadir,
@@ -33,15 +37,29 @@ $verbose ||= 0;
 $datadir //= "$Bin/../yaml-test-suite/data";
 $matrixdir //= "$Bin/../matrix";
 
-my @views = io->file("$Bin/../views.txt")->chomp->slurp;
+my %skip = (
+    'perl-pplibyaml' => { event => 1 },
+);
 
 my %views;
-@views{ @views } = (1) x @views;
+for my $lib (sort keys $list->{libraries}->%*) {
+    my $conf = $list->{libraries}->{ $lib };
+    my $runtime = $conf->{runtime};
+    my $tests = $conf->{tests};
+    for my $test (@$tests) {
+        next of $skip->{ lib }->{ $test };
+        next if $test =~ m/^(yaml)$/;
+        $views{ "$lib.$test" } = {
+            runtime => "alpine-runtime-$runtime",
+        };
+    }
+}
+my @views = sort keys %views;
 
 if ($help) {
     usage();
 }
-elsif ($list) {
+elsif ($listviews) {
     say for @views;
 }
 elsif ($all) {
@@ -74,7 +92,7 @@ sub run_tests {
     my $end;
 
     my $out = "$matrixdir/tmp";
-    my ($emitters) = gather_framework_info();
+    my ($emitters) = gather_framework_info($view);
 
     my $info = $emitters->{ $view };
     my ($lib, $format) = $view =~ m/^(.+)\.(.+)$/;
@@ -99,11 +117,12 @@ sub run_tests {
         }
     }
     else {
+        my $runtime = $views{ $view }->{runtime};
         my $cmd = qq{docker run -i --rm --user $<}
             . qq{ -v $datadir:/yaml-test-suite-data}
             . qq{ -v $Bin:/matrix/bin}
             . qq{ -v $matrixdir/tmp:/matrix/tmp}
-            . qq{ $docker_user/alpine-runtime-all}
+            . qq{ $docker_user/$runtime}
             . qq{ /matrix/bin/run-framework-tests-docker.sh /yaml/bin/$bin};
         say "Running $cmd";
         system $cmd;
@@ -191,8 +210,10 @@ EOM
 }
 
 sub gather_framework_info {
+    my ($view) = @_;
+    my $runtime = $views{ $view }->{runtime};
     my $cmd = qq{docker run -i --rm --user $<}
-        . qq{ $docker_user/alpine-runtime-all}
+        . qq{ $docker_user/$runtime}
         . q{ cat /yaml/info/views.csv};
     my @lines = qx{$cmd};
     if ($? == 0) {

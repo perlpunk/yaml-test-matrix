@@ -12,6 +12,7 @@ Getopt::Long::Configure ("bundling");
 use File::Basename qw/ basename /;
 use IO::All;
 use List::Util qw/ min /;
+use YAML::PP;
 use YAML::Matrix qw/
     minimal_events
     hsyaml_event_to_event
@@ -21,10 +22,12 @@ use YAML::Matrix qw/
 
 my $docker_user = $ENV{DOCKER_USER} || 'yamlio';
 my $not_implemented = LoadFile("ni.yaml");
+my $yp = YAML::PP->new( schema => [qw/ + Merge /] );
+my $list = $yp->load_file("$Bin/../list.yaml");
 
 GetOptions(
     "help|h" => \my $help,
-    "list|l" => \my $list,
+    "list|l" => \my $listviews,
     "all|a" => \my $all,
     "verbose|v+" => \my $verbose,
     "data-dir=s" => \my $datadir,
@@ -35,17 +38,31 @@ $verbose ||= 0;
 $datadir //= "$Bin/../yaml-test-suite/data";
 $matrixdir //= "$Bin/../matrix";
 
-my @views = io->file("$Bin/../views.txt")->chomp->slurp;
-my $id2tag = gather_tags("$datadir/tags");
+my %skip = (
+    'perl-pplibyaml' => { event => 1 },
+);
 
 my %views;
-@views{ @views } = (1) x @views;
+for my $lib (sort keys $list->{libraries}->%*) {
+    my $conf = $list->{libraries}->{ $lib };
+    my $runtime = $conf->{runtime};
+    my $tests = $conf->{tests};
+    for my $test (@$tests) {
+        next of $skip->{ lib }->{ $test };
+        next if $test =~ m/^(yaml)$/;
+        $views{ "$lib.$test" } = {
+            runtime => "alpine-runtime-$runtime",
+        };
+    }
+}
+my @views = sort keys %views;
 
+my $id2tag = gather_tags("$datadir/tags");
 
 if ($help) {
     usage();
 }
-elsif ($list) {
+elsif ($listviews) {
     say for @views;
 }
 elsif ($all) {
@@ -187,11 +204,11 @@ sub compare_tests {
                 $sum_diff++;
             }
         }
-        elsif ($view =~ m/\.(perl|p6|py)$/) {
+        elsif ($view =~ m/\.(perl|p6|py|raku|yeast)$/) {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
         }
-        else {
+        elsif ($view =~ m/\.event$/) {
             my @events = @got;
             my @orig_events = @test_events;
             if ($view eq "cpp-yamlcpp.event") {

@@ -431,6 +431,8 @@ sub info2html {
         native => "Native Data",
         py => "Native Data",
         perl => "Native Data",
+        raku => "Native Data",
+        yeast => "Native Data",
     }->{ $info->{format} };
 
     return $info;

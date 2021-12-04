@@ -24,6 +24,7 @@ ALL_VIEWS := \
 
 #------------------------------------------------------------------------------
 build: data matrix
+	wget https://raw.githubusercontent.com/yaml/yaml-runtimes/master/list.yaml
 	./bin/expected
 	./bin/run-framework-tests --all
 	./bin/compare-framework-tests --all
