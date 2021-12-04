@@ -104,7 +104,19 @@ sub gather_tags {
     for my $tag (@tags) {
         my $tagdir = "$dir/$tag";
         opendir my $dh, $tagdir or die $!;
-        my @ids = grep { -l "$tagdir/$_" and m/^[A-Z0-9]{4}$/ } readdir $dh;
+        my @ids;
+        for my $item (readdir $dh) {
+            if (-l "$tagdir/$item" and $item =~ m/^[A-Z0-9]{4}$/) {
+                push @ids, $item;
+                next;
+            }
+            if (-d "$tagdir/$item") {
+                opendir my $dh, "$tagdir/$item" or die $!;
+                my @subids = map {"$item:$_" } grep { -l "$tagdir/$item/$_" and m{^\d+$} } readdir $dh;
+                closedir $dh;
+                push @ids, @subids;
+            }
+        }
         closedir $dh;
         for my $id (@ids) {
             $tags{ $id } ||= [];

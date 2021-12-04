@@ -48,7 +48,7 @@ for my $lib (sort keys $list->{libraries}->%*) {
     my $runtime = $conf->{runtime};
     my $tests = $conf->{tests};
     for my $test (@$tests) {
-        next if $skip{ lib }->{ $test };
+        next if $skip{ $lib }->{ $test };
         next if $test =~ m/^(yaml)$/;
         $views{ "$lib.$test" } = {
             runtime => "alpine-runtime-$runtime",
@@ -105,11 +105,12 @@ sub compare_tests {
     my $tests = $test_info->{tests};
     for my $id (sort keys %$tests) {
         my $out = $tests->{ $id };
-        my ($title) = io->file("$data/$id/===")->chomp->slurp;
+        my $idf = $id =~ s{:}{/}r;
+        my ($title) = io->file("$data/$idf/===")->chomp->slurp;
         $tests->{ $id }->{title} = $title;
         my $tag_list = $id2tag->{ $id };
         my %tags = map { $_ => 1 } @$tag_list;
-        if (-f "$data/$id/error") {
+        if (-f "$data/$idf/error") {
             $out->{invalid} = 1;
             my $error = $out->{error};
             $out->{invalid_correct} = 0;
@@ -128,7 +129,7 @@ sub compare_tests {
         my $stderr = delete $out->{stderr} // '';
 
         my @got = split m/\n/, $stdout;
-        my @test_events = io->file("$data/$id/test.event")->encoding('utf-8')->chomp->slurp;
+        my @test_events = io->file("$data/$idf/test.event")->encoding('utf-8')->chomp->slurp;
         my $got_data = $stdout . $stderr;
         $tests->{ $id }->{got_data} = $got_data;
 
@@ -137,7 +138,7 @@ sub compare_tests {
             $tests->{ $id }->{msg} = $msg;
         }
 
-        if ($view =~ m/\.json$/ and not -f "$data/$id/in.json") {
+        if ($view =~ m/\.json$/ and not -f "$data/$idf/in.json") {
             $tests->{ $id }->{na} = 1;
             $sum_na++;
             if ($error) {

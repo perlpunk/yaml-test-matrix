@@ -38,7 +38,7 @@ table.matrix td.testname, table.matrix th.testname {
     max-width: 25em;
 }
 table.matrix td.testid, table.matrix th.testid {
-    min-width: 2.5em;
+    min-width: 4.3em;
 }
 table.matrix td.testid a {
     color: black;

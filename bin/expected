@@ -22,9 +22,21 @@ sub write_expected_output {
     say "Generating minimal events and normalized JSON...";
     mkdir "$matrixdir/expected";
     my @dirs = grep { m{/[A-Z0-9]{4}$} } map { "$_" } io->dir($datadir)->all;
+    my @alldirs;
     for my $dir (@dirs) {
+        if (-f "$dir/in.yaml") {
+            push @alldirs, $dir;
+        }
+        else {
+            my @subdirs = grep { m{/[0-9]+$} } map { "$_" } io->dir($dir)->all;
+            push @alldirs, @subdirs;
+        }
+    }
+    for my $dir (@alldirs) {
         my %expected = generate_expected_output($dir);
-        my $id = basename $dir;
+        my $name = $dir;
+        $name =~ s{/([A-Z0-9]{4})/([0-9]+)$}{/$1:$2};
+        my $id = basename $name;
         my $out = "$matrixdir/expected/$id";
         mkdir $out;
         for my $file (sort keys %expected) {

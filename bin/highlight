@@ -9,14 +9,24 @@ use YAML::PP;
 use YAML::PP::Highlight;
 use Encode;
 use IO::All;
-use File::Basename qw/ basename /;
+use File::Basename qw/ dirname basename /;
 use HTML::Template::Compiled;
 use JSON::PP;
 
 my $yaml_test_suite = "$Bin/../yaml-test-suite/data";
 my @dirs = grep { m{/[0-9A-Z]{4}$} } map { "$_" } io->dir($yaml_test_suite)->all;
-my @valid = grep { not -f "$_/error" } @dirs;
-my @invalid = grep { -f "$_/error" } @dirs;
+my @alldirs;
+for my $dir (@dirs) {
+    if (-f "$dir/in.yaml") {
+        push @alldirs, $dir;
+    }
+    else {
+        my @subdirs = grep { m{/[0-9]+$} } map { "$_" } io->dir($dir)->all;
+        push @alldirs, @subdirs;
+    }
+}
+my @valid = grep { not -f "$_/error" } @alldirs;
+my @invalid = grep { -f "$_/error" } @alldirs;
 
 my %tags_by_id;
 my %all_tags;
@@ -103,10 +113,17 @@ EOM
 sub highlight {
     my ($dir, $invalid) = @_;
     my $id = basename $dir;
-    my $file = "$dir/in.yaml";
     my %test;
 
+    $test{main_id} = $id;
+    if ($id =~ m/^[0-9]+$/) {
+        my $main_id = basename dirname $dir;
+        $id = "$main_id:$id";
+        $test{main_id} = $main_id;
+    }
     $test{id} = $id;
+    my $file = "$dir/in.yaml";
+
 
     my $title = io->file("$dir/===")->encoding('utf-8')->slurp;
     $test{title} = $title;

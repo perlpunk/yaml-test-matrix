@@ -145,7 +145,11 @@ sub create_html {
     for my $type (sort keys %types) {
         my $tests = $types{ $type }->[0];
         my $test_list = $types{ $type }->[1];
-        for my $test (sort { $tests->{ $a }->{title} cmp $tests->{ $b }->{title}} keys %$tests) {
+        my @tests = sort {
+            $tests->{ $a }->{title} cmp $tests->{ $b }->{title}
+            || $tests->{ $a }->{id} cmp $tests->{ $b }->{id}
+        } keys %$tests;
+        for my $test (@tests) {
             my $data = $tests->{ $test };
             my $frameworks = $data->{frameworks};
             my @frameworks;
@@ -360,8 +364,10 @@ sub create_overview {
 
 sub create_details {
     my ($type, $id) = @_;
-    my $yaml = io->file("$datadir/$id/in.yaml")->encoding('utf-8')->slurp;
-    my $events = io->file("$datadir/$id/test.event")->encoding('utf-8')->slurp;
+    my ($main_id) = split m/:/, $id;
+    my $idf = $id =~ s{:}{/}r;
+    my $yaml = io->file("$datadir/$idf/in.yaml")->encoding('utf-8')->slurp;
+    my $events = io->file("$datadir/$idf/test.event")->encoding('utf-8')->slurp;
 
     my $json;
     my $json_lines;
@@ -400,6 +406,7 @@ sub create_details {
     );
     $htc->param(
         id => $id,
+        main_id => $main_id,
         test => $test,
         yaml => $yaml,
         json => $json,

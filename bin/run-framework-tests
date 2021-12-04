@@ -47,7 +47,7 @@ for my $lib (sort keys $list->{libraries}->%*) {
     my $runtime = $conf->{runtime};
     my $tests = $conf->{tests};
     for my $test (@$tests) {
-        next if $skip{ lib }->{ $test };
+        next if $skip{ $lib }->{ $test };
         next if $test =~ m/^(yaml)$/;
         $views{ "$lib.$test" } = {
             runtime => "alpine-runtime-$runtime",
@@ -139,7 +139,7 @@ sub run_tests {
         print "\n";
     }
 
-    my @files = map { "$_" } grep { m{/\w+\.(error|stdout|stderr)$} }
+    my @files = map { "$_" } grep { m{/[\w:]+\.(error|stdout|stderr)$} }
         io->dir("$matrixdir/tmp")->all;
     say "Reading results...";
     for my $file (sort @files) {
