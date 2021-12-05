@@ -30,7 +30,53 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/5LLU.tml">&test-5
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="perl-syck-json">
+   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: did not find expected key
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|block.scalar
+   1   12   12   12 -VAL |
+   1   12   12   12 -NODE|
+   1   12   12   12 =SYNX|:
+   1   13   13   13 +NODE|
+   1   13   13   13 =WSPC|.
+   1   14   14   14 +VAL |
+   1   14   14   14 =SYNX|&gt;
+   1   15   15   15 =EOL |\x0a
+   2    0   16   16 =DENT|.
+   2    1   17   17 =NEWL|\x0a
+   3    0   18   18 =DENT|.
+   3    1   19   19 =TEXT|.
+   3    2   20   20 =NEWL|\x0a
+   4    0   21   21 =DENT|.
+   4    1   22   22 =TEXT|..
+   4    3   24   24 =NEWL|\x0a
+   5    0   25   25 =DENT|.
+   5    1   26   26 =TEXT|invalid
+   5    8   33   33 =NEWL|\x0a
+   6    0   34   34 -VAL |
+   6    0   34   34 -NODE|
+   6    0   34   34 -PAIR|
+   6    0   34   34 -MAP |
+   6    0   34   34 -NODE|
+   6    0   34   34 -DOC |
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
    &quot;block scalar&quot; : &quot;\n\n\ninvalid\n&quot;
@@ -93,6 +139,22 @@ invalid
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{ &quot;block scalar&quot; : &quot;\n\n\ninvalid\n&quot; }
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
+  block scalar =&gt; &quot;\n\n\ninvalid\n&quot;.Str,
+}
+</pre>
+ </div>
+
+
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: block scalar with wrongly indented line after spaces only
@@ -117,6 +179,24 @@ invalid
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: block scalar with wrongly indented line after spaces only
+ 
+^
+  
+~~
+   
+~~~
+ invalid
+~
+[NOT]: fy_fetch_block_scalar() failed
+[NOT]: fy_fetch_tokens() failed
+[NOT]: failed to peek token
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: block scalar with wrongly indented line after spaces only
  
 ^
@@ -345,7 +425,33 @@ YAMLParseError: Block scalars with more-indented leading empty lines must use an
     at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:42:17)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:73:19)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at next (&lt;anonymous&gt;)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
+
+YAMLParseError: Block scalars with more-indented leading empty lines must use an explicit indentation indicator at line 5, column 2:
+
+   
+ invalid
+ ^
+
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:42:17)
+    at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
     at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
@@ -366,7 +472,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55fb92b00f97
+	[C]: at 0x55bf672d2f97
 </pre>
  </div>
 
@@ -425,14 +531,14 @@ YAML      : &quot;invalid\n&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected key
-
-was found at , line: 5, column: 2
-while parsing a block mapping at line: 1, column: 1
+  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 5
+Column    : 2
+Message   : Bad indendation in MAP
+Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 204
+YAML      : &quot;invalid\n&quot;
+  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -451,6 +557,18 @@ while parsing a block mapping at line: 1, column: 1
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected key
+
+was found at , line: 5, column: 2
+while parsing a block mapping at line: 1, column: 1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected key
@@ -586,6 +704,29 @@ expected &lt;block end&gt;, but found &#39;&lt;scalar&gt;&#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 439, in parse_block_mapping_key
+    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a block mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
+    block scalar: &gt;
+    ^
+expected &lt;block end&gt;, but found &#39;&lt;scalar&gt;&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 2:
+     invalid
+     ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -680,11 +821,34 @@ expected &lt;block end&gt;, but found &#39;&lt;scalar&gt;&#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 589, in parse_block_mapping_key
+    token.start_mark,
+ruamel.yaml.parser.ParserError: while parsing a block mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
+    block scalar: &gt;
+    ^ (line: 1)
+expected &lt;block end&gt;, but found &#39;&lt;scalar&gt;&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 2:
+     invalid
+     ^ (line: 5)
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): did not find expected key while parsing a block mapping at line 1 column 1 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected key while parsing a block mapping at line 1 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

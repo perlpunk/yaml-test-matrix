@@ -84,11 +84,6 @@ keep: |+
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
-  <div class="framework framework_box_ok" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_ok">&nbsp;</span>ok   </div>
-
-
   <div class="framework framework_box_ok" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -169,7 +164,269 @@ keep: |+
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &gt;-</span>
+<span
+class="">clip: &gt;</span>
+<span
+class="">keep: |+</span>
+<span
+class="">  </span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &quot;&quot;</span>
+<span
+class="">clip: &quot;&quot;</span>
+<span
+class="">keep: |2+</span>
+<span
+class=""></span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +MAP |</span>
+<span
+class="">   1    0    0    0 +PAIR|</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +VAL |</span>
+<span
+class="">   1    0    0    0 =TEXT|strip</span>
+<span
+class="">   1    5    5    5 -VAL |</span>
+<span
+class="">   1    5    5    5 -NODE|</span>
+<span
+class="">   1    5    5    5 =SYNX|:</span>
+<span
+class="">   1    6    6    6 +NODE|</span>
+<span
+class="">   1    6    6    6 =WSPC|.</span>
+<span
+class="">   1    7    7    7 +VAL |</span>
+<span
+class="">   1    7    7    7 =SYNX|&gt;</span>
+<span
+class="">   1    8    8    8 =SYNX|-</span>
+<span
+class="">   1    9    9    9 =EOL |\x0a</span>
+<span
+class="">   2    0   10   10 -VAL |</span>
+<span
+class="">   2    0   10   10 =EOL |\x0a</span>
+<span
+class="">   3    0   11   11 -NODE|</span>
+<span
+class="">   3    0   11   11 -PAIR|</span>
+<span
+class="">   3    0   11   11 +PAIR|</span>
+<span
+class="">   3    0   11   11 +NODE|</span>
+<span
+class="">   3    0   11   11 +VAL |</span>
+<span
+class="">   3    0   11   11 =TEXT|clip</span>
+<span
+class="">   3    4   15   15 -VAL |</span>
+<span
+class="">   3    4   15   15 -NODE|</span>
+<span
+class="">   3    4   15   15 =SYNX|:</span>
+<span
+class="">   3    5   16   16 +NODE|</span>
+<span
+class="">   3    5   16   16 =WSPC|.</span>
+<span
+class="">   3    6   17   17 +VAL |</span>
+<span
+class="">   3    6   17   17 =SYNX|&gt;</span>
+<span
+class="">   3    7   18   18 =EOL |\x0a</span>
+<span
+class="">   4    0   19   19 -VAL |</span>
+<span
+class="">   4    0   19   19 =EOL |\x0a</span>
+<span
+class="">   5    0   20   20 -NODE|</span>
+<span
+class="">   5    0   20   20 -PAIR|</span>
+<span
+class="">   5    0   20   20 +PAIR|</span>
+<span
+class="">   5    0   20   20 +NODE|</span>
+<span
+class="">   5    0   20   20 +VAL |</span>
+<span
+class="">   5    0   20   20 =TEXT|keep</span>
+<span
+class="">   5    4   24   24 -VAL |</span>
+<span
+class="">   5    4   24   24 -NODE|</span>
+<span
+class="">   5    4   24   24 =SYNX|:</span>
+<span
+class="">   5    5   25   25 +NODE|</span>
+<span
+class="">   5    5   25   25 =WSPC|.</span>
+<span
+class="">   5    6   26   26 +VAL |</span>
+<span
+class="">   5    6   26   26 =SYNX||</span>
+<span
+class="">   5    7   27   27 =SYNX|+</span>
+<span
+class="">   5    8   28   28 =EOL |\x0a</span>
+<span
+class="">   6    0   29   29 =NEWL|\x0a</span>
+<span
+class="">   7    0   30   30 -VAL |</span>
+<span
+class="">   7    0   30   30 -NODE|</span>
+<span
+class="">   7    0   30   30 -PAIR|</span>
+<span
+class="">   7    0   30   30 -MAP |</span>
+<span
+class="">   7    0   30   30 -NODE|</span>
+<span
+class="">   7    0   30   30 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &quot;&quot;</span>
+<span
+class="">clip: &quot;&quot;</span>
+<span
+class="">keep: &quot;\n&quot;</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &quot;&quot;</span>
+<span
+class="">clip: &quot;&quot;</span>
+<span
+class="">keep: |+</span>
+<span
+class=""></span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &quot;&quot;</span>
+<span
+class="">clip: &quot;&quot;</span>
+<span
+class="">keep: |+</span>
+<span
+class=""></span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &quot;&quot;</span>
+<span
+class="">clip: &quot;&quot;</span>
+<span
+class="">keep: |2+</span>
+<span
+class=""></span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">strip: &gt;</span>
+<span
+class=""></span>
+<span
+class="">clip: &gt;</span>
+<span
+class=""></span>
+<span
+class="">keep: |2+</span>
+<span
+class=""></span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>
@@ -211,6 +468,24 @@ class="">}</span>
   <div class="framework framework_box_error" id="perl-tiny-perl">
 <h3><a href="#perl-tiny-perl">perl-tiny-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::Tiny found bad indenting in line &#39;clip: &gt;&#39; at /yaml/bin/perl-tiny-perl line 15.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
 </pre>
  </div>
 

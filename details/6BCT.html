@@ -108,7 +108,210 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/6BCT.tml">&test-6
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">          <div class="framework framework_box_error" id="c-libyaml-event">
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- foo: bar</span>
+<span
+class="">- - baz</span>
+<span
+class="">  - baz</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre></pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +SEQ |</span>
+<span
+class="">   1    0    0    0 =SYNX|-</span>
+<span
+class="">   1    1    1    1 =DENT|.</span>
+<span
+class="">   1    2    2    2 +NODE|</span>
+<span
+class="">   1    2    2    2 +MAP |</span>
+<span
+class="">   1    2    2    2 +PAIR|</span>
+<span
+class="">   1    2    2    2 +NODE|</span>
+<span
+class="">   1    2    2    2 +VAL |</span>
+<span
+class="">   1    2    2    2 =TEXT|foo</span>
+<span
+class="">   1    5    5    5 -VAL |</span>
+<span
+class="">   1    5    5    5 -NODE|</span>
+<span
+class="">   1    5    5    5 =SYNX|:</span>
+<span
+class="">   1    6    6    6 =WSPC|\x09.</span>
+<span
+class="">   1    8    8    8 +NODE|</span>
+<span
+class="">   1    8    8    8 +VAL |</span>
+<span
+class="">   1    8    8    8 =TEXT|bar</span>
+<span
+class="">   1   11   11   11 -VAL |</span>
+<span
+class="">   1   11   11   11 -NODE|</span>
+<span
+class="">   1   11   11   11 =EOL |\x0a</span>
+<span
+class="">   2    0   12   12 -PAIR|</span>
+<span
+class="">   2    0   12   12 -MAP |</span>
+<span
+class="">   2    0   12   12 -NODE|</span>
+<span
+class="">   2    0   12   12 =SYNX|-</span>
+<span
+class="">   2    1   13   13 =DENT|.</span>
+<span
+class="">   2    2   14   14 +NODE|</span>
+<span
+class="">   2    2   14   14 +SEQ |</span>
+<span
+class="">   2    2   14   14 =SYNX|-</span>
+<span
+class="">   2    3   15   15 =WSPC|.</span>
+<span
+class="">   2    4   16   16 +NODE|</span>
+<span
+class="">   2    4   16   16 +VAL |</span>
+<span
+class="">   2    4   16   16 =TEXT|baz</span>
+<span
+class="">   2    7   19   19 -VAL |</span>
+<span
+class="">   2    7   19   19 -NODE|</span>
+<span
+class="">   2    7   19   19 =EOL |\x0a</span>
+<span
+class="">   3    0   20   20 =DENT|..</span>
+<span
+class="">   3    2   22   22 =SYNX|-</span>
+<span
+class="">   3    3   23   23 =WSPC|\x09</span>
+<span
+class="">   3    4   24   24 +NODE|</span>
+<span
+class="">   3    4   24   24 +VAL |</span>
+<span
+class="">   3    4   24   24 =TEXT|baz</span>
+<span
+class="">   3    7   27   27 -VAL |</span>
+<span
+class="">   3    7   27   27 -NODE|</span>
+<span
+class="">   3    7   27   27 =EOL |\x0a</span>
+<span
+class="">   4    0   28   28 -SEQ |</span>
+<span
+class="">   4    0   28   28 -NODE|</span>
+<span
+class="">   4    0   28   28 -SEQ |</span>
+<span
+class="">   4    0   28   28 -NODE|</span>
+<span
+class="">   4    0   28   28 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- foo: bar</span>
+<span
+class="">- - baz</span>
+<span
+class="">  - baz</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- foo: bar</span>
+<span
+class="">- - baz</span>
+<span
+class="">  - baz</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">[</span>
+<span
+class="">  {</span>
+<span
+class="">    foo =&gt; &quot;bar&quot;.Str,</span>
+<span
+class="">  },</span>
+<span
+class="">  [</span>
+<span
+class="">    &quot;baz&quot;.Str,</span>
+<span
+class="">    &quot;baz&quot;.Str,</span>
+<span
+class="">  ],</span>
+<span
+class="">]</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
 +DOC
@@ -188,19 +391,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x556df2fa4f97
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    found character that cannot start any token
-
-was found at , line: 3, column: 4
-while scanning for the next token at line: 3, column: 4
+	[C]: at 0x561642ce5f97
 </pre>
  </div>
 
@@ -219,6 +410,18 @@ while scanning for the next token at line: 3, column: 4
 
   <div class="framework framework_box_error" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
+
+    found character that cannot start any token
+
+was found at , line: 3, column: 4
+while scanning for the next token at line: 3, column: 4
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
 
     found character that cannot start any token
@@ -412,6 +615,30 @@ found character &#39;\t&#39; that cannot start any token
  </div>
 
 
+  <div class="framework framework_box_error" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
+    if not self.check_token(KeyToken, ValueToken, BlockEndToken):
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+    self.fetch_more_tokens()
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 260, in fetch_more_tokens
+    self.get_mark())
+yaml.scanner.ScannerError: while scanning for the next token
+found character &#39;\t&#39; that cannot start any token
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 7:
+    - foo:	 bar
+          ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
@@ -521,11 +748,35 @@ found character &#39;\t&#39; that cannot start any token
  </div>
 
 
+  <div class="framework framework_box_error" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 603, in parse_block_mapping_value
+    if self.scanner.check_token(ValueToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+    self.fetch_more_tokens()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 322, in fetch_more_tokens
+    self.reader.get_mark(),
+ruamel.yaml.scanner.ScannerError: while scanning for the next token
+found character &#39;\t&#39; that cannot start any token
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 7:
+    - foo:	 bar
+          ^ (line: 1)
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): found character that cannot start any token while scanning for the next token at line 3 column 4 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_error">&nbsp;</span>error <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): found character that cannot start any token while scanning for the next token at line 3 column 4 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

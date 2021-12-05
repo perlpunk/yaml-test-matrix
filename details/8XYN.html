@@ -120,7 +120,152 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/8XYN.tml">&test-8
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">- &amp;😁 unicode anchor</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre></pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 =HEAD|---</span>
+<span
+class="">   1    3    3    3 +NODE|</span>
+<span
+class="">   1    3    3    3 =EOL |\x0a</span>
+<span
+class="">   2    0    4    4 +SEQ |</span>
+<span
+class="">   2    0    4    4 =SYNX|-</span>
+<span
+class="">   2    1    5    5 =WSPC|.</span>
+<span
+class="">   2    2    6    6 +NODE|</span>
+<span
+class="">   2    2    6    6 +PROP|</span>
+<span
+class="">   2    2    6    6 +ANCH|</span>
+<span
+class="">   2    2    6    6 =SYNX|&amp;</span>
+<span
+class="">   2    3    7    7 =META|\U0001f601</span>
+<span
+class="">   2    4    8   11 -ANCH|</span>
+<span
+class="">   2    4    8   11 -PROP|</span>
+<span
+class="">   2    4    8   11 =WSPC|.</span>
+<span
+class="">   2    5    9   12 +VAL |</span>
+<span
+class="">   2    5    9   12 =TEXT|unicode.anchor</span>
+<span
+class="">   2   19   23   26 -VAL |</span>
+<span
+class="">   2   19   23   26 -NODE|</span>
+<span
+class="">   2   19   23   26 =EOL |\x0a</span>
+<span
+class="">   3    0   24   27 -SEQ |</span>
+<span
+class="">   3    0   24   27 -NODE|</span>
+<span
+class="">   3    0   24   27 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">- &amp;😁 unicode anchor</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">- &amp;😁 unicode anchor</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">- &amp;😁 unicode anchor</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">[</span>
+<span
+class="">  &quot;unicode anchor&quot;.Str,</span>
+<span
+class="">]</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">[</span>
@@ -153,19 +298,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x561a68deaf97
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected alphabetic or numeric character
-
-was found at , line: 2, column: 4
-while scanning an anchor at line: 2, column: 3
+	[C]: at 0x5598fafb2f97
 </pre>
  </div>
 
@@ -184,6 +317,18 @@ while scanning an anchor at line: 2, column: 3
 
   <div class="framework framework_box_error" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected alphabetic or numeric character
+
+was found at , line: 2, column: 4
+while scanning an anchor at line: 2, column: 3
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected alphabetic or numeric character
@@ -362,11 +507,44 @@ expected alphabetic or numeric character, but found &#39;😁&#39;
  </div>
 
 
+  <div class="framework framework_box_error" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+    return self.parse_block_sequence_entry()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+    if not self.check_token(BlockEntryToken, BlockEndToken):
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+    self.fetch_more_tokens()
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
+    return self.fetch_anchor()
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
+    self.tokens.append(self.scan_anchor(AnchorToken))
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 924, in scan_anchor
+    % ch, self.get_mark())
+yaml.scanner.ScannerError: while scanning an anchor
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
+    - &amp;😁 unicode anchor
+      ^
+expected alphabetic or numeric character, but found &#39;😁&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 4:
+    - &amp;😁 unicode anchor
+       ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): did not find expected alphabetic or numeric character while scanning an anchor at line 2 column 3 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_error">&nbsp;</span>error <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected alphabetic or numeric character while scanning an anchor at line 2 column 3 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

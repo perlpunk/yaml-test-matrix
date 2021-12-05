@@ -30,7 +30,58 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/CML9.tml">&test-C
 <pre></pre>
 </div>
 <hr style="clear: both;">
-      <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
+   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: did not find expected &#39;,&#39; or &#39;]&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|key
+   1    3    3    3 -VAL |
+   1    3    3    3 -NODE|
+   1    3    3    3 =SYNX|:
+   1    4    4    4 =WSPC|.
+   1    5    5    5 +NODE|
+   1    5    5    5 +SEQ |
+   1    5    5    5 =SYNX|[
+   1    6    6    6 =WSPC|.
+   1    7    7    7 +NODE|
+   1    7    7    7 +VAL |
+   1    7    7    7 =TEXT|word1
+   1   12   12   12 -VAL |
+   1   12   12   12 -NODE|
+   1   12   12   12 =EOL |\x0a
+   2    0   13   13 +COMM|
+   2    0   13   13 =SYNX|#
+   2    1   14   14 =META|..xxx
+   2    6   19   19 -COMM|
+   2    6   19   19 =EOL |\x0a
+   3    0   20   20 =DENT|.
+   3    1   21   21 =WSPC|.
+   3    2   22   22 -SEQ |
+   3    2   22   22 -NODE|
+   3    2   22   22 =ERR |Unexpected.&#39;w&#39;
+   3    2   22   22 =REST|word2.]
+   3    9   29   29 =REST|\x0a
+   4    0   30   30 -PAIR|
+   4    0   30   30 -MAP |
+   4    0   30   30 -NODE|
+   4    0   30   30 -DOC |
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:3: error: missing comma in flow sequence
   word2 ]
@@ -47,6 +98,15 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/CML9.tml">&test-C
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:3: error: missing comma in flow sequence
+  word2 ]
+  ^~~~~
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:3: error: missing comma in flow sequence
   word2 ]
   ^~~~~
@@ -232,18 +292,16 @@ YAMLException: missed comma between flow collection entries (3:3)
 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Expected flow sequence to end with ] at line 2, column 2:
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Missing , or : between flow sequence items at line 3, column 3:
 
 #  xxx
- 
- ^
+  word2 ]
+  ^
 +STR
 +DOC
 +MAP
 =VAL :key
 +SEQ
-=VAL :word1
--SEQ
 </pre>
  </div>
 
@@ -254,17 +312,43 @@ YAMLException: missed comma between flow collection entries (3:3)
   if (doc.errors.length !== 0) throw doc.errors[0]
                                ^
 
-YAMLParseError: Expected flow sequence to end with ] at line 2, column 2:
+YAMLParseError: Missing , or : between flow sequence items at line 3, column 3:
 
 #  xxx
- 
- ^
+  word2 ]
+  ^
 
     at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:171:9)
+    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:132:21)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:21:42)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:73:19)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at next (&lt;anonymous&gt;)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
+
+YAMLParseError: Missing , or : between flow sequence items at line 3, column 3:
+
+#  xxx
+  word2 ]
+  ^
+
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:132:21)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:21:42)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
     at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
@@ -286,7 +370,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55ea134cff97
+	[C]: at 0x55bd7ce33f97
 </pre>
  </div>
 
@@ -356,14 +440,15 @@ YAML      : &quot;word2 ]&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected &#39;,&#39; or &#39;]&#39;
-
-was found at , line: 3, column: 3
-while parsing a flow sequence at line: 1, column: 6
+  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
+Column    : 3
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : PLAIN
+Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
+YAML      : &quot;word2 ]&quot;
+  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -382,6 +467,18 @@ while parsing a flow sequence at line: 1, column: 6
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected &#39;,&#39; or &#39;]&#39;
+
+was found at , line: 3, column: 3
+while parsing a flow sequence at line: 1, column: 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected &#39;,&#39; or &#39;]&#39;
@@ -576,6 +673,29 @@ expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 484, in parse_flow_sequence_entry
+    &quot;expected &#39;,&#39; or &#39;]&#39;, but got %r&quot; % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a flow sequence
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 6:
+    key: [ word1
+         ^
+expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 3:
+      word2 ]
+      ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -679,11 +799,52 @@ expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 656, in parse_flow_sequence_entry
+    token.start_mark,
+ruamel.yaml.parser.ParserError: while parsing a flow sequence
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 6:
+    key: [ word1
+         ^ (line: 1)
+expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 3:
+      word2 ]
+      ^ (line: 3)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): did not find expected &#39;,&#39; or &#39;]&#39; while parsing a flow sequence at line 1 column 6 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected &#39;,&#39; or &#39;]&#39; while parsing a flow sequence at line 1 column 6 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

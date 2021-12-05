@@ -111,7 +111,26 @@ key: &amp;an:chor value
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libyaml-event">
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">key: &amp;an:chor value</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_diff">&nbsp;</span>diff <br>
 
@@ -132,6 +151,92 @@ class="">-MAP</span>
 class="">-DOC</span>
 <span
 class="">-STR</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">key: &amp;an :chor value</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 =HEAD|---</span>
+<span
+class="">   1    3    3    3 +NODE|</span>
+<span
+class="">   1    3    3    3 =EOL |\x0a</span>
+<span
+class="">   2    0    4    4 +MAP |</span>
+<span
+class="">   2    0    4    4 +PAIR|</span>
+<span
+class="">   2    0    4    4 +NODE|</span>
+<span
+class="">   2    0    4    4 +VAL |</span>
+<span
+class="">   2    0    4    4 =TEXT|key</span>
+<span
+class="">   2    3    7    7 -VAL |</span>
+<span
+class="">   2    3    7    7 -NODE|</span>
+<span
+class="">   2    3    7    7 =SYNX|:</span>
+<span
+class="">   2    4    8    8 =WSPC|.</span>
+<span
+class="">   2    5    9    9 +NODE|</span>
+<span
+class="">   2    5    9    9 +PROP|</span>
+<span
+class="">   2    5    9    9 +ANCH|</span>
+<span
+class="">   2    5    9    9 =SYNX|&amp;</span>
+<span
+class="">   2    6   10   10 =META|an:chor</span>
+<span
+class="">   2   13   17   17 -ANCH|</span>
+<span
+class="">   2   13   17   17 -PROP|</span>
+<span
+class="">   2   13   17   17 =WSPC|.</span>
+<span
+class="">   2   14   18   18 +VAL |</span>
+<span
+class="">   2   14   18   18 =TEXT|value</span>
+<span
+class="">   2   19   23   23 -VAL |</span>
+<span
+class="">   2   19   23   23 -NODE|</span>
+<span
+class="">   2   19   23   23 =EOL |\x0a</span>
+<span
+class="">   3    0   24   24 -PAIR|</span>
+<span
+class="">   3    0   24   24 -MAP |</span>
+<span
+class="">   3    0   24   24 -NODE|</span>
+<span
+class="">   3    0   24   24 -DOC |</span>
 </pre>
 
  </div>
@@ -163,27 +268,43 @@ class="">-STR</span>
  </div>
 
 
-  <div class="framework framework_box_diff" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
 <span class="status_box color_diff">&nbsp;</span>diff <br>
 
   Got Events:
 <pre><span
-class="">+STR</span>
+class="diff_line">---</span>
 <span
-class="">+DOC ---</span>
+class="">key: &amp;an:chor value</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
 <span
-class="">+MAP</span>
+class="">key: &amp;an:chor value</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
 <span
-class="">=VAL :key</span>
-<span
-class="diff_line">=VAL &amp;an ::chor value</span>
-<span
-class="">-MAP</span>
-<span
-class="">-DOC</span>
-<span
-class="">-STR</span>
+class="">key: &amp;an :chor value</span>
 </pre>
 
  </div>
@@ -210,6 +331,50 @@ class="">-MAP</span>
 class="">-DOC</span>
 <span
 class="">-STR</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">key: &amp;an :chor value</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">key: &amp;an:chor value</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">{</span>
+<span
+class="">  key =&gt; &quot;value&quot;.Str,</span>
+<span
+class="">}</span>
 </pre>
 
  </div>

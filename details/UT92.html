@@ -94,7 +94,187 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/UT92.tml">&test-U
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">          <div class="framework framework_box_error" id="c-libyaml-event">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">{</span>
+<span
+class="">  matches %: 20</span>
+<span
+class="">}</span>
+<span
+class="">...</span>
+<span
+class="">--- </span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre></pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 =HEAD|---</span>
+<span
+class="">   1    3    3    3 =EOL |\x0a</span>
+<span
+class="">   2    0    4    4 +NODE|</span>
+<span
+class="">   2    0    4    4 +MAP |</span>
+<span
+class="">   2    0    4    4 =SYNX|{</span>
+<span
+class="">   2    1    5    5 =WSPC|.</span>
+<span
+class="">   2    2    6    6 +PAIR|</span>
+<span
+class="">   2    2    6    6 +NODE|</span>
+<span
+class="">   2    2    6    6 +VAL |</span>
+<span
+class="">   2    2    6    6 =TEXT|matches</span>
+<span
+class="">   2    9   13   13 =FOLD|\x0a</span>
+<span
+class="">   3    0   14   14 =TEXT|%</span>
+<span
+class="">   3    1   15   15 -VAL |</span>
+<span
+class="">   3    1   15   15 -NODE|</span>
+<span
+class="">   3    1   15   15 =WSPC|.</span>
+<span
+class="">   3    2   16   16 =SYNX|:</span>
+<span
+class="">   3    3   17   17 =WSPC|.</span>
+<span
+class="">   3    4   18   18 +NODE|</span>
+<span
+class="">   3    4   18   18 +VAL |</span>
+<span
+class="">   3    4   18   18 =TEXT|20</span>
+<span
+class="">   3    6   20   20 -VAL |</span>
+<span
+class="">   3    6   20   20 -NODE|</span>
+<span
+class="">   3    6   20   20 -PAIR|</span>
+<span
+class="">   3    6   20   20 =WSPC|.</span>
+<span
+class="">   3    7   21   21 =SYNX|}</span>
+<span
+class="">   3    8   22   22 -MAP |</span>
+<span
+class="">   3    8   22   22 -NODE|</span>
+<span
+class="">   3    8   22   22 =EOL |\x0a</span>
+<span
+class="">   4    0   23   23 -DOC |</span>
+<span
+class="">   4    0   23   23 =FOOT|...</span>
+<span
+class="">   4    3   26   26 =EOL |\x0a</span>
+<span
+class="">   5    0   27   27 +DOC |</span>
+<span
+class="">   5    0   27   27 =HEAD|---</span>
+<span
+class="">   5    3   30   30 +NODE|</span>
+<span
+class="">   5    3   30   30 +VAL |</span>
+<span
+class="">   5    3   30   30 -VAL |</span>
+<span
+class="">   5    3   30   30 -NODE|</span>
+<span
+class="">   5    3   30   30 =EOL |\x0a</span>
+<span
+class="">   6    0   31   31 +COMM|</span>
+<span
+class="">   6    0   31   31 =SYNX|#</span>
+<span
+class="">   6    1   32   32 =META|.Empty</span>
+<span
+class="">   6    7   38   38 -COMM|</span>
+<span
+class="">   6    7   38   38 =EOL |\x0a</span>
+<span
+class="">   7    0   39   39 -DOC |</span>
+<span
+class="">   7    0   39   39 =FOOT|...</span>
+<span
+class="">   7    3   42   42 =EOL |\x0a</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">{ matches %: 20 }</span>
+<span
+class="">...</span>
+<span
+class="">---</span>
+<span
+class="">null # Empty</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">---</span>
+<span
+class="">matches %: 20</span>
+<span
+class="">...</span>
+<span
+class="">---</span>
+<span
+class="">...</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
 +DOC ---
@@ -224,19 +404,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x5567538aff97
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected &#39;,&#39; or &#39;}&#39;
-
-was found at , line: 3, column: 3
-while parsing a flow mapping at line: 2, column: 1
+	[C]: at 0x55e26cef4f97
 </pre>
  </div>
 
@@ -255,6 +423,18 @@ while parsing a flow mapping at line: 2, column: 1
 
   <div class="framework framework_box_error" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected &#39;,&#39; or &#39;}&#39;
+
+was found at , line: 3, column: 3
+while parsing a flow mapping at line: 2, column: 1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected &#39;,&#39; or &#39;}&#39;
@@ -419,6 +599,29 @@ expected &#39;,&#39; or &#39;}&#39;, but got &#39;:&#39;
  </div>
 
 
+  <div class="framework framework_box_error" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 550, in parse_flow_mapping_key
+    &quot;expected &#39;,&#39; or &#39;}&#39;, but got %r&quot; % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a flow mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
+    { matches
+    ^
+expected &#39;,&#39; or &#39;}&#39;, but got &#39;:&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 3:
+    % : 20 }
+      ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
@@ -513,11 +716,52 @@ expected &#39;,&#39; or &#39;}&#39;, but got &#39;:&#39;
  </div>
 
 
+  <div class="framework framework_box_error" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 730, in parse_flow_mapping_key
+    token.start_mark,
+ruamel.yaml.parser.ParserError: while parsing a flow mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
+    { matches
+    ^ (line: 2)
+expected &#39;,&#39; or &#39;}&#39;, but got &#39;:&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 3:
+    % : 20 }
+      ^ (line: 3)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): did not find expected &#39;,&#39; or &#39;}&#39; while parsing a flow mapping at line 2 column 1 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_error">&nbsp;</span>error <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected &#39;,&#39; or &#39;}&#39; while parsing a flow mapping at line 2 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

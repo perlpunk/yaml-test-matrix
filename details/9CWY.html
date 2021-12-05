@@ -33,7 +33,14 @@ invalid
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
+   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: could not find expected &#39;:&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
 +DOC
@@ -48,6 +55,51 @@ invalid
 -MAP
 -DOC
 -STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|key
+   1    3    3    3 -VAL |
+   1    3    3    3 -NODE|
+   1    3    3    3 =SYNX|:
+   1    4    4    4 +NODE|
+   1    4    4    4 =EOL |\x0a
+   2    0    5    5 +SEQ |
+   2    0    5    5 =DENT|.
+   2    1    6    6 =SYNX|-
+   2    2    7    7 =WSPC|.
+   2    3    8    8 +NODE|
+   2    3    8    8 +VAL |
+   2    3    8    8 =TEXT|item1
+   2    8   13   13 -VAL |
+   2    8   13   13 -NODE|
+   2    8   13   13 =EOL |\x0a
+   3    0   14   14 =DENT|.
+   3    1   15   15 =SYNX|-
+   3    2   16   16 =WSPC|.
+   3    3   17   17 +NODE|
+   3    3   17   17 +VAL |
+   3    3   17   17 =TEXT|item2
+   3    8   22   22 -VAL |
+   3    8   22   22 -NODE|
+   3    8   22   22 =EOL |\x0a
+   4    0   23   23 -SEQ |
+   4    0   23   23 -NODE|
+   4    0   23   23 -PAIR|
+   4    0   23   23 -MAP |
+   4    0   23   23 -NODE|
+   4    0   23   23 -DOC |
+   4    0   23   23 =ERR |Unexpected.&#39;i&#39;
 </pre>
  </div>
 
@@ -71,6 +123,15 @@ invalid
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:4:1: error: invalid value after mapping
+invalid
+^~~~~~~
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:4:1: error: invalid value after mapping
 invalid
 ^~~~~~~
@@ -280,7 +341,33 @@ invalid
 ^^^^^^^
 
     at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:81:17)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:85:17)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at next (&lt;anonymous&gt;)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
+    at compose.next (&lt;anonymous&gt;)
+    at Function.from (&lt;anonymous&gt;)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
+
+YAMLParseError: Implicit map keys need to be followed by map values at line 4, column 1:
+
+ - item2
+invalid
+^^^^^^^
+
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:85:17)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
     at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
@@ -305,7 +392,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x557062c4bf97
+	[C]: at 0x5566a5e36f97
 </pre>
  </div>
 
@@ -375,14 +462,15 @@ YAML      : &quot;&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    could not find expected &#39;:&#39;
-
-was found at , line: 5, column: 1
-while scanning a simple key at line: 4, column: 1
+  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 4
+Column    : 8
+Expected  : COLON WS
+Got       : EOL
+Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
+YAML      : &quot;&quot;
+  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -401,6 +489,18 @@ while scanning a simple key at line: 4, column: 1
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
+
+    could not find expected &#39;:&#39;
+
+was found at , line: 5, column: 1
+while scanning a simple key at line: 4, column: 1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     could not find expected &#39;:&#39;
@@ -614,6 +714,35 @@ could not find expected &#39;:&#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 382, in parse_block_sequence_entry
+    if self.check_token(BlockEntryToken):
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 115, in check_token
+    while self.need_more_tokens():
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 292, in stale_possible_simple_keys
+    &quot;could not find expected &#39;:&#39;&quot;, self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in &quot;&lt;unicode string&gt;&quot;, line 4, column 1:
+    invalid
+    ^
+could not find expected &#39;:&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 1:
+    
+    ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -736,11 +865,58 @@ could not find expected &#39;:&#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 510, in parse_block_sequence_entry
+    if self.scanner.check_token(BlockEntryToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 169, in check_token
+    while self.need_more_tokens():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 206, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 359, in stale_possible_simple_keys
+    self.reader.get_mark(),
+ruamel.yaml.scanner.ScannerError: while scanning a simple key
+  in &quot;&lt;unicode string&gt;&quot;, line 4, column 1:
+    invalid
+    ^ (line: 4)
+could not find expected &#39;:&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 1:
+    
+    ^ (line: 5)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): could not find expected &#39;:&#39; while scanning a simple key at line 4 column 1 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): could not find expected &#39;:&#39; while scanning a simple key at line 4 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

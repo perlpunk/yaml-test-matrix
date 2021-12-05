@@ -78,11 +78,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/FQ7F.tml">&test-F
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
-  <div class="framework framework_box_ok" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_ok">&nbsp;</span>ok   </div>
-
-
   <div class="framework framework_box_ok" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -173,12 +168,221 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/FQ7F.tml">&test-F
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
   <div class="framework framework_box_json_ok" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +SEQ |</span>
+<span
+class="">   1    0    0    0 =SYNX|-</span>
+<span
+class="">   1    1    1    1 =WSPC|.</span>
+<span
+class="">   1    2    2    2 +NODE|</span>
+<span
+class="">   1    2    2    2 +VAL |</span>
+<span
+class="">   1    2    2    2 =TEXT|Mark.McGwire</span>
+<span
+class="">   1   14   14   14 -VAL |</span>
+<span
+class="">   1   14   14   14 -NODE|</span>
+<span
+class="">   1   14   14   14 =EOL |\x0a</span>
+<span
+class="">   2    0   15   15 =SYNX|-</span>
+<span
+class="">   2    1   16   16 =WSPC|.</span>
+<span
+class="">   2    2   17   17 +NODE|</span>
+<span
+class="">   2    2   17   17 +VAL |</span>
+<span
+class="">   2    2   17   17 =TEXT|Sammy.Sosa</span>
+<span
+class="">   2   12   27   27 -VAL |</span>
+<span
+class="">   2   12   27   27 -NODE|</span>
+<span
+class="">   2   12   27   27 =EOL |\x0a</span>
+<span
+class="">   3    0   28   28 =SYNX|-</span>
+<span
+class="">   3    1   29   29 =WSPC|.</span>
+<span
+class="">   3    2   30   30 +NODE|</span>
+<span
+class="">   3    2   30   30 +VAL |</span>
+<span
+class="">   3    2   30   30 =TEXT|Ken.Griffey</span>
+<span
+class="">   3   13   41   41 -VAL |</span>
+<span
+class="">   3   13   41   41 -NODE|</span>
+<span
+class="">   3   13   41   41 =EOL |\x0a</span>
+<span
+class="">   4    0   42   42 -SEQ |</span>
+<span
+class="">   4    0   42   42 -NODE|</span>
+<span
+class="">   4    0   42   42 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- Mark McGwire</span>
+<span
+class="">- Sammy Sosa</span>
+<span
+class="">- Ken Griffey</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">[</span>
+<span
+class="">  &quot;Mark McGwire&quot;.Str,</span>
+<span
+class="">  &quot;Sammy Sosa&quot;.Str,</span>
+<span
+class="">  &quot;Ken Griffey&quot;.Str,</span>
+<span
+class="">]</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">          <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[
   &#39;Mark McGwire&#39;,

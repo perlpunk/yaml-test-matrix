@@ -41,6 +41,13 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">&test-S
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>key: &quot;value&quot;
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -51,6 +58,38 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">&test-S
 -MAP
 -DOC
 -STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|key
+   1    3    3    3 -VAL |
+   1    3    3    3 -NODE|
+   1    3    3    3 =SYNX|:
+   1    4    4    4 =WSPC|.
+   1    5    5    5 +NODE|
+   1    5    5    5 +VAL |
+   1    5    5    5 =SYNX|&quot;
+   1    6    6    6 =TEXT|value
+   1   11   11   11 =SYNX|&quot;
+   1   12   12   12 -VAL |
+   1   12   12   12 -NODE|
+   1   12   12   12 =ERR |Expected.start.of.line
+   1   12   12   12 =REST|#.invalid.comment
+   1   29   29   29 =REST|\x0a
+   2    0   30   30 -PAIR|
+   2    0   30   30 -MAP |
+   2    0   30   30 -NODE|
+   2    0   30   30 -DOC |
 </pre>
  </div>
 
@@ -106,20 +145,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">&test-S
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+MAP
-=VAL :key
-=VAL &quot;value
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-json">
 <h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
@@ -134,6 +159,13 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">&test-S
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
   &#39;key&#39; =&gt; &#39;value&#39;
 }
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>key: &quot;value&quot;
 </pre>
  </div>
 
@@ -204,6 +236,13 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">&test-S
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>key: &quot;value&quot;
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -234,6 +273,29 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">&test-S
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>key: &quot;value&quot;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{ &quot;key&quot; : &quot;value&quot; }
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
+  key =&gt; &quot;value&quot;.Str,
+}
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_incorrect" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&quot;key&quot;:&quot;value&quot;}
@@ -259,6 +321,18 @@ key: &quot;value&quot;# invalid comment
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:13: error: invalid comment without whitespace after double-quoted scalar
+key: &quot;value&quot;# invalid comment
+            ^
+[NOT]: fy_fetch_flow_scalar() failed
+[NOT]: fy_fetch_tokens() failed
+[NOT]: failed to peek token
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:13: error: invalid comment without whitespace after double-quoted scalar
 key: &quot;value&quot;# invalid comment
             ^
@@ -364,7 +438,32 @@ key: &quot;value&quot;# invalid comment
     at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:35:27)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:73:19)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
+
+YAMLParseError: Comments must be separated from other tokens by white space characters at line 1, column 13:
+
+key: &quot;value&quot;# invalid comment
+            ^^^^^^^^^^^^^^^^^
+
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at Object.resolveEnd (/node/node_modules/yaml/dist/compose/resolve-end.js:16:25)
+    at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:35:27)
+    at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
     at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
@@ -409,6 +508,18 @@ Message   : Invalid plain scalar
 Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
 YAML      : &quot;# invalid comment&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
+Column    : 13
+Message   : Invalid plain scalar
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+YAML      : &quot;# invalid comment&quot;
+  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 

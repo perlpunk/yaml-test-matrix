@@ -36,7 +36,16 @@ e: f
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
+   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: found undefined tag handle
+--- !&lt;tag:example.com,2011:A&gt;
+a: b
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
 +DOC
@@ -58,6 +67,130 @@ e: f
 -MAP
 -DOC
 -STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +DIR |
+   1    0    0    0 =SYNX|%
+   1    1    1    1 =META|TAG
+   1    4    4    4 =WSPC|.
+   1    5    5    5 +HAND|
+   1    5    5    5 =SYNX|!
+   1    6    6    6 =META|prefix
+   1   12   12   12 =SYNX|!
+   1   13   13   13 -HAND|
+   1   13   13   13 =WSPC|.
+   1   14   14   14 +TAG |
+   1   14   14   14 =META|tag:example.com,2011:
+   1   35   35   35 -TAG |
+   1   35   35   35 -DIR |
+   1   35   35   35 =EOL |\x0a
+   2    0   36   36 =HEAD|---
+   2    3   39   39 +NODE|
+   2    3   39   39 =WSPC|.
+   2    4   40   40 +PROP|
+   2    4   40   40 +TAG |
+   2    4   40   40 +HAND|
+   2    4   40   40 =SYNX|!
+   2    5   41   41 =META|prefix
+   2   11   47   47 =SYNX|!
+   2   12   48   48 -HAND|
+   2   12   48   48 =META|A
+   2   13   49   49 -TAG |
+   2   13   49   49 -PROP|
+   2   13   49   49 =EOL |\x0a
+   3    0   50   50 +MAP |
+   3    0   50   50 +PAIR|
+   3    0   50   50 +NODE|
+   3    0   50   50 +VAL |
+   3    0   50   50 =TEXT|a
+   3    1   51   51 -VAL |
+   3    1   51   51 -NODE|
+   3    1   51   51 =SYNX|:
+   3    2   52   52 =WSPC|.
+   3    3   53   53 +NODE|
+   3    3   53   53 +VAL |
+   3    3   53   53 =TEXT|b
+   3    4   54   54 -VAL |
+   3    4   54   54 -NODE|
+   3    4   54   54 =EOL |\x0a
+   4    0   55   55 -PAIR|
+   4    0   55   55 -MAP |
+   4    0   55   55 -NODE|
+   4    0   55   55 -DOC |
+   4    0   55   55 +DOC |
+   4    0   55   55 =HEAD|---
+   4    3   58   58 +NODE|
+   4    3   58   58 =WSPC|.
+   4    4   59   59 +PROP|
+   4    4   59   59 +TAG |
+   4    4   59   59 +HAND|
+   4    4   59   59 =SYNX|!
+   4    5   60   60 =META|prefix
+   4   11   66   66 =SYNX|!
+   4   12   67   67 -HAND|
+   4   12   67   67 =META|B
+   4   13   68   68 -TAG |
+   4   13   68   68 -PROP|
+   4   13   68   68 =EOL |\x0a
+   5    0   69   69 +MAP |
+   5    0   69   69 +PAIR|
+   5    0   69   69 +NODE|
+   5    0   69   69 +VAL |
+   5    0   69   69 =TEXT|c
+   5    1   70   70 -VAL |
+   5    1   70   70 -NODE|
+   5    1   70   70 =SYNX|:
+   5    2   71   71 =WSPC|.
+   5    3   72   72 +NODE|
+   5    3   72   72 +VAL |
+   5    3   72   72 =TEXT|d
+   5    4   73   73 -VAL |
+   5    4   73   73 -NODE|
+   5    4   73   73 =EOL |\x0a
+   6    0   74   74 -PAIR|
+   6    0   74   74 -MAP |
+   6    0   74   74 -NODE|
+   6    0   74   74 -DOC |
+   6    0   74   74 +DOC |
+   6    0   74   74 =HEAD|---
+   6    3   77   77 +NODE|
+   6    3   77   77 =WSPC|.
+   6    4   78   78 +PROP|
+   6    4   78   78 +TAG |
+   6    4   78   78 +HAND|
+   6    4   78   78 =SYNX|!
+   6    5   79   79 =META|prefix
+   6   11   85   85 =SYNX|!
+   6   12   86   86 -HAND|
+   6   12   86   86 =META|C
+   6   13   87   87 -TAG |
+   6   13   87   87 -PROP|
+   6   13   87   87 =EOL |\x0a
+   7    0   88   88 +MAP |
+   7    0   88   88 +PAIR|
+   7    0   88   88 +NODE|
+   7    0   88   88 +VAL |
+   7    0   88   88 =TEXT|e
+   7    1   89   89 -VAL |
+   7    1   89   89 -NODE|
+   7    1   89   89 =SYNX|:
+   7    2   90   90 =WSPC|.
+   7    3   91   91 +NODE|
+   7    3   91   91 +VAL |
+   7    3   91   91 =TEXT|f
+   7    4   92   92 -VAL |
+   7    4   92   92 -NODE|
+   7    4   92   92 =EOL |\x0a
+   8    0   93   93 -PAIR|
+   8    0   93   93 -MAP |
+   8    0   93   93 -NODE|
+   8    0   93   93 -DOC |
 </pre>
  </div>
 
@@ -155,6 +288,21 @@ e: f
 {
   &quot;a&quot;: &quot;b&quot;
 }
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:4:5: error: undefined tag prefix
+--- !prefix!B
+    ^~~~~~~~~
+[NOT]: fy_fetch_tag() failed
+[NOT]: fy_fetch_tokens() failed
+[NOT]: failed to peek token
+%TAG !prefix! tag:example.com,2011:
+--- !prefix!A
+a: b
 </pre>
  </div>
 
@@ -331,6 +479,31 @@ YAMLParseError: Could not resolve tag: !prefix!B at line 4, column 5:
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
+
+YAMLParseError: Could not resolve tag: !prefix!B at line 4, column 5:
+
+--- !prefix!B
+    ^^^^^^^^^
+
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at ctx.directives.tagName.msg (/node/node_modules/yaml/dist/compose/compose-collection.js:27:68)
+    at Directives.tagName (/node/node_modules/yaml/dist/doc/directives.js:126:9)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:27:36)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at next (&lt;anonymous&gt;)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
+    at compose.next (&lt;anonymous&gt;)
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 4:1: found undefined tag handle
@@ -341,7 +514,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:443: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55a563d9ff97
+	[C]: at 0x5642e1fe3f97
 </pre>
  </div>
 
@@ -395,14 +568,10 @@ Error: unhandled exception: unknown handle: &quot;!prefix!&quot; [YamlStreamErro
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    found undefined tag handle
-
-was found at , line: 4, column: 5
-while parsing a node at line: 4, column: 5
+  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Found undefined tag handle &#39;!prefix!&#39; at /perl5/lib/perl5/YAML/PP/Parser.pm line 994, &lt;&gt; line 1.
+ at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -421,6 +590,18 @@ while parsing a node at line: 4, column: 5
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
+
+    found undefined tag handle
+
+was found at , line: 4, column: 5
+while parsing a node at line: 4, column: 5
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     found undefined tag handle
@@ -598,6 +779,30 @@ GenericMapping(tag=&#39;tag:example.com,2011:A&#39;, content={&#39;a&#39;: &#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
+    return self.parse_block_node()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
+    return self.parse_node(block=True)
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 307, in parse_node
+    tag_mark)
+yaml.parser.ParserError: while parsing a node
+found undefined tag handle &#39;!prefix!&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
+    --- !prefix!B
+        ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -698,11 +903,53 @@ GenericMapping(tag=&#39;tag:example.com,2011:A&#39;, content={&#39;a&#39;: &#39;
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 267, in parse_document_content
+    return self.parse_block_node()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 329, in parse_block_node
+    return self.parse_node(block=True)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 382, in parse_node
+    tag_mark,
+ruamel.yaml.parser.ParserError: while parsing a node
+found undefined tag handle &#39;!prefix!&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
+    --- !prefix!B
+        ^ (line: 4)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): found undefined tag handle while parsing a node at line 4 column 5 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): found undefined tag handle while parsing a node at line 4 column 5 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

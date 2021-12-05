@@ -84,9 +84,269 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/S3PD.tml">&test-S
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">plain key: in-line value</span>
+<span
+class="">: </span>
+<span
+class="">&quot;quoted key&quot;:</span>
+<span
+class="">  - entry</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre></pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +MAP |</span>
+<span
+class="">   1    0    0    0 +PAIR|</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +VAL |</span>
+<span
+class="">   1    0    0    0 =TEXT|plain.key</span>
+<span
+class="">   1    9    9    9 -VAL |</span>
+<span
+class="">   1    9    9    9 -NODE|</span>
+<span
+class="">   1    9    9    9 =SYNX|:</span>
+<span
+class="">   1   10   10   10 =WSPC|.</span>
+<span
+class="">   1   11   11   11 +NODE|</span>
+<span
+class="">   1   11   11   11 +VAL |</span>
+<span
+class="">   1   11   11   11 =TEXT|in-line.value</span>
+<span
+class="">   1   24   24   24 -VAL |</span>
+<span
+class="">   1   24   24   24 -NODE|</span>
+<span
+class="">   1   24   24   24 =EOL |\x0a</span>
+<span
+class="">   2    0   25   25 -PAIR|</span>
+<span
+class="">   2    0   25   25 +PAIR|</span>
+<span
+class="">   2    0   25   25 +NODE|</span>
+<span
+class="">   2    0   25   25 +VAL |</span>
+<span
+class="">   2    0   25   25 -VAL |</span>
+<span
+class="">   2    0   25   25 -NODE|</span>
+<span
+class="">   2    0   25   25 =SYNX|:</span>
+<span
+class="">   2    1   26   26 +NODE|</span>
+<span
+class="">   2    1   26   26 +VAL |</span>
+<span
+class="">   2    1   26   26 -VAL |</span>
+<span
+class="">   2    1   26   26 -NODE|</span>
+<span
+class="">   2    1   26   26 =WSPC|.</span>
+<span
+class="">   2    2   27   27 +COMM|</span>
+<span
+class="">   2    2   27   27 =SYNX|#</span>
+<span
+class="">   2    3   28   28 =META|.Both.empty</span>
+<span
+class="">   2   14   39   39 -COMM|</span>
+<span
+class="">   2   14   39   39 =EOL |\x0a</span>
+<span
+class="">   3    0   40   40 -PAIR|</span>
+<span
+class="">   3    0   40   40 +PAIR|</span>
+<span
+class="">   3    0   40   40 +NODE|</span>
+<span
+class="">   3    0   40   40 +VAL |</span>
+<span
+class="">   3    0   40   40 =SYNX|&quot;</span>
+<span
+class="">   3    1   41   41 =TEXT|quoted.key</span>
+<span
+class="">   3   11   51   51 =SYNX|&quot;</span>
+<span
+class="">   3   12   52   52 -VAL |</span>
+<span
+class="">   3   12   52   52 -NODE|</span>
+<span
+class="">   3   12   52   52 =SYNX|:</span>
+<span
+class="">   3   13   53   53 +NODE|</span>
+<span
+class="">   3   13   53   53 =EOL |\x0a</span>
+<span
+class="">   4    0   54   54 +SEQ |</span>
+<span
+class="">   4    0   54   54 =SYNX|-</span>
+<span
+class="">   4    1   55   55 =WSPC|.</span>
+<span
+class="">   4    2   56   56 +NODE|</span>
+<span
+class="">   4    2   56   56 +VAL |</span>
+<span
+class="">   4    2   56   56 =TEXT|entry</span>
+<span
+class="">   4    7   61   61 -VAL |</span>
+<span
+class="">   4    7   61   61 -NODE|</span>
+<span
+class="">   4    7   61   61 =EOL |\x0a</span>
+<span
+class="">   5    0   62   62 -SEQ |</span>
+<span
+class="">   5    0   62   62 -NODE|</span>
+<span
+class="">   5    0   62   62 -PAIR|</span>
+<span
+class="">   5    0   62   62 -MAP |</span>
+<span
+class="">   5    0   62   62 -NODE|</span>
+<span
+class="">   5    0   62   62 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">plain key: in-line value</span>
+<span
+class="">null: null # Both empty</span>
+<span
+class="">&quot;quoted key&quot;:</span>
+<span
+class="">  - entry</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">plain key: in-line value</span>
+<span
+class="">:</span>
+<span
+class="">&quot;quoted key&quot;:</span>
+<span
+class="">- entry</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">plain key: in-line value</span>
+<span
+class="">! &#39;&#39;:</span>
+<span
+class="">&quot;quoted key&quot;:</span>
+<span
+class="">- entry</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected key
+
+was found at , line: 2, column: 1
+while parsing a block mapping at line: 1, column: 1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 2, column 1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 439, in parse_block_mapping_key
+    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a block mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
+    plain key: in-line value
+    ^
+expected &lt;block end&gt;, but found &#39;:&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
+    : # Both empty
+    ^
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
 </pre>
  </div>
 
@@ -220,7 +480,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x557f13cc7f97
+	[C]: at 0x55a76ab96f97
 </pre>
 
  </div>
@@ -386,11 +646,21 @@ TypeError: &#39;&lt;&#39; not supported between instances of &#39;NoneType&#39; 
  </div>
 
 
+  <div class="framework framework_box_na" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+
+ </div>
+
+
   <div class="framework framework_box_na" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_na">&nbsp;</span>na  <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): did not find expected key while parsing a block mapping at line 1 column 1 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_na">&nbsp;</span>na  <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected key while parsing a block mapping at line 1 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
 
@@ -425,18 +695,6 @@ expected &lt;block end&gt;, but found &#39;:&#39;
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_ni" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected key
-
-was found at , line: 2, column: 1
-while parsing a block mapping at line: 1, column: 1
 </pre>
  </div>
 

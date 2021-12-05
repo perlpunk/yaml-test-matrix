@@ -88,11 +88,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/FH7J.tml">&test-F
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
-  <div class="framework framework_box_ok" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_ok">&nbsp;</span>ok   </div>
-
-
   <div class="framework framework_box_ok" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -108,9 +103,396 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/FH7J.tml">&test-F
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- !!str </span>
+<span
+class="">- !!null : a</span>
+<span
+class="">  b: !!str </span>
+<span
+class="">- !!str : !!null </span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- !!str</span>
+<span
+class="">- !!null &#39;&#39;: a</span>
+<span
+class="">  b: !!str</span>
+<span
+class="">- !!str &#39;&#39;: !!null</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +SEQ |</span>
+<span
+class="">   1    0    0    0 =SYNX|-</span>
+<span
+class="">   1    1    1    1 =WSPC|.</span>
+<span
+class="">   1    2    2    2 +NODE|</span>
+<span
+class="">   1    2    2    2 +PROP|</span>
+<span
+class="">   1    2    2    2 +TAG |</span>
+<span
+class="">   1    2    2    2 +HAND|</span>
+<span
+class="">   1    2    2    2 =SYNX|!</span>
+<span
+class="">   1    3    3    3 =SYNX|!</span>
+<span
+class="">   1    4    4    4 -HAND|</span>
+<span
+class="">   1    4    4    4 =META|str</span>
+<span
+class="">   1    7    7    7 -TAG |</span>
+<span
+class="">   1    7    7    7 -PROP|</span>
+<span
+class="">   1    7    7    7 +VAL |</span>
+<span
+class="">   1    7    7    7 -VAL |</span>
+<span
+class="">   1    7    7    7 -NODE|</span>
+<span
+class="">   1    7    7    7 =EOL |\x0a</span>
+<span
+class="">   2    0    8    8 =SYNX|-</span>
+<span
+class="">   2    1    9    9 +NODE|</span>
+<span
+class="">   2    1    9    9 =EOL |\x0a</span>
+<span
+class="">   3    0   10   10 +MAP |</span>
+<span
+class="">   3    0   10   10 =DENT|..</span>
+<span
+class="">   3    2   12   12 +PAIR|</span>
+<span
+class="">   3    2   12   12 +NODE|</span>
+<span
+class="">   3    2   12   12 +PROP|</span>
+<span
+class="">   3    2   12   12 +TAG |</span>
+<span
+class="">   3    2   12   12 +HAND|</span>
+<span
+class="">   3    2   12   12 =SYNX|!</span>
+<span
+class="">   3    3   13   13 =SYNX|!</span>
+<span
+class="">   3    4   14   14 -HAND|</span>
+<span
+class="">   3    4   14   14 =META|null</span>
+<span
+class="">   3    8   18   18 -TAG |</span>
+<span
+class="">   3    8   18   18 -PROP|</span>
+<span
+class="">   3    8   18   18 +VAL |</span>
+<span
+class="">   3    8   18   18 -VAL |</span>
+<span
+class="">   3    8   18   18 -NODE|</span>
+<span
+class="">   3    8   18   18 =WSPC|.</span>
+<span
+class="">   3    9   19   19 =SYNX|:</span>
+<span
+class="">   3   10   20   20 =WSPC|.</span>
+<span
+class="">   3   11   21   21 +NODE|</span>
+<span
+class="">   3   11   21   21 +VAL |</span>
+<span
+class="">   3   11   21   21 =TEXT|a</span>
+<span
+class="">   3   12   22   22 -VAL |</span>
+<span
+class="">   3   12   22   22 -NODE|</span>
+<span
+class="">   3   12   22   22 =EOL |\x0a</span>
+<span
+class="">   4    0   23   23 -PAIR|</span>
+<span
+class="">   4    0   23   23 =DENT|..</span>
+<span
+class="">   4    2   25   25 +PAIR|</span>
+<span
+class="">   4    2   25   25 +NODE|</span>
+<span
+class="">   4    2   25   25 +VAL |</span>
+<span
+class="">   4    2   25   25 =TEXT|b</span>
+<span
+class="">   4    3   26   26 -VAL |</span>
+<span
+class="">   4    3   26   26 -NODE|</span>
+<span
+class="">   4    3   26   26 =SYNX|:</span>
+<span
+class="">   4    4   27   27 =WSPC|.</span>
+<span
+class="">   4    5   28   28 +NODE|</span>
+<span
+class="">   4    5   28   28 +PROP|</span>
+<span
+class="">   4    5   28   28 +TAG |</span>
+<span
+class="">   4    5   28   28 +HAND|</span>
+<span
+class="">   4    5   28   28 =SYNX|!</span>
+<span
+class="">   4    6   29   29 =SYNX|!</span>
+<span
+class="">   4    7   30   30 -HAND|</span>
+<span
+class="">   4    7   30   30 =META|str</span>
+<span
+class="">   4   10   33   33 -TAG |</span>
+<span
+class="">   4   10   33   33 -PROP|</span>
+<span
+class="">   4   10   33   33 +VAL |</span>
+<span
+class="">   4   10   33   33 -VAL |</span>
+<span
+class="">   4   10   33   33 -NODE|</span>
+<span
+class="">   4   10   33   33 =EOL |\x0a</span>
+<span
+class="">   5    0   34   34 -PAIR|</span>
+<span
+class="">   5    0   34   34 -MAP |</span>
+<span
+class="">   5    0   34   34 -NODE|</span>
+<span
+class="">   5    0   34   34 =SYNX|-</span>
+<span
+class="">   5    1   35   35 =DENT|.</span>
+<span
+class="">   5    2   36   36 +NODE|</span>
+<span
+class="">   5    2   36   36 +MAP |</span>
+<span
+class="">   5    2   36   36 +PAIR|</span>
+<span
+class="">   5    2   36   36 +NODE|</span>
+<span
+class="">   5    2   36   36 +PROP|</span>
+<span
+class="">   5    2   36   36 +TAG |</span>
+<span
+class="">   5    2   36   36 +HAND|</span>
+<span
+class="">   5    2   36   36 =SYNX|!</span>
+<span
+class="">   5    3   37   37 =SYNX|!</span>
+<span
+class="">   5    4   38   38 -HAND|</span>
+<span
+class="">   5    4   38   38 =META|str</span>
+<span
+class="">   5    7   41   41 -TAG |</span>
+<span
+class="">   5    7   41   41 -PROP|</span>
+<span
+class="">   5    7   41   41 +VAL |</span>
+<span
+class="">   5    7   41   41 -VAL |</span>
+<span
+class="">   5    7   41   41 -NODE|</span>
+<span
+class="">   5    7   41   41 =WSPC|.</span>
+<span
+class="">   5    8   42   42 =SYNX|:</span>
+<span
+class="">   5    9   43   43 =WSPC|.</span>
+<span
+class="">   5   10   44   44 +NODE|</span>
+<span
+class="">   5   10   44   44 +PROP|</span>
+<span
+class="">   5   10   44   44 +TAG |</span>
+<span
+class="">   5   10   44   44 +HAND|</span>
+<span
+class="">   5   10   44   44 =SYNX|!</span>
+<span
+class="">   5   11   45   45 =SYNX|!</span>
+<span
+class="">   5   12   46   46 -HAND|</span>
+<span
+class="">   5   12   46   46 =META|null</span>
+<span
+class="">   5   16   50   50 -TAG |</span>
+<span
+class="">   5   16   50   50 -PROP|</span>
+<span
+class="">   5   16   50   50 +VAL |</span>
+<span
+class="">   5   16   50   50 -VAL |</span>
+<span
+class="">   5   16   50   50 -NODE|</span>
+<span
+class="">   5   16   50   50 =EOL |\x0a</span>
+<span
+class="">   6    0   51   51 -PAIR|</span>
+<span
+class="">   6    0   51   51 -MAP |</span>
+<span
+class="">   6    0   51   51 -NODE|</span>
+<span
+class="">   6    0   51   51 -SEQ |</span>
+<span
+class="">   6    0   51   51 -NODE|</span>
+<span
+class="">   6    0   51   51 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- !!str &quot;&quot;</span>
+<span
+class="">- !!null null: a</span>
+<span
+class="">  b: !!str &quot;&quot;</span>
+<span
+class="">- !!str &quot;&quot;: !!null null</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- !!str</span>
+<span
+class="">- !!null : a</span>
+<span
+class="">  b: !!str</span>
+<span
+class="">- !!str : !!null</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- !!str</span>
+<span
+class="">- !!null : a</span>
+<span
+class="">  b: !!str</span>
+<span
+class="">- !!str : !!null</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- !!str &#39;&#39;</span>
+<span
+class="">- ? !!null &#39;&#39;</span>
+<span
+class="">  : a</span>
+<span
+class="">  b: !!str &#39;&#39;</span>
+<span
+class="">- ? !!str &#39;&#39;</span>
+<span
+class="">  : !!null &#39;&#39;</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 3, column 10): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 11, in &lt;module&gt;
+    output = ruamel.yaml.emit(events)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1058, in emit
+    dumper.emit(event)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 254, in emit
+    self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 630, in expect_first_block_sequence_item
+    return self.expect_block_sequence_item(first=True)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 651, in expect_block_sequence_item
+    self.expect_node(sequence=True)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 419, in expect_node
+    self.process_tag()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 801, in process_tag
+    self.style = self.choose_scalar_style()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 836, in choose_scalar_style
+    self.event.implicit[0] or not self.event.implicit[2]
+IndexError: tuple index out of range
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
 </pre>
  </div>
 
@@ -234,7 +616,7 @@ YAMLException: bad indentation of a sequence entry (3:10)
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x557c3b457f97
+	[C]: at 0x55f444546f97
 </pre>
 
  </div>
@@ -445,6 +827,16 @@ TypeError: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[&#39;&#39;, {None: &#39;a&#39;, &#39;b&#39;: &#39;&#39;}, {&#39;&#39;: None}]
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
 </pre>
 
  </div>

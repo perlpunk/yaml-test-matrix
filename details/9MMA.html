@@ -23,10 +23,34 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MMA.tml">&test-9
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
+   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: did not find expected &lt;document start&gt;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
 -STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +DIR |
+   1    0    0    0 =SYNX|%
+   1    1    1    1 =META|YAML
+   1    5    5    5 =WSPC|.
+   1    6    6    6 =META|1.2
+   1    9    9    9 -DIR |
+   1    9    9    9 =EOL |\x0a
+   2    0   10   10 =ERR |Unexpected.end.of.input
+   2    0   10   10 -DOC |
 </pre>
  </div>
 
@@ -55,6 +79,12 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MMA.tml">&test-9
 
   <div class="framework framework_box_invalid_incorrect" id="js-yaml-json">
 <h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre></pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre></pre>
  </div>
 
@@ -97,6 +127,15 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MMA.tml">&test-9
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: stream with directives without content
+
+^
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: stream with directives without content
 
 ^
@@ -192,7 +231,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55857b6cbf97
+	[C]: at 0x555fc02f4f97
 </pre>
  </div>
 
@@ -244,13 +283,14 @@ YAML      : &quot;&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected &lt;document start&gt;
-
-was found at , line: 2, column: 1
+  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
+Column    : 1
+Message   : Directive needs document start
+Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 424
+YAML      : &quot;&quot;
+  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -268,6 +308,17 @@ was found at , line: 2, column: 1
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected &lt;document start&gt;
+
+was found at , line: 2, column: 1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected &lt;document start&gt;
@@ -400,6 +451,27 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 157, in parse_implicit_document_start
+    return self.parse_document_start()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 174, in parse_document_start
+    self.peek_token().start_mark)
+yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;stream end&gt;&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
+    
+    ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -472,11 +544,50 @@ ruamel.yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but f
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
+    for event in ruamel.yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+    while loader._parser.check_event():
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 200, in parse_implicit_document_start
+    return self.parse_document_start()
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 217, in parse_document_start
+    self.scanner.peek_token().start_mark,
+ruamel.yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;stream end&gt;&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
+    
+    ^ (line: 2)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): found incompatible YAML document at line 1 column 1 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): found incompatible YAML document at line 1 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

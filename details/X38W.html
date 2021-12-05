@@ -84,11 +84,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/X38W.tml">&test-X
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
-  <div class="framework framework_box_ok" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_ok">&nbsp;</span>ok   </div>
-
-
   <div class="framework framework_box_ok" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -104,7 +99,217 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/X38W.tml">&test-X
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-pp-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">{</span>
+<span
+class="">  ? &amp;a [</span>
+<span
+class="">    a,</span>
+<span
+class="">    &amp;b b</span>
+<span
+class="">  ] : *b,</span>
+<span
+class="">  *a : [</span>
+<span
+class="">    c,</span>
+<span
+class="">    *b,</span>
+<span
+class="">    d</span>
+<span
+class="">  ]</span>
+<span
+class="">}</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">? &amp;a</span>
+<span
+class="">- a</span>
+<span
+class="">- &amp;b b</span>
+<span
+class="">: *b</span>
+<span
+class="">*a :</span>
+<span
+class="">- c</span>
+<span
+class="">- *b</span>
+<span
+class="">- d</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +DOC |</span>
+<span
+class="">   1    0    0    0 +NODE|</span>
+<span
+class="">   1    0    0    0 +MAP |</span>
+<span
+class="">   1    0    0    0 =SYNX|{</span>
+<span
+class="">   1    1    1    1 =WSPC|.</span>
+<span
+class="">   1    2    2    2 +PAIR|</span>
+<span
+class="">   1    2    2    2 +NODE|</span>
+<span
+class="">   1    2    2    2 +PROP|</span>
+<span
+class="">   1    2    2    2 +ANCH|</span>
+<span
+class="">   1    2    2    2 =SYNX|&amp;</span>
+<span
+class="">   1    3    3    3 =META|a</span>
+<span
+class="">   1    4    4    4 -ANCH|</span>
+<span
+class="">   1    4    4    4 -PROP|</span>
+<span
+class="">   1    4    4    4 +VAL |</span>
+<span
+class="">   1    4    4    4 -VAL |</span>
+<span
+class="">   1    4    4    4 -NODE|</span>
+<span
+class="">   1    4    4    4 +NODE|</span>
+<span
+class="">   1    4    4    4 +VAL |</span>
+<span
+class="">   1    4    4    4 -VAL |</span>
+<span
+class="">   1    4    4    4 -NODE|</span>
+<span
+class="">   1    4    4    4 -PAIR|</span>
+<span
+class="">   1    4    4    4 =WSPC|.</span>
+<span
+class="">   1    5    5    5 -MAP |</span>
+<span
+class="">   1    5    5    5 -NODE|</span>
+<span
+class="">   1    5    5    5 =ERR |Unexpected.&#39;[&#39;</span>
+<span
+class="">   1    5    5    5 =REST|[a,.&amp;b.b]:.*b,.*a.:.[c,.*b,.d]}</span>
+<span
+class="">   1   36   36   36 =REST|\x0a</span>
+<span
+class="">   2    0   37   37 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">{</span>
+<span
+class="">  ? &amp;a [ a, &amp;b b ]</span>
+<span
+class="">  : *b,</span>
+<span
+class="">  ? *a</span>
+<span
+class="">  : [ c, *b, d ]</span>
+<span
+class="">}</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">? &amp;a</span>
+<span
+class="">  - a</span>
+<span
+class="">  - &amp;b b</span>
+<span
+class="">: *b</span>
+<span
+class="">*a :</span>
+<span
+class="">- c</span>
+<span
+class="">- *b</span>
+<span
+class="">- d</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">{ &amp;a  [a, &amp;b b] : *b , *a :  [c , *b, d]}</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">{? &amp;a [a, &amp;b b] : *b, *a: [c, *b, d]}</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">{&amp;a [a, &amp;b b]: *b, *a: [c, *b, d]}</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Duplicate key &#39;[&#39;a&#39;,&#39;b&#39;]&#39; at /perl5/lib/perl5/YAML/PP/Parser.pm line 61.
  at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
@@ -196,6 +401,15 @@ by default when using the new API.
  </div>
 
 
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
  <hr style="clear: both;">    <div class="framework framework_box_na" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>stdin:1:1: error: duplicate key after resolving
@@ -283,7 +497,7 @@ YAMLException: duplicated mapping key (1:21)
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x55d089c9cf97
+	[C]: at 0x563983797f97
 </pre>
 
  </div>
@@ -309,7 +523,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x5647b898f0f0)&quot; : [
+   &quot;ARRAY(0x55c19bdc3f38)&quot; : [
       &quot;c&quot;,
       &quot;b&quot;,
       &quot;d&quot;
@@ -323,7 +537,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x56098fe4a118)&#39; =&gt; [
+  &#39;ARRAY(0x55f6db92e028)&#39; =&gt; [
                                &#39;c&#39;,
                                &#39;b&#39;,
                                &#39;d&#39;
@@ -345,7 +559,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x55a2df083968)&quot; : [
+   &quot;ARRAY(0x56320e6fe420)&quot; : [
       &quot;c&quot;,
       &quot;b&quot;,
       &quot;d&quot;
@@ -359,7 +573,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x555f4c889b30)&#39; =&gt; [
+  &#39;ARRAY(0x55595d71aa70)&#39; =&gt; [
                                &#39;c&#39;,
                                &#39;b&#39;,
                                &#39;d&#39;
@@ -445,6 +659,16 @@ To suppress this check see:
 
 Duplicate keys will become an error in future releases, and are errors
 by default when using the new API.
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
 </pre>
 
  </div>

@@ -131,7 +131,424 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/DBG4.tml">&test-D
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
+<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- ::vector</span>
+<span
+class="">- &quot;: - ()&quot;</span>
+<span
+class="">- Up, up, and away!</span>
+<span
+class="">- -123</span>
+<span
+class="">- http://example.com/foo#bar</span>
+<span
+class="">- [</span>
+<span
+class="">    ::vector,</span>
+<span
+class="">    &quot;: - ()&quot;,</span>
+<span
+class="">    &quot;Up, up and away!&quot;,</span>
+<span
+class="">    -123,</span>
+<span
+class="">    http://example.com/foo#bar</span>
+<span
+class="">  ]</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="c-libyaml-yaml">
+<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre></pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">Line  Col Char Byte Token|Content</span>
+<span
+class="">   1    0    0    0 +COMM|</span>
+<span
+class="">   1    0    0    0 =SYNX|#</span>
+<span
+class="">   1    1    1    1 =META|.Outside.flow.collection:</span>
+<span
+class="">   1   26   26   26 -COMM|</span>
+<span
+class="">   1   26   26   26 =EOL |\x0a</span>
+<span
+class="">   2    0   27   27 +DOC |</span>
+<span
+class="">   2    0   27   27 +NODE|</span>
+<span
+class="">   2    0   27   27 +SEQ |</span>
+<span
+class="">   2    0   27   27 =SYNX|-</span>
+<span
+class="">   2    1   28   28 =WSPC|.</span>
+<span
+class="">   2    2   29   29 +NODE|</span>
+<span
+class="">   2    2   29   29 +VAL |</span>
+<span
+class="">   2    2   29   29 =TEXT|::vector</span>
+<span
+class="">   2   10   37   37 -VAL |</span>
+<span
+class="">   2   10   37   37 -NODE|</span>
+<span
+class="">   2   10   37   37 =EOL |\x0a</span>
+<span
+class="">   3    0   38   38 =SYNX|-</span>
+<span
+class="">   3    1   39   39 =WSPC|.</span>
+<span
+class="">   3    2   40   40 +NODE|</span>
+<span
+class="">   3    2   40   40 +VAL |</span>
+<span
+class="">   3    2   40   40 =SYNX|&quot;</span>
+<span
+class="">   3    3   41   41 =TEXT|:.-.()</span>
+<span
+class="">   3    9   47   47 =SYNX|&quot;</span>
+<span
+class="">   3   10   48   48 -VAL |</span>
+<span
+class="">   3   10   48   48 -NODE|</span>
+<span
+class="">   3   10   48   48 =EOL |\x0a</span>
+<span
+class="">   4    0   49   49 =SYNX|-</span>
+<span
+class="">   4    1   50   50 =WSPC|.</span>
+<span
+class="">   4    2   51   51 +NODE|</span>
+<span
+class="">   4    2   51   51 +VAL |</span>
+<span
+class="">   4    2   51   51 =TEXT|Up,.up,.and.away!</span>
+<span
+class="">   4   19   68   68 -VAL |</span>
+<span
+class="">   4   19   68   68 -NODE|</span>
+<span
+class="">   4   19   68   68 =EOL |\x0a</span>
+<span
+class="">   5    0   69   69 =SYNX|-</span>
+<span
+class="">   5    1   70   70 =WSPC|.</span>
+<span
+class="">   5    2   71   71 +NODE|</span>
+<span
+class="">   5    2   71   71 +VAL |</span>
+<span
+class="">   5    2   71   71 =TEXT|-123</span>
+<span
+class="">   5    6   75   75 -VAL |</span>
+<span
+class="">   5    6   75   75 -NODE|</span>
+<span
+class="">   5    6   75   75 =EOL |\x0a</span>
+<span
+class="">   6    0   76   76 =SYNX|-</span>
+<span
+class="">   6    1   77   77 =WSPC|.</span>
+<span
+class="">   6    2   78   78 +NODE|</span>
+<span
+class="">   6    2   78   78 +VAL |</span>
+<span
+class="">   6    2   78   78 =TEXT|http://example.com/foo#bar</span>
+<span
+class="">   6   28  104  104 -VAL |</span>
+<span
+class="">   6   28  104  104 -NODE|</span>
+<span
+class="">   6   28  104  104 =EOL |\x0a</span>
+<span
+class="">   7    0  105  105 +COMM|</span>
+<span
+class="">   7    0  105  105 =SYNX|#</span>
+<span
+class="">   7    1  106  106 =META|.Inside.flow.collection:</span>
+<span
+class="">   7   25  130  130 -COMM|</span>
+<span
+class="">   7   25  130  130 =EOL |\x0a</span>
+<span
+class="">   8    0  131  131 =SYNX|-</span>
+<span
+class="">   8    1  132  132 =WSPC|.</span>
+<span
+class="">   8    2  133  133 +NODE|</span>
+<span
+class="">   8    2  133  133 +SEQ |</span>
+<span
+class="">   8    2  133  133 =SYNX|[</span>
+<span
+class="">   8    3  134  134 =WSPC|.</span>
+<span
+class="">   8    4  135  135 +NODE|</span>
+<span
+class="">   8    4  135  135 +VAL |</span>
+<span
+class="">   8    4  135  135 =TEXT|::vector</span>
+<span
+class="">   8   12  143  143 -VAL |</span>
+<span
+class="">   8   12  143  143 -NODE|</span>
+<span
+class="">   8   12  143  143 =SYNX|,</span>
+<span
+class="">   8   13  144  144 =EOL |\x0a</span>
+<span
+class="">   9    0  145  145 =DENT|.</span>
+<span
+class="">   9    1  146  146 =WSPC|.</span>
+<span
+class="">   9    2  147  147 +NODE|</span>
+<span
+class="">   9    2  147  147 +VAL |</span>
+<span
+class="">   9    2  147  147 =SYNX|&quot;</span>
+<span
+class="">   9    3  148  148 =TEXT|:.-.()</span>
+<span
+class="">   9    9  154  154 =SYNX|&quot;</span>
+<span
+class="">   9   10  155  155 -VAL |</span>
+<span
+class="">   9   10  155  155 -NODE|</span>
+<span
+class="">   9   10  155  155 =SYNX|,</span>
+<span
+class="">   9   11  156  156 =EOL |\x0a</span>
+<span
+class="">  10    0  157  157 =DENT|.</span>
+<span
+class="">  10    1  158  158 =WSPC|.</span>
+<span
+class="">  10    2  159  159 +NODE|</span>
+<span
+class="">  10    2  159  159 +VAL |</span>
+<span
+class="">  10    2  159  159 =SYNX|&quot;</span>
+<span
+class="">  10    3  160  160 =TEXT|Up,.up.and.away!</span>
+<span
+class="">  10   19  176  176 =SYNX|&quot;</span>
+<span
+class="">  10   20  177  177 -VAL |</span>
+<span
+class="">  10   20  177  177 -NODE|</span>
+<span
+class="">  10   20  177  177 =SYNX|,</span>
+<span
+class="">  10   21  178  178 =EOL |\x0a</span>
+<span
+class="">  11    0  179  179 =DENT|.</span>
+<span
+class="">  11    1  180  180 =WSPC|.</span>
+<span
+class="">  11    2  181  181 +NODE|</span>
+<span
+class="">  11    2  181  181 +VAL |</span>
+<span
+class="">  11    2  181  181 =TEXT|-123</span>
+<span
+class="">  11    6  185  185 -VAL |</span>
+<span
+class="">  11    6  185  185 -NODE|</span>
+<span
+class="">  11    6  185  185 =SYNX|,</span>
+<span
+class="">  11    7  186  186 =EOL |\x0a</span>
+<span
+class="">  12    0  187  187 =DENT|.</span>
+<span
+class="">  12    1  188  188 =WSPC|.</span>
+<span
+class="">  12    2  189  189 +NODE|</span>
+<span
+class="">  12    2  189  189 +VAL |</span>
+<span
+class="">  12    2  189  189 =TEXT|http://example.com/foo#bar</span>
+<span
+class="">  12   28  215  215 -VAL |</span>
+<span
+class="">  12   28  215  215 -NODE|</span>
+<span
+class="">  12   28  215  215 =WSPC|.</span>
+<span
+class="">  12   29  216  216 =SYNX|]</span>
+<span
+class="">  12   30  217  217 -SEQ |</span>
+<span
+class="">  12   30  217  217 -NODE|</span>
+<span
+class="">  12   30  217  217 =EOL |\x0a</span>
+<span
+class="">  13    0  218  218 -SEQ |</span>
+<span
+class="">  13    0  218  218 -NODE|</span>
+<span
+class="">  13    0  218  218 -DOC |</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="js-yaml-yaml">
+<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line"># Outside flow collection:</span>
+<span
+class="">- ::vector</span>
+<span
+class="">- &quot;: - ()&quot;</span>
+<span
+class="">- Up, up, and away!</span>
+<span
+class="">- -123</span>
+<span
+class="">- http://example.com/foo#bar</span>
+<span
+class=""># Inside flow collection:</span>
+<span
+class="">- [</span>
+<span
+class="">    ::vector,</span>
+<span
+class="">    &quot;: - ()&quot;,</span>
+<span
+class="">    &quot;Up, up and away!&quot;,</span>
+<span
+class="">    -123,</span>
+<span
+class="">    http://example.com/foo#bar</span>
+<span
+class="">  ]</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="perl-pp-yaml">
+<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- ::vector</span>
+<span
+class="">- &quot;: - ()&quot;</span>
+<span
+class="">- Up, up, and away!</span>
+<span
+class="">- -123</span>
+<span
+class="">- http://example.com/foo#bar</span>
+<span
+class="">- - ::vector</span>
+<span
+class="">  - &quot;: - ()&quot;</span>
+<span
+class="">  - &quot;Up, up and away!&quot;</span>
+<span
+class="">  - -123</span>
+<span
+class="">  - http://example.com/foo#bar</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="py-ruamel-yaml">
+<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">- ::vector</span>
+<span
+class="">- &quot;: - ()&quot;</span>
+<span
+class="">- Up, up, and away!</span>
+<span
+class="">- -123</span>
+<span
+class="">- http://example.com/foo#bar</span>
+<span
+class="">- [::vector, &quot;: - ()&quot;, &quot;Up, up and away!&quot;, -123, http://example.com/foo#bar]</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+  Got Events:
+<pre><span
+class="diff_line">[</span>
+<span
+class="">  &quot;::vector&quot;.Str,</span>
+<span
+class="">  &quot;: - ()&quot;.Str,</span>
+<span
+class="">  &quot;Up, up, and away!&quot;.Str,</span>
+<span
+class="">  -123.Int,</span>
+<span
+class="">  &quot;http://example.com/foo#bar&quot;.Str,</span>
+<span
+class="">  [</span>
+<span
+class="">    &quot;::vector&quot;.Str,</span>
+<span
+class="">    &quot;: - ()&quot;.Str,</span>
+<span
+class="">    &quot;Up, up and away!&quot;.Str,</span>
+<span
+class="">    -123.Int,</span>
+<span
+class="">    &quot;http://example.com/foo#bar&quot;.Str,</span>
+<span
+class="">  ],</span>
+<span
+class="">]</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">[</span>
@@ -248,19 +665,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x56112926ff97
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pplibyaml-event">
-<h3><a href="#perl-pplibyaml-event">perl-pplibyaml-event</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected node content
-
-was found at , line: 8, column: 5
-while parsing a flow node at line: 8, column: 5
+	[C]: at 0x55c002469f97
 </pre>
  </div>
 
@@ -279,6 +684,18 @@ while parsing a flow node at line: 8, column: 5
 
   <div class="framework framework_box_error" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
+
+    did not find expected node content
+
+was found at , line: 8, column: 5
+while parsing a flow node at line: 8, column: 5
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
+<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected node content
@@ -450,11 +867,37 @@ expected the node content, but found &#39;:&#39;
  </div>
 
 
+  <div class="framework framework_box_error" id="py-pyyaml-yaml">
+<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+    while loader.check_event():
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+    self.current_event = self.state()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
+    return self.parse_flow_sequence_entry(first=True)
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
+    return self.parse_flow_node()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
+    return self.parse_node()
+  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 371, in parse_node
+    token.start_mark)
+yaml.parser.ParserError: while parsing a flow node
+expected the node content, but found &#39;:&#39;
+  in &quot;&lt;unicode string&gt;&quot;, line 8, column 5:
+    - [ ::vector,
+        ^
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>/usr/lib/ruby/2.5.0/psych.rb:405:in `parse&#39;: (&lt;unknown&gt;): did not find expected node content while parsing a flow node at line 8 column 5 (Psych::SyntaxError)
-	from /usr/lib/ruby/2.5.0/psych.rb:405:in `parse_stream&#39;
-	from /usr/lib/ruby/2.5.0/psych.rb:488:in `load_stream&#39;
+<span class="status_box color_error">&nbsp;</span>error <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected node content while parsing a flow node at line 8 column 5 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>
