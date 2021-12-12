@@ -27,14 +27,7 @@ double: &quot;quoted \&#39; scalar&quot;
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: found unknown escape character
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
+   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
 +DOC
@@ -153,18 +146,6 @@ double: &quot;quoted \&#39; scalar&quot;
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:17: error: invalid escape &#39;\&#39;&#39; in double-quoted string
-double: &quot;quoted \&#39; scalar&quot;
-                ^~
-[NOT]: fy_fetch_flow_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:17: error: invalid escape &#39;\&#39;&#39; in double-quoted string
 double: &quot;quoted \&#39; scalar&quot;
                 ^~
@@ -390,31 +371,6 @@ double: &quot;quoted \&#39; scalar&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: Invalid escape sequence \&#39; at line 2, column 17:
-
-double: &quot;quoted \&#39; scalar&quot;
-                ^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at _onError (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:10:42)
-    at doubleQuotedValue (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:153:17)
-    at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:22:21)
-    at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 2:1: found unknown escape character
@@ -426,7 +382,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55add35c6f97
+	[C]: at 0x5565cbe5af97
 </pre>
  </div>
 
@@ -484,18 +440,6 @@ YAML      : &quot;\\&#39; scalar\&quot;&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 2
-Column    : 17
-Message   : Invalid quoted &lt;&quot;&gt; string
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 738
-YAML      : &quot;\\&#39; scalar\&quot;&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-json">
 <h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
@@ -510,18 +454,6 @@ while parsing a quoted scalar at line: 2, column: 9
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    found unknown escape character
-
-was found at , line: 2, column: 17
-while parsing a quoted scalar at line: 2, column: 9
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     found unknown escape character
@@ -696,41 +628,6 @@ found unknown escape character &quot;&#39;&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
-    for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
-    while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
-    if not self.check_token(KeyToken, ValueToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 251, in fetch_more_tokens
-    return self.fetch_double()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 655, in fetch_double
-    self.fetch_flow_scalar(style=&#39;&quot;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 666, in fetch_flow_scalar
-    self.tokens.append(self.scan_flow_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 1152, in scan_flow_scalar
-    chunks.extend(self.scan_flow_scalar_non_spaces(double, start_mark))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 1224, in scan_flow_scalar_non_spaces
-    &quot;found unknown escape character %r&quot; % ch, self.get_mark())
-yaml.scanner.ScannerError: while scanning a double-quoted scalar
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 9:
-    double: &quot;quoted \&#39; scalar&quot;
-            ^
-found unknown escape character &quot;&#39;&quot;
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 18:
-    double: &quot;quoted \&#39; scalar&quot;
-                     ^
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -836,41 +733,6 @@ found unknown escape character &quot;&#39;&quot;
     item_value = self.compose_node(node, item_key)
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 603, in parse_block_mapping_value
-    if self.scanner.check_token(ValueToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 311, in fetch_more_tokens
-    return self.fetch_double()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 729, in fetch_double
-    self.fetch_flow_scalar(style=&#39;&quot;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 738, in fetch_flow_scalar
-    self.tokens.append(self.scan_flow_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1383, in scan_flow_scalar
-    chunks.extend(self.scan_flow_scalar_non_spaces(double, start_mark))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1460, in scan_flow_scalar_non_spaces
-    self.reader.get_mark(),
-ruamel.yaml.scanner.ScannerError: while scanning a double-quoted scalar
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 9:
-    double: &quot;quoted \&#39; scalar&quot;
-            ^ (line: 2)
-found unknown escape character &quot;&#39;&quot;
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 18:
-    double: &quot;quoted \&#39; scalar&quot;
-                     ^ (line: 2)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
-    while loader._parser.check_event():
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
     self.current_event = self.state()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 603, in parse_block_mapping_value

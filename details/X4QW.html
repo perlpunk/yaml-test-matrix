@@ -41,14 +41,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/X4QW.tml">&test-X
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>block: &gt;
-  scalar
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -118,14 +110,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/X4QW.tml">&test-X
   &#39;block&#39; =&gt; &#39;scalar
 &#39;
 }
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>block: &gt;
-  scalar
 </pre>
  </div>
 
@@ -227,18 +211,6 @@ block: &gt;# comment
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:9: error: invalid comment without whitespace after block scalar indicator
-block: &gt;# comment
-        ^
-[NOT]: fy_fetch_block_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:9: error: invalid comment without whitespace after block scalar indicator
 block: &gt;# comment
         ^
@@ -453,31 +425,6 @@ block: &gt;# comment
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: Comments must be separated from other tokens by white space characters at line 1, column 9:
-
-block: &gt;# comment
-        ^^^^^^^^^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at parseBlockScalarHeader (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:154:21)
-    at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:7:20)
-    at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="nim-nimyaml-event">
 <h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/tmp/NimYAML-0.16.0/yaml/stream.nim(134) nimyaml_event
@@ -527,18 +474,6 @@ Message   : Invalid block scalar
 Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 544
 YAML      : &quot;# comment&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
-Column    : 9
-Message   : Invalid block scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 544
-YAML      : &quot;# comment&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -705,41 +640,6 @@ expected chomping or indentation indicators, but found &#39;#&#39;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
-    for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
-    while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
-    if not self.check_token(KeyToken, ValueToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
-    return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
-    self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
-    self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
-    chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 1089, in scan_block_scalar_indicators
-    % ch, self.get_mark())
-yaml.scanner.ScannerError: while scanning a block scalar
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
-    block: &gt;# comment
-           ^
-expected chomping or indentation indicators, but found &#39;#&#39;
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
-    block: &gt;# comment
-            ^
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -845,41 +745,6 @@ expected chomping or indentation indicators, but found &#39;#&#39;
     item_value = self.compose_node(node, item_key)
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 603, in parse_block_mapping_value
-    if self.scanner.check_token(ValueToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 303, in fetch_more_tokens
-    return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 712, in fetch_folded
-    self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 721, in fetch_block_scalar
-    self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1154, in scan_block_scalar
-    chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1299, in scan_block_scalar_indicators
-    self.reader.get_mark(),
-ruamel.yaml.scanner.ScannerError: while scanning a block scalar
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
-    block: &gt;# comment
-           ^ (line: 1)
-expected chomping or indentation indicators, but found &#39;#&#39;
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
-    block: &gt;# comment
-            ^ (line: 1)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
-    while loader._parser.check_event():
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
     self.current_event = self.state()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 603, in parse_block_mapping_value

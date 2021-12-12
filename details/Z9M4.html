@@ -141,229 +141,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/Z9M4.tml">&test-Z
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">%TAG !e! tag:example.com,2000:app/</span>
-<span
-class="">---</span>
-<span
-class="">- !e!foo &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">- !&lt;tag:example.com,2000:app/foo&gt; &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +DIR |</span>
-<span
-class="">   1    0    0    0 =SYNX|%</span>
-<span
-class="">   1    1    1    1 =META|TAG</span>
-<span
-class="">   1    4    4    4 =WSPC|.</span>
-<span
-class="">   1    5    5    5 +HAND|</span>
-<span
-class="">   1    5    5    5 =SYNX|!</span>
-<span
-class="">   1    6    6    6 =META|e</span>
-<span
-class="">   1    7    7    7 =SYNX|!</span>
-<span
-class="">   1    8    8    8 -HAND|</span>
-<span
-class="">   1    8    8    8 =WSPC|.</span>
-<span
-class="">   1    9    9    9 +TAG |</span>
-<span
-class="">   1    9    9    9 =META|tag:example.com,2000:app/</span>
-<span
-class="">   1   34   34   34 -TAG |</span>
-<span
-class="">   1   34   34   34 -DIR |</span>
-<span
-class="">   1   34   34   34 =EOL |\x0a</span>
-<span
-class="">   2    0   35   35 =HEAD|---</span>
-<span
-class="">   2    3   38   38 +NODE|</span>
-<span
-class="">   2    3   38   38 =EOL |\x0a</span>
-<span
-class="">   3    0   39   39 +SEQ |</span>
-<span
-class="">   3    0   39   39 =SYNX|-</span>
-<span
-class="">   3    1   40   40 =WSPC|.</span>
-<span
-class="">   3    2   41   41 +NODE|</span>
-<span
-class="">   3    2   41   41 +PROP|</span>
-<span
-class="">   3    2   41   41 +TAG |</span>
-<span
-class="">   3    2   41   41 +HAND|</span>
-<span
-class="">   3    2   41   41 =SYNX|!</span>
-<span
-class="">   3    3   42   42 =META|e</span>
-<span
-class="">   3    4   43   43 =SYNX|!</span>
-<span
-class="">   3    5   44   44 -HAND|</span>
-<span
-class="">   3    5   44   44 =META|foo</span>
-<span
-class="">   3    8   47   47 -TAG |</span>
-<span
-class="">   3    8   47   47 -PROP|</span>
-<span
-class="">   3    8   47   47 =WSPC|.</span>
-<span
-class="">   3    9   48   48 +VAL |</span>
-<span
-class="">   3    9   48   48 =SYNX|&quot;</span>
-<span
-class="">   3   10   49   49 =TEXT|bar</span>
-<span
-class="">   3   13   52   52 =SYNX|&quot;</span>
-<span
-class="">   3   14   53   53 -VAL |</span>
-<span
-class="">   3   14   53   53 -NODE|</span>
-<span
-class="">   3   14   53   53 =EOL |\x0a</span>
-<span
-class="">   4    0   54   54 -SEQ |</span>
-<span
-class="">   4    0   54   54 -NODE|</span>
-<span
-class="">   4    0   54   54 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">%TAG !e! tag:example.com,2000:app/</span>
-<span
-class="">---</span>
-<span
-class="">- !e!foo &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">- !&lt;tag:example.com,2000:app/foo&gt; &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">- !&lt;tag:example.com,2000:app/foo&gt; &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">%TAG !e! tag:example.com,2000:app/</span>
-<span
-class="">---</span>
-<span
-class="">- !e!foo &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">%TAG !e! tag:example.com,2000:app/</span>
-<span
-class="">---</span>
-<span
-class="">- !e!foo &quot;bar&quot;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">[</span>
-<span
-class="">  &quot;bar&quot;.Str,</span>
-<span
-class="">]</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-syck-json">
+ <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">&quot;%TAG !e! tag:example.com,2000:app/ --- - !e!foo \&quot;bar\&quot;&quot;</span>
@@ -393,7 +171,59 @@ class="diff_line">&quot;%TAG !e! tag:example.com,2000:app/ --- - !e!foo \&quot;b
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +DIR |
+   1    0    0    0 =SYNX|%
+   1    1    1    1 =META|TAG
+   1    4    4    4 =WSPC|.
+   1    5    5    5 +HAND|
+   1    5    5    5 =SYNX|!
+   1    6    6    6 =META|e
+   1    7    7    7 =SYNX|!
+   1    8    8    8 -HAND|
+   1    8    8    8 =WSPC|.
+   1    9    9    9 +TAG |
+   1    9    9    9 =META|tag:example.com,2000:app/
+   1   34   34   34 -TAG |
+   1   34   34   34 -DIR |
+   1   34   34   34 =EOL |\x0a
+   2    0   35   35 =HEAD|---
+   2    3   38   38 +NODE|
+   2    3   38   38 =EOL |\x0a
+   3    0   39   39 +SEQ |
+   3    0   39   39 =SYNX|-
+   3    1   40   40 =WSPC|.
+   3    2   41   41 +NODE|
+   3    2   41   41 +PROP|
+   3    2   41   41 +TAG |
+   3    2   41   41 +HAND|
+   3    2   41   41 =SYNX|!
+   3    3   42   42 =META|e
+   3    4   43   43 =SYNX|!
+   3    5   44   44 -HAND|
+   3    5   44   44 =META|foo
+   3    8   47   47 -TAG |
+   3    8   47   47 -PROP|
+   3    8   47   47 =WSPC|.
+   3    9   48   48 +VAL |
+   3    9   48   48 =SYNX|&quot;
+   3   10   49   49 =TEXT|bar
+   3   13   52   52 =SYNX|&quot;
+   3   14   53   53 -VAL |
+   3   14   53   53 -NODE|
+   3   14   53   53 =EOL |\x0a
+   4    0   54   54 -SEQ |
+   4    0   54   54 -NODE|
+   4    0   54   54 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[
   &#39;bar&#39;
@@ -432,6 +262,16 @@ class="diff_line">&quot;%TAG !e! tag:example.com,2000:app/ --- - !e!foo \&quot;b
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[GenericScalar(tag=&#39;tag:example.com,2000:app/foo&#39;, content=&#39;bar&#39;)]
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>[
+  &quot;bar&quot;.Str,
+]
 </pre>
 
  </div>

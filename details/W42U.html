@@ -168,347 +168,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/W42U.tml">&test-W
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- </span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one</span>
-<span
-class="">  - two</span>
-<span
-class="">- one: two</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">-</span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one</span>
-<span
-class="">  - two</span>
-<span
-class="">- one: two</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +SEQ |</span>
-<span
-class="">   1    0    0    0 =SYNX|-</span>
-<span
-class="">   1    1    1    1 +NODE|</span>
-<span
-class="">   1    1    1    1 +VAL |</span>
-<span
-class="">   1    1    1    1 -VAL |</span>
-<span
-class="">   1    1    1    1 -NODE|</span>
-<span
-class="">   1    1    1    1 =WSPC|.</span>
-<span
-class="">   1    2    2    2 +COMM|</span>
-<span
-class="">   1    2    2    2 =SYNX|#</span>
-<span
-class="">   1    3    3    3 =META|.Empty</span>
-<span
-class="">   1    9    9    9 -COMM|</span>
-<span
-class="">   1    9    9    9 =EOL |\x0a</span>
-<span
-class="">   2    0   10   10 =SYNX|-</span>
-<span
-class="">   2    1   11   11 +NODE|</span>
-<span
-class="">   2    1   11   11 =WSPC|.</span>
-<span
-class="">   2    2   12   12 +VAL |</span>
-<span
-class="">   2    2   12   12 =SYNX||</span>
-<span
-class="">   2    3   13   13 =EOL |\x0a</span>
-<span
-class="">   3    0   14   14 =DENT|.</span>
-<span
-class="">   3    1   15   15 =TEXT|block.node</span>
-<span
-class="">   3   11   25   25 =NEWL|\x0a</span>
-<span
-class="">   4    0   26   26 -VAL |</span>
-<span
-class="">   4    0   26   26 -NODE|</span>
-<span
-class="">   4    0   26   26 =SYNX|-</span>
-<span
-class="">   4    1   27   27 =DENT|.</span>
-<span
-class="">   4    2   28   28 +NODE|</span>
-<span
-class="">   4    2   28   28 +SEQ |</span>
-<span
-class="">   4    2   28   28 =SYNX|-</span>
-<span
-class="">   4    3   29   29 =WSPC|.</span>
-<span
-class="">   4    4   30   30 +NODE|</span>
-<span
-class="">   4    4   30   30 +VAL |</span>
-<span
-class="">   4    4   30   30 =TEXT|one</span>
-<span
-class="">   4    7   33   33 -VAL |</span>
-<span
-class="">   4    7   33   33 -NODE|</span>
-<span
-class="">   4    7   33   33 =WSPC|.</span>
-<span
-class="">   4    8   34   34 +COMM|</span>
-<span
-class="">   4    8   34   34 =SYNX|#</span>
-<span
-class="">   4    9   35   35 =META|.Compact</span>
-<span
-class="">   4   17   43   43 -COMM|</span>
-<span
-class="">   4   17   43   43 =EOL |\x0a</span>
-<span
-class="">   5    0   44   44 =DENT|..</span>
-<span
-class="">   5    2   46   46 =SYNX|-</span>
-<span
-class="">   5    3   47   47 =WSPC|.</span>
-<span
-class="">   5    4   48   48 +NODE|</span>
-<span
-class="">   5    4   48   48 +VAL |</span>
-<span
-class="">   5    4   48   48 =TEXT|two</span>
-<span
-class="">   5    7   51   51 -VAL |</span>
-<span
-class="">   5    7   51   51 -NODE|</span>
-<span
-class="">   5    7   51   51 =WSPC|.</span>
-<span
-class="">   5    8   52   52 +COMM|</span>
-<span
-class="">   5    8   52   52 =SYNX|#</span>
-<span
-class="">   5    9   53   53 =META|.sequence</span>
-<span
-class="">   5   18   62   62 -COMM|</span>
-<span
-class="">   5   18   62   62 =EOL |\x0a</span>
-<span
-class="">   6    0   63   63 -SEQ |</span>
-<span
-class="">   6    0   63   63 -NODE|</span>
-<span
-class="">   6    0   63   63 =SYNX|-</span>
-<span
-class="">   6    1   64   64 =DENT|.</span>
-<span
-class="">   6    2   65   65 +NODE|</span>
-<span
-class="">   6    2   65   65 +MAP |</span>
-<span
-class="">   6    2   65   65 +PAIR|</span>
-<span
-class="">   6    2   65   65 +NODE|</span>
-<span
-class="">   6    2   65   65 +VAL |</span>
-<span
-class="">   6    2   65   65 =TEXT|one</span>
-<span
-class="">   6    5   68   68 -VAL |</span>
-<span
-class="">   6    5   68   68 -NODE|</span>
-<span
-class="">   6    5   68   68 =SYNX|:</span>
-<span
-class="">   6    6   69   69 =WSPC|.</span>
-<span
-class="">   6    7   70   70 +NODE|</span>
-<span
-class="">   6    7   70   70 +VAL |</span>
-<span
-class="">   6    7   70   70 =TEXT|two</span>
-<span
-class="">   6   10   73   73 -VAL |</span>
-<span
-class="">   6   10   73   73 -NODE|</span>
-<span
-class="">   6   10   73   73 =WSPC|.</span>
-<span
-class="">   6   11   74   74 +COMM|</span>
-<span
-class="">   6   11   74   74 =SYNX|#</span>
-<span
-class="">   6   12   75   75 =META|.Compact.mapping</span>
-<span
-class="">   6   28   91   91 -COMM|</span>
-<span
-class="">   6   28   91   91 =EOL |\x0a</span>
-<span
-class="">   7    0   92   92 -PAIR|</span>
-<span
-class="">   7    0   92   92 -MAP |</span>
-<span
-class="">   7    0   92   92 -NODE|</span>
-<span
-class="">   7    0   92   92 -SEQ |</span>
-<span
-class="">   7    0   92   92 -NODE|</span>
-<span
-class="">   7    0   92   92 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- null # Empty</span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one # Compact</span>
-<span
-class="">  - two # sequence</span>
-<span
-class="">- one: two # Compact mapping</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">-</span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one</span>
-<span
-class="">  - two</span>
-<span
-class="">- one: two</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">-</span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one</span>
-<span
-class="">  - two</span>
-<span
-class="">- one: two</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">-</span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one</span>
-<span
-class="">  - two</span>
-<span
-class="">- one: two</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- </span>
-<span
-class="">- |</span>
-<span
-class="">  block node</span>
-<span
-class="">- - one</span>
-<span
-class="">  - two</span>
-<span
-class="">- one: two</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="lua-lyaml-json">
+ <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">[</span>
@@ -596,7 +256,102 @@ class="">]</span>
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +SEQ |
+   1    0    0    0 =SYNX|-
+   1    1    1    1 +NODE|
+   1    1    1    1 +VAL |
+   1    1    1    1 -VAL |
+   1    1    1    1 -NODE|
+   1    1    1    1 =WSPC|.
+   1    2    2    2 +COMM|
+   1    2    2    2 =SYNX|#
+   1    3    3    3 =META|.Empty
+   1    9    9    9 -COMM|
+   1    9    9    9 =EOL |\x0a
+   2    0   10   10 =SYNX|-
+   2    1   11   11 +NODE|
+   2    1   11   11 =WSPC|.
+   2    2   12   12 +VAL |
+   2    2   12   12 =SYNX||
+   2    3   13   13 =EOL |\x0a
+   3    0   14   14 =DENT|.
+   3    1   15   15 =TEXT|block.node
+   3   11   25   25 =NEWL|\x0a
+   4    0   26   26 -VAL |
+   4    0   26   26 -NODE|
+   4    0   26   26 =SYNX|-
+   4    1   27   27 =DENT|.
+   4    2   28   28 +NODE|
+   4    2   28   28 +SEQ |
+   4    2   28   28 =SYNX|-
+   4    3   29   29 =WSPC|.
+   4    4   30   30 +NODE|
+   4    4   30   30 +VAL |
+   4    4   30   30 =TEXT|one
+   4    7   33   33 -VAL |
+   4    7   33   33 -NODE|
+   4    7   33   33 =WSPC|.
+   4    8   34   34 +COMM|
+   4    8   34   34 =SYNX|#
+   4    9   35   35 =META|.Compact
+   4   17   43   43 -COMM|
+   4   17   43   43 =EOL |\x0a
+   5    0   44   44 =DENT|..
+   5    2   46   46 =SYNX|-
+   5    3   47   47 =WSPC|.
+   5    4   48   48 +NODE|
+   5    4   48   48 +VAL |
+   5    4   48   48 =TEXT|two
+   5    7   51   51 -VAL |
+   5    7   51   51 -NODE|
+   5    7   51   51 =WSPC|.
+   5    8   52   52 +COMM|
+   5    8   52   52 =SYNX|#
+   5    9   53   53 =META|.sequence
+   5   18   62   62 -COMM|
+   5   18   62   62 =EOL |\x0a
+   6    0   63   63 -SEQ |
+   6    0   63   63 -NODE|
+   6    0   63   63 =SYNX|-
+   6    1   64   64 =DENT|.
+   6    2   65   65 +NODE|
+   6    2   65   65 +MAP |
+   6    2   65   65 +PAIR|
+   6    2   65   65 +NODE|
+   6    2   65   65 +VAL |
+   6    2   65   65 =TEXT|one
+   6    5   68   68 -VAL |
+   6    5   68   68 -NODE|
+   6    5   68   68 =SYNX|:
+   6    6   69   69 =WSPC|.
+   6    7   70   70 +NODE|
+   6    7   70   70 +VAL |
+   6    7   70   70 =TEXT|two
+   6   10   73   73 -VAL |
+   6   10   73   73 -NODE|
+   6   10   73   73 =WSPC|.
+   6   11   74   74 +COMM|
+   6   11   74   74 =SYNX|#
+   6   12   75   75 =META|.Compact.mapping
+   6   28   91   91 -COMM|
+   6   28   91   91 =EOL |\x0a
+   7    0   92   92 -PAIR|
+   7    0   92   92 -MAP |
+   7    0   92   92 -NODE|
+   7    0   92   92 -SEQ |
+   7    0   92   92 -NODE|
+   7    0   92   92 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[
   undef,

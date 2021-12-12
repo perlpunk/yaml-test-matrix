@@ -124,625 +124,7 @@ block: &gt; # lala
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot;</span>
-<span
-class="">b: plain value</span>
-<span
-class="">c: d</span>
-<span
-class="">? - seq1</span>
-<span
-class="">: - seq2</span>
-<span
-class="">e: &amp;node</span>
-<span
-class="">  - x: y</span>
-<span
-class="">block: &gt;</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot;</span>
-<span
-class="">b: plain value</span>
-<span
-class="">c: d</span>
-<span
-class="">? - seq1</span>
-<span
-class="">: - seq2</span>
-<span
-class="">e: &amp;node</span>
-<span
-class="">- x: y</span>
-<span
-class="">block: &gt;</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 +PAIR|</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +VAL |</span>
-<span
-class="">   1    0    0    0 =TEXT|a</span>
-<span
-class="">   1    1    1    1 -VAL |</span>
-<span
-class="">   1    1    1    1 -NODE|</span>
-<span
-class="">   1    1    1    1 =SYNX|:</span>
-<span
-class="">   1    2    2    2 =WSPC|.</span>
-<span
-class="">   1    3    3    3 +NODE|</span>
-<span
-class="">   1    3    3    3 +VAL |</span>
-<span
-class="">   1    3    3    3 =SYNX|&quot;</span>
-<span
-class="">   1    4    4    4 =TEXT|double</span>
-<span
-class="">   1   10   10   10 =FOLD|\x0a</span>
-<span
-class="">   2    0   11   11 =DENT|.</span>
-<span
-class="">   2    1   12   12 =WSPC|.</span>
-<span
-class="">   2    2   13   13 =TEXT|quotes</span>
-<span
-class="">   2    8   19   19 =SYNX|&quot;</span>
-<span
-class="">   2    9   20   20 -VAL |</span>
-<span
-class="">   2    9   20   20 -NODE|</span>
-<span
-class="">   2    9   20   20 =WSPC|.</span>
-<span
-class="">   2   10   21   21 +COMM|</span>
-<span
-class="">   2   10   21   21 =SYNX|#</span>
-<span
-class="">   2   11   22   22 =META|.lala</span>
-<span
-class="">   2   16   27   27 -COMM|</span>
-<span
-class="">   2   16   27   27 =EOL |\x0a</span>
-<span
-class="">   3    0   28   28 -PAIR|</span>
-<span
-class="">   3    0   28   28 +PAIR|</span>
-<span
-class="">   3    0   28   28 +NODE|</span>
-<span
-class="">   3    0   28   28 +VAL |</span>
-<span
-class="">   3    0   28   28 =TEXT|b</span>
-<span
-class="">   3    1   29   29 -VAL |</span>
-<span
-class="">   3    1   29   29 -NODE|</span>
-<span
-class="">   3    1   29   29 =SYNX|:</span>
-<span
-class="">   3    2   30   30 =WSPC|.</span>
-<span
-class="">   3    3   31   31 +NODE|</span>
-<span
-class="">   3    3   31   31 +VAL |</span>
-<span
-class="">   3    3   31   31 =TEXT|plain</span>
-<span
-class="">   3    8   36   36 =FOLD|\x0a</span>
-<span
-class="">   4    0   37   37 =DENT|.</span>
-<span
-class="">   4    1   38   38 =TEXT|value</span>
-<span
-class="">   4    6   43   43 -VAL |</span>
-<span
-class="">   4    6   43   43 -NODE|</span>
-<span
-class="">   4    6   43   43 =WSPC|..</span>
-<span
-class="">   4    8   45   45 +COMM|</span>
-<span
-class="">   4    8   45   45 =SYNX|#</span>
-<span
-class="">   4    9   46   46 =META|.lala</span>
-<span
-class="">   4   14   51   51 -COMM|</span>
-<span
-class="">   4   14   51   51 =EOL |\x0a</span>
-<span
-class="">   5    0   52   52 -PAIR|</span>
-<span
-class="">   5    0   52   52 +PAIR|</span>
-<span
-class="">   5    0   52   52 +NODE|</span>
-<span
-class="">   5    0   52   52 +VAL |</span>
-<span
-class="">   5    0   52   52 =TEXT|c</span>
-<span
-class="">   5    1   53   53 -VAL |</span>
-<span
-class="">   5    1   53   53 -NODE|</span>
-<span
-class="">   5    1   53   53 =WSPC|..</span>
-<span
-class="">   5    3   55   55 =SYNX|:</span>
-<span
-class="">   5    4   56   56 =WSPC|.</span>
-<span
-class="">   5    5   57   57 +COMM|</span>
-<span
-class="">   5    5   57   57 =SYNX|#</span>
-<span
-class="">   5    6   58   58 =META|lala</span>
-<span
-class="">   5   10   62   62 -COMM|</span>
-<span
-class="">   5   10   62   62 =EOL |\x0a</span>
-<span
-class="">   6    0   63   63 =DENT|.</span>
-<span
-class="">   6    1   64   64 =WSPC|.</span>
-<span
-class="">   6    2   65   65 +NODE|</span>
-<span
-class="">   6    2   65   65 +VAL |</span>
-<span
-class="">   6    2   65   65 =TEXT|d</span>
-<span
-class="">   6    3   66   66 -VAL |</span>
-<span
-class="">   6    3   66   66 -NODE|</span>
-<span
-class="">   6    3   66   66 =EOL |\x0a</span>
-<span
-class="">   7    0   67   67 -PAIR|</span>
-<span
-class="">   7    0   67   67 +PAIR|</span>
-<span
-class="">   7    0   67   67 =SYNX|?</span>
-<span
-class="">   7    1   68   68 +NODE|</span>
-<span
-class="">   7    1   68   68 =WSPC|.</span>
-<span
-class="">   7    2   69   69 +COMM|</span>
-<span
-class="">   7    2   69   69 =SYNX|#</span>
-<span
-class="">   7    3   70   70 =META|.lala</span>
-<span
-class="">   7    8   75   75 -COMM|</span>
-<span
-class="">   7    8   75   75 =EOL |\x0a</span>
-<span
-class="">   8    0   76   76 +SEQ |</span>
-<span
-class="">   8    0   76   76 =DENT|.</span>
-<span
-class="">   8    1   77   77 =SYNX|-</span>
-<span
-class="">   8    2   78   78 =WSPC|.</span>
-<span
-class="">   8    3   79   79 +NODE|</span>
-<span
-class="">   8    3   79   79 +VAL |</span>
-<span
-class="">   8    3   79   79 =TEXT|seq1</span>
-<span
-class="">   8    7   83   83 -VAL |</span>
-<span
-class="">   8    7   83   83 -NODE|</span>
-<span
-class="">   8    7   83   83 =EOL |\x0a</span>
-<span
-class="">   9    0   84   84 -SEQ |</span>
-<span
-class="">   9    0   84   84 -NODE|</span>
-<span
-class="">   9    0   84   84 =SYNX|:</span>
-<span
-class="">   9    1   85   85 +NODE|</span>
-<span
-class="">   9    1   85   85 =WSPC|.</span>
-<span
-class="">   9    2   86   86 +COMM|</span>
-<span
-class="">   9    2   86   86 =SYNX|#</span>
-<span
-class="">   9    3   87   87 =META|.lala</span>
-<span
-class="">   9    8   92   92 -COMM|</span>
-<span
-class="">   9    8   92   92 =EOL |\x0a</span>
-<span
-class="">  10    0   93   93 +SEQ |</span>
-<span
-class="">  10    0   93   93 =DENT|.</span>
-<span
-class="">  10    1   94   94 =SYNX|-</span>
-<span
-class="">  10    2   95   95 =WSPC|.</span>
-<span
-class="">  10    3   96   96 +COMM|</span>
-<span
-class="">  10    3   96   96 =SYNX|#</span>
-<span
-class="">  10    4   97   97 =META|lala</span>
-<span
-class="">  10    8  101  101 -COMM|</span>
-<span
-class="">  10    8  101  101 =EOL |\x0a</span>
-<span
-class="">  11    0  102  102 =DENT|..</span>
-<span
-class="">  11    2  104  104 +NODE|</span>
-<span
-class="">  11    2  104  104 +VAL |</span>
-<span
-class="">  11    2  104  104 =TEXT|seq2</span>
-<span
-class="">  11    6  108  108 -VAL |</span>
-<span
-class="">  11    6  108  108 -NODE|</span>
-<span
-class="">  11    6  108  108 =EOL |\x0a</span>
-<span
-class="">  12    0  109  109 -SEQ |</span>
-<span
-class="">  12    0  109  109 -NODE|</span>
-<span
-class="">  12    0  109  109 -PAIR|</span>
-<span
-class="">  12    0  109  109 +PAIR|</span>
-<span
-class="">  12    0  109  109 +NODE|</span>
-<span
-class="">  12    0  109  109 +VAL |</span>
-<span
-class="">  12    0  109  109 =TEXT|e</span>
-<span
-class="">  12    1  110  110 -VAL |</span>
-<span
-class="">  12    1  110  110 -NODE|</span>
-<span
-class="">  12    1  110  110 =SYNX|:</span>
-<span
-class="">  12    2  111  111 +NODE|</span>
-<span
-class="">  12    2  111  111 =EOL |\x0a</span>
-<span
-class="">  13    0  112  112 =DENT|.</span>
-<span
-class="">  13    1  113  113 +PROP|</span>
-<span
-class="">  13    1  113  113 +ANCH|</span>
-<span
-class="">  13    1  113  113 =SYNX|&amp;</span>
-<span
-class="">  13    2  114  114 =META|node</span>
-<span
-class="">  13    6  118  118 -ANCH|</span>
-<span
-class="">  13    6  118  118 -PROP|</span>
-<span
-class="">  13    6  118  118 =WSPC|.</span>
-<span
-class="">  13    7  119  119 +COMM|</span>
-<span
-class="">  13    7  119  119 =SYNX|#</span>
-<span
-class="">  13    8  120  120 =META|.lala</span>
-<span
-class="">  13   13  125  125 -COMM|</span>
-<span
-class="">  13   13  125  125 =EOL |\x0a</span>
-<span
-class="">  14    0  126  126 +SEQ |</span>
-<span
-class="">  14    0  126  126 =DENT|.</span>
-<span
-class="">  14    1  127  127 =SYNX|-</span>
-<span
-class="">  14    2  128  128 =DENT|.</span>
-<span
-class="">  14    3  129  129 +NODE|</span>
-<span
-class="">  14    3  129  129 +MAP |</span>
-<span
-class="">  14    3  129  129 +PAIR|</span>
-<span
-class="">  14    3  129  129 +NODE|</span>
-<span
-class="">  14    3  129  129 +VAL |</span>
-<span
-class="">  14    3  129  129 =TEXT|x</span>
-<span
-class="">  14    4  130  130 -VAL |</span>
-<span
-class="">  14    4  130  130 -NODE|</span>
-<span
-class="">  14    4  130  130 =SYNX|:</span>
-<span
-class="">  14    5  131  131 =WSPC|.</span>
-<span
-class="">  14    6  132  132 +NODE|</span>
-<span
-class="">  14    6  132  132 +VAL |</span>
-<span
-class="">  14    6  132  132 =TEXT|y</span>
-<span
-class="">  14    7  133  133 -VAL |</span>
-<span
-class="">  14    7  133  133 -NODE|</span>
-<span
-class="">  14    7  133  133 =EOL |\x0a</span>
-<span
-class="">  15    0  134  134 -PAIR|</span>
-<span
-class="">  15    0  134  134 -MAP |</span>
-<span
-class="">  15    0  134  134 -NODE|</span>
-<span
-class="">  15    0  134  134 -SEQ |</span>
-<span
-class="">  15    0  134  134 -NODE|</span>
-<span
-class="">  15    0  134  134 -PAIR|</span>
-<span
-class="">  15    0  134  134 +PAIR|</span>
-<span
-class="">  15    0  134  134 +NODE|</span>
-<span
-class="">  15    0  134  134 +VAL |</span>
-<span
-class="">  15    0  134  134 =TEXT|block</span>
-<span
-class="">  15    5  139  139 -VAL |</span>
-<span
-class="">  15    5  139  139 -NODE|</span>
-<span
-class="">  15    5  139  139 =SYNX|:</span>
-<span
-class="">  15    6  140  140 +NODE|</span>
-<span
-class="">  15    6  140  140 =WSPC|.</span>
-<span
-class="">  15    7  141  141 +VAL |</span>
-<span
-class="">  15    7  141  141 =SYNX|&gt;</span>
-<span
-class="">  15    8  142  142 =WSPC|.</span>
-<span
-class="">  15    9  143  143 +COMM|</span>
-<span
-class="">  15    9  143  143 =SYNX|#</span>
-<span
-class="">  15   10  144  144 =META|.lala</span>
-<span
-class="">  15   15  149  149 -COMM|</span>
-<span
-class="">  15   15  149  149 =EOL |\x0a</span>
-<span
-class="">  16    0  150  150 =DENT|..</span>
-<span
-class="">  16    2  152  152 =TEXT|abcde</span>
-<span
-class="">  16    7  157  157 =NEWL|\x0a</span>
-<span
-class="">  17    0  158  158 -VAL |</span>
-<span
-class="">  17    0  158  158 -NODE|</span>
-<span
-class="">  17    0  158  158 -PAIR|</span>
-<span
-class="">  17    0  158  158 -MAP |</span>
-<span
-class="">  17    0  158  158 -NODE|</span>
-<span
-class="">  17    0  158  158 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot; # lala</span>
-<span
-class="">b: plain value # lala</span>
-<span
-class="">c:</span>
-<span
-class="">  #lala</span>
-<span
-class="">  d</span>
-<span
-class=""># lala</span>
-<span
-class="">? - seq1</span>
-<span
-class="">:</span>
-<span
-class="">  # lala</span>
-<span
-class="">  #lala</span>
-<span
-class="">  - seq2</span>
-<span
-class="">e:</span>
-<span
-class="">  # lala</span>
-<span
-class="">  &amp;node</span>
-<span
-class="">  - x: y</span>
-<span
-class="">block: &gt; # lala</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot;</span>
-<span
-class="">b: plain value</span>
-<span
-class="">c: d</span>
-<span
-class="">? - seq1</span>
-<span
-class="">: - seq2</span>
-<span
-class="">e: &amp;node</span>
-<span
-class="">- x: y</span>
-<span
-class="">block: &gt;</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot;</span>
-<span
-class="">b: plain value</span>
-<span
-class="">c: d</span>
-<span
-class="">? - seq1</span>
-<span
-class="">: - seq2</span>
-<span
-class="">e: &amp;node</span>
-<span
-class="">- x: y</span>
-<span
-class="">block: &gt;</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot;</span>
-<span
-class="">b: plain value</span>
-<span
-class="">c: d</span>
-<span
-class="">? - seq1</span>
-<span
-class="">: - seq2</span>
-<span
-class="">e: &amp;node</span>
-<span
-class="">- x: y</span>
-<span
-class="">block: &gt;</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a: &quot;double quotes&quot;</span>
-<span
-class="">b: plain value</span>
-<span
-class="">c: d</span>
-<span
-class="">? - seq1</span>
-<span
-class="">: - seq2</span>
-<span
-class="">e: &amp;node</span>
-<span
-class="">- x: y</span>
-<span
-class="">block: &gt;</span>
-<span
-class="">  abcde</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-yaml-perl">
+ <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-yaml-perl">
 <h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Inconsistent indentation level
    Code: YAML_PARSE_ERR_INCONSISTENT_INDENTATION
@@ -821,6 +203,211 @@ stdin:8:2: error: Non scalar keys are not allowed in JSON emit mode
  </div>
 
 
+  <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|a
+   1    1    1    1 -VAL |
+   1    1    1    1 -NODE|
+   1    1    1    1 =SYNX|:
+   1    2    2    2 =WSPC|.
+   1    3    3    3 +NODE|
+   1    3    3    3 +VAL |
+   1    3    3    3 =SYNX|&quot;
+   1    4    4    4 =TEXT|double
+   1   10   10   10 =FOLD|\x0a
+   2    0   11   11 =DENT|.
+   2    1   12   12 =WSPC|.
+   2    2   13   13 =TEXT|quotes
+   2    8   19   19 =SYNX|&quot;
+   2    9   20   20 -VAL |
+   2    9   20   20 -NODE|
+   2    9   20   20 =WSPC|.
+   2   10   21   21 +COMM|
+   2   10   21   21 =SYNX|#
+   2   11   22   22 =META|.lala
+   2   16   27   27 -COMM|
+   2   16   27   27 =EOL |\x0a
+   3    0   28   28 -PAIR|
+   3    0   28   28 +PAIR|
+   3    0   28   28 +NODE|
+   3    0   28   28 +VAL |
+   3    0   28   28 =TEXT|b
+   3    1   29   29 -VAL |
+   3    1   29   29 -NODE|
+   3    1   29   29 =SYNX|:
+   3    2   30   30 =WSPC|.
+   3    3   31   31 +NODE|
+   3    3   31   31 +VAL |
+   3    3   31   31 =TEXT|plain
+   3    8   36   36 =FOLD|\x0a
+   4    0   37   37 =DENT|.
+   4    1   38   38 =TEXT|value
+   4    6   43   43 -VAL |
+   4    6   43   43 -NODE|
+   4    6   43   43 =WSPC|..
+   4    8   45   45 +COMM|
+   4    8   45   45 =SYNX|#
+   4    9   46   46 =META|.lala
+   4   14   51   51 -COMM|
+   4   14   51   51 =EOL |\x0a
+   5    0   52   52 -PAIR|
+   5    0   52   52 +PAIR|
+   5    0   52   52 +NODE|
+   5    0   52   52 +VAL |
+   5    0   52   52 =TEXT|c
+   5    1   53   53 -VAL |
+   5    1   53   53 -NODE|
+   5    1   53   53 =WSPC|..
+   5    3   55   55 =SYNX|:
+   5    4   56   56 =WSPC|.
+   5    5   57   57 +COMM|
+   5    5   57   57 =SYNX|#
+   5    6   58   58 =META|lala
+   5   10   62   62 -COMM|
+   5   10   62   62 =EOL |\x0a
+   6    0   63   63 =DENT|.
+   6    1   64   64 =WSPC|.
+   6    2   65   65 +NODE|
+   6    2   65   65 +VAL |
+   6    2   65   65 =TEXT|d
+   6    3   66   66 -VAL |
+   6    3   66   66 -NODE|
+   6    3   66   66 =EOL |\x0a
+   7    0   67   67 -PAIR|
+   7    0   67   67 +PAIR|
+   7    0   67   67 =SYNX|?
+   7    1   68   68 +NODE|
+   7    1   68   68 =WSPC|.
+   7    2   69   69 +COMM|
+   7    2   69   69 =SYNX|#
+   7    3   70   70 =META|.lala
+   7    8   75   75 -COMM|
+   7    8   75   75 =EOL |\x0a
+   8    0   76   76 +SEQ |
+   8    0   76   76 =DENT|.
+   8    1   77   77 =SYNX|-
+   8    2   78   78 =WSPC|.
+   8    3   79   79 +NODE|
+   8    3   79   79 +VAL |
+   8    3   79   79 =TEXT|seq1
+   8    7   83   83 -VAL |
+   8    7   83   83 -NODE|
+   8    7   83   83 =EOL |\x0a
+   9    0   84   84 -SEQ |
+   9    0   84   84 -NODE|
+   9    0   84   84 =SYNX|:
+   9    1   85   85 +NODE|
+   9    1   85   85 =WSPC|.
+   9    2   86   86 +COMM|
+   9    2   86   86 =SYNX|#
+   9    3   87   87 =META|.lala
+   9    8   92   92 -COMM|
+   9    8   92   92 =EOL |\x0a
+  10    0   93   93 +SEQ |
+  10    0   93   93 =DENT|.
+  10    1   94   94 =SYNX|-
+  10    2   95   95 =WSPC|.
+  10    3   96   96 +COMM|
+  10    3   96   96 =SYNX|#
+  10    4   97   97 =META|lala
+  10    8  101  101 -COMM|
+  10    8  101  101 =EOL |\x0a
+  11    0  102  102 =DENT|..
+  11    2  104  104 +NODE|
+  11    2  104  104 +VAL |
+  11    2  104  104 =TEXT|seq2
+  11    6  108  108 -VAL |
+  11    6  108  108 -NODE|
+  11    6  108  108 =EOL |\x0a
+  12    0  109  109 -SEQ |
+  12    0  109  109 -NODE|
+  12    0  109  109 -PAIR|
+  12    0  109  109 +PAIR|
+  12    0  109  109 +NODE|
+  12    0  109  109 +VAL |
+  12    0  109  109 =TEXT|e
+  12    1  110  110 -VAL |
+  12    1  110  110 -NODE|
+  12    1  110  110 =SYNX|:
+  12    2  111  111 +NODE|
+  12    2  111  111 =EOL |\x0a
+  13    0  112  112 =DENT|.
+  13    1  113  113 +PROP|
+  13    1  113  113 +ANCH|
+  13    1  113  113 =SYNX|&amp;
+  13    2  114  114 =META|node
+  13    6  118  118 -ANCH|
+  13    6  118  118 -PROP|
+  13    6  118  118 =WSPC|.
+  13    7  119  119 +COMM|
+  13    7  119  119 =SYNX|#
+  13    8  120  120 =META|.lala
+  13   13  125  125 -COMM|
+  13   13  125  125 =EOL |\x0a
+  14    0  126  126 +SEQ |
+  14    0  126  126 =DENT|.
+  14    1  127  127 =SYNX|-
+  14    2  128  128 =DENT|.
+  14    3  129  129 +NODE|
+  14    3  129  129 +MAP |
+  14    3  129  129 +PAIR|
+  14    3  129  129 +NODE|
+  14    3  129  129 +VAL |
+  14    3  129  129 =TEXT|x
+  14    4  130  130 -VAL |
+  14    4  130  130 -NODE|
+  14    4  130  130 =SYNX|:
+  14    5  131  131 =WSPC|.
+  14    6  132  132 +NODE|
+  14    6  132  132 +VAL |
+  14    6  132  132 =TEXT|y
+  14    7  133  133 -VAL |
+  14    7  133  133 -NODE|
+  14    7  133  133 =EOL |\x0a
+  15    0  134  134 -PAIR|
+  15    0  134  134 -MAP |
+  15    0  134  134 -NODE|
+  15    0  134  134 -SEQ |
+  15    0  134  134 -NODE|
+  15    0  134  134 -PAIR|
+  15    0  134  134 +PAIR|
+  15    0  134  134 +NODE|
+  15    0  134  134 +VAL |
+  15    0  134  134 =TEXT|block
+  15    5  139  139 -VAL |
+  15    5  139  139 -NODE|
+  15    5  139  139 =SYNX|:
+  15    6  140  140 +NODE|
+  15    6  140  140 =WSPC|.
+  15    7  141  141 +VAL |
+  15    7  141  141 =SYNX|&gt;
+  15    8  142  142 =WSPC|.
+  15    9  143  143 +COMM|
+  15    9  143  143 =SYNX|#
+  15   10  144  144 =META|.lala
+  15   15  149  149 -COMM|
+  15   15  149  149 =EOL |\x0a
+  16    0  150  150 =DENT|..
+  16    2  152  152 =TEXT|abcde
+  16    7  157  157 =NEWL|\x0a
+  17    0  158  158 -VAL |
+  17    0  158  158 -NODE|
+  17    0  158  158 -PAIR|
+  17    0  158  158 -MAP |
+  17    0  158  158 -NODE|
+  17    0  158  158 -DOC |
+</pre>
+
+ </div>
+
+
   <div class="framework framework_box_na" id="java-snakeyaml-json">
 <h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
@@ -878,7 +465,7 @@ stdin:8:2: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x559696e61f97
+	[C]: at 0x55bf73097f97
 </pre>
 
  </div>
@@ -973,7 +560,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x56009ab945b8)&quot; : [
+   &quot;ARRAY(0x55d5846ad5b8)&quot; : [
       &quot;seq2&quot;
    ],
    &quot;a&quot; : &quot;double quotes&quot;,
@@ -994,7 +581,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x55feda6c6420)&#39; =&gt; [
+  &#39;ARRAY(0x55d9458f0640)&#39; =&gt; [
                                &#39;seq2&#39;
                              ],
   &#39;a&#39; =&gt; &#39;double quotes&#39;,
@@ -1024,7 +611,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x56266fb1a408)&quot; : [
+   &quot;ARRAY(0x55fe1301a408)&quot; : [
       &quot;seq2&quot;
    ],
    &quot;a&quot; : &quot;double quotes&quot;,
@@ -1045,7 +632,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x55f30fedbec0)&#39; =&gt; [
+  &#39;ARRAY(0x564096957ec0)&#39; =&gt; [
                                &#39;seq2&#39;
                              ],
   &#39;a&#39; =&gt; &#39;double quotes&#39;,

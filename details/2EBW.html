@@ -172,297 +172,7 @@ this is#not: a comment
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~: safe</span>
-<span
-class="">?foo: safe question mark</span>
-<span
-class="">:foo: safe colon</span>
-<span
-class="">-foo: safe dash</span>
-<span
-class="">this is#not: a comment</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 +PAIR|</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +VAL |</span>
-<span
-class="">   1    0    0    0 =TEXT|a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\x5c]^_`az{|}~</span>
-<span
-class="">   1   39   39   39 -VAL |</span>
-<span
-class="">   1   39   39   39 -NODE|</span>
-<span
-class="">   1   39   39   39 =SYNX|:</span>
-<span
-class="">   1   40   40   40 =WSPC|.</span>
-<span
-class="">   1   41   41   41 +NODE|</span>
-<span
-class="">   1   41   41   41 +VAL |</span>
-<span
-class="">   1   41   41   41 =TEXT|safe</span>
-<span
-class="">   1   45   45   45 -VAL |</span>
-<span
-class="">   1   45   45   45 -NODE|</span>
-<span
-class="">   1   45   45   45 =EOL |\x0a</span>
-<span
-class="">   2    0   46   46 -PAIR|</span>
-<span
-class="">   2    0   46   46 +PAIR|</span>
-<span
-class="">   2    0   46   46 =SYNX|?</span>
-<span
-class="">   2    1   47   47 +NODE|</span>
-<span
-class="">   2    1   47   47 +VAL |</span>
-<span
-class="">   2    1   47   47 -VAL |</span>
-<span
-class="">   2    1   47   47 -NODE|</span>
-<span
-class="">   2    1   47   47 =REST|foo:.safe.question.mark</span>
-<span
-class="">   2   24   70   70 =REST|\x0a</span>
-<span
-class="">   3    0   71   71 =SYNX|:</span>
-<span
-class="">   3    1   72   72 +NODE|</span>
-<span
-class="">   3    1   72   72 +VAL |</span>
-<span
-class="">   3    1   72   72 -VAL |</span>
-<span
-class="">   3    1   72   72 -NODE|</span>
-<span
-class="">   3    1   72   72 =REST|foo:.safe.colon</span>
-<span
-class="">   3   16   87   87 =REST|\x0a</span>
-<span
-class="">   4    0   88   88 -PAIR|</span>
-<span
-class="">   4    0   88   88 +PAIR|</span>
-<span
-class="">   4    0   88   88 +NODE|</span>
-<span
-class="">   4    0   88   88 +VAL |</span>
-<span
-class="">   4    0   88   88 =TEXT|-foo</span>
-<span
-class="">   4    4   92   92 -VAL |</span>
-<span
-class="">   4    4   92   92 -NODE|</span>
-<span
-class="">   4    4   92   92 =SYNX|:</span>
-<span
-class="">   4    5   93   93 =WSPC|.</span>
-<span
-class="">   4    6   94   94 +NODE|</span>
-<span
-class="">   4    6   94   94 +VAL |</span>
-<span
-class="">   4    6   94   94 =TEXT|safe.dash</span>
-<span
-class="">   4   15  103  103 -VAL |</span>
-<span
-class="">   4   15  103  103 -NODE|</span>
-<span
-class="">   4   15  103  103 =EOL |\x0a</span>
-<span
-class="">   5    0  104  104 -PAIR|</span>
-<span
-class="">   5    0  104  104 +PAIR|</span>
-<span
-class="">   5    0  104  104 +NODE|</span>
-<span
-class="">   5    0  104  104 +VAL |</span>
-<span
-class="">   5    0  104  104 =TEXT|this.is#not</span>
-<span
-class="">   5   11  115  115 -VAL |</span>
-<span
-class="">   5   11  115  115 -NODE|</span>
-<span
-class="">   5   11  115  115 =SYNX|:</span>
-<span
-class="">   5   12  116  116 =WSPC|.</span>
-<span
-class="">   5   13  117  117 +NODE|</span>
-<span
-class="">   5   13  117  117 +VAL |</span>
-<span
-class="">   5   13  117  117 =TEXT|a.comment</span>
-<span
-class="">   5   22  126  126 -VAL |</span>
-<span
-class="">   5   22  126  126 -NODE|</span>
-<span
-class="">   5   22  126  126 =EOL |\x0a</span>
-<span
-class="">   6    0  127  127 -PAIR|</span>
-<span
-class="">   6    0  127  127 -MAP |</span>
-<span
-class="">   6    0  127  127 -NODE|</span>
-<span
-class="">   6    0  127  127 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">&quot;a!\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~&quot;: safe</span>
-<span
-class="">?foo: safe question mark</span>
-<span
-class="">:foo: safe colon</span>
-<span
-class="">-foo: safe dash</span>
-<span
-class="">this is#not: a comment</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~: safe</span>
-<span
-class="">?foo: safe question mark</span>
-<span
-class="">:foo: safe colon</span>
-<span
-class="">-foo: safe dash</span>
-<span
-class="">this is#not: a comment</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~: safe</span>
-<span
-class="">?foo: safe question mark</span>
-<span
-class="">:foo: safe colon</span>
-<span
-class="">-foo: safe dash</span>
-<span
-class="">this is#not: a comment</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~: safe</span>
-<span
-class="">?foo: safe question mark</span>
-<span
-class="">:foo: safe colon</span>
-<span
-class="">-foo: safe dash</span>
-<span
-class="">this is#not: a comment</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~: safe</span>
-<span
-class="">?foo: safe question mark</span>
-<span
-class="">:foo: safe colon</span>
-<span
-class="">-foo: safe dash</span>
-<span
-class="">this is#not: a comment</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  -foo                                    =&gt; &quot;safe dash&quot;.Str,</span>
-<span
-class="">  :foo                                    =&gt; &quot;safe colon&quot;.Str,</span>
-<span
-class="">  ?foo                                    =&gt; &quot;safe question mark&quot;.Str,</span>
-<span
-class="">  a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~ =&gt; &quot;safe&quot;.Str,</span>
-<span
-class="">  this is#not                             =&gt; &quot;a comment&quot;.Str,</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="ruby-psych-json">
+ <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>
@@ -482,14 +192,7 @@ class="">}</span>
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_error" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Emitter error: anchor value must contain alphanumerical characters only
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-tiny-json">
+ <hr style="clear: both;">    <div class="framework framework_box_error" id="perl-tiny-json">
 <h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::Tiny failed to classify line &#39;:foo: safe colon&#39; at /yaml/bin/perl-tiny-json line 12.
 </pre>
@@ -525,7 +228,82 @@ class="">}</span>
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\x5c]^_`az{|}~
+   1   39   39   39 -VAL |
+   1   39   39   39 -NODE|
+   1   39   39   39 =SYNX|:
+   1   40   40   40 =WSPC|.
+   1   41   41   41 +NODE|
+   1   41   41   41 +VAL |
+   1   41   41   41 =TEXT|safe
+   1   45   45   45 -VAL |
+   1   45   45   45 -NODE|
+   1   45   45   45 =EOL |\x0a
+   2    0   46   46 -PAIR|
+   2    0   46   46 +PAIR|
+   2    0   46   46 =SYNX|?
+   2    1   47   47 +NODE|
+   2    1   47   47 +VAL |
+   2    1   47   47 -VAL |
+   2    1   47   47 -NODE|
+   2    1   47   47 =REST|foo:.safe.question.mark
+   2   24   70   70 =REST|\x0a
+   3    0   71   71 =SYNX|:
+   3    1   72   72 +NODE|
+   3    1   72   72 +VAL |
+   3    1   72   72 -VAL |
+   3    1   72   72 -NODE|
+   3    1   72   72 =REST|foo:.safe.colon
+   3   16   87   87 =REST|\x0a
+   4    0   88   88 -PAIR|
+   4    0   88   88 +PAIR|
+   4    0   88   88 +NODE|
+   4    0   88   88 +VAL |
+   4    0   88   88 =TEXT|-foo
+   4    4   92   92 -VAL |
+   4    4   92   92 -NODE|
+   4    4   92   92 =SYNX|:
+   4    5   93   93 =WSPC|.
+   4    6   94   94 +NODE|
+   4    6   94   94 +VAL |
+   4    6   94   94 =TEXT|safe.dash
+   4   15  103  103 -VAL |
+   4   15  103  103 -NODE|
+   4   15  103  103 =EOL |\x0a
+   5    0  104  104 -PAIR|
+   5    0  104  104 +PAIR|
+   5    0  104  104 +NODE|
+   5    0  104  104 +VAL |
+   5    0  104  104 =TEXT|this.is#not
+   5   11  115  115 -VAL |
+   5   11  115  115 -NODE|
+   5   11  115  115 =SYNX|:
+   5   12  116  116 =WSPC|.
+   5   13  117  117 +NODE|
+   5   13  117  117 +VAL |
+   5   13  117  117 =TEXT|a.comment
+   5   22  126  126 -VAL |
+   5   22  126  126 -NODE|
+   5   22  126  126 =EOL |\x0a
+   6    0  127  127 -PAIR|
+   6    0  127  127 -MAP |
+   6    0  127  127 -NODE|
+   6    0  127  127 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;-foo&#39; =&gt; &#39;safe dash&#39;,
@@ -600,6 +378,20 @@ class="">}</span>
  &#39;?foo&#39;: &#39;safe question mark&#39;,
  &#39;a!&quot;#$%&amp;\&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~&#39;: &#39;safe&#39;,
  &#39;this is#not&#39;: &#39;a comment&#39;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  -foo                                    =&gt; &quot;safe dash&quot;.Str,
+  :foo                                    =&gt; &quot;safe colon&quot;.Str,
+  ?foo                                    =&gt; &quot;safe question mark&quot;.Str,
+  a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~ =&gt; &quot;safe&quot;.Str,
+  this is#not                             =&gt; &quot;a comment&quot;.Str,
+}
 </pre>
 
  </div>

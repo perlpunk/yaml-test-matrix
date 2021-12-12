@@ -175,331 +175,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/R52L.tml">&test-R
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">{</span>
-<span
-class="">  top1: [</span>
-<span
-class="">    item1,</span>
-<span
-class="">    {</span>
-<span
-class="">      key2: value2</span>
-<span
-class="">    },</span>
-<span
-class="">    item3</span>
-<span
-class="">  ],</span>
-<span
-class="">  top2: value2</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">top1:</span>
-<span
-class="">- item1</span>
-<span
-class="">- key2: value2</span>
-<span
-class="">- item3</span>
-<span
-class="">top2: value2</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 =HEAD|---</span>
-<span
-class="">   1    3    3    3 =EOL |\x0a</span>
-<span
-class="">   2    0    4    4 +NODE|</span>
-<span
-class="">   2    0    4    4 +MAP |</span>
-<span
-class="">   2    0    4    4 =SYNX|{</span>
-<span
-class="">   2    1    5    5 =WSPC|.</span>
-<span
-class="">   2    2    6    6 +PAIR|</span>
-<span
-class="">   2    2    6    6 +NODE|</span>
-<span
-class="">   2    2    6    6 +VAL |</span>
-<span
-class="">   2    2    6    6 =TEXT|top1</span>
-<span
-class="">   2    6   10   10 -VAL |</span>
-<span
-class="">   2    6   10   10 -NODE|</span>
-<span
-class="">   2    6   10   10 =SYNX|:</span>
-<span
-class="">   2    7   11   11 =WSPC|.</span>
-<span
-class="">   2    8   12   12 +NODE|</span>
-<span
-class="">   2    8   12   12 +SEQ |</span>
-<span
-class="">   2    8   12   12 =SYNX|[</span>
-<span
-class="">   2    9   13   13 +NODE|</span>
-<span
-class="">   2    9   13   13 +VAL |</span>
-<span
-class="">   2    9   13   13 =TEXT|item1</span>
-<span
-class="">   2   14   18   18 -VAL |</span>
-<span
-class="">   2   14   18   18 -NODE|</span>
-<span
-class="">   2   14   18   18 =SYNX|,</span>
-<span
-class="">   2   15   19   19 =WSPC|.</span>
-<span
-class="">   2   16   20   20 +NODE|</span>
-<span
-class="">   2   16   20   20 +MAP |</span>
-<span
-class="">   2   16   20   20 =SYNX|{</span>
-<span
-class="">   2   17   21   21 +PAIR|</span>
-<span
-class="">   2   17   21   21 +NODE|</span>
-<span
-class="">   2   17   21   21 +VAL |</span>
-<span
-class="">   2   17   21   21 =TEXT|key2</span>
-<span
-class="">   2   21   25   25 -VAL |</span>
-<span
-class="">   2   21   25   25 -NODE|</span>
-<span
-class="">   2   21   25   25 =SYNX|:</span>
-<span
-class="">   2   22   26   26 =WSPC|.</span>
-<span
-class="">   2   23   27   27 +NODE|</span>
-<span
-class="">   2   23   27   27 +VAL |</span>
-<span
-class="">   2   23   27   27 =TEXT|value2</span>
-<span
-class="">   2   29   33   33 -VAL |</span>
-<span
-class="">   2   29   33   33 -NODE|</span>
-<span
-class="">   2   29   33   33 -PAIR|</span>
-<span
-class="">   2   29   33   33 =SYNX|}</span>
-<span
-class="">   2   30   34   34 -MAP |</span>
-<span
-class="">   2   30   34   34 -NODE|</span>
-<span
-class="">   2   30   34   34 =SYNX|,</span>
-<span
-class="">   2   31   35   35 =WSPC|.</span>
-<span
-class="">   2   32   36   36 +NODE|</span>
-<span
-class="">   2   32   36   36 +VAL |</span>
-<span
-class="">   2   32   36   36 =TEXT|item3</span>
-<span
-class="">   2   37   41   41 -VAL |</span>
-<span
-class="">   2   37   41   41 -NODE|</span>
-<span
-class="">   2   37   41   41 =SYNX|]</span>
-<span
-class="">   2   38   42   42 -SEQ |</span>
-<span
-class="">   2   38   42   42 -NODE|</span>
-<span
-class="">   2   38   42   42 -PAIR|</span>
-<span
-class="">   2   38   42   42 =SYNX|,</span>
-<span
-class="">   2   39   43   43 =WSPC|.</span>
-<span
-class="">   2   40   44   44 +PAIR|</span>
-<span
-class="">   2   40   44   44 +NODE|</span>
-<span
-class="">   2   40   44   44 +VAL |</span>
-<span
-class="">   2   40   44   44 =TEXT|top2</span>
-<span
-class="">   2   44   48   48 -VAL |</span>
-<span
-class="">   2   44   48   48 -NODE|</span>
-<span
-class="">   2   44   48   48 =SYNX|:</span>
-<span
-class="">   2   45   49   49 =WSPC|.</span>
-<span
-class="">   2   46   50   50 +NODE|</span>
-<span
-class="">   2   46   50   50 +VAL |</span>
-<span
-class="">   2   46   50   50 =TEXT|value2</span>
-<span
-class="">   2   52   56   56 -VAL |</span>
-<span
-class="">   2   52   56   56 -NODE|</span>
-<span
-class="">   2   52   56   56 -PAIR|</span>
-<span
-class="">   2   52   56   56 =WSPC|.</span>
-<span
-class="">   2   53   57   57 =SYNX|}</span>
-<span
-class="">   2   54   58   58 -MAP |</span>
-<span
-class="">   2   54   58   58 -NODE|</span>
-<span
-class="">   2   54   58   58 =EOL |\x0a</span>
-<span
-class="">   3    0   59   59 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">{ top1: [ item1, { key2: value2 }, item3 ], top2: value2 }</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">top1:</span>
-<span
-class="">- item1</span>
-<span
-class="">- key2: value2</span>
-<span
-class="">- item3</span>
-<span
-class="">top2: value2</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">--- {top1:  [item1, {key2: value2}, item3], top2: value2}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">--- {top1: [item1, {key2: value2}, item3], top2: value2}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">--- {top1: [item1, {key2: value2}, item3], top2: value2}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  top1 =&gt; [</span>
-<span
-class="">    &quot;item1&quot;.Str,</span>
-<span
-class="">    {</span>
-<span
-class="">      key2 =&gt; &quot;value2&quot;.Str,</span>
-<span
-class="">    },</span>
-<span
-class="">    &quot;item3&quot;.Str,</span>
-<span
-class="">  ],</span>
-<span
-class="">  top2 =&gt; &quot;value2&quot;.Str,</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-yaml-json">
+ <hr style="clear: both;">          <div class="framework framework_box_error" id="perl-yaml-json">
 <h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Invalid element in map
    Code: YAML_LOAD_ERR_BAD_MAP_ELEMENT
@@ -521,7 +197,93 @@ class="">}</span>
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 =HEAD|---
+   1    3    3    3 =EOL |\x0a
+   2    0    4    4 +NODE|
+   2    0    4    4 +MAP |
+   2    0    4    4 =SYNX|{
+   2    1    5    5 =WSPC|.
+   2    2    6    6 +PAIR|
+   2    2    6    6 +NODE|
+   2    2    6    6 +VAL |
+   2    2    6    6 =TEXT|top1
+   2    6   10   10 -VAL |
+   2    6   10   10 -NODE|
+   2    6   10   10 =SYNX|:
+   2    7   11   11 =WSPC|.
+   2    8   12   12 +NODE|
+   2    8   12   12 +SEQ |
+   2    8   12   12 =SYNX|[
+   2    9   13   13 +NODE|
+   2    9   13   13 +VAL |
+   2    9   13   13 =TEXT|item1
+   2   14   18   18 -VAL |
+   2   14   18   18 -NODE|
+   2   14   18   18 =SYNX|,
+   2   15   19   19 =WSPC|.
+   2   16   20   20 +NODE|
+   2   16   20   20 +MAP |
+   2   16   20   20 =SYNX|{
+   2   17   21   21 +PAIR|
+   2   17   21   21 +NODE|
+   2   17   21   21 +VAL |
+   2   17   21   21 =TEXT|key2
+   2   21   25   25 -VAL |
+   2   21   25   25 -NODE|
+   2   21   25   25 =SYNX|:
+   2   22   26   26 =WSPC|.
+   2   23   27   27 +NODE|
+   2   23   27   27 +VAL |
+   2   23   27   27 =TEXT|value2
+   2   29   33   33 -VAL |
+   2   29   33   33 -NODE|
+   2   29   33   33 -PAIR|
+   2   29   33   33 =SYNX|}
+   2   30   34   34 -MAP |
+   2   30   34   34 -NODE|
+   2   30   34   34 =SYNX|,
+   2   31   35   35 =WSPC|.
+   2   32   36   36 +NODE|
+   2   32   36   36 +VAL |
+   2   32   36   36 =TEXT|item3
+   2   37   41   41 -VAL |
+   2   37   41   41 -NODE|
+   2   37   41   41 =SYNX|]
+   2   38   42   42 -SEQ |
+   2   38   42   42 -NODE|
+   2   38   42   42 -PAIR|
+   2   38   42   42 =SYNX|,
+   2   39   43   43 =WSPC|.
+   2   40   44   44 +PAIR|
+   2   40   44   44 +NODE|
+   2   40   44   44 +VAL |
+   2   40   44   44 =TEXT|top2
+   2   44   48   48 -VAL |
+   2   44   48   48 -NODE|
+   2   44   48   48 =SYNX|:
+   2   45   49   49 =WSPC|.
+   2   46   50   50 +NODE|
+   2   46   50   50 +VAL |
+   2   46   50   50 =TEXT|value2
+   2   52   56   56 -VAL |
+   2   52   56   56 -NODE|
+   2   52   56   56 -PAIR|
+   2   52   56   56 =WSPC|.
+   2   53   57   57 =SYNX|}
+   2   54   58   58 -MAP |
+   2   54   58   58 -NODE|
+   2   54   58   58 =EOL |\x0a
+   3    0   59   59 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;top1&#39; =&gt; [
@@ -600,6 +362,23 @@ class="">}</span>
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;top1&#39;: [&#39;item1&#39;, {&#39;key2&#39;: &#39;value2&#39;}, &#39;item3&#39;], &#39;top2&#39;: &#39;value2&#39;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  top1 =&gt; [
+    &quot;item1&quot;.Str,
+    {
+      key2 =&gt; &quot;value2&quot;.Str,
+    },
+    &quot;item3&quot;.Str,
+  ],
+  top2 =&gt; &quot;value2&quot;.Str,
+}
 </pre>
 
  </div>

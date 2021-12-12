@@ -174,331 +174,7 @@ Reuse anchor: *anchor
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 +PAIR|</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +VAL |</span>
-<span
-class="">   1    0    0    0 =TEXT|First.occurrence</span>
-<span
-class="">   1   16   16   16 -VAL |</span>
-<span
-class="">   1   16   16   16 -NODE|</span>
-<span
-class="">   1   16   16   16 =SYNX|:</span>
-<span
-class="">   1   17   17   17 =WSPC|.</span>
-<span
-class="">   1   18   18   18 +NODE|</span>
-<span
-class="">   1   18   18   18 +PROP|</span>
-<span
-class="">   1   18   18   18 +ANCH|</span>
-<span
-class="">   1   18   18   18 =SYNX|&amp;</span>
-<span
-class="">   1   19   19   19 =META|anchor</span>
-<span
-class="">   1   25   25   25 -ANCH|</span>
-<span
-class="">   1   25   25   25 -PROP|</span>
-<span
-class="">   1   25   25   25 =WSPC|.</span>
-<span
-class="">   1   26   26   26 +VAL |</span>
-<span
-class="">   1   26   26   26 =TEXT|Foo</span>
-<span
-class="">   1   29   29   29 -VAL |</span>
-<span
-class="">   1   29   29   29 -NODE|</span>
-<span
-class="">   1   29   29   29 =EOL |\x0a</span>
-<span
-class="">   2    0   30   30 -PAIR|</span>
-<span
-class="">   2    0   30   30 +PAIR|</span>
-<span
-class="">   2    0   30   30 +NODE|</span>
-<span
-class="">   2    0   30   30 +VAL |</span>
-<span
-class="">   2    0   30   30 =TEXT|Second.occurrence</span>
-<span
-class="">   2   17   47   47 -VAL |</span>
-<span
-class="">   2   17   47   47 -NODE|</span>
-<span
-class="">   2   17   47   47 =SYNX|:</span>
-<span
-class="">   2   18   48   48 =WSPC|.</span>
-<span
-class="">   2   19   49   49 +NODE|</span>
-<span
-class="">   2   19   49   49 +ALI |</span>
-<span
-class="">   2   19   49   49 =SYNX|*</span>
-<span
-class="">   2   20   50   50 =META|anchor</span>
-<span
-class="">   2   26   56   56 -ALI |</span>
-<span
-class="">   2   26   56   56 -NODE|</span>
-<span
-class="">   2   26   56   56 =EOL |\x0a</span>
-<span
-class="">   3    0   57   57 -PAIR|</span>
-<span
-class="">   3    0   57   57 +PAIR|</span>
-<span
-class="">   3    0   57   57 +NODE|</span>
-<span
-class="">   3    0   57   57 +VAL |</span>
-<span
-class="">   3    0   57   57 =TEXT|Override.anchor</span>
-<span
-class="">   3   15   72   72 -VAL |</span>
-<span
-class="">   3   15   72   72 -NODE|</span>
-<span
-class="">   3   15   72   72 =SYNX|:</span>
-<span
-class="">   3   16   73   73 =WSPC|.</span>
-<span
-class="">   3   17   74   74 +NODE|</span>
-<span
-class="">   3   17   74   74 +PROP|</span>
-<span
-class="">   3   17   74   74 +ANCH|</span>
-<span
-class="">   3   17   74   74 =SYNX|&amp;</span>
-<span
-class="">   3   18   75   75 =META|anchor</span>
-<span
-class="">   3   24   81   81 -ANCH|</span>
-<span
-class="">   3   24   81   81 -PROP|</span>
-<span
-class="">   3   24   81   81 =WSPC|.</span>
-<span
-class="">   3   25   82   82 +VAL |</span>
-<span
-class="">   3   25   82   82 =TEXT|Bar</span>
-<span
-class="">   3   28   85   85 -VAL |</span>
-<span
-class="">   3   28   85   85 -NODE|</span>
-<span
-class="">   3   28   85   85 =EOL |\x0a</span>
-<span
-class="">   4    0   86   86 -PAIR|</span>
-<span
-class="">   4    0   86   86 +PAIR|</span>
-<span
-class="">   4    0   86   86 +NODE|</span>
-<span
-class="">   4    0   86   86 +VAL |</span>
-<span
-class="">   4    0   86   86 =TEXT|Reuse.anchor</span>
-<span
-class="">   4   12   98   98 -VAL |</span>
-<span
-class="">   4   12   98   98 -NODE|</span>
-<span
-class="">   4   12   98   98 =SYNX|:</span>
-<span
-class="">   4   13   99   99 =WSPC|.</span>
-<span
-class="">   4   14  100  100 +NODE|</span>
-<span
-class="">   4   14  100  100 +ALI |</span>
-<span
-class="">   4   14  100  100 =SYNX|*</span>
-<span
-class="">   4   15  101  101 =META|anchor</span>
-<span
-class="">   4   21  107  107 -ALI |</span>
-<span
-class="">   4   21  107  107 -NODE|</span>
-<span
-class="">   4   21  107  107 =EOL |\x0a</span>
-<span
-class="">   5    0  108  108 -PAIR|</span>
-<span
-class="">   5    0  108  108 -MAP |</span>
-<span
-class="">   5    0  108  108 -NODE|</span>
-<span
-class="">   5    0  108  108 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">First occurrence: &amp;anchor Foo</span>
-<span
-class="">Second occurrence: *anchor</span>
-<span
-class="">Override anchor: &amp;anchor Bar</span>
-<span
-class="">Reuse anchor: *anchor</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  First occurrence  =&gt; &quot;Foo&quot;.Str,</span>
-<span
-class="">  Override anchor   =&gt; &quot;Bar&quot;.Str,</span>
-<span
-class="">  Reuse anchor      =&gt; &quot;Bar&quot;.Str,</span>
-<span
-class="">  Second occurrence =&gt; &quot;Foo&quot;.Str,</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="py-pyyaml-json">
+ <hr style="clear: both;">          <div class="framework framework_box_error" id="py-pyyaml-json">
 <h3><a href="#py-pyyaml-json">py-pyyaml-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
@@ -560,7 +236,97 @@ second occurrence
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|First.occurrence
+   1   16   16   16 -VAL |
+   1   16   16   16 -NODE|
+   1   16   16   16 =SYNX|:
+   1   17   17   17 =WSPC|.
+   1   18   18   18 +NODE|
+   1   18   18   18 +PROP|
+   1   18   18   18 +ANCH|
+   1   18   18   18 =SYNX|&amp;
+   1   19   19   19 =META|anchor
+   1   25   25   25 -ANCH|
+   1   25   25   25 -PROP|
+   1   25   25   25 =WSPC|.
+   1   26   26   26 +VAL |
+   1   26   26   26 =TEXT|Foo
+   1   29   29   29 -VAL |
+   1   29   29   29 -NODE|
+   1   29   29   29 =EOL |\x0a
+   2    0   30   30 -PAIR|
+   2    0   30   30 +PAIR|
+   2    0   30   30 +NODE|
+   2    0   30   30 +VAL |
+   2    0   30   30 =TEXT|Second.occurrence
+   2   17   47   47 -VAL |
+   2   17   47   47 -NODE|
+   2   17   47   47 =SYNX|:
+   2   18   48   48 =WSPC|.
+   2   19   49   49 +NODE|
+   2   19   49   49 +ALI |
+   2   19   49   49 =SYNX|*
+   2   20   50   50 =META|anchor
+   2   26   56   56 -ALI |
+   2   26   56   56 -NODE|
+   2   26   56   56 =EOL |\x0a
+   3    0   57   57 -PAIR|
+   3    0   57   57 +PAIR|
+   3    0   57   57 +NODE|
+   3    0   57   57 +VAL |
+   3    0   57   57 =TEXT|Override.anchor
+   3   15   72   72 -VAL |
+   3   15   72   72 -NODE|
+   3   15   72   72 =SYNX|:
+   3   16   73   73 =WSPC|.
+   3   17   74   74 +NODE|
+   3   17   74   74 +PROP|
+   3   17   74   74 +ANCH|
+   3   17   74   74 =SYNX|&amp;
+   3   18   75   75 =META|anchor
+   3   24   81   81 -ANCH|
+   3   24   81   81 -PROP|
+   3   24   81   81 =WSPC|.
+   3   25   82   82 +VAL |
+   3   25   82   82 =TEXT|Bar
+   3   28   85   85 -VAL |
+   3   28   85   85 -NODE|
+   3   28   85   85 =EOL |\x0a
+   4    0   86   86 -PAIR|
+   4    0   86   86 +PAIR|
+   4    0   86   86 +NODE|
+   4    0   86   86 +VAL |
+   4    0   86   86 =TEXT|Reuse.anchor
+   4   12   98   98 -VAL |
+   4   12   98   98 -NODE|
+   4   12   98   98 =SYNX|:
+   4   13   99   99 =WSPC|.
+   4   14  100  100 +NODE|
+   4   14  100  100 +ALI |
+   4   14  100  100 =SYNX|*
+   4   15  101  101 =META|anchor
+   4   21  107  107 -ALI |
+   4   21  107  107 -NODE|
+   4   21  107  107 =EOL |\x0a
+   5    0  108  108 -PAIR|
+   5    0  108  108 -MAP |
+   5    0  108  108 -NODE|
+   5    0  108  108 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;First occurrence&#39; =&gt; &#39;Foo&#39;,
@@ -640,6 +406,19 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 3, column 18:
     Override anchor: &amp;anchor Bar
                      ^ (line: 3)
   warnings.warn(ws, ReusedAnchorWarning)
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  First occurrence  =&gt; &quot;Foo&quot;.Str,
+  Override anchor   =&gt; &quot;Bar&quot;.Str,
+  Reuse anchor      =&gt; &quot;Bar&quot;.Str,
+  Second occurrence =&gt; &quot;Foo&quot;.Str,
+}
 </pre>
 
  </div>

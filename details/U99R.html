@@ -25,14 +25,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/U99R.tml">&test-U
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: did not find expected whitespace or line break
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="dotnet-yamldotnet-event">
+   <div class="framework framework_box_invalid_incorrect" id="dotnet-yamldotnet-event">
 <h3><a href="#dotnet-yamldotnet-event">dotnet-yamldotnet-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
 +DOC
@@ -150,13 +143,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/U99R.tml">&test-U
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>- !!str, &#39;xxx&#39;
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -208,15 +194,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/U99R.tml">&test-U
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:8: error: did not find expected &#39;-&#39; indicator
-- !!str, xxx
-       ^
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:8: error: did not find expected &#39;-&#39; indicator
 - !!str, xxx
        ^
@@ -376,31 +353,6 @@ YAMLParseError: Tags and anchors must be separated from the next token by white 
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: Tags and anchors must be separated from the next token by white space at line 1, column 8:
-
-- !!str, xxx
-       ^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveProps (/node/node_modules/yaml/dist/compose/resolve-props.js:114:9)
-    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:10:36)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:17:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-    at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-    at compose.next (&lt;anonymous&gt;)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="nim-nimyaml-event">
 <h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/tmp/NimYAML-0.16.0/yaml/stream.nim(134) nimyaml_event
@@ -455,19 +407,6 @@ YAML      : &quot;, xxx\n&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
-Column    : 8
-Expected  : EOL WS
-Got       : FLOW_COMMA
-Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;, xxx\n&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-json">
 <h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
@@ -482,18 +421,6 @@ while scanning a tag at line: 1, column: 3
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected whitespace or line break
-
-was found at , line: 1, column: 8
-while scanning a tag at line: 1, column: 3
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected whitespace or line break
@@ -535,30 +462,6 @@ while scanning a tag at line: 1, column: 3
   <div class="framework framework_box_invalid_correct" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::XS Error: bad tag found for scalar: &#39;tag:yaml.org,2002:str,&#39; at /yaml/bin/perl-xs-perl line 16, &lt;&gt; line 1.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 11, in &lt;module&gt;
-    output = ruamel.yaml.emit(events)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1058, in emit
-    dumper.emit(event)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 254, in emit
-    self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 630, in expect_first_block_sequence_item
-    return self.expect_block_sequence_item(first=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 651, in expect_block_sequence_item
-    self.expect_node(sequence=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 419, in expect_node
-    self.process_tag()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 801, in process_tag
-    self.style = self.choose_scalar_style()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 836, in choose_scalar_style
-    self.event.implicit[0] or not self.event.implicit[2]
-IndexError: tuple index out of range
 </pre>
  </div>
 

@@ -26,14 +26,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/2CMS.tml">&test-2
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: mapping values are not allowed in this context
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+   <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
 <h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
    1    0    0    0 +DOC |
@@ -107,22 +100,6 @@ this
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:1: error: invalid multiline plain key
-this
-^~~~
- is
-~~~
-  invalid: x
-~~~~~~~~~
-[NOT]: fy_fetch_plain_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:1: error: invalid multiline plain key
 this
 ^~~~
@@ -313,31 +290,6 @@ this
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: Implicit keys need to be on a single line at line 1, column 1:
-
-this
-^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:46:13)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-    at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-    at compose.next (&lt;anonymous&gt;)
-    at Function.from (&lt;anonymous&gt;)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 1:1: mapping values are not allowed in this context
@@ -347,7 +299,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:502: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x562eb7071f97
+	[C]: at 0x563b503b4f97
 </pre>
  </div>
 
@@ -405,19 +357,6 @@ YAML      : &quot;: x\n&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
-Column    : 10
-Expected  : EOL
-Got       : COLON
-Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;: x\n&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-json">
 <h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
@@ -431,17 +370,6 @@ was found at , line: 3, column: 10
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    mapping values are not allowed in this context
-
-was found at , line: 3, column: 10
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     mapping values are not allowed in this context
@@ -606,31 +534,6 @@ yaml.scanner.ScannerError: mapping values are not allowed here
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
-    for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
-    while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 193, in parse_document_end
-    token = self.peek_token()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 129, in peek_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 223, in fetch_more_tokens
-    return self.fetch_value()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 579, in fetch_value
-    self.get_mark())
-yaml.scanner.ScannerError: mapping values are not allowed here
-  in &quot;&lt;unicode string&gt;&quot;, line 3, column 10:
-      invalid: x
-             ^
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -704,31 +607,6 @@ ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 104, in compose_document
     self.parser.get_event()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 162, in get_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 241, in parse_document_end
-    token = self.scanner.peek_token()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 283, in fetch_more_tokens
-    return self.fetch_value()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 656, in fetch_value
-    self.reader.get_mark(),
-ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
-  in &quot;&lt;unicode string&gt;&quot;, line 3, column 10:
-      invalid: x
-             ^ (line: 3)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
     self.current_event = self.state()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 241, in parse_document_end
     token = self.scanner.peek_token()

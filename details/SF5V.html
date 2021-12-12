@@ -25,14 +25,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SF5V.tml">&test-S
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: found duplicate %YAML directive
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+   <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
 <h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
    1    0    0    0 +DOC |
@@ -79,15 +72,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SF5V.tml">&test-S
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>%YAML 1.2
----
-null
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>&quot;%YAML 1.2 %YAML 1.2 ---&quot;
@@ -115,16 +99,6 @@ null
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:7: error: duplicate version directive
-%YAML 1.2
-      ^~~
-[NOT]: failed to fy_parse_version_directive()
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:7: error: duplicate version directive
 %YAML 1.2
       ^~~
@@ -285,7 +259,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x562db11a5f97
+	[C]: at 0x55bbd806bf97
 </pre>
  </div>
 
@@ -325,14 +299,6 @@ Error: unhandled exception: Duplicate %YAML [YamlStreamError]
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Found duplicate YAML directive at /yaml/bin/perl-pp-yaml line 28.
- at /yaml/bin/perl-pp-yaml line 28.
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-json">
 <h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
@@ -346,17 +312,6 @@ was found at , line: 2, column: 1
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    found duplicate %YAML directive
-
-was found at , line: 2, column: 1
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     found duplicate %YAML directive
@@ -509,29 +464,6 @@ yaml.parser.ParserError: found duplicate YAML directive
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
-    for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
-    while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 157, in parse_implicit_document_start
-    return self.parse_document_start()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 169, in parse_document_start
-    version, tags = self.process_directives()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 225, in process_directives
-    &quot;found duplicate YAML directive&quot;, token.start_mark)
-yaml.parser.ParserError: found duplicate YAML directive
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
-    %YAML 1.2
-    ^
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -594,29 +526,6 @@ ruamel.yaml.parser.ParserError: found duplicate YAML directive
     return self.composer.check_node()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 62, in check_node
     return not self.parser.check_event(StreamEndEvent)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 200, in parse_implicit_document_start
-    return self.parse_document_start()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 211, in parse_document_start
-    version, tags = self.process_directives()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 278, in process_directives
-    None, None, &#39;found duplicate YAML directive&#39;, token.start_mark
-ruamel.yaml.parser.ParserError: found duplicate YAML directive
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
-    %YAML 1.2
-    ^ (line: 2)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
-    while loader._parser.check_event():
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
     self.current_event = self.state()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 200, in parse_implicit_document_start

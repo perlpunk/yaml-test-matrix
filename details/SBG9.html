@@ -98,279 +98,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SBG9.tml">&test-S
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  a: [</span>
-<span
-class="">    b,</span>
-<span
-class="">    c</span>
-<span
-class="">  ],</span>
-<span
-class="">  ? [</span>
-<span
-class="">    d,</span>
-<span
-class="">    e</span>
-<span
-class="">  ] : f</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a:</span>
-<span
-class="">- b</span>
-<span
-class="">- c</span>
-<span
-class="">? - d</span>
-<span
-class="">  - e</span>
-<span
-class="">: f</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 =SYNX|{</span>
-<span
-class="">   1    1    1    1 +PAIR|</span>
-<span
-class="">   1    1    1    1 +NODE|</span>
-<span
-class="">   1    1    1    1 +VAL |</span>
-<span
-class="">   1    1    1    1 =TEXT|a</span>
-<span
-class="">   1    2    2    2 -VAL |</span>
-<span
-class="">   1    2    2    2 -NODE|</span>
-<span
-class="">   1    2    2    2 =SYNX|:</span>
-<span
-class="">   1    3    3    3 =WSPC|.</span>
-<span
-class="">   1    4    4    4 +NODE|</span>
-<span
-class="">   1    4    4    4 +SEQ |</span>
-<span
-class="">   1    4    4    4 =SYNX|[</span>
-<span
-class="">   1    5    5    5 +NODE|</span>
-<span
-class="">   1    5    5    5 +VAL |</span>
-<span
-class="">   1    5    5    5 =TEXT|b</span>
-<span
-class="">   1    6    6    6 -VAL |</span>
-<span
-class="">   1    6    6    6 -NODE|</span>
-<span
-class="">   1    6    6    6 =SYNX|,</span>
-<span
-class="">   1    7    7    7 =WSPC|.</span>
-<span
-class="">   1    8    8    8 +NODE|</span>
-<span
-class="">   1    8    8    8 +VAL |</span>
-<span
-class="">   1    8    8    8 =TEXT|c</span>
-<span
-class="">   1    9    9    9 -VAL |</span>
-<span
-class="">   1    9    9    9 -NODE|</span>
-<span
-class="">   1    9    9    9 =SYNX|]</span>
-<span
-class="">   1   10   10   10 -SEQ |</span>
-<span
-class="">   1   10   10   10 -NODE|</span>
-<span
-class="">   1   10   10   10 -PAIR|</span>
-<span
-class="">   1   10   10   10 =SYNX|,</span>
-<span
-class="">   1   11   11   11 =WSPC|.</span>
-<span
-class="">   1   12   12   12 +PAIR|</span>
-<span
-class="">   1   12   12   12 +NODE|</span>
-<span
-class="">   1   12   12   12 +SEQ |</span>
-<span
-class="">   1   12   12   12 =SYNX|[</span>
-<span
-class="">   1   13   13   13 +NODE|</span>
-<span
-class="">   1   13   13   13 +VAL |</span>
-<span
-class="">   1   13   13   13 =TEXT|d</span>
-<span
-class="">   1   14   14   14 -VAL |</span>
-<span
-class="">   1   14   14   14 -NODE|</span>
-<span
-class="">   1   14   14   14 =SYNX|,</span>
-<span
-class="">   1   15   15   15 =WSPC|.</span>
-<span
-class="">   1   16   16   16 +NODE|</span>
-<span
-class="">   1   16   16   16 +VAL |</span>
-<span
-class="">   1   16   16   16 =TEXT|e</span>
-<span
-class="">   1   17   17   17 -VAL |</span>
-<span
-class="">   1   17   17   17 -NODE|</span>
-<span
-class="">   1   17   17   17 =SYNX|]</span>
-<span
-class="">   1   18   18   18 -SEQ |</span>
-<span
-class="">   1   18   18   18 -NODE|</span>
-<span
-class="">   1   18   18   18 =SYNX|:</span>
-<span
-class="">   1   19   19   19 =WSPC|.</span>
-<span
-class="">   1   20   20   20 +NODE|</span>
-<span
-class="">   1   20   20   20 +VAL |</span>
-<span
-class="">   1   20   20   20 =TEXT|f</span>
-<span
-class="">   1   21   21   21 -VAL |</span>
-<span
-class="">   1   21   21   21 -NODE|</span>
-<span
-class="">   1   21   21   21 -PAIR|</span>
-<span
-class="">   1   21   21   21 =SYNX|}</span>
-<span
-class="">   1   22   22   22 -MAP |</span>
-<span
-class="">   1   22   22   22 -NODE|</span>
-<span
-class="">   1   22   22   22 =EOL |\x0a</span>
-<span
-class="">   2    0   23   23 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  a: [ b, c ],</span>
-<span
-class="">  ? [ d, e ]</span>
-<span
-class="">  : f</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">a:</span>
-<span
-class="">- b</span>
-<span
-class="">- c</span>
-<span
-class="">? - d</span>
-<span
-class="">  - e</span>
-<span
-class="">: f</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{a:  [b, c], [d, e]: f}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{a: [b, c], ? [d, e] : f}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{a: [b, c], [d, e]: f}</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-yaml-perl">
+ <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-yaml-perl">
 <h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Invalid element in map
    Code: YAML_LOAD_ERR_BAD_MAP_ELEMENT
@@ -450,6 +178,79 @@ stdin:1:13: error: Non scalar keys are not allowed in JSON emit mode
  </div>
 
 
+  <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 =SYNX|{
+   1    1    1    1 +PAIR|
+   1    1    1    1 +NODE|
+   1    1    1    1 +VAL |
+   1    1    1    1 =TEXT|a
+   1    2    2    2 -VAL |
+   1    2    2    2 -NODE|
+   1    2    2    2 =SYNX|:
+   1    3    3    3 =WSPC|.
+   1    4    4    4 +NODE|
+   1    4    4    4 +SEQ |
+   1    4    4    4 =SYNX|[
+   1    5    5    5 +NODE|
+   1    5    5    5 +VAL |
+   1    5    5    5 =TEXT|b
+   1    6    6    6 -VAL |
+   1    6    6    6 -NODE|
+   1    6    6    6 =SYNX|,
+   1    7    7    7 =WSPC|.
+   1    8    8    8 +NODE|
+   1    8    8    8 +VAL |
+   1    8    8    8 =TEXT|c
+   1    9    9    9 -VAL |
+   1    9    9    9 -NODE|
+   1    9    9    9 =SYNX|]
+   1   10   10   10 -SEQ |
+   1   10   10   10 -NODE|
+   1   10   10   10 -PAIR|
+   1   10   10   10 =SYNX|,
+   1   11   11   11 =WSPC|.
+   1   12   12   12 +PAIR|
+   1   12   12   12 +NODE|
+   1   12   12   12 +SEQ |
+   1   12   12   12 =SYNX|[
+   1   13   13   13 +NODE|
+   1   13   13   13 +VAL |
+   1   13   13   13 =TEXT|d
+   1   14   14   14 -VAL |
+   1   14   14   14 -NODE|
+   1   14   14   14 =SYNX|,
+   1   15   15   15 =WSPC|.
+   1   16   16   16 +NODE|
+   1   16   16   16 +VAL |
+   1   16   16   16 =TEXT|e
+   1   17   17   17 -VAL |
+   1   17   17   17 -NODE|
+   1   17   17   17 =SYNX|]
+   1   18   18   18 -SEQ |
+   1   18   18   18 -NODE|
+   1   18   18   18 =SYNX|:
+   1   19   19   19 =WSPC|.
+   1   20   20   20 +NODE|
+   1   20   20   20 +VAL |
+   1   20   20   20 =TEXT|f
+   1   21   21   21 -VAL |
+   1   21   21   21 -NODE|
+   1   21   21   21 -PAIR|
+   1   21   21   21 =SYNX|}
+   1   22   22   22 -MAP |
+   1   22   22   22 -NODE|
+   1   22   22   22 =EOL |\x0a
+   2    0   23   23 -DOC |
+</pre>
+
+ </div>
+
+
   <div class="framework framework_box_na" id="java-snakeyaml-json">
 <h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
@@ -493,7 +294,7 @@ stdin:1:13: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x55a4dbbe1f97
+	[C]: at 0x558ba3773f97
 </pre>
 
  </div>
@@ -558,7 +359,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x55f16f19e5d0)&quot; : &quot;f&quot;,
+   &quot;ARRAY(0x5588ac1c35d0)&quot; : &quot;f&quot;,
    &quot;a&quot; : [
       &quot;b&quot;,
       &quot;c&quot;
@@ -572,7 +373,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x561b7118a670)&#39; =&gt; &#39;f&#39;,
+  &#39;ARRAY(0x5622d9751608)&#39; =&gt; &#39;f&#39;,
   &#39;a&#39; =&gt; [
            &#39;b&#39;,
            &#39;c&#39;
@@ -594,7 +395,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x55a56455e3c0)&quot; : &quot;f&quot;,
+   &quot;ARRAY(0x5631f0d2d3c0)&quot; : &quot;f&quot;,
    &quot;a&quot; : [
       &quot;b&quot;,
       &quot;c&quot;
@@ -608,7 +409,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x55c0095c9570)&#39; =&gt; &#39;f&#39;,
+  &#39;ARRAY(0x56409cdaf4f0)&#39; =&gt; &#39;f&#39;,
   &#39;a&#39; =&gt; [
            &#39;b&#39;,
            &#39;c&#39;

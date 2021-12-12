@@ -88,207 +88,7 @@ omitted value:,
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  unquoted: &quot;separate&quot;,</span>
-<span
-class="">  http://foo.com: ,</span>
-<span
-class="">  omitted value: </span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre></pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 =SYNX|{</span>
-<span
-class="">   1    1    1    1 =EOL |\x0a</span>
-<span
-class="">   2    0    2    2 +PAIR|</span>
-<span
-class="">   2    0    2    2 +NODE|</span>
-<span
-class="">   2    0    2    2 +VAL |</span>
-<span
-class="">   2    0    2    2 =TEXT|unquoted</span>
-<span
-class="">   2    8   10   10 -VAL |</span>
-<span
-class="">   2    8   10   10 -NODE|</span>
-<span
-class="">   2    8   10   10 =WSPC|.</span>
-<span
-class="">   2    9   11   11 =SYNX|:</span>
-<span
-class="">   2   10   12   12 =WSPC|.</span>
-<span
-class="">   2   11   13   13 +NODE|</span>
-<span
-class="">   2   11   13   13 +VAL |</span>
-<span
-class="">   2   11   13   13 =SYNX|&quot;</span>
-<span
-class="">   2   12   14   14 =TEXT|separate</span>
-<span
-class="">   2   20   22   22 =SYNX|&quot;</span>
-<span
-class="">   2   21   23   23 -VAL |</span>
-<span
-class="">   2   21   23   23 -NODE|</span>
-<span
-class="">   2   21   23   23 -PAIR|</span>
-<span
-class="">   2   21   23   23 =SYNX|,</span>
-<span
-class="">   2   22   24   24 =EOL |\x0a</span>
-<span
-class="">   3    0   25   25 +PAIR|</span>
-<span
-class="">   3    0   25   25 +NODE|</span>
-<span
-class="">   3    0   25   25 +VAL |</span>
-<span
-class="">   3    0   25   25 =TEXT|http://foo.com</span>
-<span
-class="">   3   14   39   39 -VAL |</span>
-<span
-class="">   3   14   39   39 -NODE|</span>
-<span
-class="">   3   14   39   39 +NODE|</span>
-<span
-class="">   3   14   39   39 +VAL |</span>
-<span
-class="">   3   14   39   39 -VAL |</span>
-<span
-class="">   3   14   39   39 -NODE|</span>
-<span
-class="">   3   14   39   39 -PAIR|</span>
-<span
-class="">   3   14   39   39 =SYNX|,</span>
-<span
-class="">   3   15   40   40 =EOL |\x0a</span>
-<span
-class="">   4    0   41   41 +PAIR|</span>
-<span
-class="">   4    0   41   41 +NODE|</span>
-<span
-class="">   4    0   41   41 +VAL |</span>
-<span
-class="">   4    0   41   41 =TEXT|omitted.value:</span>
-<span
-class="">   4   14   55   55 -VAL |</span>
-<span
-class="">   4   14   55   55 -NODE|</span>
-<span
-class="">   4   14   55   55 +NODE|</span>
-<span
-class="">   4   14   55   55 +VAL |</span>
-<span
-class="">   4   14   55   55 -VAL |</span>
-<span
-class="">   4   14   55   55 -NODE|</span>
-<span
-class="">   4   14   55   55 -PAIR|</span>
-<span
-class="">   4   14   55   55 =SYNX|,</span>
-<span
-class="">   4   15   56   56 =EOL |\x0a</span>
-<span
-class="">   5    0   57   57 =SYNX|}</span>
-<span
-class="">   5    1   58   58 -MAP |</span>
-<span
-class="">   5    1   58   58 -NODE|</span>
-<span
-class="">   5    1   58   58 =EOL |\x0a</span>
-<span
-class="">   6    0   59   59 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  unquoted: &quot;separate&quot;,</span>
-<span
-class="">  http://foo.com,</span>
-<span
-class="">  omitted value: null</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unquoted: &quot;separate&quot;</span>
-<span
-class="">http://foo.com:</span>
-<span
-class="">omitted value:</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{unquoted: &quot;separate&quot;, ! &#39;http://foo.com&#39;: ! &#39;&#39;, omitted value: ! &#39;&#39;}</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-event">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_diff">&nbsp;</span>diff <br>
 
@@ -322,18 +122,6 @@ class="">-STR</span>
  </div>
 
 
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{unquoted: &quot;separate&quot;, http://foo.com: ! &#39;&#39;, ! &#39;omitted value:&#39;: ! &#39;&#39;}</span>
-</pre>
-
- </div>
-
-
  <hr style="clear: both;">       <div class="framework framework_box_error" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
@@ -350,18 +138,6 @@ Parse error: found unexpected &#39;:&#39;
 
   <div class="framework framework_box_error" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    found unexpected &#39;:&#39;
-
-was found at , line: 4, column: 14
-while scanning a plain scalar at line: 4, column: 1
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
 
     found unexpected &#39;:&#39;
@@ -439,6 +215,69 @@ while scanning a plain scalar at line: 4, column: 1
  </div>
 
 
+  <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 =SYNX|{
+   1    1    1    1 =EOL |\x0a
+   2    0    2    2 +PAIR|
+   2    0    2    2 +NODE|
+   2    0    2    2 +VAL |
+   2    0    2    2 =TEXT|unquoted
+   2    8   10   10 -VAL |
+   2    8   10   10 -NODE|
+   2    8   10   10 =WSPC|.
+   2    9   11   11 =SYNX|:
+   2   10   12   12 =WSPC|.
+   2   11   13   13 +NODE|
+   2   11   13   13 +VAL |
+   2   11   13   13 =SYNX|&quot;
+   2   12   14   14 =TEXT|separate
+   2   20   22   22 =SYNX|&quot;
+   2   21   23   23 -VAL |
+   2   21   23   23 -NODE|
+   2   21   23   23 -PAIR|
+   2   21   23   23 =SYNX|,
+   2   22   24   24 =EOL |\x0a
+   3    0   25   25 +PAIR|
+   3    0   25   25 +NODE|
+   3    0   25   25 +VAL |
+   3    0   25   25 =TEXT|http://foo.com
+   3   14   39   39 -VAL |
+   3   14   39   39 -NODE|
+   3   14   39   39 +NODE|
+   3   14   39   39 +VAL |
+   3   14   39   39 -VAL |
+   3   14   39   39 -NODE|
+   3   14   39   39 -PAIR|
+   3   14   39   39 =SYNX|,
+   3   15   40   40 =EOL |\x0a
+   4    0   41   41 +PAIR|
+   4    0   41   41 +NODE|
+   4    0   41   41 +VAL |
+   4    0   41   41 =TEXT|omitted.value:
+   4   14   55   55 -VAL |
+   4   14   55   55 -NODE|
+   4   14   55   55 +NODE|
+   4   14   55   55 +VAL |
+   4   14   55   55 -VAL |
+   4   14   55   55 -NODE|
+   4   14   55   55 -PAIR|
+   4   14   55   55 =SYNX|,
+   4   15   56   56 =EOL |\x0a
+   5    0   57   57 =SYNX|}
+   5    1   58   58 -MAP |
+   5    1   58   58 -NODE|
+   5    1   58   58 =EOL |\x0a
+   6    0   59   59 -DOC |
+</pre>
+
+ </div>
+
+
   <div class="framework framework_box_na" id="java-snakeyaml-json">
 <h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
@@ -480,7 +319,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x563b2243cf97
+	[C]: at 0x5571b2b54f97
 </pre>
 
  </div>

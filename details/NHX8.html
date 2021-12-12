@@ -77,157 +77,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/NHX8.tml">&test-N
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">: </span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre></pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 +PAIR|</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +VAL |</span>
-<span
-class="">   1    0    0    0 -VAL |</span>
-<span
-class="">   1    0    0    0 -NODE|</span>
-<span
-class="">   1    0    0    0 =SYNX|:</span>
-<span
-class="">   1    1    1    1 +NODE|</span>
-<span
-class="">   1    1    1    1 +VAL |</span>
-<span
-class="">   1    1    1    1 -VAL |</span>
-<span
-class="">   1    1    1    1 -NODE|</span>
-<span
-class="">   1    1    1    1 =EOL |\x0a</span>
-<span
-class="">   2    0    2    2 =EOL |\x0a</span>
-<span
-class="">   3    0    3    3 =EOL |\x0a</span>
-<span
-class="">   4    0    4    4 -PAIR|</span>
-<span
-class="">   4    0    4    4 -MAP |</span>
-<span
-class="">   4    0    4    4 -NODE|</span>
-<span
-class="">   4    0    4    4 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">null:</span>
-<span
-class=""></span>
-<span
-class="">  null</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">:</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">! &#39;&#39;:</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected key
-
-was found at 
-while parsing a block mapping at line: 1, column: 1
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 1, column 1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
-    for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
-    while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 425, in parse_block_mapping_first_key
-    return self.parse_block_mapping_key()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 439, in parse_block_mapping_key
-    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
-yaml.parser.ParserError: while parsing a block mapping
-expected &lt;block end&gt;, but found &#39;:&#39;
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
-    :
-    ^
 </pre>
  </div>
 
@@ -275,6 +127,34 @@ Aborted (core dumped)
   <div class="framework framework_box_na" id="hs-hsyaml-json">
 <h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{&quot;&quot;:null}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 -VAL |
+   1    0    0    0 -NODE|
+   1    0    0    0 =SYNX|:
+   1    1    1    1 +NODE|
+   1    1    1    1 +VAL |
+   1    1    1    1 -VAL |
+   1    1    1    1 -NODE|
+   1    1    1    1 =EOL |\x0a
+   2    0    2    2 =EOL |\x0a
+   3    0    3    3 =EOL |\x0a
+   4    0    4    4 -PAIR|
+   4    0    4    4 -MAP |
+   4    0    4    4 -NODE|
+   4    0    4    4 -DOC |
 </pre>
 
  </div>
@@ -355,7 +235,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x562c5d264f97
+	[C]: at 0x556c0468cf97
 </pre>
 
  </div>

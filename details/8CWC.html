@@ -166,165 +166,7 @@ key ends with two colons::: value
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">key ends with two colons::: value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">&#39;key ends with two colons::&#39;: value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 =HEAD|---</span>
-<span
-class="">   1    3    3    3 +NODE|</span>
-<span
-class="">   1    3    3    3 =EOL |\x0a</span>
-<span
-class="">   2    0    4    4 +MAP |</span>
-<span
-class="">   2    0    4    4 +PAIR|</span>
-<span
-class="">   2    0    4    4 +NODE|</span>
-<span
-class="">   2    0    4    4 +VAL |</span>
-<span
-class="">   2    0    4    4 =TEXT|key.ends.with.two.colons::</span>
-<span
-class="">   2   26   30   30 -VAL |</span>
-<span
-class="">   2   26   30   30 -NODE|</span>
-<span
-class="">   2   26   30   30 =SYNX|:</span>
-<span
-class="">   2   27   31   31 =WSPC|.</span>
-<span
-class="">   2   28   32   32 +NODE|</span>
-<span
-class="">   2   28   32   32 +VAL |</span>
-<span
-class="">   2   28   32   32 =TEXT|value</span>
-<span
-class="">   2   33   37   37 -VAL |</span>
-<span
-class="">   2   33   37   37 -NODE|</span>
-<span
-class="">   2   33   37   37 =EOL |\x0a</span>
-<span
-class="">   3    0   38   38 -PAIR|</span>
-<span
-class="">   3    0   38   38 -MAP |</span>
-<span
-class="">   3    0   38   38 -NODE|</span>
-<span
-class="">   3    0   38   38 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">&quot;key ends with two colons::&quot;: value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">&#39;key ends with two colons::&#39;: value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">! &#39;key ends with two colons::&#39;: value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">---</span>
-<span
-class="">! &#39;key ends with two colons::&#39;: value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  key ends with two colons:: =&gt; &quot;value&quot;.Str,</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pp-event">
+ <hr style="clear: both;">          <div class="framework framework_box_error" id="perl-pp-event">
 <h3><a href="#perl-pp-event">perl-pp-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
 +DOC ---
@@ -362,19 +204,38 @@ YAML      : &quot;::: value&quot;
  </div>
 
 
-  <div class="framework framework_box_error" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Line      : 2
-Column    : 25
-Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
-YAML      : &quot;::: value&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 =HEAD|---
+   1    3    3    3 +NODE|
+   1    3    3    3 =EOL |\x0a
+   2    0    4    4 +MAP |
+   2    0    4    4 +PAIR|
+   2    0    4    4 +NODE|
+   2    0    4    4 +VAL |
+   2    0    4    4 =TEXT|key.ends.with.two.colons::
+   2   26   30   30 -VAL |
+   2   26   30   30 -NODE|
+   2   26   30   30 =SYNX|:
+   2   27   31   31 =WSPC|.
+   2   28   32   32 +NODE|
+   2   28   32   32 +VAL |
+   2   28   32   32 =TEXT|value
+   2   33   37   37 -VAL |
+   2   33   37   37 -NODE|
+   2   33   37   37 =EOL |\x0a
+   3    0   38   38 -PAIR|
+   3    0   38   38 -MAP |
+   3    0   38   38 -NODE|
+   3    0   38   38 -DOC |
 </pre>
+
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pplibyaml-perl">
+  <div class="framework framework_box_na" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;key ends with two colons::&#39; =&gt; &#39;value&#39;
@@ -435,6 +296,16 @@ YAML      : &quot;::: value&quot;
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;key ends with two colons::&#39;: &#39;value&#39;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  key ends with two colons:: =&gt; &quot;value&quot;.Str,
+}
 </pre>
 
  </div>

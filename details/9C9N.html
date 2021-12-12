@@ -49,17 +49,6 @@ c]
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-flow:
-- a
-- b
-- c
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -187,14 +176,6 @@ flow:
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-flow: [a, b, c]
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
@@ -285,14 +266,6 @@ flow: [a, b, c]
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-flow: [a, b, c]
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -327,14 +300,6 @@ flow: [a, b, c]
   <div class="framework framework_box_invalid_incorrect" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&#39;flow&#39;: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-flow: [a, b, c]
 </pre>
  </div>
 
@@ -386,18 +351,6 @@ b,
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: wrongly indented flow sequence
-b,
-^
-[NOT]: fy_fetch_plain_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: wrongly indented flow sequence
 b,
 ^
@@ -536,31 +489,6 @@ flow: [a,
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: Expected flow sequence to end with ] at line 2, column 10:
-
-flow: [a,
-         ^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:174:9)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:21:42)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-    at next (&lt;anonymous&gt;)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="nim-nimyaml-event">
 <h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/tmp/NimYAML-0.16.0/yaml/stream.nim(134) nimyaml_event
@@ -619,18 +547,6 @@ Message   : Bad indendation in FLOWSEQ
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 199
 YAML      : &quot;b,\n&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
-Column    : 1
-Message   : Bad indendation in FLOWSEQ
-Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 199
-YAML      : &quot;b,\n&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 

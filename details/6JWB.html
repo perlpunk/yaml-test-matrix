@@ -169,311 +169,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/6JWB.tml">&test-6
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">foo: !!seq</span>
-<span
-class="">  - !!str a</span>
-<span
-class="">  - !!map</span>
-<span
-class="">    key: !!str value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">foo: !!seq</span>
-<span
-class="">- !!str a</span>
-<span
-class="">- !!map</span>
-<span
-class="">  key: !!str value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 +PAIR|</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +VAL |</span>
-<span
-class="">   1    0    0    0 =TEXT|foo</span>
-<span
-class="">   1    3    3    3 -VAL |</span>
-<span
-class="">   1    3    3    3 -NODE|</span>
-<span
-class="">   1    3    3    3 =SYNX|:</span>
-<span
-class="">   1    4    4    4 +NODE|</span>
-<span
-class="">   1    4    4    4 =WSPC|.</span>
-<span
-class="">   1    5    5    5 +PROP|</span>
-<span
-class="">   1    5    5    5 +TAG |</span>
-<span
-class="">   1    5    5    5 +HAND|</span>
-<span
-class="">   1    5    5    5 =SYNX|!</span>
-<span
-class="">   1    6    6    6 =SYNX|!</span>
-<span
-class="">   1    7    7    7 -HAND|</span>
-<span
-class="">   1    7    7    7 =META|seq</span>
-<span
-class="">   1   10   10   10 -TAG |</span>
-<span
-class="">   1   10   10   10 -PROP|</span>
-<span
-class="">   1   10   10   10 =EOL |\x0a</span>
-<span
-class="">   2    0   11   11 +SEQ |</span>
-<span
-class="">   2    0   11   11 =DENT|..</span>
-<span
-class="">   2    2   13   13 =SYNX|-</span>
-<span
-class="">   2    3   14   14 =WSPC|.</span>
-<span
-class="">   2    4   15   15 +NODE|</span>
-<span
-class="">   2    4   15   15 +PROP|</span>
-<span
-class="">   2    4   15   15 +TAG |</span>
-<span
-class="">   2    4   15   15 +HAND|</span>
-<span
-class="">   2    4   15   15 =SYNX|!</span>
-<span
-class="">   2    5   16   16 =SYNX|!</span>
-<span
-class="">   2    6   17   17 -HAND|</span>
-<span
-class="">   2    6   17   17 =META|str</span>
-<span
-class="">   2    9   20   20 -TAG |</span>
-<span
-class="">   2    9   20   20 -PROP|</span>
-<span
-class="">   2    9   20   20 =WSPC|.</span>
-<span
-class="">   2   10   21   21 +VAL |</span>
-<span
-class="">   2   10   21   21 =TEXT|a</span>
-<span
-class="">   2   11   22   22 -VAL |</span>
-<span
-class="">   2   11   22   22 -NODE|</span>
-<span
-class="">   2   11   22   22 =EOL |\x0a</span>
-<span
-class="">   3    0   23   23 =DENT|..</span>
-<span
-class="">   3    2   25   25 =SYNX|-</span>
-<span
-class="">   3    3   26   26 +NODE|</span>
-<span
-class="">   3    3   26   26 =WSPC|.</span>
-<span
-class="">   3    4   27   27 +PROP|</span>
-<span
-class="">   3    4   27   27 +TAG |</span>
-<span
-class="">   3    4   27   27 +HAND|</span>
-<span
-class="">   3    4   27   27 =SYNX|!</span>
-<span
-class="">   3    5   28   28 =SYNX|!</span>
-<span
-class="">   3    6   29   29 -HAND|</span>
-<span
-class="">   3    6   29   29 =META|map</span>
-<span
-class="">   3    9   32   32 -TAG |</span>
-<span
-class="">   3    9   32   32 -PROP|</span>
-<span
-class="">   3    9   32   32 =EOL |\x0a</span>
-<span
-class="">   4    0   33   33 +MAP |</span>
-<span
-class="">   4    0   33   33 =DENT|....</span>
-<span
-class="">   4    4   37   37 +PAIR|</span>
-<span
-class="">   4    4   37   37 +NODE|</span>
-<span
-class="">   4    4   37   37 +VAL |</span>
-<span
-class="">   4    4   37   37 =TEXT|key</span>
-<span
-class="">   4    7   40   40 -VAL |</span>
-<span
-class="">   4    7   40   40 -NODE|</span>
-<span
-class="">   4    7   40   40 =SYNX|:</span>
-<span
-class="">   4    8   41   41 =WSPC|.</span>
-<span
-class="">   4    9   42   42 +NODE|</span>
-<span
-class="">   4    9   42   42 +PROP|</span>
-<span
-class="">   4    9   42   42 +TAG |</span>
-<span
-class="">   4    9   42   42 +HAND|</span>
-<span
-class="">   4    9   42   42 =SYNX|!</span>
-<span
-class="">   4   10   43   43 =SYNX|!</span>
-<span
-class="">   4   11   44   44 -HAND|</span>
-<span
-class="">   4   11   44   44 =META|str</span>
-<span
-class="">   4   14   47   47 -TAG |</span>
-<span
-class="">   4   14   47   47 -PROP|</span>
-<span
-class="">   4   14   47   47 =WSPC|.</span>
-<span
-class="">   4   15   48   48 +VAL |</span>
-<span
-class="">   4   15   48   48 =TEXT|value</span>
-<span
-class="">   4   20   53   53 -VAL |</span>
-<span
-class="">   4   20   53   53 -NODE|</span>
-<span
-class="">   4   20   53   53 =EOL |\x0a</span>
-<span
-class="">   5    0   54   54 -PAIR|</span>
-<span
-class="">   5    0   54   54 -MAP |</span>
-<span
-class="">   5    0   54   54 -NODE|</span>
-<span
-class="">   5    0   54   54 -SEQ |</span>
-<span
-class="">   5    0   54   54 -NODE|</span>
-<span
-class="">   5    0   54   54 -PAIR|</span>
-<span
-class="">   5    0   54   54 -MAP |</span>
-<span
-class="">   5    0   54   54 -NODE|</span>
-<span
-class="">   5    0   54   54 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">foo:</span>
-<span
-class="">  !!seq</span>
-<span
-class="">  - !!str a</span>
-<span
-class="">  - !!map</span>
-<span
-class="">    key: !!str value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">foo: !!seq</span>
-<span
-class="">- !!str a</span>
-<span
-class="">- !!map</span>
-<span
-class="">  key: !!str value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">foo: !!seq</span>
-<span
-class="">- !!str a</span>
-<span
-class="">- !!map</span>
-<span
-class="">  key: !!str value</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">foo: !!seq</span>
-<span
-class="">- !!str &#39;a&#39;</span>
-<span
-class="">- !!map</span>
-<span
-class="">  key: !!str &#39;value&#39;</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">          <div class="framework framework_box_error" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Unhandled exception. YamlDotNet.Core.YamlException: (Line: 1, Col: 6, Idx: 5) - (Line: 2, Col: 3, Idx: 13): Encountered an unresolved tag &#39;tag:yaml.org,2002:seq&#39;
    at YamlDotNet.Serialization.NodeTypeResolvers.PreventUnknownTagsNodeTypeResolver.YamlDotNet.Serialization.INodeTypeResolver.Resolve(NodeEvent nodeEvent, Type&amp; currentType)
@@ -490,30 +186,6 @@ class="">  key: !!str &#39;value&#39;</span>
    at YamlDotNet.Serialization.Deserializer.Deserialize(TextReader input)
    at Program.Main(String[] commandLineArguments)
 Aborted (core dumped)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 11, in &lt;module&gt;
-    output = ruamel.yaml.emit(events)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1058, in emit
-    dumper.emit(event)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 254, in emit
-    self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 630, in expect_first_block_sequence_item
-    return self.expect_block_sequence_item(first=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 651, in expect_block_sequence_item
-    self.expect_node(sequence=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 419, in expect_node
-    self.process_tag()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 801, in process_tag
-    self.style = self.choose_scalar_style()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/emitter.py&quot;, line 836, in choose_scalar_style
-    self.event.implicit[0] or not self.event.implicit[2]
-IndexError: tuple index out of range
 </pre>
  </div>
 
@@ -536,7 +208,106 @@ IndexError: tuple index out of range
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|foo
+   1    3    3    3 -VAL |
+   1    3    3    3 -NODE|
+   1    3    3    3 =SYNX|:
+   1    4    4    4 +NODE|
+   1    4    4    4 =WSPC|.
+   1    5    5    5 +PROP|
+   1    5    5    5 +TAG |
+   1    5    5    5 +HAND|
+   1    5    5    5 =SYNX|!
+   1    6    6    6 =SYNX|!
+   1    7    7    7 -HAND|
+   1    7    7    7 =META|seq
+   1   10   10   10 -TAG |
+   1   10   10   10 -PROP|
+   1   10   10   10 =EOL |\x0a
+   2    0   11   11 +SEQ |
+   2    0   11   11 =DENT|..
+   2    2   13   13 =SYNX|-
+   2    3   14   14 =WSPC|.
+   2    4   15   15 +NODE|
+   2    4   15   15 +PROP|
+   2    4   15   15 +TAG |
+   2    4   15   15 +HAND|
+   2    4   15   15 =SYNX|!
+   2    5   16   16 =SYNX|!
+   2    6   17   17 -HAND|
+   2    6   17   17 =META|str
+   2    9   20   20 -TAG |
+   2    9   20   20 -PROP|
+   2    9   20   20 =WSPC|.
+   2   10   21   21 +VAL |
+   2   10   21   21 =TEXT|a
+   2   11   22   22 -VAL |
+   2   11   22   22 -NODE|
+   2   11   22   22 =EOL |\x0a
+   3    0   23   23 =DENT|..
+   3    2   25   25 =SYNX|-
+   3    3   26   26 +NODE|
+   3    3   26   26 =WSPC|.
+   3    4   27   27 +PROP|
+   3    4   27   27 +TAG |
+   3    4   27   27 +HAND|
+   3    4   27   27 =SYNX|!
+   3    5   28   28 =SYNX|!
+   3    6   29   29 -HAND|
+   3    6   29   29 =META|map
+   3    9   32   32 -TAG |
+   3    9   32   32 -PROP|
+   3    9   32   32 =EOL |\x0a
+   4    0   33   33 +MAP |
+   4    0   33   33 =DENT|....
+   4    4   37   37 +PAIR|
+   4    4   37   37 +NODE|
+   4    4   37   37 +VAL |
+   4    4   37   37 =TEXT|key
+   4    7   40   40 -VAL |
+   4    7   40   40 -NODE|
+   4    7   40   40 =SYNX|:
+   4    8   41   41 =WSPC|.
+   4    9   42   42 +NODE|
+   4    9   42   42 +PROP|
+   4    9   42   42 +TAG |
+   4    9   42   42 +HAND|
+   4    9   42   42 =SYNX|!
+   4   10   43   43 =SYNX|!
+   4   11   44   44 -HAND|
+   4   11   44   44 =META|str
+   4   14   47   47 -TAG |
+   4   14   47   47 -PROP|
+   4   14   47   47 =WSPC|.
+   4   15   48   48 +VAL |
+   4   15   48   48 =TEXT|value
+   4   20   53   53 -VAL |
+   4   20   53   53 -NODE|
+   4   20   53   53 =EOL |\x0a
+   5    0   54   54 -PAIR|
+   5    0   54   54 -MAP |
+   5    0   54   54 -NODE|
+   5    0   54   54 -SEQ |
+   5    0   54   54 -NODE|
+   5    0   54   54 -PAIR|
+   5    0   54   54 -MAP |
+   5    0   54   54 -NODE|
+   5    0   54   54 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;foo&#39; =&gt; [

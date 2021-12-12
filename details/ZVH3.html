@@ -30,14 +30,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/ZVH3.tml">&test-Z
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Parse error: did not find expected &#39;-&#39; indicator
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
+   <div class="framework framework_box_invalid_incorrect" id="hs-reference-yeast">
 <h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>Line  Col Char Byte Token|Content
    1    0    0    0 +DOC |
@@ -90,15 +83,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/ZVH3.tml">&test-Z
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:2: error: wrongly indented sequence item
- - item1
- ^
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:2: error: wrongly indented sequence item
  - item1
  ^
@@ -321,32 +305,6 @@ YAMLParseError: All sequence items must start at the same column at line 2, colu
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: All sequence items must start at the same column at line 2, column 2:
-
-- key: value
- - item1
- ^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:21:21)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:17:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-    at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-    at compose.next (&lt;anonymous&gt;)
-    at Function.from (&lt;anonymous&gt;)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 2:2: did not find expected &#39;-&#39; indicator
@@ -358,7 +316,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x563c520eaf97
+	[C]: at 0x55974ac8ff97
 </pre>
  </div>
 
@@ -422,18 +380,6 @@ YAML      : &quot;- item1\n&quot;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 2
-Column    : 2
-Message   : Expected SEQ
-Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 239
-YAML      : &quot;- item1\n&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-json">
 <h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
@@ -448,18 +394,6 @@ while parsing a block collection at line: 1, column: 1
 
   <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-perl">
 <h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
-
-    did not find expected &#39;-&#39; indicator
-
-was found at , line: 2, column: 2
-while parsing a block collection at line: 1, column: 1
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::PP::LibYAML Error: The problem:
 
     did not find expected &#39;-&#39; indicator
@@ -647,29 +581,6 @@ expected &lt;block end&gt;, but found &#39;&lt;block sequence start&gt;&#39;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-pyyaml-yaml&quot;, line 8, in &lt;module&gt;
-    for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
-    while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 393, in parse_block_sequence_entry
-    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
-yaml.parser.ParserError: while parsing a block collection
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
-    - key: value
-    ^
-expected &lt;block end&gt;, but found &#39;&lt;block sequence start&gt;&#39;
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 2:
-     - item1
-     ^
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
@@ -750,29 +661,6 @@ expected &lt;block end&gt;, but found &#39;&lt;block sequence start&gt;&#39;
     node = self.compose_sequence_node(anchor)
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 179, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 525, in parse_block_sequence_entry
-    token.start_mark,
-ruamel.yaml.parser.ParserError: while parsing a block collection
-  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
-    - key: value
-    ^ (line: 1)
-expected &lt;block end&gt;, but found &#39;&lt;block sequence start&gt;&#39;
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 2:
-     - item1
-     ^ (line: 2)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
-    while loader._parser.check_event():
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
     self.current_event = self.state()
   File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 525, in parse_block_sequence_entry

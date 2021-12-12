@@ -171,521 +171,7 @@ tie-fighter: &#39;|\-*-/|&#39;
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.☺&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.\u263A&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +MAP |</span>
-<span
-class="">   1    0    0    0 +PAIR|</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +VAL |</span>
-<span
-class="">   1    0    0    0 =TEXT|unicode</span>
-<span
-class="">   1    7    7    7 -VAL |</span>
-<span
-class="">   1    7    7    7 -NODE|</span>
-<span
-class="">   1    7    7    7 =SYNX|:</span>
-<span
-class="">   1    8    8    8 =WSPC|.</span>
-<span
-class="">   1    9    9    9 +NODE|</span>
-<span
-class="">   1    9    9    9 +VAL |</span>
-<span
-class="">   1    9    9    9 =SYNX|&quot;</span>
-<span
-class="">   1   10   10   10 =TEXT|Sosa.did.fine.</span>
-<span
-class="">   1   24   24   24 +ESC |</span>
-<span
-class="">   1   24   24   24 =SYNX|\x5c</span>
-<span
-class="">   1   25   25   25 =SYNX|u</span>
-<span
-class="">   1   26   26   26 =META|263A</span>
-<span
-class="">   1   30   30   30 -ESC |</span>
-<span
-class="">   1   30   30   30 =SYNX|&quot;</span>
-<span
-class="">   1   31   31   31 -VAL |</span>
-<span
-class="">   1   31   31   31 -NODE|</span>
-<span
-class="">   1   31   31   31 =EOL |\x0a</span>
-<span
-class="">   2    0   32   32 -PAIR|</span>
-<span
-class="">   2    0   32   32 +PAIR|</span>
-<span
-class="">   2    0   32   32 +NODE|</span>
-<span
-class="">   2    0   32   32 +VAL |</span>
-<span
-class="">   2    0   32   32 =TEXT|control</span>
-<span
-class="">   2    7   39   39 -VAL |</span>
-<span
-class="">   2    7   39   39 -NODE|</span>
-<span
-class="">   2    7   39   39 =SYNX|:</span>
-<span
-class="">   2    8   40   40 =WSPC|.</span>
-<span
-class="">   2    9   41   41 +NODE|</span>
-<span
-class="">   2    9   41   41 +VAL |</span>
-<span
-class="">   2    9   41   41 =SYNX|&quot;</span>
-<span
-class="">   2   10   42   42 +ESC |</span>
-<span
-class="">   2   10   42   42 =SYNX|\x5c</span>
-<span
-class="">   2   11   43   43 =META|b</span>
-<span
-class="">   2   12   44   44 -ESC |</span>
-<span
-class="">   2   12   44   44 =TEXT|1998</span>
-<span
-class="">   2   16   48   48 +ESC |</span>
-<span
-class="">   2   16   48   48 =SYNX|\x5c</span>
-<span
-class="">   2   17   49   49 =META|t</span>
-<span
-class="">   2   18   50   50 -ESC |</span>
-<span
-class="">   2   18   50   50 =TEXT|1999</span>
-<span
-class="">   2   22   54   54 +ESC |</span>
-<span
-class="">   2   22   54   54 =SYNX|\x5c</span>
-<span
-class="">   2   23   55   55 =META|t</span>
-<span
-class="">   2   24   56   56 -ESC |</span>
-<span
-class="">   2   24   56   56 =TEXT|2000</span>
-<span
-class="">   2   28   60   60 +ESC |</span>
-<span
-class="">   2   28   60   60 =SYNX|\x5c</span>
-<span
-class="">   2   29   61   61 =META|n</span>
-<span
-class="">   2   30   62   62 -ESC |</span>
-<span
-class="">   2   30   62   62 =SYNX|&quot;</span>
-<span
-class="">   2   31   63   63 -VAL |</span>
-<span
-class="">   2   31   63   63 -NODE|</span>
-<span
-class="">   2   31   63   63 =EOL |\x0a</span>
-<span
-class="">   3    0   64   64 -PAIR|</span>
-<span
-class="">   3    0   64   64 +PAIR|</span>
-<span
-class="">   3    0   64   64 +NODE|</span>
-<span
-class="">   3    0   64   64 +VAL |</span>
-<span
-class="">   3    0   64   64 =TEXT|hex.esc</span>
-<span
-class="">   3    7   71   71 -VAL |</span>
-<span
-class="">   3    7   71   71 -NODE|</span>
-<span
-class="">   3    7   71   71 =SYNX|:</span>
-<span
-class="">   3    8   72   72 =WSPC|.</span>
-<span
-class="">   3    9   73   73 +NODE|</span>
-<span
-class="">   3    9   73   73 +VAL |</span>
-<span
-class="">   3    9   73   73 =SYNX|&quot;</span>
-<span
-class="">   3   10   74   74 +ESC |</span>
-<span
-class="">   3   10   74   74 =SYNX|\x5c</span>
-<span
-class="">   3   11   75   75 =SYNX|x</span>
-<span
-class="">   3   12   76   76 =META|0d</span>
-<span
-class="">   3   14   78   78 -ESC |</span>
-<span
-class="">   3   14   78   78 +ESC |</span>
-<span
-class="">   3   14   78   78 =SYNX|\x5c</span>
-<span
-class="">   3   15   79   79 =SYNX|x</span>
-<span
-class="">   3   16   80   80 =META|0a</span>
-<span
-class="">   3   18   82   82 -ESC |</span>
-<span
-class="">   3   18   82   82 =TEXT|.is.</span>
-<span
-class="">   3   22   86   86 +ESC |</span>
-<span
-class="">   3   22   86   86 =SYNX|\x5c</span>
-<span
-class="">   3   23   87   87 =META|r</span>
-<span
-class="">   3   24   88   88 -ESC |</span>
-<span
-class="">   3   24   88   88 +ESC |</span>
-<span
-class="">   3   24   88   88 =SYNX|\x5c</span>
-<span
-class="">   3   25   89   89 =META|n</span>
-<span
-class="">   3   26   90   90 -ESC |</span>
-<span
-class="">   3   26   90   90 =SYNX|&quot;</span>
-<span
-class="">   3   27   91   91 -VAL |</span>
-<span
-class="">   3   27   91   91 -NODE|</span>
-<span
-class="">   3   27   91   91 =EOL |\x0a</span>
-<span
-class="">   4    0   92   92 =EOL |\x0a</span>
-<span
-class="">   5    0   93   93 -PAIR|</span>
-<span
-class="">   5    0   93   93 +PAIR|</span>
-<span
-class="">   5    0   93   93 +NODE|</span>
-<span
-class="">   5    0   93   93 +VAL |</span>
-<span
-class="">   5    0   93   93 =TEXT|single</span>
-<span
-class="">   5    6   99   99 -VAL |</span>
-<span
-class="">   5    6   99   99 -NODE|</span>
-<span
-class="">   5    6   99   99 =SYNX|:</span>
-<span
-class="">   5    7  100  100 =WSPC|.</span>
-<span
-class="">   5    8  101  101 +NODE|</span>
-<span
-class="">   5    8  101  101 +VAL |</span>
-<span
-class="">   5    8  101  101 =SYNX|&#39;</span>
-<span
-class="">   5    9  102  102 =TEXT|&quot;Howdy!&quot;.he.cried.</span>
-<span
-class="">   5   27  120  120 =SYNX|&#39;</span>
-<span
-class="">   5   28  121  121 -VAL |</span>
-<span
-class="">   5   28  121  121 -NODE|</span>
-<span
-class="">   5   28  121  121 =EOL |\x0a</span>
-<span
-class="">   6    0  122  122 -PAIR|</span>
-<span
-class="">   6    0  122  122 +PAIR|</span>
-<span
-class="">   6    0  122  122 +NODE|</span>
-<span
-class="">   6    0  122  122 +VAL |</span>
-<span
-class="">   6    0  122  122 =TEXT|quoted</span>
-<span
-class="">   6    6  128  128 -VAL |</span>
-<span
-class="">   6    6  128  128 -NODE|</span>
-<span
-class="">   6    6  128  128 =SYNX|:</span>
-<span
-class="">   6    7  129  129 =WSPC|.</span>
-<span
-class="">   6    8  130  130 +NODE|</span>
-<span
-class="">   6    8  130  130 +VAL |</span>
-<span
-class="">   6    8  130  130 =SYNX|&#39;</span>
-<span
-class="">   6    9  131  131 =TEXT|.#.Not.a.</span>
-<span
-class="">   6   18  140  140 +ESC |</span>
-<span
-class="">   6   18  140  140 =SYNX|&#39;</span>
-<span
-class="">   6   19  141  141 =META|&#39;</span>
-<span
-class="">   6   20  142  142 -ESC |</span>
-<span
-class="">   6   20  142  142 =TEXT|comment</span>
-<span
-class="">   6   27  149  149 +ESC |</span>
-<span
-class="">   6   27  149  149 =SYNX|&#39;</span>
-<span
-class="">   6   28  150  150 =META|&#39;</span>
-<span
-class="">   6   29  151  151 -ESC |</span>
-<span
-class="">   6   29  151  151 =TEXT|.</span>
-<span
-class="">   6   30  152  152 =SYNX|&#39;</span>
-<span
-class="">   6   31  153  153 -VAL |</span>
-<span
-class="">   6   31  153  153 -NODE|</span>
-<span
-class="">   6   31  153  153 =EOL |\x0a</span>
-<span
-class="">   7    0  154  154 -PAIR|</span>
-<span
-class="">   7    0  154  154 +PAIR|</span>
-<span
-class="">   7    0  154  154 +NODE|</span>
-<span
-class="">   7    0  154  154 +VAL |</span>
-<span
-class="">   7    0  154  154 =TEXT|tie-fighter</span>
-<span
-class="">   7   11  165  165 -VAL |</span>
-<span
-class="">   7   11  165  165 -NODE|</span>
-<span
-class="">   7   11  165  165 =SYNX|:</span>
-<span
-class="">   7   12  166  166 =WSPC|.</span>
-<span
-class="">   7   13  167  167 +NODE|</span>
-<span
-class="">   7   13  167  167 +VAL |</span>
-<span
-class="">   7   13  167  167 =SYNX|&#39;</span>
-<span
-class="">   7   14  168  168 =TEXT||\x5c-*-/|</span>
-<span
-class="">   7   21  175  175 =SYNX|&#39;</span>
-<span
-class="">   7   22  176  176 -VAL |</span>
-<span
-class="">   7   22  176  176 -NODE|</span>
-<span
-class="">   7   22  176  176 =EOL |\x0a</span>
-<span
-class="">   8    0  177  177 -PAIR|</span>
-<span
-class="">   8    0  177  177 -MAP |</span>
-<span
-class="">   8    0  177  177 -NODE|</span>
-<span
-class="">   8    0  177  177 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.☺&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class=""></span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.☺&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.☺&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.\u263A&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">unicode: &quot;Sosa did fine.\u263A&quot;</span>
-<span
-class="">control: &quot;\b1998\t1999\t2000\n&quot;</span>
-<span
-class="">hex esc: &quot;\r\n is \r\n&quot;</span>
-<span
-class="">single: &#39;&quot;Howdy!&quot; he cried.&#39;</span>
-<span
-class="">quoted: &#39; # Not a &#39;&#39;comment&#39;&#39;.&#39;</span>
-<span
-class="">tie-fighter: &#39;|\-*-/|&#39;</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">{</span>
-<span
-class="">  control     =&gt; &quot;\b1998\t1999\t2000\n&quot;.Str,</span>
-<span
-class="">  hex esc     =&gt; &quot;\r\n is \r\n&quot;.Str,</span>
-<span
-class="">  quoted      =&gt; &quot; # Not a &#39;comment&#39;.&quot;.Str,</span>
-<span
-class="">  single      =&gt; &quot;\&quot;Howdy!\&quot; he cried.&quot;.Str,</span>
-<span
-class="">  tie-fighter =&gt; &quot;|\\-*-/|&quot;.Str,</span>
-<span
-class="">  unicode     =&gt; &quot;Sosa did fine.☺&quot;.Str,</span>
-<span
-class="">}</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">parse error: Invalid string: control characters from U+0000 through U+001F must be escaped at line 1, column 64</span>
@@ -759,7 +245,175 @@ class="">}</span>
  </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_na" id="perl-pp-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|unicode
+   1    7    7    7 -VAL |
+   1    7    7    7 -NODE|
+   1    7    7    7 =SYNX|:
+   1    8    8    8 =WSPC|.
+   1    9    9    9 +NODE|
+   1    9    9    9 +VAL |
+   1    9    9    9 =SYNX|&quot;
+   1   10   10   10 =TEXT|Sosa.did.fine.
+   1   24   24   24 +ESC |
+   1   24   24   24 =SYNX|\x5c
+   1   25   25   25 =SYNX|u
+   1   26   26   26 =META|263A
+   1   30   30   30 -ESC |
+   1   30   30   30 =SYNX|&quot;
+   1   31   31   31 -VAL |
+   1   31   31   31 -NODE|
+   1   31   31   31 =EOL |\x0a
+   2    0   32   32 -PAIR|
+   2    0   32   32 +PAIR|
+   2    0   32   32 +NODE|
+   2    0   32   32 +VAL |
+   2    0   32   32 =TEXT|control
+   2    7   39   39 -VAL |
+   2    7   39   39 -NODE|
+   2    7   39   39 =SYNX|:
+   2    8   40   40 =WSPC|.
+   2    9   41   41 +NODE|
+   2    9   41   41 +VAL |
+   2    9   41   41 =SYNX|&quot;
+   2   10   42   42 +ESC |
+   2   10   42   42 =SYNX|\x5c
+   2   11   43   43 =META|b
+   2   12   44   44 -ESC |
+   2   12   44   44 =TEXT|1998
+   2   16   48   48 +ESC |
+   2   16   48   48 =SYNX|\x5c
+   2   17   49   49 =META|t
+   2   18   50   50 -ESC |
+   2   18   50   50 =TEXT|1999
+   2   22   54   54 +ESC |
+   2   22   54   54 =SYNX|\x5c
+   2   23   55   55 =META|t
+   2   24   56   56 -ESC |
+   2   24   56   56 =TEXT|2000
+   2   28   60   60 +ESC |
+   2   28   60   60 =SYNX|\x5c
+   2   29   61   61 =META|n
+   2   30   62   62 -ESC |
+   2   30   62   62 =SYNX|&quot;
+   2   31   63   63 -VAL |
+   2   31   63   63 -NODE|
+   2   31   63   63 =EOL |\x0a
+   3    0   64   64 -PAIR|
+   3    0   64   64 +PAIR|
+   3    0   64   64 +NODE|
+   3    0   64   64 +VAL |
+   3    0   64   64 =TEXT|hex.esc
+   3    7   71   71 -VAL |
+   3    7   71   71 -NODE|
+   3    7   71   71 =SYNX|:
+   3    8   72   72 =WSPC|.
+   3    9   73   73 +NODE|
+   3    9   73   73 +VAL |
+   3    9   73   73 =SYNX|&quot;
+   3   10   74   74 +ESC |
+   3   10   74   74 =SYNX|\x5c
+   3   11   75   75 =SYNX|x
+   3   12   76   76 =META|0d
+   3   14   78   78 -ESC |
+   3   14   78   78 +ESC |
+   3   14   78   78 =SYNX|\x5c
+   3   15   79   79 =SYNX|x
+   3   16   80   80 =META|0a
+   3   18   82   82 -ESC |
+   3   18   82   82 =TEXT|.is.
+   3   22   86   86 +ESC |
+   3   22   86   86 =SYNX|\x5c
+   3   23   87   87 =META|r
+   3   24   88   88 -ESC |
+   3   24   88   88 +ESC |
+   3   24   88   88 =SYNX|\x5c
+   3   25   89   89 =META|n
+   3   26   90   90 -ESC |
+   3   26   90   90 =SYNX|&quot;
+   3   27   91   91 -VAL |
+   3   27   91   91 -NODE|
+   3   27   91   91 =EOL |\x0a
+   4    0   92   92 =EOL |\x0a
+   5    0   93   93 -PAIR|
+   5    0   93   93 +PAIR|
+   5    0   93   93 +NODE|
+   5    0   93   93 +VAL |
+   5    0   93   93 =TEXT|single
+   5    6   99   99 -VAL |
+   5    6   99   99 -NODE|
+   5    6   99   99 =SYNX|:
+   5    7  100  100 =WSPC|.
+   5    8  101  101 +NODE|
+   5    8  101  101 +VAL |
+   5    8  101  101 =SYNX|&#39;
+   5    9  102  102 =TEXT|&quot;Howdy!&quot;.he.cried.
+   5   27  120  120 =SYNX|&#39;
+   5   28  121  121 -VAL |
+   5   28  121  121 -NODE|
+   5   28  121  121 =EOL |\x0a
+   6    0  122  122 -PAIR|
+   6    0  122  122 +PAIR|
+   6    0  122  122 +NODE|
+   6    0  122  122 +VAL |
+   6    0  122  122 =TEXT|quoted
+   6    6  128  128 -VAL |
+   6    6  128  128 -NODE|
+   6    6  128  128 =SYNX|:
+   6    7  129  129 =WSPC|.
+   6    8  130  130 +NODE|
+   6    8  130  130 +VAL |
+   6    8  130  130 =SYNX|&#39;
+   6    9  131  131 =TEXT|.#.Not.a.
+   6   18  140  140 +ESC |
+   6   18  140  140 =SYNX|&#39;
+   6   19  141  141 =META|&#39;
+   6   20  142  142 -ESC |
+   6   20  142  142 =TEXT|comment
+   6   27  149  149 +ESC |
+   6   27  149  149 =SYNX|&#39;
+   6   28  150  150 =META|&#39;
+   6   29  151  151 -ESC |
+   6   29  151  151 =TEXT|.
+   6   30  152  152 =SYNX|&#39;
+   6   31  153  153 -VAL |
+   6   31  153  153 -NODE|
+   6   31  153  153 =EOL |\x0a
+   7    0  154  154 -PAIR|
+   7    0  154  154 +PAIR|
+   7    0  154  154 +NODE|
+   7    0  154  154 +VAL |
+   7    0  154  154 =TEXT|tie-fighter
+   7   11  165  165 -VAL |
+   7   11  165  165 -NODE|
+   7   11  165  165 =SYNX|:
+   7   12  166  166 =WSPC|.
+   7   13  167  167 +NODE|
+   7   13  167  167 +VAL |
+   7   13  167  167 =SYNX|&#39;
+   7   14  168  168 =TEXT||\x5c-*-/|
+   7   21  175  175 =SYNX|&#39;
+   7   22  176  176 -VAL |
+   7   22  176  176 -NODE|
+   7   22  176  176 =EOL |\x0a
+   8    0  177  177 -PAIR|
+   8    0  177  177 -MAP |
+   8    0  177  177 -NODE|
+   8    0  177  177 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;control&#39; =&gt; &#39;1998	1999	2000
@@ -888,6 +542,21 @@ class="">}</span>
  &#39;single&#39;: &#39;&quot;Howdy!&quot; he cried.&#39;,
  &#39;tie-fighter&#39;: &#39;|\\-*-/|&#39;,
  &#39;unicode&#39;: &#39;Sosa did fine.☺&#39;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  control     =&gt; &quot;\b1998\t1999\t2000\n&quot;.Str,
+  hex esc     =&gt; &quot;\r\n is \r\n&quot;.Str,
+  quoted      =&gt; &quot; # Not a &#39;comment&#39;.&quot;.Str,
+  single      =&gt; &quot;\&quot;Howdy!\&quot; he cried.&quot;.Str,
+  tie-fighter =&gt; &quot;|\\-*-/|&quot;.Str,
+  unicode     =&gt; &quot;Sosa did fine.☺&quot;.Str,
+}
 </pre>
 
  </div>

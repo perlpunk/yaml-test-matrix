@@ -47,15 +47,6 @@ key: value
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-key: value
----
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -151,17 +142,6 @@ undef
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-key: value
-...
-%YAML 1.2
----
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
@@ -217,17 +197,6 @@ None
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-key: value
-%YAML 1.2
----
-...
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -263,17 +232,6 @@ None
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>---
-key: value
-%YAML 1.2
----
-...
-</pre>
- </div>
-
-
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:7: error: missing explicit document end marker before directive(s)
@@ -291,15 +249,6 @@ key: value
 
   <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:7: error: missing explicit document end marker before directive(s)
-%YAML 1.2
-      ^~~
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:7: error: missing explicit document end marker before directive(s)
 %YAML 1.2
       ^~~
@@ -451,32 +400,6 @@ key: value
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-yaml:8
-  if (doc.errors.length !== 0) throw doc.errors[0]
-                               ^
-
-YAMLParseError: Plain value cannot start with directive indicator character % at line 3, column 1:
-
-key: value
-%YAML 1.2
-^
-
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at _onError (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:10:42)
-    at plainValue (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:68:9)
-    at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:14:21)
-    at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:51:15)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 3:1: found incompatible YAML document
@@ -486,7 +409,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x557dbf2eef97
+	[C]: at 0x55f37285bf97
 </pre>
  </div>
 
@@ -546,19 +469,6 @@ Got       : YAML_DIRECTIVE
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
 YAML      : &quot;%YAML 1.2&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
-Column    : 1
-Expected  : ALIAS COLON DOC_END DOC_START EOL PLAIN QUESTION QUOTED
-Got       : YAML_DIRECTIVE
-Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;%YAML 1.2&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 

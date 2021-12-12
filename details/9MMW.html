@@ -101,345 +101,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MMW.tml">&test-9
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_diff" id="c-libfyaml-yaml">
-<h3><a href="#c-libfyaml-yaml">c-libfyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- [</span>
-<span
-class="">    {</span>
-<span
-class="">      YAML: separate</span>
-<span
-class="">    }</span>
-<span
-class="">  ]</span>
-<span
-class="">- [</span>
-<span
-class="">    {</span>
-<span
-class="">      &quot;JSON like&quot;: adjacent</span>
-<span
-class="">    }</span>
-<span
-class="">  ]</span>
-<span
-class="">- [</span>
-<span
-class="">    {</span>
-<span
-class="">      ? {</span>
-<span
-class="">        JSON: like</span>
-<span
-class="">      } : adjacent</span>
-<span
-class="">    }</span>
-<span
-class="">  ]</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="c-libyaml-yaml">
-<h3><a href="#c-libyaml-yaml">c-libyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- - YAML: separate</span>
-<span
-class="">- - &quot;JSON like&quot;: adjacent</span>
-<span
-class="">- - ? JSON: like</span>
-<span
-class="">    : adjacent</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="hs-reference-yeast">
-<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">Line  Col Char Byte Token|Content</span>
-<span
-class="">   1    0    0    0 +DOC |</span>
-<span
-class="">   1    0    0    0 +NODE|</span>
-<span
-class="">   1    0    0    0 +SEQ |</span>
-<span
-class="">   1    0    0    0 =SYNX|-</span>
-<span
-class="">   1    1    1    1 =WSPC|.</span>
-<span
-class="">   1    2    2    2 +NODE|</span>
-<span
-class="">   1    2    2    2 +SEQ |</span>
-<span
-class="">   1    2    2    2 =SYNX|[</span>
-<span
-class="">   1    3    3    3 =WSPC|.</span>
-<span
-class="">   1    4    4    4 +MAP |</span>
-<span
-class="">   1    4    4    4 +PAIR|</span>
-<span
-class="">   1    4    4    4 +NODE|</span>
-<span
-class="">   1    4    4    4 +VAL |</span>
-<span
-class="">   1    4    4    4 =TEXT|YAML</span>
-<span
-class="">   1    8    8    8 -VAL |</span>
-<span
-class="">   1    8    8    8 -NODE|</span>
-<span
-class="">   1    8    8    8 =WSPC|.</span>
-<span
-class="">   1    9    9    9 =SYNX|:</span>
-<span
-class="">   1   10   10   10 =WSPC|.</span>
-<span
-class="">   1   11   11   11 +NODE|</span>
-<span
-class="">   1   11   11   11 +VAL |</span>
-<span
-class="">   1   11   11   11 =TEXT|separate</span>
-<span
-class="">   1   19   19   19 -VAL |</span>
-<span
-class="">   1   19   19   19 -NODE|</span>
-<span
-class="">   1   19   19   19 -PAIR|</span>
-<span
-class="">   1   19   19   19 -MAP |</span>
-<span
-class="">   1   19   19   19 =WSPC|.</span>
-<span
-class="">   1   20   20   20 =SYNX|]</span>
-<span
-class="">   1   21   21   21 -SEQ |</span>
-<span
-class="">   1   21   21   21 -NODE|</span>
-<span
-class="">   1   21   21   21 =EOL |\x0a</span>
-<span
-class="">   2    0   22   22 =SYNX|-</span>
-<span
-class="">   2    1   23   23 =WSPC|.</span>
-<span
-class="">   2    2   24   24 +NODE|</span>
-<span
-class="">   2    2   24   24 +SEQ |</span>
-<span
-class="">   2    2   24   24 =SYNX|[</span>
-<span
-class="">   2    3   25   25 =WSPC|.</span>
-<span
-class="">   2    4   26   26 +MAP |</span>
-<span
-class="">   2    4   26   26 +PAIR|</span>
-<span
-class="">   2    4   26   26 +NODE|</span>
-<span
-class="">   2    4   26   26 +VAL |</span>
-<span
-class="">   2    4   26   26 =SYNX|&quot;</span>
-<span
-class="">   2    5   27   27 =TEXT|JSON.like</span>
-<span
-class="">   2   14   36   36 =SYNX|&quot;</span>
-<span
-class="">   2   15   37   37 -VAL |</span>
-<span
-class="">   2   15   37   37 -NODE|</span>
-<span
-class="">   2   15   37   37 =SYNX|:</span>
-<span
-class="">   2   16   38   38 +NODE|</span>
-<span
-class="">   2   16   38   38 +VAL |</span>
-<span
-class="">   2   16   38   38 =TEXT|adjacent</span>
-<span
-class="">   2   24   46   46 -VAL |</span>
-<span
-class="">   2   24   46   46 -NODE|</span>
-<span
-class="">   2   24   46   46 -PAIR|</span>
-<span
-class="">   2   24   46   46 -MAP |</span>
-<span
-class="">   2   24   46   46 =WSPC|.</span>
-<span
-class="">   2   25   47   47 =SYNX|]</span>
-<span
-class="">   2   26   48   48 -SEQ |</span>
-<span
-class="">   2   26   48   48 -NODE|</span>
-<span
-class="">   2   26   48   48 =EOL |\x0a</span>
-<span
-class="">   3    0   49   49 =SYNX|-</span>
-<span
-class="">   3    1   50   50 =WSPC|.</span>
-<span
-class="">   3    2   51   51 +NODE|</span>
-<span
-class="">   3    2   51   51 +SEQ |</span>
-<span
-class="">   3    2   51   51 =SYNX|[</span>
-<span
-class="">   3    3   52   52 =WSPC|.</span>
-<span
-class="">   3    4   53   53 +MAP |</span>
-<span
-class="">   3    4   53   53 +PAIR|</span>
-<span
-class="">   3    4   53   53 +NODE|</span>
-<span
-class="">   3    4   53   53 +MAP |</span>
-<span
-class="">   3    4   53   53 =SYNX|{</span>
-<span
-class="">   3    5   54   54 +PAIR|</span>
-<span
-class="">   3    5   54   54 +NODE|</span>
-<span
-class="">   3    5   54   54 +VAL |</span>
-<span
-class="">   3    5   54   54 =TEXT|JSON</span>
-<span
-class="">   3    9   58   58 -VAL |</span>
-<span
-class="">   3    9   58   58 -NODE|</span>
-<span
-class="">   3    9   58   58 =SYNX|:</span>
-<span
-class="">   3   10   59   59 =WSPC|.</span>
-<span
-class="">   3   11   60   60 +NODE|</span>
-<span
-class="">   3   11   60   60 +VAL |</span>
-<span
-class="">   3   11   60   60 =TEXT|like</span>
-<span
-class="">   3   15   64   64 -VAL |</span>
-<span
-class="">   3   15   64   64 -NODE|</span>
-<span
-class="">   3   15   64   64 -PAIR|</span>
-<span
-class="">   3   15   64   64 =SYNX|}</span>
-<span
-class="">   3   16   65   65 -MAP |</span>
-<span
-class="">   3   16   65   65 -NODE|</span>
-<span
-class="">   3   16   65   65 =SYNX|:</span>
-<span
-class="">   3   17   66   66 +NODE|</span>
-<span
-class="">   3   17   66   66 +VAL |</span>
-<span
-class="">   3   17   66   66 =TEXT|adjacent</span>
-<span
-class="">   3   25   74   74 -VAL |</span>
-<span
-class="">   3   25   74   74 -NODE|</span>
-<span
-class="">   3   25   74   74 -PAIR|</span>
-<span
-class="">   3   25   74   74 -MAP |</span>
-<span
-class="">   3   25   74   74 =WSPC|.</span>
-<span
-class="">   3   26   75   75 =SYNX|]</span>
-<span
-class="">   3   27   76   76 -SEQ |</span>
-<span
-class="">   3   27   76   76 -NODE|</span>
-<span
-class="">   3   27   76   76 =EOL |\x0a</span>
-<span
-class="">   4    0   77   77 -SEQ |</span>
-<span
-class="">   4    0   77   77 -NODE|</span>
-<span
-class="">   4    0   77   77 -DOC |</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="js-yaml-yaml">
-<h3><a href="#js-yaml-yaml">js-yaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- [ { YAML: separate } ]</span>
-<span
-class="">- [ { &quot;JSON like&quot;: adjacent } ]</span>
-<span
-class="">- [</span>
-<span
-class="">    {</span>
-<span
-class="">        ? { JSON: like }</span>
-<span
-class="">        : adjacent</span>
-<span
-class="">      }</span>
-<span
-class="">  ]</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="perl-pplibyaml-yaml">
-<h3><a href="#perl-pplibyaml-yaml">perl-pplibyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">-[ {YAML: separate}]</span>
-<span
-class="">-[ {&quot;JSON like&quot;: adjacent}]</span>
-<span
-class="">-[{ {JSON: like}: adjacent}]</span>
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_diff" id="py-pyyaml-yaml">
-<h3><a href="#py-pyyaml-yaml">py-pyyaml-yaml</a></h3>
-<span class="status_box color_diff">&nbsp;</span>diff <br>
-
-  Got Events:
-<pre><span
-class="diff_line">- [{YAML: separate}]</span>
-<span
-class="">- [{&quot;JSON like&quot;: adjacent}]</span>
-<span
-class="">- [{? {JSON: like} : adjacent}]</span>
-</pre>
-
- </div>
-
-
- <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pp-event">
+ <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-pp-event">
 <h3><a href="#perl-pp-event">perl-pp-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
 +DOC
@@ -481,19 +143,6 @@ Got       : PLAIN
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
 YAML      : &quot;:adjacent ]&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-pp-yaml">
-<h3><a href="#perl-pp-yaml">perl-pp-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Line      : 3
-Column    : 17
-Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
-Got       : PLAIN
-Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;:adjacent ]&quot;
-  at /yaml/bin/perl-pp-yaml line 28.
 </pre>
  </div>
 
@@ -613,29 +262,6 @@ expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
  </div>
 
 
-  <div class="framework framework_box_error" id="py-ruamel-yaml">
-<h3><a href="#py-ruamel-yaml">py-ruamel-yaml</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-yaml&quot;, line 8, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 656, in parse_flow_sequence_entry
-    token.start_mark,
-ruamel.yaml.parser.ParserError: while parsing a flow sequence
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
-    - [ &quot;JSON like&quot;:adjacent ]
-      ^ (line: 2)
-expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 16:
-    - [ &quot;JSON like&quot;:adjacent ]
-                   ^ (line: 2)
-</pre>
- </div>
-
-
   <div class="framework framework_box_error" id="raku-yamlish-raku">
 <h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
@@ -681,6 +307,117 @@ stdin:3:5: error: Non scalar keys are not allowed in JSON emit mode
   <div class="framework framework_box_na" id="hs-hsyaml-json">
 <h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[[{&quot;YAML&quot;:&quot;separate&quot;}],[{&quot;JSON like&quot;:&quot;adjacent&quot;}],[{&quot;{\&quot;JSON\&quot;:\&quot;like\&quot;}&quot;:&quot;adjacent&quot;}]]
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +SEQ |
+   1    0    0    0 =SYNX|-
+   1    1    1    1 =WSPC|.
+   1    2    2    2 +NODE|
+   1    2    2    2 +SEQ |
+   1    2    2    2 =SYNX|[
+   1    3    3    3 =WSPC|.
+   1    4    4    4 +MAP |
+   1    4    4    4 +PAIR|
+   1    4    4    4 +NODE|
+   1    4    4    4 +VAL |
+   1    4    4    4 =TEXT|YAML
+   1    8    8    8 -VAL |
+   1    8    8    8 -NODE|
+   1    8    8    8 =WSPC|.
+   1    9    9    9 =SYNX|:
+   1   10   10   10 =WSPC|.
+   1   11   11   11 +NODE|
+   1   11   11   11 +VAL |
+   1   11   11   11 =TEXT|separate
+   1   19   19   19 -VAL |
+   1   19   19   19 -NODE|
+   1   19   19   19 -PAIR|
+   1   19   19   19 -MAP |
+   1   19   19   19 =WSPC|.
+   1   20   20   20 =SYNX|]
+   1   21   21   21 -SEQ |
+   1   21   21   21 -NODE|
+   1   21   21   21 =EOL |\x0a
+   2    0   22   22 =SYNX|-
+   2    1   23   23 =WSPC|.
+   2    2   24   24 +NODE|
+   2    2   24   24 +SEQ |
+   2    2   24   24 =SYNX|[
+   2    3   25   25 =WSPC|.
+   2    4   26   26 +MAP |
+   2    4   26   26 +PAIR|
+   2    4   26   26 +NODE|
+   2    4   26   26 +VAL |
+   2    4   26   26 =SYNX|&quot;
+   2    5   27   27 =TEXT|JSON.like
+   2   14   36   36 =SYNX|&quot;
+   2   15   37   37 -VAL |
+   2   15   37   37 -NODE|
+   2   15   37   37 =SYNX|:
+   2   16   38   38 +NODE|
+   2   16   38   38 +VAL |
+   2   16   38   38 =TEXT|adjacent
+   2   24   46   46 -VAL |
+   2   24   46   46 -NODE|
+   2   24   46   46 -PAIR|
+   2   24   46   46 -MAP |
+   2   24   46   46 =WSPC|.
+   2   25   47   47 =SYNX|]
+   2   26   48   48 -SEQ |
+   2   26   48   48 -NODE|
+   2   26   48   48 =EOL |\x0a
+   3    0   49   49 =SYNX|-
+   3    1   50   50 =WSPC|.
+   3    2   51   51 +NODE|
+   3    2   51   51 +SEQ |
+   3    2   51   51 =SYNX|[
+   3    3   52   52 =WSPC|.
+   3    4   53   53 +MAP |
+   3    4   53   53 +PAIR|
+   3    4   53   53 +NODE|
+   3    4   53   53 +MAP |
+   3    4   53   53 =SYNX|{
+   3    5   54   54 +PAIR|
+   3    5   54   54 +NODE|
+   3    5   54   54 +VAL |
+   3    5   54   54 =TEXT|JSON
+   3    9   58   58 -VAL |
+   3    9   58   58 -NODE|
+   3    9   58   58 =SYNX|:
+   3   10   59   59 =WSPC|.
+   3   11   60   60 +NODE|
+   3   11   60   60 +VAL |
+   3   11   60   60 =TEXT|like
+   3   15   64   64 -VAL |
+   3   15   64   64 -NODE|
+   3   15   64   64 -PAIR|
+   3   15   64   64 =SYNX|}
+   3   16   65   65 -MAP |
+   3   16   65   65 -NODE|
+   3   16   65   65 =SYNX|:
+   3   17   66   66 +NODE|
+   3   17   66   66 +VAL |
+   3   17   66   66 =TEXT|adjacent
+   3   25   74   74 -VAL |
+   3   25   74   74 -NODE|
+   3   25   74   74 -PAIR|
+   3   25   74   74 -MAP |
+   3   25   74   74 =WSPC|.
+   3   26   75   75 =SYNX|]
+   3   27   76   76 -SEQ |
+   3   27   76   76 -NODE|
+   3   27   76   76 =EOL |\x0a
+   4    0   77   77 -SEQ |
+   4    0   77   77 -NODE|
+   4    0   77   77 -DOC |
 </pre>
 
  </div>
@@ -749,7 +486,7 @@ stdin:3:5: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x55f4790e6f97
+	[C]: at 0x562d0b14af97
 </pre>
 
  </div>
@@ -848,7 +585,7 @@ YAML      : &quot;:adjacent ]&quot;
    ],
    [
       {
-         &quot;HASH(0x562fe4aac5d0)&quot; : &quot;adjacent&quot;
+         &quot;HASH(0x555b7bb6e5d0)&quot; : &quot;adjacent&quot;
       }
    ]
 ]
@@ -872,7 +609,7 @@ YAML      : &quot;:adjacent ]&quot;
   ],
   [
     {
-      &#39;HASH(0x558e33333fd0)&#39; =&gt; &#39;adjacent&#39;
+      &#39;HASH(0x56075e0ccfd0)&#39; =&gt; &#39;adjacent&#39;
     }
   ]
 ]
