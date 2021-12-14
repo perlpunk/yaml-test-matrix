@@ -48,7 +48,7 @@ for my $lib (sort keys $list->{libraries}->%*) {
     my $runtime = $conf->{runtime};
     my $tests = $conf->{tests};
     for my $test (@$tests) {
-        next of $skip->{ lib }->{ $test };
+        next if $skip{ lib }->{ $test };
         next if $test =~ m/^(yaml)$/;
         $views{ "$lib.$test" } = {
             runtime => "alpine-runtime-$runtime",
@@ -89,6 +89,8 @@ sub compare_tests {
     say "-" x 80;
     say "Running $view";
     my $data = $args{data};
+    my $config = $views{ $view }
+        or die "View $view not supported";
 
     my ($sum_ok, $sum_diff, $sum_na, $sum_err, $sum_naerror, $sum_ni) = (0) x 6;
     my $outfile = "$matrixdir/data/$view-out.yaml";

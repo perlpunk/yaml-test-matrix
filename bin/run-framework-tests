@@ -47,7 +47,7 @@ for my $lib (sort keys $list->{libraries}->%*) {
     my $runtime = $conf->{runtime};
     my $tests = $conf->{tests};
     for my $test (@$tests) {
-        next of $skip->{ lib }->{ $test };
+        next if $skip{ lib }->{ $test };
         next if $test =~ m/^(yaml)$/;
         $views{ "$lib.$test" } = {
             runtime => "alpine-runtime-$runtime",
@@ -91,6 +91,8 @@ sub run_tests {
     my $start = time;
     my $end;
 
+    my $config = $views{ $view }
+        or die "View $view not supported";
     my $out = "$matrixdir/tmp";
     my ($emitters) = gather_framework_info($view);
 
