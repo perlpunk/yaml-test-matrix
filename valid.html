@@ -78,6 +78,10 @@ checked="checked" onchange="toggle_framework('c-libfyaml-json')">
 class="selector-json selector-dotnet" data-fw="dotnet-yamldotnet-json"
 checked="checked" onchange="toggle_framework('dotnet-yamldotnet-json')">
 <label for="fw-select-dotnet-yamldotnet-json" >dotnet yamldotnet</label><br>
+ <input type="checkbox" name="" value="1" id="fw-select-go-yaml-json"
+class="selector-json selector-go" data-fw="go-yaml-json"
+checked="checked" onchange="toggle_framework('go-yaml-json')">
+<label for="fw-select-go-yaml-json" >go yaml</label><br>
  <input type="checkbox" name="" value="1" id="fw-select-hs-hsyaml-json"
 class="selector-json selector-hs" data-fw="hs-hsyaml-json"
 checked="checked" onchange="toggle_framework('hs-hsyaml-json')">
@@ -204,6 +208,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-ruamel-event">py<br>ruamel<br>event</td>
  <td class="result c-libfyaml-json">c<br>libfyaml<br>json</td>
  <td class="result dotnet-yamldotnet-json">dotnet<br>yamldotnet<br>json</td>
+ <td class="result go-yaml-json">go<br>yaml<br>json</td>
  <td class="result hs-hsyaml-json">hs<br>hsyaml<br>json</td>
  <td class="result java-snakeyaml-json">java<br>snakeyaml<br>json</td>
  <td class="result js-jsyaml-json">js<br>jsyaml<br>json</td>
@@ -324,6 +329,12 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <span class="status_box color_json_diff">&nbsp;</span>34<br>
 <span class="status_box color_na">&nbsp;</span>24<br>
 <span class="status_box color_error">&nbsp;</span>23<br>
+</td>
+ <td class="result go-yaml-json">  <span class="status_box color_json_ok">&nbsp;</span>189<br>
+<br>
+ <span class="status_box color_json_diff">&nbsp;</span>2<br>
+<span class="status_box color_na">&nbsp;</span>24<br>
+<span class="status_box color_error">&nbsp;</span>33<br>
 </td>
  <td class="result hs-hsyaml-json">  <span class="status_box color_json_ok">&nbsp;</span>223<br>
 <br>
@@ -511,6 +522,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/V55R.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/V55R.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/V55R.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/V55R.html#java-snakeyaml-json">&nbsp;</a>
@@ -592,6 +605,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/6M2F.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/6M2F.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/6M2F.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/6M2F.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -675,6 +690,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/X38W.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/X38W.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/X38W.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/X38W.html#java-snakeyaml-json">&nbsp;</a>
@@ -756,6 +773,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/E76Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/E76Z.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/E76Z.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/E76Z.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -839,6 +858,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/W5VH.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/W5VH.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/W5VH.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/W5VH.html#java-snakeyaml-json">&nbsp;</a>
@@ -920,6 +941,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2EBW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/2EBW.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/2EBW.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/2EBW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1003,6 +1026,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FBC9.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/FBC9.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/FBC9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/FBC9.html#java-snakeyaml-json">&nbsp;</a>
@@ -1084,6 +1109,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6SLA.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/6SLA.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6SLA.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6SLA.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1167,6 +1194,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/SKE5.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/SKE5.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/SKE5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/SKE5.html#java-snakeyaml-json">&nbsp;</a>
@@ -1248,6 +1277,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6KGN.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6KGN.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6KGN.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6KGN.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1331,6 +1362,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/Y2GN.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_diff "><a class="invisible" href="details/Y2GN.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/Y2GN.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_diff "><a class="invisible" href="details/Y2GN.html#java-snakeyaml-json">&nbsp;</a>
@@ -1412,6 +1445,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8XYN.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8XYN.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/8XYN.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8XYN.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1495,6 +1530,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/2SXE.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/2SXE.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/2SXE.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/2SXE.html#java-snakeyaml-json">&nbsp;</a>
@@ -1576,6 +1613,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F2C7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/F2C7.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/F2C7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/F2C7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1659,6 +1698,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/ZH7C.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/ZH7C.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/ZH7C.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/ZH7C.html#java-snakeyaml-json">&nbsp;</a>
@@ -1740,6 +1781,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/PW8X.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/PW8X.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/PW8X.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/PW8X.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1823,6 +1866,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6H3V.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6H3V.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6H3V.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/6H3V.html#java-snakeyaml-json">&nbsp;</a>
@@ -1904,6 +1949,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7Z25.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/7Z25.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/7Z25.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7Z25.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -1987,6 +2034,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/H2RW.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/H2RW.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/H2RW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/H2RW.html#java-snakeyaml-json">&nbsp;</a>
@@ -2068,6 +2117,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/2JQS.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/2JQS.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/2JQS.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/2JQS.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -2151,6 +2202,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7W2P.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7W2P.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7W2P.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_diff "><a class="invisible" href="details/7W2P.html#java-snakeyaml-json">&nbsp;</a>
@@ -2232,6 +2285,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JTV5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/JTV5.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/JTV5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/JTV5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -2315,6 +2370,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/93JH.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/93JH.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/93JH.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/93JH.html#java-snakeyaml-json">&nbsp;</a>
@@ -2396,6 +2453,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6FWR.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6FWR.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6FWR.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6FWR.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -2479,6 +2538,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MYW6.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/MYW6.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/MYW6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/MYW6.html#java-snakeyaml-json">&nbsp;</a>
@@ -2560,6 +2621,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/753E.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/753E.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/753E.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/753E.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -2643,6 +2706,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8QBE.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/8QBE.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8QBE.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/8QBE.html#java-snakeyaml-json">&nbsp;</a>
@@ -2724,6 +2789,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3ALJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3ALJ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/3ALJ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/3ALJ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -2807,6 +2874,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/KMK3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/KMK3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/KMK3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/KMK3.html#java-snakeyaml-json">&nbsp;</a>
@@ -2888,6 +2957,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/D83L.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/D83L.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/D83L.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/D83L.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -2971,6 +3042,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/K3WX.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/K3WX.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/K3WX.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/K3WX.html#java-snakeyaml-json">&nbsp;</a>
@@ -3052,6 +3125,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5MUD.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5MUD.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/5MUD.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5MUD.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -3135,6 +3210,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/5T43.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/5T43.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5T43.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/5T43.html#java-snakeyaml-json">&nbsp;</a>
@@ -3216,6 +3293,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S7BG.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/S7BG.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/S7BG.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/S7BG.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -3299,6 +3378,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4UYU.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4UYU.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4UYU.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/4UYU.html#java-snakeyaml-json">&nbsp;</a>
@@ -3380,6 +3461,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/QT73.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/QT73.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/QT73.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/QT73.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -3463,6 +3546,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7TMG.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7TMG.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7TMG.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/7TMG.html#java-snakeyaml-json">&nbsp;</a>
@@ -3544,6 +3629,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/565N.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/565N.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_diff "><a class="invisible" href="details/565N.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/565N.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -3627,6 +3714,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/PUW8.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/PUW8.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/PUW8.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/PUW8.html#java-snakeyaml-json">&nbsp;</a>
@@ -3708,6 +3797,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S4T7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/S4T7.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/S4T7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/S4T7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -3791,6 +3882,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/HWV9.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/HWV9.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/HWV9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/HWV9.html#java-snakeyaml-json">&nbsp;</a>
@@ -3872,6 +3965,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CPZ3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/CPZ3.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/CPZ3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/CPZ3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -3955,6 +4050,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/J7VC.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/J7VC.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/J7VC.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/J7VC.html#java-snakeyaml-json">&nbsp;</a>
@@ -4036,6 +4133,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/NHX8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/NHX8.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/NHX8.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/NHX8.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -4119,6 +4218,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/AVM7.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/AVM7.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/AVM7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/AVM7.html#java-snakeyaml-json">&nbsp;</a>
@@ -4200,6 +4301,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7ZZ5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7ZZ5.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7ZZ5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7ZZ5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -4283,6 +4386,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/CFD4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/CFD4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/CFD4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/CFD4.html#java-snakeyaml-json">&nbsp;</a>
@@ -4364,6 +4469,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/NKF9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/NKF9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/NKF9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/NKF9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -4447,6 +4554,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3UYS.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/3UYS.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/3UYS.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/3UYS.html#java-snakeyaml-json">&nbsp;</a>
@@ -4528,6 +4637,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8MK2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/8MK2.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/8MK2.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8MK2.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -4611,6 +4722,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/52DL.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/52DL.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/52DL.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/52DL.html#java-snakeyaml-json">&nbsp;</a>
@@ -4692,6 +4805,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/X8DW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/X8DW.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/X8DW.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/X8DW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -4775,6 +4890,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/54T7.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/54T7.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/54T7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/54T7.html#java-snakeyaml-json">&nbsp;</a>
@@ -4856,6 +4973,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/4ABK.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/4ABK.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/4ABK.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/4ABK.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -4939,6 +5058,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MXS3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/MXS3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/MXS3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/MXS3.html#java-snakeyaml-json">&nbsp;</a>
@@ -5020,6 +5141,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DHP8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DHP8.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/DHP8.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/DHP8.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -5103,6 +5226,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/D88J.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/D88J.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/D88J.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/D88J.html#java-snakeyaml-json">&nbsp;</a>
@@ -5184,6 +5309,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/SBG9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/SBG9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/SBG9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/SBG9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -5267,6 +5394,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FUP4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/FUP4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/FUP4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/FUP4.html#java-snakeyaml-json">&nbsp;</a>
@@ -5348,6 +5477,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4MUZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4MUZ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/4MUZ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4MUZ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -5431,6 +5562,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/TS54.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/TS54.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/TS54.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/TS54.html#java-snakeyaml-json">&nbsp;</a>
@@ -5512,6 +5645,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4Q9F.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4Q9F.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4Q9F.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4Q9F.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -5595,6 +5730,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/LX3P.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/LX3P.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/LX3P.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/LX3P.html#java-snakeyaml-json">&nbsp;</a>
@@ -5676,6 +5813,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/ZWK4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/ZWK4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/ZWK4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/ZWK4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -5759,6 +5898,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/M29M.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/M29M.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/M29M.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/M29M.html#java-snakeyaml-json">&nbsp;</a>
@@ -5840,6 +5981,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/H3Z8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/H3Z8.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/H3Z8.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/H3Z8.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -5923,6 +6066,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/AZW3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/AZW3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/AZW3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/AZW3.html#java-snakeyaml-json">&nbsp;</a>
@@ -6004,6 +6149,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/6BFJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/6BFJ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/6BFJ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/6BFJ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -6087,6 +6234,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/GH63.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/GH63.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/GH63.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/GH63.html#java-snakeyaml-json">&nbsp;</a>
@@ -6168,6 +6317,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RR7F.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/RR7F.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/RR7F.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/RR7F.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -6251,6 +6402,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/F6MC.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/F6MC.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/F6MC.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/F6MC.html#java-snakeyaml-json">&nbsp;</a>
@@ -6332,6 +6485,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9FMG.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9FMG.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9FMG.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9FMG.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -6415,6 +6570,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9YRD.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9YRD.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9YRD.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/9YRD.html#java-snakeyaml-json">&nbsp;</a>
@@ -6496,6 +6653,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/EX5H.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/EX5H.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/EX5H.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/EX5H.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -6579,6 +6738,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/A984.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/A984.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/A984.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/A984.html#java-snakeyaml-json">&nbsp;</a>
@@ -6660,6 +6821,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9SA2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9SA2.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/9SA2.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9SA2.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -6743,6 +6906,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9BXH.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9BXH.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9BXH.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_diff "><a class="invisible" href="details/9BXH.html#java-snakeyaml-json">&nbsp;</a>
@@ -6824,6 +6989,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/NJ66.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/NJ66.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/NJ66.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/NJ66.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -6907,6 +7074,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8KB6.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/8KB6.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8KB6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_diff "><a class="invisible" href="details/8KB6.html#java-snakeyaml-json">&nbsp;</a>
@@ -6988,6 +7157,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/36F6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/36F6.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/36F6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/36F6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -7071,6 +7242,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/NB6Z.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/NB6Z.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/NB6Z.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/NB6Z.html#java-snakeyaml-json">&nbsp;</a>
@@ -7152,6 +7325,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/XLQ9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/XLQ9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/XLQ9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/XLQ9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -7235,6 +7410,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/K4SU.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/K4SU.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/K4SU.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/K4SU.html#java-snakeyaml-json">&nbsp;</a>
@@ -7316,6 +7493,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J5UC.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/J5UC.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/J5UC.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/J5UC.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -7399,6 +7578,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/M7NX.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/M7NX.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/M7NX.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/M7NX.html#java-snakeyaml-json">&nbsp;</a>
@@ -7480,6 +7661,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F3CP.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/F3CP.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/F3CP.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/F3CP.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -7563,6 +7746,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/R52L.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/R52L.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/R52L.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/R52L.html#java-snakeyaml-json">&nbsp;</a>
@@ -7644,6 +7829,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/4FJ6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/4FJ6.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/4FJ6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/4FJ6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -7727,6 +7914,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/ZK9H.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/ZK9H.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/ZK9H.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/ZK9H.html#java-snakeyaml-json">&nbsp;</a>
@@ -7808,6 +7997,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/BU8L.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/BU8L.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/BU8L.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/BU8L.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -7891,6 +8082,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/U3XV.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/U3XV.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/U3XV.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/U3XV.html#java-snakeyaml-json">&nbsp;</a>
@@ -7972,6 +8165,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7BMT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7BMT.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7BMT.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7BMT.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -8055,6 +8250,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MZX3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/MZX3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/MZX3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/MZX3.html#java-snakeyaml-json">&nbsp;</a>
@@ -8136,6 +8333,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3MYT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3MYT.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/3MYT.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/3MYT.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -8219,6 +8418,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/UDM2.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/UDM2.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/UDM2.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/UDM2.html#java-snakeyaml-json">&nbsp;</a>
@@ -8300,6 +8501,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8CWC.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8CWC.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/8CWC.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8CWC.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -8383,6 +8586,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4V8U.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4V8U.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4V8U.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/4V8U.html#java-snakeyaml-json">&nbsp;</a>
@@ -8464,6 +8669,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JR7V.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/JR7V.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/JR7V.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/JR7V.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -8547,6 +8754,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/KSS4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/KSS4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/KSS4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/KSS4.html#java-snakeyaml-json">&nbsp;</a>
@@ -8628,6 +8837,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RLU9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/RLU9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/RLU9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/RLU9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -8711,6 +8922,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/AZ63.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/AZ63.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/AZ63.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/AZ63.html#java-snakeyaml-json">&nbsp;</a>
@@ -8792,6 +9005,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/AB8U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/AB8U.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/AB8U.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/AB8U.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -8875,6 +9090,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9J7A.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9J7A.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9J7A.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/9J7A.html#java-snakeyaml-json">&nbsp;</a>
@@ -8956,6 +9173,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/65WH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/65WH.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/65WH.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/65WH.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -9039,6 +9258,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/D9TU.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/D9TU.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/D9TU.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/D9TU.html#java-snakeyaml-json">&nbsp;</a>
@@ -9120,6 +9341,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/9MMW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/9MMW.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/9MMW.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/9MMW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -9203,6 +9426,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3R3P.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/3R3P.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/3R3P.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/3R3P.html#java-snakeyaml-json">&nbsp;</a>
@@ -9284,6 +9509,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FTA2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FTA2.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/FTA2.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/FTA2.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -9367,6 +9594,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FQ7F.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/FQ7F.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/FQ7F.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/FQ7F.html#java-snakeyaml-json">&nbsp;</a>
@@ -9448,6 +9677,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7BUB.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7BUB.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7BUB.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7BUB.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -9531,6 +9762,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/M5DY.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/M5DY.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/M5DY.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/M5DY.html#java-snakeyaml-json">&nbsp;</a>
@@ -9612,6 +9845,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9U5K.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/9U5K.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9U5K.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9U5K.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -9695,6 +9930,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6JQW.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6JQW.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6JQW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/6JQW.html#java-snakeyaml-json">&nbsp;</a>
@@ -9776,6 +10013,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/96L6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/96L6.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/96L6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/96L6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -9859,6 +10098,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6VJK.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6VJK.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6VJK.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/6VJK.html#java-snakeyaml-json">&nbsp;</a>
@@ -9940,6 +10181,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HMK4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/HMK4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/HMK4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/HMK4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -10023,6 +10266,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/G4RS.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/G4RS.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/G4RS.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/G4RS.html#java-snakeyaml-json">&nbsp;</a>
@@ -10104,6 +10349,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4CQQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4CQQ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4CQQ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4CQQ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -10187,6 +10434,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/SYW4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/SYW4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/SYW4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/SYW4.html#java-snakeyaml-json">&nbsp;</a>
@@ -10268,6 +10517,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/C4HZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/C4HZ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/C4HZ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/C4HZ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -10351,6 +10602,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/2XXW.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/2XXW.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/2XXW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_diff "><a class="invisible" href="details/2XXW.html#java-snakeyaml-json">&nbsp;</a>
@@ -10432,6 +10685,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J7PZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/J7PZ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/J7PZ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/J7PZ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -10515,6 +10770,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/UGM3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/UGM3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/UGM3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_ni "><a class="invisible" href="details/UGM3.html#java-snakeyaml-json">&nbsp;</a>
@@ -10596,6 +10853,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RZT7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/RZT7.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/RZT7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/RZT7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -10679,6 +10938,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/PBJ2.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/PBJ2.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/PBJ2.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/PBJ2.html#java-snakeyaml-json">&nbsp;</a>
@@ -10760,6 +11021,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/229Q.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/229Q.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/229Q.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/229Q.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -10843,6 +11106,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/YD5X.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/YD5X.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/YD5X.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/YD5X.html#java-snakeyaml-json">&nbsp;</a>
@@ -10924,6 +11189,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/ZF4X.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/ZF4X.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/ZF4X.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/ZF4X.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11007,6 +11274,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/JHB9.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/JHB9.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/JHB9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/JHB9.html#java-snakeyaml-json">&nbsp;</a>
@@ -11088,6 +11357,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/U9NS.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/U9NS.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/U9NS.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/U9NS.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11171,6 +11442,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/J9HZ.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/J9HZ.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/J9HZ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/J9HZ.html#java-snakeyaml-json">&nbsp;</a>
@@ -11252,6 +11525,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J3BT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/J3BT.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/J3BT.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/J3BT.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11335,6 +11610,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/S9E8.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/S9E8.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/S9E8.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/S9E8.html#java-snakeyaml-json">&nbsp;</a>
@@ -11416,6 +11693,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UDR7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/UDR7.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/UDR7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/UDR7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11499,6 +11778,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/98YD.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/98YD.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/98YD.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/98YD.html#java-snakeyaml-json">&nbsp;</a>
@@ -11580,6 +11861,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CUP7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/CUP7.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/CUP7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/CUP7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11663,6 +11946,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5BVJ.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5BVJ.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5BVJ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/5BVJ.html#java-snakeyaml-json">&nbsp;</a>
@@ -11744,6 +12029,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9SHH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9SHH.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9SHH.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9SHH.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11827,6 +12114,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/27NA.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/27NA.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/27NA.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/27NA.html#java-snakeyaml-json">&nbsp;</a>
@@ -11908,6 +12197,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6HB6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6HB6.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6HB6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6HB6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -11991,6 +12282,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/8G76.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/8G76.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8G76.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/8G76.html#java-snakeyaml-json">&nbsp;</a>
@@ -12072,6 +12365,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/P94K.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/P94K.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/P94K.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/P94K.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -12155,6 +12450,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/Q9WF.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/Q9WF.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/Q9WF.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/Q9WF.html#java-snakeyaml-json">&nbsp;</a>
@@ -12236,6 +12533,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6LVF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6LVF.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/6LVF.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6LVF.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -12319,6 +12618,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/2LFX.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/2LFX.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/2LFX.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/2LFX.html#java-snakeyaml-json">&nbsp;</a>
@@ -12400,6 +12701,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/BEC7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/BEC7.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/BEC7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/BEC7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -12483,6 +12786,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/U3C3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/U3C3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/U3C3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/U3C3.html#java-snakeyaml-json">&nbsp;</a>
@@ -12564,6 +12869,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9WXW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/9WXW.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9WXW.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9WXW.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -12647,6 +12954,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/6WLZ.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6WLZ.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6WLZ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_ni "><a class="invisible" href="details/6WLZ.html#java-snakeyaml-json">&nbsp;</a>
@@ -12728,6 +13037,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/P76L.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/P76L.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/P76L.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/P76L.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -12811,6 +13122,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/A2M4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/A2M4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/A2M4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/A2M4.html#java-snakeyaml-json">&nbsp;</a>
@@ -12892,6 +13205,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CC74.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/CC74.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/CC74.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/CC74.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -12975,6 +13290,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/5TYM.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5TYM.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5TYM.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_ni "><a class="invisible" href="details/5TYM.html#java-snakeyaml-json">&nbsp;</a>
@@ -13056,6 +13373,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Z9M4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/Z9M4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/Z9M4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/Z9M4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -13139,6 +13458,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/HMQ5.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/HMQ5.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/HMQ5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/HMQ5.html#java-snakeyaml-json">&nbsp;</a>
@@ -13220,6 +13541,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7FWL.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/7FWL.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7FWL.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7FWL.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -13303,6 +13626,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/6CK3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6CK3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6CK3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_ni "><a class="invisible" href="details/6CK3.html#java-snakeyaml-json">&nbsp;</a>
@@ -13384,6 +13709,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S4JQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/S4JQ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/S4JQ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/S4JQ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -13467,6 +13794,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/JS2J.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/JS2J.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/JS2J.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/JS2J.html#java-snakeyaml-json">&nbsp;</a>
@@ -13548,6 +13877,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6BCT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6BCT.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/6BCT.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6BCT.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -13631,6 +13962,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/4ZYM.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4ZYM.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4ZYM.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/4ZYM.html#java-snakeyaml-json">&nbsp;</a>
@@ -13712,6 +14045,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5GBF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5GBF.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5GBF.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5GBF.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -13795,6 +14130,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/XV9V.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/XV9V.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/XV9V.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/XV9V.html#java-snakeyaml-json">&nbsp;</a>
@@ -13876,6 +14213,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K527.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/K527.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/K527.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/K527.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -13959,6 +14298,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/93WF.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/93WF.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/93WF.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/93WF.html#java-snakeyaml-json">&nbsp;</a>
@@ -14040,6 +14381,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MJS9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/MJS9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/MJS9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/MJS9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -14123,6 +14466,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/TL85.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/TL85.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/TL85.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/TL85.html#java-snakeyaml-json">&nbsp;</a>
@@ -14204,6 +14549,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6WPF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6WPF.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6WPF.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6WPF.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -14287,6 +14634,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5NYZ.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5NYZ.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5NYZ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/5NYZ.html#java-snakeyaml-json">&nbsp;</a>
@@ -14368,6 +14717,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3GZX.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3GZX.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/3GZX.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/3GZX.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -14451,6 +14802,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DBG4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/DBG4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/DBG4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/DBG4.html#java-snakeyaml-json">&nbsp;</a>
@@ -14532,6 +14885,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/L9U5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/L9U5.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/L9U5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/L9U5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -14615,6 +14970,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/HS5T.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/HS5T.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/HS5T.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/HS5T.html#java-snakeyaml-json">&nbsp;</a>
@@ -14696,6 +15053,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5KJE.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5KJE.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5KJE.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5KJE.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -14779,6 +15138,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8UDB.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/8UDB.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/8UDB.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/8UDB.html#java-snakeyaml-json">&nbsp;</a>
@@ -14860,6 +15221,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5C5M.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5C5M.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5C5M.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5C5M.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -14943,6 +15306,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/DFF7.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/DFF7.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/DFF7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/DFF7.html#java-snakeyaml-json">&nbsp;</a>
@@ -15024,6 +15389,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/C2DT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/C2DT.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/C2DT.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/C2DT.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -15107,6 +15474,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/QF4Y.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/QF4Y.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/QF4Y.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/QF4Y.html#java-snakeyaml-json">&nbsp;</a>
@@ -15188,6 +15557,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/WZ62.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/WZ62.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/WZ62.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/WZ62.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -15271,6 +15642,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/CT4Q.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/CT4Q.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/CT4Q.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/CT4Q.html#java-snakeyaml-json">&nbsp;</a>
@@ -15352,6 +15725,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Q88A.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/Q88A.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/Q88A.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/Q88A.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -15435,6 +15810,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/LE5A.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/LE5A.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/LE5A.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/LE5A.html#java-snakeyaml-json">&nbsp;</a>
@@ -15516,6 +15893,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/FRK4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/FRK4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/FRK4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/FRK4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -15599,6 +15978,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/LQZ7.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/LQZ7.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/LQZ7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/LQZ7.html#java-snakeyaml-json">&nbsp;</a>
@@ -15680,6 +16061,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/NP9H.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/NP9H.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/NP9H.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/NP9H.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -15763,6 +16146,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/Q8AD.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/Q8AD.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/Q8AD.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/Q8AD.html#java-snakeyaml-json">&nbsp;</a>
@@ -15844,6 +16229,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7A4E.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7A4E.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7A4E.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7A4E.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -15927,6 +16314,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9TFX.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9TFX.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9TFX.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/9TFX.html#java-snakeyaml-json">&nbsp;</a>
@@ -16008,6 +16397,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4GC6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4GC6.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4GC6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4GC6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -16091,6 +16482,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/SSW6.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/SSW6.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/SSW6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/SSW6.html#java-snakeyaml-json">&nbsp;</a>
@@ -16172,6 +16565,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/87E4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/87E4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/87E4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/87E4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -16255,6 +16650,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/PRH3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/PRH3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/PRH3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/PRH3.html#java-snakeyaml-json">&nbsp;</a>
@@ -16336,6 +16733,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/T4YY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/T4YY.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/T4YY.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/T4YY.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -16419,6 +16818,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/P2AD.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/P2AD.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/P2AD.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/P2AD.html#java-snakeyaml-json">&nbsp;</a>
@@ -16500,6 +16901,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7T8X.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7T8X.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/7T8X.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/7T8X.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -16583,6 +16986,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/JQ4R.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/JQ4R.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/JQ4R.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/JQ4R.html#java-snakeyaml-json">&nbsp;</a>
@@ -16664,6 +17069,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/W42U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/W42U.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/W42U.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/W42U.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -16747,6 +17154,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/TE2A.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/TE2A.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/TE2A.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/TE2A.html#java-snakeyaml-json">&nbsp;</a>
@@ -16828,6 +17237,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5WE3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/5WE3.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/5WE3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/5WE3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -16911,6 +17322,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/S3PD.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/S3PD.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/S3PD.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/S3PD.html#java-snakeyaml-json">&nbsp;</a>
@@ -16992,6 +17405,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/V9D5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/V9D5.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/V9D5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/V9D5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -17075,6 +17490,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/R4YG.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/R4YG.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/R4YG.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/R4YG.html#java-snakeyaml-json">&nbsp;</a>
@@ -17156,6 +17573,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4QFQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4QFQ.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/4QFQ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/4QFQ.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -17239,6 +17658,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/735Y.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/735Y.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/735Y.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/735Y.html#java-snakeyaml-json">&nbsp;</a>
@@ -17320,6 +17741,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M5C3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/M5C3.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/M5C3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/M5C3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -17403,6 +17826,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/Z67P.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/Z67P.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/Z67P.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_ni "><a class="invisible" href="details/Z67P.html#java-snakeyaml-json">&nbsp;</a>
@@ -17484,6 +17909,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/57H4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/57H4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/57H4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/57H4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -17567,6 +17994,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/A6F9.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/A6F9.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/A6F9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/A6F9.html#java-snakeyaml-json">&nbsp;</a>
@@ -17648,6 +18077,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F8F9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/F8F9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/F8F9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/F8F9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -17731,6 +18162,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/K858.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/K858.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/K858.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/K858.html#java-snakeyaml-json">&nbsp;</a>
@@ -17812,6 +18245,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M9B4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/M9B4.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/M9B4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/M9B4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -17895,6 +18330,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/T5N4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/T5N4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/T5N4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/T5N4.html#java-snakeyaml-json">&nbsp;</a>
@@ -17976,6 +18413,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DWX9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DWX9.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/DWX9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/DWX9.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -18059,6 +18498,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/T26H.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/T26H.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/T26H.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/T26H.html#java-snakeyaml-json">&nbsp;</a>
@@ -18140,6 +18581,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/G992.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/G992.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/G992.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/G992.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -18223,6 +18666,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/B3HG.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/B3HG.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/B3HG.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/B3HG.html#java-snakeyaml-json">&nbsp;</a>
@@ -18304,6 +18749,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RTP8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/RTP8.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/RTP8.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/RTP8.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -18387,6 +18834,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/M7A3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/M7A3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/M7A3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/M7A3.html#java-snakeyaml-json">&nbsp;</a>
@@ -18468,6 +18917,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UT92.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/UT92.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/UT92.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/UT92.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -18551,6 +19002,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/W4TN.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/W4TN.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/W4TN.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/W4TN.html#java-snakeyaml-json">&nbsp;</a>
@@ -18632,6 +19085,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6ZKB.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/6ZKB.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/6ZKB.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6ZKB.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -18715,6 +19170,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/9DXL.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/9DXL.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/9DXL.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/9DXL.html#java-snakeyaml-json">&nbsp;</a>
@@ -18796,6 +19253,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K54U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/K54U.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/K54U.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/K54U.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -18879,6 +19338,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/Q5MG.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/Q5MG.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/Q5MG.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/Q5MG.html#java-snakeyaml-json">&nbsp;</a>
@@ -18960,6 +19421,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6JWB.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/6JWB.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6JWB.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6JWB.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -19043,6 +19506,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/EHF6.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/EHF6.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/EHF6.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/EHF6.html#java-snakeyaml-json">&nbsp;</a>
@@ -19124,6 +19589,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/35KP.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/35KP.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/35KP.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/35KP.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -19207,6 +19674,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/2AUY.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/2AUY.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/2AUY.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/2AUY.html#java-snakeyaml-json">&nbsp;</a>
@@ -19288,6 +19757,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/L94M.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/L94M.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/L94M.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/L94M.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -19371,6 +19842,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/74H7.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/74H7.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/74H7.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/74H7.html#java-snakeyaml-json">&nbsp;</a>
@@ -19452,6 +19925,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/FH7J.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/FH7J.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/FH7J.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/FH7J.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -19535,6 +20010,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/82AN.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/82AN.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/82AN.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/82AN.html#java-snakeyaml-json">&nbsp;</a>
@@ -19616,6 +20093,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/EXG3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/EXG3.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/EXG3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/EXG3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -19699,6 +20178,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/33X3.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/33X3.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/33X3.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/33X3.html#java-snakeyaml-json">&nbsp;</a>
@@ -19780,6 +20261,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6XDY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/6XDY.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/6XDY.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/6XDY.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -19863,6 +20346,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/XW4D.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/XW4D.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/XW4D.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/XW4D.html#java-snakeyaml-json">&nbsp;</a>
@@ -19944,6 +20429,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/RZP5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/RZP5.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/RZP5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/RZP5.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -20027,6 +20514,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/KK5P.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/KK5P.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/KK5P.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_na "><a class="invisible" href="details/KK5P.html#java-snakeyaml-json">&nbsp;</a>
@@ -20108,6 +20597,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9KAX.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/9KAX.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/9KAX.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_error "><a class="invisible" href="details/9KAX.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -20191,6 +20682,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/NAT4.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/NAT4.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/NAT4.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/NAT4.html#java-snakeyaml-json">&nbsp;</a>
@@ -20272,6 +20765,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CN3R.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/CN3R.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/CN3R.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/CN3R.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -20355,6 +20850,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DC7X.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/DC7X.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/DC7X.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/DC7X.html#java-snakeyaml-json">&nbsp;</a>
@@ -20436,6 +20933,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/LP6E.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/LP6E.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/LP6E.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/LP6E.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -20519,6 +21018,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/26DV.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_json_ok "><a class="invisible" href="details/26DV.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/26DV.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_json_ok "><a class="invisible" href="details/26DV.html#java-snakeyaml-json">&nbsp;</a>
@@ -20600,6 +21101,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FP8R.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FP8R.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/FP8R.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/FP8R.html#hs-hsyaml-json">&nbsp;</a>
 </td>
@@ -20683,6 +21186,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DK3J.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
+ <td class="result go-yaml-json color_error "><a class="invisible" href="details/DK3J.html#go-yaml-json">&nbsp;</a>
+</td>
  <td class="result hs-hsyaml-json color_json_ok "><a class="invisible" href="details/DK3J.html#hs-hsyaml-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_error "><a class="invisible" href="details/DK3J.html#java-snakeyaml-json">&nbsp;</a>
@@ -20764,6 +21269,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/6PBE.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/6PBE.html#dotnet-yamldotnet-json">&nbsp;</a>
+</td>
+ <td class="result go-yaml-json color_na "><a class="invisible" href="details/6PBE.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_na "><a class="invisible" href="details/6PBE.html#hs-hsyaml-json">&nbsp;</a>
 </td>
