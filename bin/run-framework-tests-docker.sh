@@ -1,6 +1,6 @@
 #!/bin/ash
 
-#set -x
+set -x
 
 if [[ ! -d /yaml-test-suite-data ]]; then
     echo "/yaml-test-suite-data needed"
@@ -8,6 +8,8 @@ if [[ ! -d /yaml-test-suite-data ]]; then
 fi
 
 view="$1"
+bulk=$2
+timeout=${3:-10}
 
 cd /yaml-test-suite-data
 
@@ -17,6 +19,15 @@ if [[ ! -d /matrix/tmp ]]; then
 fi
 
 echo "Running tests in docker..."
+if $bulk; then
+
+    export BULK=/matrix/tmp
+#    view=/matrix/bin/perl-pp-event
+    view=/matrix/bin/perl-refparser-event
+    find [A-Z0-9]* -name in.yaml | timeout "$timeout" "$view"
+
+else
+
 for id in [A-Z0-9]*
 #for id in 229Q
 do
@@ -30,5 +41,8 @@ do
     fi
     [[ -f core ]] && rm core
 done
+
+fi
+
 echo "Done        "
 

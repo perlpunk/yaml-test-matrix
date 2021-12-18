@@ -1,0 +1,64 @@
+#!/usr/bin/env perl
+
+use v5.18;
+
+use YAML::Parser;
+use Encode;
+
+if ($ENV{BULK}) {
+    # Input: lines like 229Q/in.yaml
+    # Output: $ENV{BULK}/229Q.{stdout,stderr,error}
+    my $dir = $ENV{BULK};
+    while (my $file = <STDIN>) {
+        chomp $file;
+#        warn __PACKAGE__.':'.__LINE__.": !!! $file\n";
+        my ($id) = $file =~ m{^([A-Z0-9]+)/in\.yaml} or next;
+        open my $fh, '>', "$dir/$id.error" or die $!;
+        close $fh;
+
+        open $fh, '<:encoding(UTF-8)', $file or die $!;
+        my $input = do { local $/; <$fh> };
+        close $fh;
+
+        my $stdout = '';
+        my $stderr = '';
+        eval {
+            local *STDOUT;
+            local *STDERR;
+            open STDOUT, ">>", \$stdout;
+            open STDERR, ">>", \$stderr;
+
+            my $receiver = PerlYamlReferenceParserTestReceiver->new;
+            my $output = YAML::Parser->new(receiver => $receiver)
+             ->parse($input)
+             ->receiver
+             ->output;
+
+            print encode_utf8($output);
+        };
+        if (my $err = $@) {
+            $stderr .= $err;
+        }
+        else {
+            unlink "$dir/$id.error";
+        }
+        open $fh, '>', "$dir/$id.stdout" or die $!;
+        print $fh $stdout;
+        close $fh;
+        open $fh, '>', "$dir/$id.stderr" or die $!;
+        print $fh $stderr;
+        close $fh;
+
+    }
+    exit;
+}
+
+
+my $receiver = PerlYamlReferenceParserTestReceiver->new;
+my $input = decode_utf8 do { local $/; <> };
+my $output = YAML::Parser->new(receiver => $receiver)
+ ->parse($input)
+ ->receiver
+ ->output;
+
+print encode_utf8($output);

@@ -125,7 +125,8 @@ sub run_tests {
             . qq{ -v $Bin:/matrix/bin}
             . qq{ -v $matrixdir/tmp:/matrix/tmp}
             . qq{ $docker_user/$runtime}
-            . qq{ /matrix/bin/run-framework-tests-docker.sh /yaml/bin/$bin};
+            . qq{ /matrix/bin/run-framework-tests-docker.sh /yaml/bin/$bin true};
+#            . qq{ /matrix/bin/run-framework-tests-docker.sh /scripts/$bin true};
         say "Running $cmd";
         system $cmd;
     }
