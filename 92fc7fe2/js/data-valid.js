@@ -209,42 +209,42 @@ var data = {
       },
       "3RLN:00" : {
          "id" : "3RLN:00",
-         "in_json" : null,
+         "in_json" : "\"1 leading \\ttab\"\n",
          "in_yaml" : "\"1 leading\n    \\ttab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"1 leading \\ttab\n-DOC\n-STR\n"
       },
       "3RLN:01" : {
          "id" : "3RLN:01",
-         "in_json" : null,
+         "in_json" : "\"2 leading \\ttab\"\n",
          "in_yaml" : "\"2 leading\n    \\\ttab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"2 leading \\ttab\n-DOC\n-STR\n"
       },
       "3RLN:02" : {
          "id" : "3RLN:02",
-         "in_json" : null,
+         "in_json" : "\"3 leading tab\"\n",
          "in_yaml" : "\"3 leading\n    \ttab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"3 leading tab\n-DOC\n-STR\n"
       },
       "3RLN:03" : {
          "id" : "3RLN:03",
-         "in_json" : null,
+         "in_json" : "\"4 leading \\t  tab\"\n",
          "in_yaml" : "\"4 leading\n    \\t  tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"4 leading \\t  tab\n-DOC\n-STR\n"
       },
       "3RLN:04" : {
          "id" : "3RLN:04",
-         "in_json" : null,
+         "in_json" : "\"5 leading \\t  tab\"\n",
          "in_yaml" : "\"5 leading\n    \\\t  tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"5 leading \\t  tab\n-DOC\n-STR\n"
       },
       "3RLN:05" : {
          "id" : "3RLN:05",
-         "in_json" : null,
+         "in_json" : "\"6 leading tab\"\n",
          "in_yaml" : "\"6 leading\n    \t  tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"6 leading tab\n-DOC\n-STR\n"
@@ -1025,14 +1025,14 @@ var data = {
       },
       "96NN:00" : {
          "id" : "96NN:00",
-         "in_json" : null,
+         "in_json" : "{\"foo\":\"\\tbar\"}\n",
          "in_yaml" : "foo: |-\n \tbar\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n+MAP\n=VAL :foo\n=VAL |\\tbar\n-MAP\n-DOC\n-STR\n"
       },
       "96NN:01" : {
          "id" : "96NN:01",
-         "in_json" : null,
+         "in_json" : "{\"foo\":\"\\tbar\"}\n",
          "in_yaml" : "foo: |-\n \tbar",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n+MAP\n=VAL :foo\n=VAL |\\tbar\n-MAP\n-DOC\n-STR\n"
@@ -1448,42 +1448,42 @@ var data = {
       },
       "DE56:00" : {
          "id" : "DE56:00",
-         "in_json" : null,
+         "in_json" : "\"1 trailing\\t tab\"\n",
          "in_yaml" : "\"1 trailing\\t\n    tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"1 trailing\\t tab\n-DOC\n-STR\n"
       },
       "DE56:01" : {
          "id" : "DE56:01",
-         "in_json" : null,
+         "in_json" : "\"2 trailing\\t tab\"\n",
          "in_yaml" : "\"2 trailing\\t  \n    tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"2 trailing\\t tab\n-DOC\n-STR\n"
       },
       "DE56:02" : {
          "id" : "DE56:02",
-         "in_json" : null,
+         "in_json" : "\"3 trailing\\t tab\"\n",
          "in_yaml" : "\"3 trailing\\\t\n    tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"3 trailing\\t tab\n-DOC\n-STR\n"
       },
       "DE56:03" : {
          "id" : "DE56:03",
-         "in_json" : null,
+         "in_json" : "\"4 trailing\\t tab\"\n",
          "in_yaml" : "\"4 trailing\\\t  \n    tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"4 trailing\\t tab\n-DOC\n-STR\n"
       },
       "DE56:04" : {
          "id" : "DE56:04",
-         "in_json" : null,
+         "in_json" : "\"5 trailing tab\"\n",
          "in_yaml" : "\"5 trailing\t\n    tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"5 trailing tab\n-DOC\n-STR\n"
       },
       "DE56:05" : {
          "id" : "DE56:05",
-         "in_json" : null,
+         "in_json" : "\"6 trailing tab\"\n",
          "in_yaml" : "\"6 trailing\t  \n    tab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"6 trailing tab\n-DOC\n-STR\n"
@@ -1954,21 +1954,21 @@ var data = {
       },
       "KH5V:00" : {
          "id" : "KH5V:00",
-         "in_json" : null,
+         "in_json" : "\"1 inline\\ttab\"\n",
          "in_yaml" : "\"1 inline\\ttab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"1 inline\\ttab\n-DOC\n-STR\n"
       },
       "KH5V:01" : {
          "id" : "KH5V:01",
-         "in_json" : null,
+         "in_json" : "\"2 inline\\ttab\"\n",
          "in_yaml" : "\"2 inline\\\ttab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"2 inline\\ttab\n-DOC\n-STR\n"
       },
       "KH5V:02" : {
          "id" : "KH5V:02",
-         "in_json" : null,
+         "in_json" : "\"3 inline\\ttab\"\n",
          "in_yaml" : "\"3 inline\ttab\"\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n=VAL \"3 inline\\ttab\n-DOC\n-STR\n"
@@ -2007,7 +2007,7 @@ var data = {
       },
       "L383" : {
          "id" : "L383",
-         "in_json" : "\"foo\"\n",
+         "in_json" : "\"foo\"\n\"foo\"\n",
          "in_yaml" : "--- foo  # comment\n--- foo  # comment\n",
          "tags" : [
             "comment"
@@ -2584,7 +2584,7 @@ var data = {
       },
       "SM9W:00" : {
          "id" : "SM9W:00",
-         "in_json" : null,
+         "in_json" : "[null]\n",
          "in_yaml" : "-",
          "tags" : [],
          "test_event" : "+STR\n+DOC\n+SEQ\n=VAL :\n-SEQ\n-DOC\n-STR\n"
