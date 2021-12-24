@@ -512,7 +512,7 @@ stdin:15:5: error: Non scalar keys are not allowed in JSON emit mode
     ]
   }
 }
-(node:2523) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ a ]&quot;. Set mapAsMap: true to use object keys.
+(node:2522) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ a ]&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -524,7 +524,7 @@ stdin:15:5: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x55b0e93dbf97
+	[C]: at 0x559c0b658f97
 </pre>
 
  </div>
@@ -658,19 +658,19 @@ stack traceback:
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
    &quot;complex1&quot; : {
-      &quot;ARRAY(0x5640786e5420)&quot; : null
+      &quot;ARRAY(0x55a997d9d420)&quot; : null
    },
    &quot;complex2&quot; : {
-      &quot;ARRAY(0x5640786d7e50)&quot; : &quot;b&quot;
+      &quot;ARRAY(0x55a997d8fe50)&quot; : &quot;b&quot;
    },
    &quot;complex3&quot; : {
-      &quot;ARRAY(0x5640786e55b8)&quot; : &quot;b\n&quot;
+      &quot;ARRAY(0x55a997d9d5b8)&quot; : &quot;b\n&quot;
    },
    &quot;complex4&quot; : {
       &quot;a\n&quot; : null
    },
    &quot;complex5&quot; : {
-      &quot;ARRAY(0x5640786e5498)&quot; : [
+      &quot;ARRAY(0x55a997d9d498)&quot; : [
          &quot;b&quot;
       ]
    }
@@ -684,13 +684,13 @@ stack traceback:
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;complex1&#39; =&gt; {
-                  &#39;ARRAY(0x5584bcfb5b20)&#39; =&gt; undef
+                  &#39;ARRAY(0x5593f9053b20)&#39; =&gt; undef
                 },
   &#39;complex2&#39; =&gt; {
-                  &#39;ARRAY(0x5584bcfb60c0)&#39; =&gt; &#39;b&#39;
+                  &#39;ARRAY(0x5593f9054120)&#39; =&gt; &#39;b&#39;
                 },
   &#39;complex3&#39; =&gt; {
-                  &#39;ARRAY(0x5584bd243fa8)&#39; =&gt; &#39;b
+                  &#39;ARRAY(0x5593f92e1da8)&#39; =&gt; &#39;b
 &#39;
                 },
   &#39;complex4&#39; =&gt; {
@@ -698,7 +698,7 @@ stack traceback:
 &#39; =&gt; undef
                 },
   &#39;complex5&#39; =&gt; {
-                  &#39;ARRAY(0x5584bd243d50)&#39; =&gt; [
+                  &#39;ARRAY(0x5593f92e1b50)&#39; =&gt; [
                                                &#39;b&#39;
                                              ]
                 }
