@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>#S9E8 - Spec Example 5.3. Block Structure Indicators - YAML Test Matrix</title>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="../css/yaml.css">
+<link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
+</head>
+<body>
+
+<h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
+<h2><tt>--- <a
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/S9E8.yaml">&test-S9E8</a><br>
+&nbsp;&nbsp;Title: Spec Example 5.3. Block Structure Indicators</br>
+&nbsp;&nbsp;Tags: [ explicit-key, mapping, sequence, spec ]</tt></h2>
+
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>sequence:
+- one
+- two
+mapping:
+  ? sky
+  : blue
+  sea : green
+</pre></div>
+<div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
++DOC
++MAP
+=VAL :sequence
++SEQ
+=VAL :one
+=VAL :two
+-SEQ
+=VAL :mapping
++MAP
+=VAL :sky
+=VAL :blue
+=VAL :sea
+=VAL :green
+-MAP
+-MAP
+-DOC
+-STR
+</pre></div>
+<div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
+<pre>{<br>  &quot;mapping&quot;: {<br>    &quot;sea&quot;: &quot;green&quot;,<br>    &quot;sky&quot;: &quot;blue&quot;<br>  },<br>  &quot;sequence&quot;: [<br>    &quot;one&quot;,<br>    &quot;two&quot;<br>  ]<br>}<br></pre>
+</div>
+<hr style="clear: both;">
+   <div class="framework framework_box_ok" id="c-libfyaml-event">
+<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="c-libyaml-event">
+<h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="cpp-yamlcpp-event">
+<h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="dotnet-yamldotnet-event">
+<h3><a href="#dotnet-yamldotnet-event">dotnet-yamldotnet-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="hs-hsyaml-event">
+<h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="java-snakeyaml-event">
+<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="js-yaml-event">
+<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="nim-nimyaml-event">
+<h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-pp-event">
+<h3><a href="#perl-pp-event">perl-pp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-refparser-event">
+<h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-pyyaml-event">
+<h3><a href="#py-pyyaml-event">py-pyyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="dotnet-yamldotnet-json">
+<h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="go-yaml-json">
+<h3><a href="#go-yaml-json">go-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="hs-hsyaml-json">
+<h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="java-snakeyaml-json">
+<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="js-jsyaml-json">
+<h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="js-yaml-json">
+<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="lua-lyaml-json">
+<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-pp-json">
+<h3><a href="#perl-pp-json">perl-pp-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-pplibyaml-json">
+<h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-syck-json">
+<h3><a href="#perl-syck-json">perl-syck-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-xs-json">
+<h3><a href="#perl-xs-json">perl-xs-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-yaml-json">
+<h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="py-pyyaml-json">
+<h3><a href="#py-pyyaml-json">py-pyyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="ruby-psych-json">
+<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">             <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|sequence
+   1    8    8    8 -VAL |
+   1    8    8    8 -NODE|
+   1    8    8    8 =SYNX|:
+   1    9    9    9 +NODE|
+   1    9    9    9 =EOL |\x0a
+   2    0   10   10 +SEQ |
+   2    0   10   10 =SYNX|-
+   2    1   11   11 =WSPC|.
+   2    2   12   12 +NODE|
+   2    2   12   12 +VAL |
+   2    2   12   12 =TEXT|one
+   2    5   15   15 -VAL |
+   2    5   15   15 -NODE|
+   2    5   15   15 =EOL |\x0a
+   3    0   16   16 =SYNX|-
+   3    1   17   17 =WSPC|.
+   3    2   18   18 +NODE|
+   3    2   18   18 +VAL |
+   3    2   18   18 =TEXT|two
+   3    5   21   21 -VAL |
+   3    5   21   21 -NODE|
+   3    5   21   21 =EOL |\x0a
+   4    0   22   22 -SEQ |
+   4    0   22   22 -NODE|
+   4    0   22   22 -PAIR|
+   4    0   22   22 +PAIR|
+   4    0   22   22 +NODE|
+   4    0   22   22 +VAL |
+   4    0   22   22 =TEXT|mapping
+   4    7   29   29 -VAL |
+   4    7   29   29 -NODE|
+   4    7   29   29 =SYNX|:
+   4    8   30   30 +NODE|
+   4    8   30   30 =EOL |\x0a
+   5    0   31   31 +MAP |
+   5    0   31   31 =DENT|..
+   5    2   33   33 +PAIR|
+   5    2   33   33 =SYNX|?
+   5    3   34   34 =WSPC|.
+   5    4   35   35 +NODE|
+   5    4   35   35 +VAL |
+   5    4   35   35 =TEXT|sky
+   5    7   38   38 -VAL |
+   5    7   38   38 -NODE|
+   5    7   38   38 =EOL |\x0a
+   6    0   39   39 =DENT|..
+   6    2   41   41 =SYNX|:
+   6    3   42   42 =WSPC|.
+   6    4   43   43 +NODE|
+   6    4   43   43 +VAL |
+   6    4   43   43 =TEXT|blue
+   6    8   47   47 -VAL |
+   6    8   47   47 -NODE|
+   6    8   47   47 =EOL |\x0a
+   7    0   48   48 -PAIR|
+   7    0   48   48 =DENT|..
+   7    2   50   50 +PAIR|
+   7    2   50   50 +NODE|
+   7    2   50   50 +VAL |
+   7    2   50   50 =TEXT|sea
+   7    5   53   53 -VAL |
+   7    5   53   53 -NODE|
+   7    5   53   53 =WSPC|.
+   7    6   54   54 =SYNX|:
+   7    7   55   55 =WSPC|.
+   7    8   56   56 +NODE|
+   7    8   56   56 +VAL |
+   7    8   56   56 =TEXT|green
+   7   13   61   61 -VAL |
+   7   13   61   61 -NODE|
+   7   13   61   61 =EOL |\x0a
+   8    0   62   62 -PAIR|
+   8    0   62   62 -MAP |
+   8    0   62   62 -NODE|
+   8    0   62   62 -PAIR|
+   8    0   62   62 -MAP |
+   8    0   62   62 -NODE|
+   8    0   62   62 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
+<h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;sea&#39; =&gt; &#39;green&#39;,
+                 &#39;sky&#39; =&gt; &#39;blue&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;one&#39;,
+                  &#39;two&#39;
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pplibyaml-perl">
+<h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;sea&#39; =&gt; &#39;green&#39;,
+                 &#39;sky&#39; =&gt; &#39;blue&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;one&#39;,
+                  &#39;two&#39;
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-syck-perl">
+<h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;sea&#39; =&gt; &#39;green&#39;,
+                 &#39;sky&#39; =&gt; &#39;blue&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;one&#39;,
+                  &#39;two&#39;
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-xs-perl">
+<h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;sea&#39; =&gt; &#39;green&#39;,
+                 &#39;sky&#39; =&gt; &#39;blue&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;one&#39;,
+                  &#39;two&#39;
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-yaml-perl">
+<h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;sea&#39; =&gt; &#39;green&#39;,
+                 &#39;sky&#39; =&gt; &#39;blue&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;one&#39;,
+                  &#39;two&#39;
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-pyyaml-py">
+<h3><a href="#py-pyyaml-py">py-pyyaml-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;mapping&#39;: {&#39;sea&#39;: &#39;green&#39;, &#39;sky&#39;: &#39;blue&#39;}, &#39;sequence&#39;: [&#39;one&#39;, &#39;two&#39;]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;mapping&#39;: {&#39;sea&#39;: &#39;green&#39;, &#39;sky&#39;: &#39;blue&#39;}, &#39;sequence&#39;: [&#39;one&#39;, &#39;two&#39;]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  mapping  =&gt; {
+    sea =&gt; &quot;green&quot;.Str,
+    sky =&gt; &quot;blue&quot;.Str,
+  },
+  sequence =&gt; [
+    &quot;one&quot;.Str,
+    &quot;two&quot;.Str,
+  ],
+}
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_ni" id="perl-tiny-json">
+<h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;  ? sky&#39; at /yaml/bin/perl-tiny-json line 12.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_ni" id="perl-tiny-perl">
+<h3><a href="#perl-tiny-perl">perl-tiny-perl</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;  ? sky&#39; at /yaml/bin/perl-tiny-perl line 15.
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">        </body>
+</html>
+
