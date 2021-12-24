@@ -65,9 +65,10 @@ It is suited to identify which problems each processors has and what to avoid.
 <div id="framework-info">
 <table class="yaml">
 <tr>
-<th></th>
-<th colspan="7"><a href="valid.html">Valid ([%= .sum_valid %])</a></th>
+<th colspan="2"></th>
+<th colspan="6"><a href="valid.html">Valid ([%= .sum_valid %])</a></th>
 <th colspan="3"><a href="invalid.html">Invalid ([%= .sum_invalid %])</a></th>
+<th colspan="2" class="separator">Total ([%= .total %])</th>
 </tr>
 <tr>
 <th colspan="2"><a href="processors.html">Processors</a></th>
@@ -78,8 +79,10 @@ It is suited to identify which problems each processors has and what to avoid.
 <th><a href="#legend-columns" title="Parse error">error</a></th>
 <th><a href="#legend-columns" title="Not applicable">n/a</a></th>
 <th></th>
-<th><a href="#legend-columns" title="Correctly identified as invalid">correct</a></th>
-<th><a href="#legend-columns" title="Parsed incorrectly as valid">incorrect</a></th>
+<th><a href="#legend-columns" title="Correctly identified as invalid">pass</a></th>
+<th><a href="#legend-columns" title="Parsed incorrectly as valid">fail</a></th>
+<th class="separator"><a href="#legend-columns" title="Test passed">pass</a></th>
+<th><a href="#legend-columns" title="Test failed">fail</a></th>
 </tr>
 [%each .overview %]
 [%set_var info value=__value__ %]
@@ -91,6 +94,8 @@ It is suited to identify which problems each processors has and what to avoid.
 [%loop info.invalid_columns %]
 <th class="sub"><span class="status_box color_[%= _ %]"></th>
 [%/loop info.invalid_columns %]
+<th class="sub separator"><span class="status_box color_pass"></th>
+<th class="sub"><span class="status_box color_fail"></th>
 </tr>
 [%loop info.views %]
 <tr>
@@ -103,11 +108,11 @@ It is suited to identify which problems each processors has and what to avoid.
     title="[%= percent %]%"
 >&nbsp;</span>[%/loop percentage_valid %]
 </td>
-<td>[%= ok %][%= json_ok %]</td>
-<td>[%= ni %]</td>
-<td>[%= diff %][%= json_diff %]</td>
-<td>[%= error %]</td>
-<td>[%= na %]</td>
+<td class="number">[%= ok %][%= json_ok %]</td>
+<td class="number">[%= ni %]</td>
+<td class="number">[%= diff %][%= json_diff %]</td>
+<td class="number">[%= error %]</td>
+<td class="number">[%= na %]</td>
 <td class="percentage" style="min-width: [%= .width_invalid %]px;">
 [%loop percentage_invalid %]<span
     class="overview_status color_[%= status %] bar_[%= border %]"
@@ -115,8 +120,10 @@ It is suited to identify which problems each processors has and what to avoid.
     title="[%= percent %]%"
 ></span>[%/loop percentage_valid %]
 </td>
-<td>[%= invalid_correct %]</td>
-<td>[%= invalid_incorrect %]</td>
+<td class="number">[%= invalid_correct %]</td>
+<td class="number">[%= invalid_incorrect %]</td>
+<td class="number separator">[%= pass %]</td>
+<td class="number">[%= fail %]</td>
 </tr>
 [%/loop views %]
 [%/each .overview %]

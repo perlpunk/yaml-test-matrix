@@ -123,6 +123,14 @@ table.matrix thead tr.overview td {
     background-color: #ff5858;
     color: #ff5858;
 }
+.color_pass, table.matrix tbody td.color_pass {
+    background-color: #55ff58;
+    color: #ff5858;
+}
+.color_fail, table.matrix tbody td.color_fail {
+    background-color: #ff5858;
+    color: #ff5858;
+}
 
 table.matrix tr td:target {
     background-color: yellow;
@@ -297,7 +305,7 @@ table.yaml tr th,
 table.yaml tr th {
     font-weight: bold;
     text-align: left;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 table.yaml tr th.sub {
     background-color: #ddd;
@@ -306,6 +314,9 @@ table.yaml tr th.sub {
 table.yaml tr td.number {
     text-align: right;
     font-family: monospace;
+}
+table.yaml tr td.separator, table.yaml tr th.separator {
+    border-left: 3px solid #aaa !important;
 }
 table.yaml tr:hover > td,
     table.yaml tr:hover > th {

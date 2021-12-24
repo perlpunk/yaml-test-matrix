@@ -7,7 +7,7 @@ Its output is currently saved in the
 [gh-pages branch](https://github.com/yaml/yaml-test-suite/tree/gh-pages)
 of yaml-test-suite.
 
-You can find the current version on: [matrix.yaml.io](https://matrix.yaml.io/).
+You can find the current version on: [matrix.yaml.info](https://matrix.yaml.info/).
 During development I'm using
 [perlpunk.github.io/yaml-test-matrix](https://perlpunk.github.io/yaml-test-matrix/).
 

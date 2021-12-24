@@ -258,7 +258,7 @@ sub create_overview {
         },
     );
     my ($sum_valid, $sum_invalid) = (0, 0);
-    my $factor = 1.7;
+    my $factor = 1.3;
     for my $fw (sort {
         my @parts_a = split m/-/, $a;
         my @parts_b = split m/-/, $b;
@@ -273,15 +273,21 @@ sub create_overview {
         next if $format !~ m/json|event/;
         my $total_valid = 0;
         my $total_invalid = 0;
+        my $pass = 0;
+        my $fail = 0;
+        my $total = 0;
         for my $status (qw/
             ok json_ok diff json_diff na error ni
             invalid_correct invalid_incorrect /) {
             my $count = $data->{ $status };
             $row{ $status } = $count;
             $count ||= 0;
+            $total += $count;
             $total_valid += $count unless $status =~ m/invalid/;
             $total_invalid += $count if $status =~ m/invalid/;
         }
+        $pass = ($data->{ok} || 0) + ($data->{json_ok} || 0) + $data->{invalid_correct};
+        $fail = $total - $pass - ($data->{na} || 0);
         my @percentage_valid;
         my @percentage_invalid;
         my @status_percentage_valid;
@@ -334,6 +340,9 @@ sub create_overview {
         }
         $row{percentage_valid} = \@percentage_valid;
         $row{percentage_invalid} = \@percentage_invalid;
+        $row{total} = $total;
+        $row{pass} = $pass;
+        $row{fail} = $fail || '';
         $sum_valid = $total_valid;
         $sum_invalid = $total_invalid;
         push @{ $overviews{ $format }->{views} }, \%row;
@@ -348,6 +357,7 @@ sub create_overview {
         not_implemented => $highlighted,
         sum_valid => $sum_valid,
         sum_invalid => $sum_invalid,
+        total => $sum_valid + $sum_invalid,
         width_valid => $sum_valid * $factor + 10,
         width_invalid => $sum_invalid * $factor + 10,
         data_commit => {
