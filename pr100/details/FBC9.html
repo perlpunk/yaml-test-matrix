@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,12 +16,12 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/FBC9.yaml">&test-F
 &nbsp;&nbsp;Title: Allowed characters in plain scalars</br>
 &nbsp;&nbsp;Tags: [ scalar ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>safe: a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~
-     !&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~
-safe question mark: ?foo
-safe colon: :foo
-safe dash: -foo
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">safe</span><span class="colon">:</span><span class="default"> </span><span class="default">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~</span><span class="eol">
+</span><span class="indent">     </span><span class="default">!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~</span><span class="eol">
+</span><span class="plainkey">safe question mark</span><span class="colon">:</span><span class="default"> </span><span class="default">?foo</span><span class="eol">
+</span><span class="plainkey">safe colon</span><span class="colon">:</span><span class="default"> </span><span class="default">:foo</span><span class="eol">
+</span><span class="plainkey">safe dash</span><span class="colon">:</span><span class="default"> </span><span class="default">-foo</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

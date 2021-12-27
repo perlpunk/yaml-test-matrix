@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,19 +16,19 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/565N.yaml">&test-5
 &nbsp;&nbsp;Title: Construct Binary</br>
 &nbsp;&nbsp;Tags: [ tag, unknown-tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>canonical: !!binary &quot;\
- R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\
- OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\
- +f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\
- AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=&quot;
-generic: !!binary |
- R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5
- OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+
- +f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC
- AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=
-description:
- The binary value above is a tiny arrow encoded as a gif image.
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">canonical</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!binary</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\</span><span class="eol">
+</span><span class="default"> </span><span class="doublequoted">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\</span><span class="eol">
+</span><span class="default"> </span><span class="doublequoted">OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\</span><span class="eol">
+</span><span class="default"> </span><span class="doublequoted">+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\</span><span class="eol">
+</span><span class="default"> </span><span class="doublequoted">AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="plainkey">generic</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!binary</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="eol">
+</span><span class="plainkey">description</span><span class="colon">:</span><span class="eol">
+</span><span class="default"> </span><span class="default">The binary value above is a tiny arrow encoded as a gif image.</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

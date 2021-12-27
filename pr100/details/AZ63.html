@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,11 +16,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/AZ63.yaml">&test-A
 &nbsp;&nbsp;Title: Sequence With Same Indentation as Parent Mapping</br>
 &nbsp;&nbsp;Tags: [ indent, mapping, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>one:
-- 2
-- 3
-four: 5
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">one</span><span class="colon">:</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">2</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">3</span><span class="eol">
+</span><span class="plainkey">four</span><span class="colon">:</span><span class="default"> </span><span class="default">5</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

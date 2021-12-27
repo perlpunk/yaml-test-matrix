@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,12 +16,12 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/EB22.yaml">&test-E
 &nbsp;&nbsp;Title: Missing document-end marker before directive</br>
 &nbsp;&nbsp;Tags: [ directive, error, footer ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-scalar1 # comment
-%YAML 1.2
----
-scalar2
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">scalar1 # comment</span><span class="eol">
+</span><span class="default">%YAML 1.2</span><span class="eol">
+</span><span class="default">---</span><span class="eol">
+</span><span class="default">scalar2</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 =VAL :scalar1

@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,11 +16,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/6JWB.yaml">&test-6
 &nbsp;&nbsp;Title: Tags for Block Objects</br>
 &nbsp;&nbsp;Tags: [ mapping, sequence, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>foo: !!seq
-  - !!str a
-  - !!map
-    key: !!str value
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">foo</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!seq</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="tag">!!map</span><span class="eol">
+</span><span class="default">    </span><span class="plainkey">key</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">value</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

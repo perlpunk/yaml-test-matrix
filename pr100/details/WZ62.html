@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,11 +16,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/WZ62.yaml">&test-W
 &nbsp;&nbsp;Title: Spec Example 7.2. Empty Content</br>
 &nbsp;&nbsp;Tags: [ flow, scalar, spec, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>{
-  foo : !!str,
-  !!str : bar,
-}
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="flowmap_start">{</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">foo</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="tag">!!str</span><span class="flow_comma">,</span><span class="eol">
+</span><span class="default">  </span><span class="tag">!!str</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="flow_comma">,</span><span class="eol">
+</span><span class="flowmap_end">}</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP {}

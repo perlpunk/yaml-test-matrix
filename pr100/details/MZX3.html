@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,13 +16,13 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/MZX3.yaml">&test-M
 &nbsp;&nbsp;Title: Non-Specific Tags on Scalars</br>
 &nbsp;&nbsp;Tags: [ folded, scalar ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- plain
-- &quot;double quoted&quot;
-- &#39;single quoted&#39;
-- &gt;
-  block
-- plain again
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="default"> </span><span class="default">plain</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double quoted</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted">single quoted</span><span class="singlequote">&#39;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">block</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">plain again</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ

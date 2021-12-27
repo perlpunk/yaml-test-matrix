@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,10 +16,10 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/DMG6.yaml">&test-D
 &nbsp;&nbsp;Title: Wrong indendation in Map</br>
 &nbsp;&nbsp;Tags: [ error, indent, mapping ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>key:
-  ok: 1
- wrong: 2
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">key:</span><span class="eol">
+</span><span class="default">  ok: 1</span><span class="eol">
+</span><span class="default"> wrong: 2</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

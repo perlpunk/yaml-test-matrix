@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,15 +16,15 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/M29M.yaml">&test-M
 &nbsp;&nbsp;Title: Literal Block Scalar</br>
 &nbsp;&nbsp;Tags: [ literal, scalar, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>a: |
- ab
- 
- cd
- ef
- 
-
-...
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="eol">
+</span><span class="indent"> </span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="eol">
+</span><span class="indent"> </span><span class="eol">
+</span><span class="eol">
+</span><span class="doc_end">...</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

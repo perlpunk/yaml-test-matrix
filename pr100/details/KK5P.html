@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,23 +16,23 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/KK5P.yaml">&test-K
 &nbsp;&nbsp;Title: Various combinations of explicit block mappings</br>
 &nbsp;&nbsp;Tags: [ explicit-key, mapping, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>complex1:
-  ? - a
-complex2:
-  ? - a
-  : b
-complex3:
-  ? - a
-  : &gt;
-    b
-complex4:
-  ? &gt;
-    a
-  :
-complex5:
-  ? - a
-  : - b
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">complex1</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="plainkey">complex2</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="eol">
+</span><span class="plainkey">complex3</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">b</span><span class="eol">
+</span><span class="plainkey">complex4</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="eol">
+</span><span class="plainkey">complex5</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

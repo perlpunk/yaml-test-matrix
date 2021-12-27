@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,11 +16,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/F2C7.yaml">&test-F
 &nbsp;&nbsp;Title: Anchors and Tags</br>
 &nbsp;&nbsp;Tags: [ anchor, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre> - &amp;a !!str a
- - !!int 2
- - !!int &amp;c 4
- - &amp;d d
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="tag">!!int</span><span class="default"> </span><span class="default">2</span><span class="eol">
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="tag">!!int</span><span class="default"> </span><span class="anchor">&amp;c</span><span class="default"> </span><span class="default">4</span><span class="eol">
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;d</span><span class="default"> </span><span class="default">d</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ

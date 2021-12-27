@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,10 +16,10 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/H7J7.yaml">&test-H
 &nbsp;&nbsp;Title: Node anchor not indented</br>
 &nbsp;&nbsp;Tags: [ anchor, error, indent, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>key: &amp;x
-!!map
-  a: b
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">key: &amp;x</span><span class="eol">
+</span><span class="default">!!map</span><span class="eol">
+</span><span class="default">  a: b</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

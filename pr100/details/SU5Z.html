@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,8 +16,8 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/SU5Z.yaml">&test-S
 &nbsp;&nbsp;Title: Comment without whitespace after doublequoted scalar</br>
 &nbsp;&nbsp;Tags: [ comment, double, error, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>key: &quot;value&quot;# invalid comment
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">key: &quot;value&quot;# invalid comment</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

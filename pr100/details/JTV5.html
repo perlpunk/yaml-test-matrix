@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,13 +16,13 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/JTV5.yaml">&test-J
 &nbsp;&nbsp;Title: Block Mapping with Multiline Scalars</br>
 &nbsp;&nbsp;Tags: [ explicit-key, mapping, scalar ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>? a
-  true
-: null
-  d
-? e
-  42
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="question">?</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="indent">  </span><span class="default">true</span><span class="eol">
+</span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="eol">
+</span><span class="indent">  </span><span class="default">d</span><span class="eol">
+</span><span class="question">?</span><span class="default"> </span><span class="default">e</span><span class="eol">
+</span><span class="indent">  </span><span class="default">42</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

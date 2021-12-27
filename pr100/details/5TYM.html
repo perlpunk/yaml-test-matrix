@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,14 +16,14 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/5TYM.yaml">&test-5
 &nbsp;&nbsp;Title: Spec Example 6.21. Local Tag Prefix</br>
 &nbsp;&nbsp;Tags: [ directive, local-tag, spec, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>%TAG !m! !my-
---- # Bulb here
-!m!light fluorescent
-...
-%TAG !m! !my-
---- # Color here
-!m!light green
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="tag_directive">%TAG !m! !my-</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol"> # Bulb here
+</span><span class="tag">!m!light</span><span class="default"> </span><span class="default">fluorescent</span><span class="eol">
+</span><span class="doc_end">...</span><span class="eol">
+</span><span class="tag_directive">%TAG !m! !my-</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol"> # Color here
+</span><span class="tag">!m!light</span><span class="default"> </span><span class="default">green</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 =VAL &lt;!my-light&gt; :fluorescent

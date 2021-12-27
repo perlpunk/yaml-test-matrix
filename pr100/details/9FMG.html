@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,13 +16,13 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9FMG.yaml">&test-9
 &nbsp;&nbsp;Title: Multi-level Mapping Indent</br>
 &nbsp;&nbsp;Tags: [ indent, mapping ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>a:
-  b:
-    c: d
-  e:
-    f: g
-h: i
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">a</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="eol">
+</span><span class="default">    </span><span class="plainkey">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">e</span><span class="colon">:</span><span class="eol">
+</span><span class="default">    </span><span class="plainkey">f</span><span class="colon">:</span><span class="default"> </span><span class="default">g</span><span class="eol">
+</span><span class="plainkey">h</span><span class="colon">:</span><span class="default"> </span><span class="default">i</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

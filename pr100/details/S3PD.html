@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,11 +16,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/S3PD.yaml">&test-S
 &nbsp;&nbsp;Title: Spec Example 8.18. Implicit Block Mapping Entries</br>
 &nbsp;&nbsp;Tags: [ empty-key, mapping, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>plain key: in-line value
-: # Both empty
-&quot;quoted key&quot;:
-- entry
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">plain key</span><span class="colon">:</span><span class="default"> </span><span class="default">in-line value</span><span class="eol">
+</span><span class="colon">:</span><span class="eol"> # Both empty
+</span><span class="doublequote">&quot;</span><span class="doublequoted">quoted key</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">entry</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

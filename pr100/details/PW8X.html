@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -15,19 +16,19 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/PW8X.yaml">&test-P
 &nbsp;&nbsp;Title: Anchors on Empty Scalars</br>
 &nbsp;&nbsp;Tags: [ anchor, explicit-key ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- &amp;a
-- a
--
-  &amp;a : a
-  b: &amp;b
--
-  &amp;c : &amp;a
--
-  ? &amp;d
--
-  ? &amp;e
-  : &amp;a
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;a</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;b</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;c</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="anchor">&amp;d</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="anchor">&amp;e</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
