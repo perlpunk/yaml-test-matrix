@@ -315,15 +315,19 @@ var data = {
          ],
          "test_event" : "+STR\n+DOC\n=VAL 'here's to \"quotes\"\n-DOC\n-STR\n"
       },
-      "4MUZ" : {
-         "id" : "4MUZ",
+      "4MUZ:00" : {
+         "id" : "4MUZ:00",
          "in_json" : "{\n  \"foo\": \"bar\"\n}\n",
          "in_yaml" : "{\"foo\"\n: \"bar\"}\n",
-         "tags" : [
-            "flow",
-            "mapping"
-         ],
+         "tags" : [],
          "test_event" : "+STR\n+DOC\n+MAP {}\n=VAL \"foo\n=VAL \"bar\n-MAP\n-DOC\n-STR\n"
+      },
+      "4MUZ:01" : {
+         "id" : "4MUZ:01",
+         "in_json" : "{\n  \"foo\": \"bar\"\n}\n",
+         "in_yaml" : "{\"foo\"\n: bar}\n",
+         "tags" : [],
+         "test_event" : "+STR\n+DOC\n+MAP {}\n=VAL \"foo\n=VAL :bar\n-MAP\n-DOC\n-STR\n"
       },
       "4Q9F" : {
          "id" : "4Q9F",
@@ -351,6 +355,16 @@ var data = {
             "whitespace"
          ],
          "test_event" : "+STR\n+DOC\n+SEQ\n=VAL |detected\\n\n=VAL >\\n\\n# detected\\n\n=VAL | explicit\\n\n=VAL >detected\\n\n-SEQ\n-DOC\n-STR\n"
+      },
+      "4RWC" : {
+         "id" : "4RWC",
+         "in_json" : "[\n  1,\n  2,\n  3\n]\n",
+         "in_yaml" : "  [1, 2, 3]  \n  ",
+         "tags" : [
+            "flow",
+            "whitespace"
+         ],
+         "test_event" : "+STR\n+DOC\n+SEQ []\n=VAL :1\n=VAL :2\n=VAL :3\n-SEQ\n-DOC\n-STR\n"
       },
       "4UYU" : {
          "id" : "4UYU",
@@ -437,18 +451,15 @@ var data = {
          ],
          "test_event" : "+STR\n+DOC\n+MAP\n=VAL :sequence\n+SEQ <tag:yaml.org,2002:seq>\n=VAL :entry\n+SEQ <tag:yaml.org,2002:seq>\n=VAL :nested\n-SEQ\n-SEQ\n=VAL :mapping\n+MAP <tag:yaml.org,2002:map>\n=VAL :foo\n=VAL :bar\n-MAP\n-MAP\n-DOC\n-STR\n"
       },
-      "58MP:00" : {
-         "id" : "58MP:00",
-         "in_json" : "{\n  \"x\": \"y\"\n}\n",
-         "in_yaml" : "{\"x\"\n: y}\n",
-         "tags" : [],
-         "test_event" : "+STR\n+DOC\n+MAP {}\n=VAL \"x\n=VAL :y\n-MAP\n-DOC\n-STR\n"
-      },
-      "58MP:01" : {
-         "id" : "58MP:01",
+      "58MP" : {
+         "id" : "58MP",
          "in_json" : "{\n  \"x\": \":x\"\n}\n",
          "in_yaml" : "{x: :x}\n",
-         "tags" : [],
+         "tags" : [
+            "edge",
+            "flow",
+            "mapping"
+         ],
          "test_event" : "+STR\n+DOC\n+MAP {}\n=VAL :x\n=VAL ::x\n-MAP\n-DOC\n-STR\n"
       },
       "5BVJ" : {
@@ -1896,6 +1907,27 @@ var data = {
          ],
          "test_event" : "+STR\n+DOC ---\n+MAP\n=VAL :hr\n+SEQ\n=VAL :Mark McGwire\n=VAL :Sammy Sosa\n-SEQ\n=VAL :rbi\n+SEQ\n=VAL :Sammy Sosa\n=VAL :Ken Griffey\n-SEQ\n-MAP\n-DOC\n-STR\n"
       },
+      "JEF9:00" : {
+         "id" : "JEF9:00",
+         "in_json" : "[\n  \"\\n\\n\"\n]\n",
+         "in_yaml" : "- |+\n\n\n",
+         "tags" : [],
+         "test_event" : "+STR\n+DOC\n+SEQ\n=VAL |\\n\\n\n-SEQ\n-DOC\n-STR\n"
+      },
+      "JEF9:01" : {
+         "id" : "JEF9:01",
+         "in_json" : "[\n  \"\\n\"\n]\n",
+         "in_yaml" : "- |+\n   \n",
+         "tags" : [],
+         "test_event" : "+STR\n+DOC\n+SEQ\n=VAL |\\n\n-SEQ\n-DOC\n-STR\n"
+      },
+      "JEF9:02" : {
+         "id" : "JEF9:02",
+         "in_json" : "[\n  \"\\n\"\n]\n",
+         "in_yaml" : "- |+\n   ",
+         "tags" : [],
+         "test_event" : "+STR\n+DOC\n+SEQ\n=VAL |\\n\n-SEQ\n-DOC\n-STR\n"
+      },
       "JHB9" : {
          "id" : "JHB9",
          "in_json" : "[\n  \"Mark McGwire\",\n  \"Sammy Sosa\",\n  \"Ken Griffey\"\n]\n[\n  \"Chicago Cubs\",\n  \"St Louis Cardinals\"\n]\n",
@@ -2243,66 +2275,38 @@ var data = {
          ],
          "test_event" : "+STR\n+DOC\n=VAL >foo \\n\\n\\t bar\\n\\nbaz\\n\n-DOC\n-STR\n"
       },
-      "MUS6:00" : {
-         "id" : "MUS6:00",
-         "in_json" : "null\n",
-         "in_yaml" : "%YAML  1.1\n---\n",
-         "tags" : [],
-         "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
-      },
-      "MUS6:01" : {
-         "id" : "MUS6:01",
-         "in_json" : "null\n",
-         "in_yaml" : "%YAML 1.1 #...\n---\n",
-         "tags" : [],
-         "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
-      },
       "MUS6:02" : {
          "id" : "MUS6:02",
          "in_json" : "null\n",
-         "in_yaml" : "%YAM 1.1\n---\n",
+         "in_yaml" : "%YAML  1.1\n---\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
       },
       "MUS6:03" : {
          "id" : "MUS6:03",
          "in_json" : "null\n",
-         "in_yaml" : "%YAMLL 1.1\n---\n",
+         "in_yaml" : "%YAML \t 1.1\n---\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
       },
       "MUS6:04" : {
          "id" : "MUS6:04",
          "in_json" : "null\n",
-         "in_yaml" : "%YAML\t1.1\n---\n",
+         "in_yaml" : "%YAML 1.1  # comment\n---\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
       },
       "MUS6:05" : {
          "id" : "MUS6:05",
          "in_json" : "null\n",
-         "in_yaml" : "%YAML1.1\n---\n",
+         "in_yaml" : "%YAM 1.1\n---\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
       },
       "MUS6:06" : {
          "id" : "MUS6:06",
          "in_json" : "null\n",
-         "in_yaml" : "%***\n---\n",
-         "tags" : [],
-         "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
-      },
-      "MUS6:07" : {
-         "id" : "MUS6:07",
-         "in_json" : "null\n",
-         "in_yaml" : "%YAML 1.1 1.2\n---\n",
-         "tags" : [],
-         "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
-      },
-      "MUS6:08" : {
-         "id" : "MUS6:08",
-         "in_json" : "null\n",
-         "in_yaml" : "%YAML 1.12345\n---\n",
+         "in_yaml" : "%YAMLL 1.1\n---\n",
          "tags" : [],
          "test_event" : "+STR\n+DOC ---\n=VAL :\n-DOC\n-STR\n"
       },

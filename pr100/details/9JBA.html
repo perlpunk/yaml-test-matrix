@@ -20,7 +20,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9JBA.yaml">&test-9
 </pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
-+SEQ
++SEQ []
 =VAL :a
 =VAL :b
 =VAL :c
@@ -405,7 +405,7 @@ YAMLParseError: Comments must be separated from other tokens by white space char
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 2
 Column    : 13
 Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 377
 YAML      : &quot;#invalid&quot;
   at /yaml/bin/perl-pp-event line 25.
 +STR
@@ -424,7 +424,7 @@ YAML      : &quot;#invalid&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 2
 Column    : 13
 Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 377
 YAML      : &quot;#invalid&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -436,7 +436,7 @@ YAML      : &quot;#invalid&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 2
 Column    : 13
 Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 377
 YAML      : &quot;#invalid&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>

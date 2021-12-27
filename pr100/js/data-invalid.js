@@ -510,9 +510,14 @@ var data = {
             "tag"
          ]
       },
-      "MUS6:09" : {
-         "id" : "MUS6:09",
+      "MUS6:00" : {
+         "id" : "MUS6:00",
          "in_yaml" : "%YAML 1.1#...\n---\n",
+         "tags" : []
+      },
+      "MUS6:01" : {
+         "id" : "MUS6:01",
+         "in_yaml" : "%YAML 1.2\n---\n%YAML 1.2\n---\n",
          "tags" : []
       },
       "N4JP" : {
