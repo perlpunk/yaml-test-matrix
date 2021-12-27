@@ -5,6 +5,7 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
@@ -17,7 +18,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/[%= main_id
 &nbsp;&nbsp;Tags: [ [%loop .test.tags join=", " %][%= _ %][%/loop %]
 ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>[%= .yaml %]</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>[%= .yaml_highlighted escape=0 %]</pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>[%= .events %]</pre></div>
 <div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
 <pre>[%loop .json_lines %][%= _ %]<br>[%/loop %]</pre>

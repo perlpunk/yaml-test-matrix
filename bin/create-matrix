@@ -414,11 +414,27 @@ sub create_details {
         path => "$Bin/../share/matrix/templates",
         %htc_args,
     );
+    my ($error, $tokens) = YAML::PP::Parser->yaml_to_tokens( string => $yaml );
+    if ($error) {
+        # YAML::PP can't parse it, just display it without highlighting
+        @$tokens = ();
+        my @yaml = split m/^/, $yaml;
+        for my $line (@yaml) {
+            my ($text, $eol) = $line =~ m/\A(.*?)( *\n)\z/;
+            my @tokens = (
+                { name => 'PLAIN', value => $text },
+                { name => 'EOL', value => $eol },
+            );
+            push @$tokens, @tokens;
+        }
+    }
+    my $highlighted = YAML::PP::Highlight->htmlcolored($tokens);
     $htc->param(
         id => $id,
         main_id => $main_id,
         test => $test,
         yaml => $yaml,
+        yaml_highlighted => $highlighted,
         json => $json,
         json_lines => $json_lines,
         events => $events,
