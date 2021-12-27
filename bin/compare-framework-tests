@@ -226,7 +226,7 @@ sub compare_tests {
                 or $view eq "nim-nimyaml.event"
                 or $view eq "hs-hsyaml.event"
                 or $view eq "perl-pp.event"
-                or $view eq "js-yaml.event") {
+                ) {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.flow.event")
                     ->encoding('utf-8')->chomp->slurp;
