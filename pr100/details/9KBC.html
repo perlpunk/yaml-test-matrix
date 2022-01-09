@@ -196,11 +196,11 @@ Aborted (core dumped)
     --- key1: value1
             ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:890)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:379)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:271)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:286)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:910)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:400)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:274)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:288)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -215,11 +215,11 @@ Aborted (core dumped)
     --- key1: value1
             ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:890)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:379)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:271)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:286)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:910)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:400)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:274)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:288)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -494,17 +494,17 @@ yaml.scanner.ScannerError: mapping values are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 241, in parse_document_end
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 253, in parse_document_end
     token = self.scanner.peek_token()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 188, in peek_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 283, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 288, in fetch_more_tokens
     return self.fetch_value()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 656, in fetch_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 661, in fetch_value
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
@@ -522,23 +522,23 @@ ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 104, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 102, in compose_document
     self.parser.get_event()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 162, in get_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 168, in get_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 241, in parse_document_end
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 253, in parse_document_end
     token = self.scanner.peek_token()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 188, in peek_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 283, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 288, in fetch_more_tokens
     return self.fetch_value()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 656, in fetch_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 661, in fetch_value
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
@@ -553,23 +553,23 @@ ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 104, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 102, in compose_document
     self.parser.get_event()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 162, in get_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 168, in get_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 241, in parse_document_end
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 253, in parse_document_end
     token = self.scanner.peek_token()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 188, in peek_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 283, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 288, in fetch_more_tokens
     return self.fetch_value()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 656, in fetch_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 661, in fetch_value
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
@@ -603,6 +603,16 @@ ruamel.yaml.scanner.ScannerError: mapping values are not allowed here
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Error: ScanError { mark: Marker { index: 8, line: 1, col: 8 }, info: &quot;mapping values are not allowed in this context&quot; }
++STR
++DOC
+=VAL :key1
 </pre>
  </div>
 

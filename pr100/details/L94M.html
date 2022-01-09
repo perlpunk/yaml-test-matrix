@@ -181,7 +181,61 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/L94M.yaml">&test-L
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_na" id="hs-reference-yeast">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL &lt;tag:yaml.org,2002:str&gt; :a
+=VAL &lt;tag:yaml.org,2002:int&gt; :47
+=VAL :c
+=VAL &lt;tag:yaml.org,2002:str&gt; :d
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :a
+=VAL &lt;Tag(&quot;!!&quot;, &quot;int&quot;)&gt; :47
+=VAL :c
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :d
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="diff_line">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :a</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;int&quot;)&gt; :47</span>
+<span
+class="">=VAL :c</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :d</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">          <div class="framework framework_box_na" id="hs-reference-yeast">
 <h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
    1    0    0    0 +DOC |

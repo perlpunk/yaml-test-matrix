@@ -104,7 +104,89 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/FH7J.yaml">&test-F
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &lt;tag:yaml.org,2002:str&gt; :
++MAP
+=VAL &lt;tag:yaml.org,2002:null&gt; :
+=VAL :a
+=VAL :b
+=VAL &lt;tag:yaml.org,2002:str&gt; :
+-MAP
++MAP
+=VAL &lt;tag:yaml.org,2002:str&gt; :
+=VAL &lt;tag:yaml.org,2002:null&gt; :
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :
++MAP
+=VAL &lt;Tag(&quot;!!&quot;, &quot;null&quot;)&gt; :
+=VAL :a
+=VAL :b
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :
+-MAP
++MAP
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :
+=VAL &lt;Tag(&quot;!!&quot;, &quot;null&quot;)&gt; :
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+SEQ</span>
+<span
+class="diff_line">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;null&quot;)&gt; :</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;null&quot;)&gt; :</span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 3, column 10): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
 </pre>

@@ -88,6 +88,23 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/H7J7.yaml">&test-H
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
++DOC
++MAP
+=VAL :key
++MAP &amp;1
+=VAL :a
+=VAL :b
+-MAP
+-MAP
+-DOC
+-STR
+</pre>
+ </div>
+
+
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: invalid tag indent for mapping
@@ -214,14 +231,14 @@ could not find expected &#39;:&#39;
       a: b
       ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:484)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:310)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:505)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:331)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
 	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:424)
 	at org.yaml.snakeyaml.parser.ParserImpl.parseBlockNodeOrIndentlessSequence(ParserImpl.java:404)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2300(ParserImpl.java:120)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:670)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl.access$2300(ParserImpl.java:121)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -240,14 +257,14 @@ could not find expected &#39;:&#39;
       a: b
       ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:484)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:310)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:505)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:331)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
 	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:424)
 	at org.yaml.snakeyaml.parser.ParserImpl.parseBlockNodeOrIndentlessSequence(ParserImpl.java:404)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2300(ParserImpl.java:120)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:670)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl.access$2300(ParserImpl.java:121)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -617,21 +634,21 @@ could not find expected &#39;:&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 611, in parse_block_mapping_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 638, in parse_block_mapping_value
     return self.parse_block_node_or_indentless_sequence()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 337, in parse_block_node_or_indentless_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 352, in parse_block_node_or_indentless_sequence
     return self.parse_node(block=True, indentless_sequence=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 359, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 375, in parse_node
     if self.scanner.check_token(TagToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 222, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 227, in fetch_more_tokens
     self.stale_possible_simple_keys()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 359, in stale_possible_simple_keys
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 364, in stale_possible_simple_keys
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a simple key
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -654,33 +671,33 @@ could not find expected &#39;:&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 138, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 143, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 218, in compose_mapping_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 223, in compose_mapping_node
     item_value = self.compose_node(node, item_key)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 611, in parse_block_mapping_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 638, in parse_block_mapping_value
     return self.parse_block_node_or_indentless_sequence()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 337, in parse_block_node_or_indentless_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 352, in parse_block_node_or_indentless_sequence
     return self.parse_node(block=True, indentless_sequence=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 359, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 375, in parse_node
     if self.scanner.check_token(TagToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 222, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 227, in fetch_more_tokens
     self.stale_possible_simple_keys()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 359, in stale_possible_simple_keys
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 364, in stale_possible_simple_keys
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a simple key
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -699,33 +716,33 @@ could not find expected &#39;:&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 138, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 143, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 218, in compose_mapping_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 223, in compose_mapping_node
     item_value = self.compose_node(node, item_key)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 611, in parse_block_mapping_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 638, in parse_block_mapping_value
     return self.parse_block_node_or_indentless_sequence()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 337, in parse_block_node_or_indentless_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 352, in parse_block_node_or_indentless_sequence
     return self.parse_node(block=True, indentless_sequence=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 359, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 375, in parse_node
     if self.scanner.check_token(TagToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 222, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 227, in fetch_more_tokens
     self.stale_possible_simple_keys()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 359, in stale_possible_simple_keys
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 364, in stale_possible_simple_keys
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a simple key
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:

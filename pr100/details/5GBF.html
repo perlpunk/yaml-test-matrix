@@ -170,7 +170,67 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/5GBF.yaml">&test-5
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :Folding
+=VAL &quot;Empty line\nas a line feed
+=VAL :Chomping
+=VAL |Clipped empty lines\n
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :Folding
+=VAL &quot;Empty line
+as a line feed
+=VAL :Chomping
+=VAL |Clipped empty lines
+
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :Folding</span>
+<span
+class="diff_line">=VAL &quot;Empty line</span>
+<span
+class="">as a line feed</span>
+<span
+class="">=VAL :Chomping</span>
+<span
+class="">=VAL |Clipped empty lines</span>
+<span
+class=""></span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>

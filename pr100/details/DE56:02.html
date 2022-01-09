@@ -29,7 +29,12 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/DE56.yaml">&test-D
 <pre>&quot;3 trailing\t tab&quot;<br></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_ok" id="c-libyaml-event">
+   <div class="framework framework_box_ok" id="c-libfyaml-event">
+<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
@@ -79,7 +84,12 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/DE56.yaml">&test-D
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="go-yaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="go-yaml-json">
 <h3><a href="#go-yaml-json">go-yaml-json</a></h3>
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
@@ -134,17 +144,31 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/DE56.yaml">&test-D
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="c-libfyaml-event">
-<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
 <span class="status_box color_diff">&nbsp;</span>diff <br>
 
-  Got Events:
+ Minimal Events:
+<pre>
++STR
++DOC
+=VAL &quot;3 trailing\t tab
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
+=VAL &quot;3 trailing	 tab
+-DOC
+-STR</pre>
+ Got Events:
 <pre><span
 class="">+STR</span>
 <span
 class="">+DOC</span>
 <span
-class="diff_line">=VAL &quot;3 trailingtab</span>
+class="diff_line">=VAL &quot;3 trailing	 tab</span>
 <span
 class="">-DOC</span>
 <span
@@ -154,15 +178,7 @@ class="">-STR</span>
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="c-libfyaml-json">
-<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
-class="diff_line">&quot;3 trailingtab&quot;</span>
-</pre>
- </div>
-
-
-  <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">parse error: Invalid string: control characters from U+0000 through U+001F must be escaped at line 1, column 17</span>
@@ -189,14 +205,14 @@ found unknown escape character 	(9)
     &quot;3 trailing\	
                 ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1965)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1904)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1048)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1030)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:415)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:213)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1980)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1919)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -215,15 +231,15 @@ found unknown escape character 	(9)
     &quot;3 trailing\	
                 ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1965)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1904)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1048)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1030)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:415)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:213)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1980)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1919)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:93)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)

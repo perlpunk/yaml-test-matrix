@@ -185,12 +185,12 @@ expected &#39; &#39;, but found &#39;{&#39; (123)
     !invalid{}tag scalar
             ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanTag(ScannerImpl.java:1612)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchTag(ScannerImpl.java:975)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:393)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:304)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanTag(ScannerImpl.java:1627)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchTag(ScannerImpl.java:995)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:414)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:306)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -209,12 +209,12 @@ expected &#39; &#39;, but found &#39;{&#39; (123)
     !invalid{}tag scalar
             ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanTag(ScannerImpl.java:1612)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchTag(ScannerImpl.java:975)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:393)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:304)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanTag(ScannerImpl.java:1627)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchTag(ScannerImpl.java:995)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:414)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:306)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -567,19 +567,19 @@ expected &#39; &#39;, but found &#39;{&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 261, in parse_document_content
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 273, in parse_document_content
     DirectiveToken, DocumentStartToken, DocumentEndToken, StreamEndToken
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 295, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 300, in fetch_more_tokens
     return self.fetch_tag()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 704, in fetch_tag
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 709, in fetch_tag
     self.tokens.append(self.scan_tag())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1134, in scan_tag
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1139, in scan_tag
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a tag
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -600,27 +600,27 @@ expected &#39; &#39;, but found &#39;{&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 261, in parse_document_content
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 273, in parse_document_content
     DirectiveToken, DocumentStartToken, DocumentEndToken, StreamEndToken
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 295, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 300, in fetch_more_tokens
     return self.fetch_tag()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 704, in fetch_tag
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 709, in fetch_tag
     self.tokens.append(self.scan_tag())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1134, in scan_tag
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1139, in scan_tag
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a tag
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -639,27 +639,27 @@ expected &#39; &#39;, but found &#39;{&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 261, in parse_document_content
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 273, in parse_document_content
     DirectiveToken, DocumentStartToken, DocumentEndToken, StreamEndToken
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 295, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 300, in fetch_more_tokens
     return self.fetch_tag()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 704, in fetch_tag
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 709, in fetch_tag
     self.tokens.append(self.scan_tag())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1134, in scan_tag
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1139, in scan_tag
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a tag
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -697,6 +697,15 @@ expected &#39; &#39;, but found &#39;{&#39;
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Error: ScanError { mark: Marker { index: 4, line: 2, col: 0 }, info: &quot;while scanning a tag, did not find expected whitespace or line break&quot; }
++STR
++DOC
 </pre>
  </div>
 

@@ -182,7 +182,80 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/M6YH.yaml">&test-M
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL |x\n
++MAP
+=VAL :foo
+=VAL :bar
+-MAP
++SEQ
+=VAL :42
+-SEQ
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL |x
+
++MAP
+=VAL :foo
+=VAL :bar
+-MAP
++SEQ
+=VAL :42
+-SEQ
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+SEQ</span>
+<span
+class="diff_line">=VAL |x</span>
+<span
+class=""></span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :foo</span>
+<span
+class="">=VAL :bar</span>
+<span
+class="">-MAP</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :42</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">[</span>

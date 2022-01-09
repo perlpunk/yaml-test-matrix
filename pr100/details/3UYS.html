@@ -205,14 +205,14 @@ found unknown escape character /(47)
     escaped slash: &quot;a\/b&quot;
                       ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1965)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1901)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1048)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1030)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:415)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1980)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1916)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:660)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -231,14 +231,14 @@ found unknown escape character /(47)
     escaped slash: &quot;a\/b&quot;
                       ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1965)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1901)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1048)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1030)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:415)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1980)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1916)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:660)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -254,6 +254,17 @@ found unknown escape character /(47)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
 	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>+STR
++DOC
++MAP
+=VAL :escaped slash
+Error: ScanError { mark: Marker { index: 15, line: 1, col: 15 }, info: &quot;while parsing a quoted scalar, found unknown escape character&quot; }
 </pre>
  </div>
 

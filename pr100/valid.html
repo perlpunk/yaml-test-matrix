@@ -65,6 +65,10 @@ checked="checked" onchange="toggle_framework('py-pyyaml-event')">
 class="selector-event selector-py" data-fw="py-ruamel-event"
 checked="checked" onchange="toggle_framework('py-ruamel-event')">
 <label for="fw-select-py-ruamel-event" >py ruamel</label><br>
+ <input type="checkbox" name="" value="1" id="fw-select-rust-yamlrust-event"
+class="selector-event selector-rust" data-fw="rust-yamlrust-event"
+checked="checked" onchange="toggle_framework('rust-yamlrust-event')">
+<label for="fw-select-rust-yamlrust-event" >rust yamlrust</label><br>
  </div>
  <div class="selector">
 <input type="checkbox" name="type-json" value="1" id="type-json"
@@ -206,6 +210,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result perl-refparser-event">perl<br>refparser<br>event</td>
  <td class="result py-pyyaml-event">py<br>pyyaml<br>event</td>
  <td class="result py-ruamel-event">py<br>ruamel<br>event</td>
+ <td class="result rust-yamlrust-event">rust<br>yamlrust<br>event</td>
  <td class="result c-libfyaml-json">c<br>libfyaml<br>json</td>
  <td class="result dotnet-yamldotnet-json">dotnet<br>yamldotnet<br>json</td>
  <td class="result go-yaml-json">go<br>yaml<br>json</td>
@@ -246,11 +251,11 @@ href="processors.html">Frameworks</a><br>Tests</th>
 <span class="status_box color_error">&nbsp;</span>error<br>
  </td>
 
- <td class="result c-libfyaml-event"> <span class="status_box color_ok">&nbsp;</span>291 <br>
+ <td class="result c-libfyaml-event"> <span class="status_box color_ok">&nbsp;</span>296 <br>
 <br>
-<span class="status_box color_diff">&nbsp;</span>5 <br>
+<span class="status_box color_diff">&nbsp;</span>2 <br>
 <br>
-<span class="status_box color_error">&nbsp;</span>2<br>
+<br>
 </td>
  <td class="result c-libyaml-event"> <span class="status_box color_ok">&nbsp;</span>247 <br>
 <span class="status_box color_ni">&nbsp;</span>9<br>
@@ -318,11 +323,17 @@ href="processors.html">Frameworks</a><br>Tests</th>
 <br>
 <span class="status_box color_error">&nbsp;</span>28<br>
 </td>
- <td class="result c-libfyaml-json">  <span class="status_box color_json_ok">&nbsp;</span>261<br>
+ <td class="result rust-yamlrust-event"> <span class="status_box color_ok">&nbsp;</span>124 <br>
 <br>
- <span class="status_box color_json_diff">&nbsp;</span>6<br>
+<span class="status_box color_diff">&nbsp;</span>147 <br>
+<br>
+<span class="status_box color_error">&nbsp;</span>27<br>
+</td>
+ <td class="result c-libfyaml-json">  <span class="status_box color_json_ok">&nbsp;</span>266<br>
+<br>
+ <span class="status_box color_json_diff">&nbsp;</span>3<br>
 <span class="status_box color_na">&nbsp;</span>29<br>
-<span class="status_box color_error">&nbsp;</span>2<br>
+<br>
 </td>
  <td class="result dotnet-yamldotnet-json">  <span class="status_box color_json_ok">&nbsp;</span>169<br>
 <span class="status_box color_ni">&nbsp;</span>16<br>
@@ -518,6 +529,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/V55R.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/V55R.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/V55R.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/V55R.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -601,6 +614,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ni "><a class="invisible" href="details/6M2F.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6M2F.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6M2F.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/6M2F.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -686,6 +701,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/X38W.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/X38W.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/X38W.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/X38W.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -769,6 +786,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/E76Z.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/E76Z.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/E76Z.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/E76Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -854,6 +873,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/W5VH.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/W5VH.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/W5VH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/W5VH.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -937,6 +958,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/2EBW.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2EBW.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/2EBW.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2EBW.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -1022,6 +1045,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/FBC9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/FBC9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FBC9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FBC9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1105,6 +1130,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6SLA.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6SLA.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6SLA.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6SLA.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -1190,6 +1217,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/SKE5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/SKE5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/SKE5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/SKE5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1273,6 +1302,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6KGN.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6KGN.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/6KGN.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6KGN.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -1358,6 +1389,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Y2GN.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/Y2GN.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Y2GN.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/Y2GN.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1441,6 +1474,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/8XYN.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8XYN.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/8XYN.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8XYN.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -1526,6 +1561,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2SXE.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/2SXE.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2SXE.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/2SXE.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1609,6 +1646,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/F2C7.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/F2C7.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/F2C7.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F2C7.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -1694,6 +1733,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/ZH7C.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/ZH7C.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/ZH7C.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/ZH7C.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1777,6 +1818,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/PW8X.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/PW8X.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/PW8X.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/PW8X.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -1862,6 +1905,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6H3V.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6H3V.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6H3V.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6H3V.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1945,6 +1990,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/7Z25.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7Z25.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/7Z25.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7Z25.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -2030,6 +2077,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/H2RW.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/H2RW.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/H2RW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/H2RW.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2113,6 +2162,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ni "><a class="invisible" href="details/2JQS.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2JQS.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/2JQS.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/2JQS.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -2198,6 +2249,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7W2P.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/7W2P.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7W2P.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7W2P.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2281,6 +2334,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/JTV5.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JTV5.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/JTV5.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JTV5.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -2366,6 +2421,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/93JH.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/93JH.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/93JH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/93JH.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2449,6 +2506,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6FWR.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6FWR.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6FWR.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6FWR.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -2534,6 +2593,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MYW6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/MYW6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MYW6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MYW6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2617,6 +2678,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/753E.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/753E.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/753E.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/753E.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -2702,6 +2765,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8QBE.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/8QBE.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8QBE.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8QBE.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2785,6 +2850,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/3ALJ.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3ALJ.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/3ALJ.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3ALJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -2870,6 +2937,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/KMK3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/KMK3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/KMK3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/KMK3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2953,6 +3022,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/D83L.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/D83L.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/D83L.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/D83L.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -3038,6 +3109,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M6YH.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/M6YH.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M6YH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/M6YH.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3121,6 +3194,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/K3WX.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/K3WX.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/K3WX.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K3WX.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -3206,6 +3281,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/5MUD.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/5MUD.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5MUD.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5MUD.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3289,6 +3366,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/5T43.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5T43.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/5T43.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5T43.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -3374,6 +3453,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/S7BG.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/S7BG.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S7BG.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/S7BG.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3457,6 +3538,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/4UYU.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4UYU.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/4UYU.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4UYU.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -3542,6 +3625,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/QT73.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/QT73.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/QT73.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/QT73.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3625,6 +3710,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/7TMG.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7TMG.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/7TMG.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7TMG.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -3710,6 +3797,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/565N.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/565N.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/565N.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/565N.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3793,6 +3882,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/MUS6:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MUS6:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MUS6:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MUS6:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -3878,6 +3969,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/MUS6:03.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MUS6:03.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MUS6:03.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MUS6:03.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3961,6 +4054,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/MUS6:04.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MUS6:04.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MUS6:04.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MUS6:04.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -4046,6 +4141,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MUS6:05.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MUS6:05.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MUS6:05.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MUS6:05.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4106,7 +4203,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <tr>
 <td class="testid"><tt><a href="#MUS6:06">MUS6:06</tt></a></td>
 <td id="MUS6:06" class="testname"><a href="details/MUS6:06.html">Directive variants</a></td>
- <td class="result c-libfyaml-event color_error "><a class="invisible" href="details/MUS6:06.html#c-libfyaml-event">&nbsp;</a>
+ <td class="result c-libfyaml-event color_ok "><a class="invisible" href="details/MUS6:06.html#c-libfyaml-event">&nbsp;</a>
 </td>
  <td class="result c-libyaml-event color_error "><a class="invisible" href="details/MUS6:06.html#c-libyaml-event">&nbsp;</a>
 </td>
@@ -4130,7 +4227,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MUS6:06.html#py-ruamel-event">&nbsp;</a>
 </td>
- <td class="result c-libfyaml-json color_error "><a class="invisible" href="details/MUS6:06.html#c-libfyaml-json">&nbsp;</a>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MUS6:06.html#rust-yamlrust-event">&nbsp;</a>
+</td>
+ <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MUS6:06.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/MUS6:06.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
@@ -4213,6 +4312,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/PUW8.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/PUW8.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/PUW8.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/PUW8.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -4298,6 +4399,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/S4T7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/S4T7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S4T7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/S4T7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4381,6 +4484,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/HWV9.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/HWV9.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/HWV9.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HWV9.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -4466,6 +4571,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/CPZ3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/CPZ3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CPZ3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/CPZ3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4549,6 +4656,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/J7VC.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/J7VC.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/J7VC.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J7VC.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -4634,6 +4743,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/NHX8.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/NHX8.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/NHX8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/NHX8.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4717,6 +4828,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/AVM7.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/AVM7.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/AVM7.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/AVM7.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -4802,6 +4915,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7ZZ5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/7ZZ5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7ZZ5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7ZZ5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4885,6 +5000,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ni "><a class="invisible" href="details/CFD4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/CFD4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/CFD4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/CFD4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -4970,6 +5087,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/NKF9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/NKF9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/NKF9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/NKF9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5053,6 +5172,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/3UYS.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3UYS.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/3UYS.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3UYS.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -5138,6 +5259,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8MK2.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/8MK2.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8MK2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/8MK2.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5221,6 +5344,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/52DL.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/52DL.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/52DL.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/52DL.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -5306,6 +5431,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/X8DW.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/X8DW.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/X8DW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/X8DW.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5389,6 +5516,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/54T7.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/54T7.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/54T7.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/54T7.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -5474,6 +5603,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_diff "><a class="invisible" href="details/4ABK.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4ABK.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/4ABK.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/4ABK.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5557,6 +5688,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/MXS3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MXS3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/MXS3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MXS3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -5642,6 +5775,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DHP8.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/DHP8.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DHP8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DHP8.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5725,6 +5860,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/D88J.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/D88J.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/D88J.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/D88J.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -5810,6 +5947,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/SBG9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/SBG9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/SBG9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/SBG9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5893,6 +6032,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/FUP4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/FUP4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/FUP4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FUP4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -5978,6 +6119,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/VJP3:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/VJP3:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/VJP3:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/VJP3:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6061,6 +6204,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/4MUZ:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/4MUZ:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/4MUZ:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4MUZ:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -6146,6 +6291,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/4MUZ:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/4MUZ:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4MUZ:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4MUZ:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6206,7 +6353,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <tr>
 <td class="testid"><tt><a href="#58MP">58MP</tt></a></td>
 <td id="58MP" class="testname"><a href="details/58MP.html">Flow mapping edge cases</a></td>
- <td class="result c-libfyaml-event color_error "><a class="invisible" href="details/58MP.html#c-libfyaml-event">&nbsp;</a>
+ <td class="result c-libfyaml-event color_ok "><a class="invisible" href="details/58MP.html#c-libfyaml-event">&nbsp;</a>
 </td>
  <td class="result c-libyaml-event color_error "><a class="invisible" href="details/58MP.html#c-libyaml-event">&nbsp;</a>
 </td>
@@ -6230,7 +6377,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/58MP.html#py-ruamel-event">&nbsp;</a>
 </td>
- <td class="result c-libfyaml-json color_error "><a class="invisible" href="details/58MP.html#c-libfyaml-json">&nbsp;</a>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/58MP.html#rust-yamlrust-event">&nbsp;</a>
+</td>
+ <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/58MP.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/58MP.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
@@ -6313,6 +6462,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/C4WK.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/C4WK.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/C4WK.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/C4WK.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -6398,6 +6549,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/TS54.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/TS54.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/TS54.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/TS54.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6481,6 +6634,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/4Q9F.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4Q9F.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4Q9F.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4Q9F.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -6566,6 +6721,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/LX3P.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/LX3P.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/LX3P.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/LX3P.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6649,6 +6806,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/KH5V:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/KH5V:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/KH5V:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/KH5V:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -6734,6 +6893,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/KH5V:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/KH5V:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/KH5V:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/KH5V:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6817,6 +6978,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/KH5V:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/KH5V:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/KH5V:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/KH5V:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -6902,6 +7065,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/ZWK4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/ZWK4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/ZWK4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/ZWK4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6985,6 +7150,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/96NN:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/96NN:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/96NN:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/96NN:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -7070,6 +7237,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/96NN:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/96NN:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/96NN:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/96NN:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7153,6 +7322,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/3RLN:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3RLN:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/3RLN:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3RLN:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -7238,6 +7409,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3RLN:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/3RLN:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3RLN:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/3RLN:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7321,6 +7494,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/3RLN:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3RLN:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/3RLN:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3RLN:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -7406,6 +7581,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3RLN:03.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/3RLN:03.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3RLN:03.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/3RLN:03.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7489,6 +7666,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/3RLN:04.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3RLN:04.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/3RLN:04.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3RLN:04.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -7574,6 +7753,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3RLN:05.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/3RLN:05.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3RLN:05.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3RLN:05.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7657,6 +7838,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/UV7Q.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/UV7Q.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/UV7Q.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UV7Q.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -7742,6 +7925,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M29M.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/M29M.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M29M.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/M29M.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7825,6 +8010,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/2G84:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2G84:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/2G84:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2G84:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -7910,6 +8097,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2G84:03.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/2G84:03.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2G84:03.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/2G84:03.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7993,6 +8182,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/4WA9.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4WA9.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4WA9.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4WA9.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -8078,6 +8269,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/H3Z8.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/H3Z8.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/H3Z8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/H3Z8.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8161,6 +8354,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/AZW3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/AZW3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/AZW3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/AZW3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -8246,6 +8441,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6BFJ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/6BFJ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/6BFJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/6BFJ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8329,6 +8526,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/GH63.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/GH63.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/GH63.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/GH63.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -8414,6 +8613,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/RR7F.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/RR7F.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RR7F.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/RR7F.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8497,6 +8698,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/F6MC.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/F6MC.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/F6MC.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F6MC.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -8582,6 +8785,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9FMG.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/9FMG.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9FMG.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9FMG.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8665,6 +8870,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/9YRD.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9YRD.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/9YRD.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9YRD.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -8750,6 +8957,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/EX5H.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/EX5H.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/EX5H.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/EX5H.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8833,6 +9042,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/A984.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/A984.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/A984.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/A984.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -8918,6 +9129,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/9SA2.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/9SA2.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9SA2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9SA2.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -9001,6 +9214,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/9BXH.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9BXH.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/9BXH.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9BXH.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -9086,6 +9301,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/NJ66.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/NJ66.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/NJ66.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/NJ66.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -9169,6 +9386,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/8KB6.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8KB6.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/8KB6.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8KB6.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -9254,6 +9473,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/36F6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/36F6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/36F6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/36F6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -9337,6 +9558,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/NB6Z.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/NB6Z.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/NB6Z.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/NB6Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -9422,6 +9645,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/XLQ9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/XLQ9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/XLQ9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/XLQ9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -9505,6 +9730,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/K4SU.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/K4SU.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/K4SU.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K4SU.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -9590,6 +9817,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/J5UC.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/J5UC.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J5UC.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/J5UC.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -9673,6 +9902,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/M7NX.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M7NX.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/M7NX.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M7NX.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -9758,6 +9989,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/F3CP.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/F3CP.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F3CP.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/F3CP.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -9841,6 +10074,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/R52L.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/R52L.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/R52L.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/R52L.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -9926,6 +10161,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4FJ6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/4FJ6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/4FJ6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/4FJ6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -10009,6 +10246,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/ZK9H.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/ZK9H.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/ZK9H.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/ZK9H.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -10094,6 +10333,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/BU8L.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/BU8L.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/BU8L.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/BU8L.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -10177,6 +10418,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/U3XV.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/U3XV.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/U3XV.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/U3XV.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -10262,6 +10505,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7BMT.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/7BMT.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7BMT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7BMT.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -10345,6 +10590,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/MZX3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MZX3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MZX3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MZX3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -10430,6 +10677,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3MYT.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/3MYT.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3MYT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3MYT.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -10513,6 +10762,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/UDM2.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/UDM2.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/UDM2.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UDM2.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -10598,6 +10849,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8CWC.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/8CWC.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8CWC.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/8CWC.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -10681,6 +10934,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/4V8U.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4V8U.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4V8U.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4V8U.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -10766,6 +11021,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_diff "><a class="invisible" href="details/652Z.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/652Z.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/652Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/652Z.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -10849,6 +11106,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ni "><a class="invisible" href="details/M2N8:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M2N8:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/M2N8:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/M2N8:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -10934,6 +11193,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M2N8:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/M2N8:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/M2N8:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/M2N8:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -11017,6 +11278,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/JR7V.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JR7V.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/JR7V.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JR7V.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -11102,6 +11365,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9MQT:00.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/9MQT:00.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9MQT:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9MQT:00.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -11185,6 +11450,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/HM87:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/HM87:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/HM87:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HM87:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -11270,6 +11537,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_diff "><a class="invisible" href="details/HM87:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/HM87:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HM87:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/HM87:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -11353,6 +11622,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/KSS4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/KSS4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/KSS4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/KSS4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -11438,6 +11709,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/RLU9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/RLU9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RLU9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/RLU9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -11521,6 +11794,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/AZ63.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/AZ63.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/AZ63.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/AZ63.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -11606,6 +11881,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/AB8U.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/AB8U.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/AB8U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/AB8U.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -11689,6 +11966,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/9J7A.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9J7A.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/9J7A.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9J7A.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -11774,6 +12053,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/65WH.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/65WH.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/65WH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/65WH.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -11857,6 +12138,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/D9TU.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/D9TU.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/D9TU.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/D9TU.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -11942,6 +12225,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/9MMW.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/9MMW.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/9MMW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/9MMW.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -12025,6 +12310,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/3R3P.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3R3P.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/3R3P.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3R3P.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -12110,6 +12397,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/FTA2.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/FTA2.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FTA2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/FTA2.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -12193,6 +12482,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/SM9W:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/SM9W:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/SM9W:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/SM9W:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -12278,6 +12569,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/SM9W:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/SM9W:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/SM9W:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/SM9W:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -12361,6 +12654,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/FQ7F.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/FQ7F.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/FQ7F.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FQ7F.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -12446,6 +12741,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7BUB.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/7BUB.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7BUB.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7BUB.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -12529,6 +12826,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/M5DY.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M5DY.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/M5DY.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/M5DY.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -12614,6 +12913,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9U5K.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/9U5K.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9U5K.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/9U5K.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -12697,6 +12998,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6JQW.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6JQW.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6JQW.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6JQW.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -12782,6 +13085,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/96L6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/96L6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/96L6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/96L6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -12865,6 +13170,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6VJK.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6VJK.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6VJK.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6VJK.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -12950,6 +13257,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/HMK4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/HMK4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HMK4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/HMK4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -13033,6 +13342,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/G4RS.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/G4RS.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/G4RS.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/G4RS.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -13118,6 +13429,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4CQQ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4CQQ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4CQQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4CQQ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -13201,6 +13514,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/SYW4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/SYW4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/SYW4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/SYW4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -13286,6 +13601,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/C4HZ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/C4HZ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/C4HZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/C4HZ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -13369,6 +13686,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/2XXW.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2XXW.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/2XXW.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2XXW.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -13454,6 +13773,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/J7PZ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/J7PZ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J7PZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/J7PZ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -13537,6 +13858,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/UGM3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/UGM3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/UGM3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UGM3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -13622,6 +13945,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/RZT7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/RZT7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RZT7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/RZT7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -13705,6 +14030,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/PBJ2.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/PBJ2.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/PBJ2.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/PBJ2.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -13790,6 +14117,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/229Q.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/229Q.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/229Q.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/229Q.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -13873,6 +14202,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/YD5X.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/YD5X.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/YD5X.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/YD5X.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -13958,6 +14289,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/ZF4X.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/ZF4X.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/ZF4X.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/ZF4X.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -14041,6 +14374,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/JHB9.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JHB9.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/JHB9.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JHB9.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -14126,6 +14461,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/U9NS.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/U9NS.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/U9NS.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/U9NS.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -14209,6 +14546,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/J9HZ.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/J9HZ.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/J9HZ.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J9HZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -14294,6 +14633,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/J3BT.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/J3BT.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/J3BT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/J3BT.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -14377,6 +14718,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/S9E8.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/S9E8.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/S9E8.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S9E8.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -14462,6 +14805,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/UDR7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/UDR7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UDR7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/UDR7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -14545,6 +14890,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/98YD.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/98YD.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/98YD.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/98YD.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -14630,6 +14977,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/CUP7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/CUP7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CUP7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/CUP7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -14713,6 +15062,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/5BVJ.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5BVJ.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/5BVJ.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5BVJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -14798,6 +15149,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9SHH.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/9SHH.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9SHH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/9SHH.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -14881,6 +15234,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/27NA.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/27NA.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/27NA.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/27NA.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -14966,6 +15321,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/6HB6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6HB6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6HB6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6HB6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -15049,6 +15406,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/8G76.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8G76.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/8G76.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8G76.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -15134,6 +15493,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/P94K.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/P94K.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/P94K.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/P94K.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -15217,6 +15578,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/Q9WF.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Q9WF.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/Q9WF.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/Q9WF.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -15302,6 +15665,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6LVF.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/6LVF.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6LVF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6LVF.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -15385,6 +15750,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/2LFX.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2LFX.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/2LFX.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2LFX.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -15470,6 +15837,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/BEC7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/BEC7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/BEC7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/BEC7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -15553,6 +15922,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/U3C3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/U3C3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/U3C3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/U3C3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -15638,6 +16009,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9WXW.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/9WXW.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9WXW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/9WXW.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -15721,6 +16094,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6WLZ.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6WLZ.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6WLZ.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6WLZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -15806,6 +16181,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/P76L.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/P76L.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/P76L.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/P76L.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -15889,6 +16266,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/A2M4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/A2M4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/A2M4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/A2M4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -15974,6 +16353,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/CC74.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/CC74.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CC74.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/CC74.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -16057,6 +16438,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/5TYM.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5TYM.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/5TYM.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5TYM.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -16142,6 +16525,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Z9M4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/Z9M4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Z9M4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/Z9M4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -16225,6 +16610,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/HMQ5.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/HMQ5.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/HMQ5.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HMQ5.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -16310,6 +16697,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7FWL.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/7FWL.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7FWL.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/7FWL.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -16393,6 +16782,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6CK3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6CK3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6CK3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6CK3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -16478,6 +16869,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/S4JQ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/S4JQ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/S4JQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/S4JQ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -16561,6 +16954,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/JS2J.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JS2J.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/JS2J.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JS2J.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -16646,6 +17041,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/6BCT.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6BCT.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6BCT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6BCT.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -16729,6 +17126,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/4ZYM.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4ZYM.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4ZYM.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4ZYM.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -16814,6 +17213,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5GBF.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/5GBF.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5GBF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5GBF.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -16897,6 +17298,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/XV9V.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/XV9V.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/XV9V.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/XV9V.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -16982,6 +17385,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/K527.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/K527.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K527.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/K527.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -17065,6 +17470,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/93WF.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/93WF.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/93WF.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/93WF.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -17150,6 +17557,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/MJS9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/MJS9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/MJS9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/MJS9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -17233,6 +17642,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/TL85.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/TL85.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/TL85.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/TL85.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -17318,6 +17729,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6WPF.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6WPF.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6WPF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/6WPF.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -17401,6 +17814,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/5NYZ.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5NYZ.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/5NYZ.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5NYZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -17486,6 +17901,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/3GZX.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/3GZX.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/3GZX.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/3GZX.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -17569,6 +17986,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/DBG4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DBG4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/DBG4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DBG4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -17654,6 +18073,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/L9U5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/L9U5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/L9U5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/L9U5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -17737,6 +18158,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/HS5T.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/HS5T.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/HS5T.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/HS5T.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -17822,6 +18245,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5KJE.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/5KJE.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5KJE.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5KJE.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -17905,6 +18330,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/8UDB.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/8UDB.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/8UDB.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/8UDB.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -17990,6 +18417,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5C5M.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/5C5M.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5C5M.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/5C5M.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -18073,6 +18502,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/DFF7.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DFF7.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/DFF7.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/DFF7.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -18158,6 +18589,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/C2DT.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/C2DT.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/C2DT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/C2DT.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -18241,6 +18674,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/QF4Y.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/QF4Y.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/QF4Y.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/QF4Y.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -18326,6 +18761,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/WZ62.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/WZ62.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/WZ62.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/WZ62.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -18409,6 +18846,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/CT4Q.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/CT4Q.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/CT4Q.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CT4Q.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -18494,6 +18933,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Q88A.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/Q88A.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Q88A.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/Q88A.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -18577,6 +19018,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/LE5A.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/LE5A.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/LE5A.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/LE5A.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -18662,6 +19105,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_diff "><a class="invisible" href="details/FRK4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/FRK4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/FRK4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/FRK4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -18745,6 +19190,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/LQZ7.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/LQZ7.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/LQZ7.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/LQZ7.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -18830,6 +19277,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/NP9H.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/NP9H.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/NP9H.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/NP9H.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -18913,6 +19362,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/Q8AD.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Q8AD.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/Q8AD.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Q8AD.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -18998,6 +19449,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7A4E.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/7A4E.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7A4E.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7A4E.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -19081,6 +19534,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/9TFX.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9TFX.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/9TFX.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9TFX.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -19166,6 +19621,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4GC6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/4GC6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4GC6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4GC6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -19249,6 +19706,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/SSW6.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/SSW6.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/SSW6.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/SSW6.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -19334,6 +19793,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/87E4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/87E4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/87E4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/87E4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -19417,6 +19878,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/PRH3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/PRH3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/PRH3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/PRH3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -19502,6 +19965,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/T4YY.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/T4YY.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/T4YY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/T4YY.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -19585,6 +20050,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/P2AD.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/P2AD.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/P2AD.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/P2AD.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -19670,6 +20137,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/7T8X.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/7T8X.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/7T8X.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/7T8X.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -19753,6 +20222,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/JQ4R.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JQ4R.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/JQ4R.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JQ4R.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -19838,6 +20309,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/W42U.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/W42U.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/W42U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/W42U.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -19921,6 +20394,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/TE2A.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/TE2A.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/TE2A.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/TE2A.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -20006,6 +20481,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/5WE3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/5WE3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/5WE3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/5WE3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -20089,6 +20566,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ni "><a class="invisible" href="details/S3PD.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/S3PD.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/S3PD.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/S3PD.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -20174,6 +20653,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/V9D5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/V9D5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/V9D5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/V9D5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -20257,6 +20738,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/R4YG.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/R4YG.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/R4YG.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/R4YG.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -20342,6 +20825,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4QFQ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/4QFQ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4QFQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/4QFQ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -20425,6 +20910,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/735Y.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/735Y.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/735Y.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/735Y.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -20510,6 +20997,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M5C3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/M5C3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M5C3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_ni "><a class="invisible" href="details/M5C3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -20593,6 +21082,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/Z67P.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Z67P.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/Z67P.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Z67P.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -20678,6 +21169,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/57H4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/57H4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/57H4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/57H4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -20761,6 +21254,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/A6F9.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/A6F9.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/A6F9.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/A6F9.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -20846,6 +21341,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/F8F9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/F8F9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/F8F9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/F8F9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -20929,6 +21426,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/K858.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/K858.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/K858.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K858.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -21014,6 +21513,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/M9B4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/M9B4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M9B4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/M9B4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -21097,6 +21598,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/T5N4.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/T5N4.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/T5N4.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/T5N4.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -21182,6 +21685,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DWX9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/DWX9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DWX9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DWX9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -21265,6 +21770,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/T26H.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/T26H.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/T26H.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/T26H.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -21350,6 +21857,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/G992.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/G992.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/G992.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/G992.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -21433,6 +21942,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/B3HG.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/B3HG.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/B3HG.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/B3HG.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -21518,6 +22029,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/RTP8.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/RTP8.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/RTP8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/RTP8.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -21601,6 +22114,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/M7A3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/M7A3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/M7A3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/M7A3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -21686,6 +22201,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/UT92.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/UT92.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UT92.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/UT92.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -21769,6 +22286,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/W4TN.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/W4TN.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/W4TN.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/W4TN.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -21854,6 +22373,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6ZKB.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6ZKB.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6ZKB.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/6ZKB.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -21937,6 +22458,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/9DXL.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9DXL.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/9DXL.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9DXL.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -22022,6 +22545,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/UKK6:00.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/UKK6:00.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/UKK6:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/UKK6:00.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -22082,7 +22607,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <tr>
 <td class="testid"><tt><a href="#UKK6:01">UKK6:01</tt></a></td>
 <td id="UKK6:01" class="testname"><a href="details/UKK6:01.html">Syntax character edge cases</a></td>
- <td class="result c-libfyaml-event color_diff "><a class="invisible" href="details/UKK6:01.html#c-libfyaml-event">&nbsp;</a>
+ <td class="result c-libfyaml-event color_ok "><a class="invisible" href="details/UKK6:01.html#c-libfyaml-event">&nbsp;</a>
 </td>
  <td class="result c-libyaml-event color_ok "><a class="invisible" href="details/UKK6:01.html#c-libyaml-event">&nbsp;</a>
 </td>
@@ -22106,7 +22631,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/UKK6:01.html#py-ruamel-event">&nbsp;</a>
 </td>
- <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/UKK6:01.html#c-libfyaml-json">&nbsp;</a>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/UKK6:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
+ <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/UKK6:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/UKK6:01.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
@@ -22189,6 +22716,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/UKK6:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/UKK6:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/UKK6:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/UKK6:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -22274,6 +22803,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/K54U.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/K54U.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/K54U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/K54U.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -22357,6 +22888,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/Q5MG.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/Q5MG.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/Q5MG.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Q5MG.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -22442,6 +22975,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/Y79Y:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/Y79Y:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/Y79Y:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/Y79Y:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -22525,6 +23060,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/Y79Y:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/Y79Y:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/Y79Y:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Y79Y:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -22610,6 +23147,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/Y79Y:06.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/Y79Y:06.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/Y79Y:06.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/Y79Y:06.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -22693,6 +23232,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6JWB.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6JWB.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6JWB.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6JWB.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -22778,6 +23319,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/EHF6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/EHF6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/EHF6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/EHF6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -22861,6 +23404,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/35KP.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/35KP.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/35KP.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/35KP.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -22946,6 +23491,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/2AUY.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/2AUY.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/2AUY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/2AUY.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -23029,6 +23576,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/L94M.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/L94M.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/L94M.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/L94M.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -23114,6 +23663,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/74H7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/74H7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/74H7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/74H7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -23197,6 +23748,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/FH7J.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/FH7J.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/FH7J.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/FH7J.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -23282,6 +23835,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/82AN.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/82AN.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/82AN.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/82AN.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -23365,6 +23920,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/EXG3.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/EXG3.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/EXG3.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/EXG3.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -23450,6 +24007,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/33X3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/33X3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/33X3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/33X3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -23533,6 +24092,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/4RWC.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/4RWC.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/4RWC.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/4RWC.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -23618,6 +24179,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DE56:00.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/DE56:00.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DE56:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DE56:00.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -23702,6 +24265,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DE56:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/DE56:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DE56:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DE56:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -23762,7 +24327,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <tr>
 <td class="testid"><tt><a href="#DE56:02">DE56:02</tt></a></td>
 <td id="DE56:02" class="testname"><a href="details/DE56:02.html">Trailing tabs in double quoted</a></td>
- <td class="result c-libfyaml-event color_diff "><a class="invisible" href="details/DE56:02.html#c-libfyaml-event">&nbsp;</a>
+ <td class="result c-libfyaml-event color_ok "><a class="invisible" href="details/DE56:02.html#c-libfyaml-event">&nbsp;</a>
 </td>
  <td class="result c-libyaml-event color_ok "><a class="invisible" href="details/DE56:02.html#c-libyaml-event">&nbsp;</a>
 </td>
@@ -23786,7 +24351,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DE56:02.html#py-ruamel-event">&nbsp;</a>
 </td>
- <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/DE56:02.html#c-libfyaml-json">&nbsp;</a>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/DE56:02.html#rust-yamlrust-event">&nbsp;</a>
+</td>
+ <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DE56:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DE56:02.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
@@ -23846,7 +24413,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <tr>
 <td class="testid"><tt><a href="#DE56:03">DE56:03</tt></a></td>
 <td id="DE56:03" class="testname"><a href="details/DE56:03.html">Trailing tabs in double quoted</a></td>
- <td class="result c-libfyaml-event color_diff "><a class="invisible" href="details/DE56:03.html#c-libfyaml-event">&nbsp;</a>
+ <td class="result c-libfyaml-event color_ok "><a class="invisible" href="details/DE56:03.html#c-libfyaml-event">&nbsp;</a>
 </td>
  <td class="result c-libyaml-event color_ok "><a class="invisible" href="details/DE56:03.html#c-libyaml-event">&nbsp;</a>
 </td>
@@ -23870,7 +24437,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DE56:03.html#py-ruamel-event">&nbsp;</a>
 </td>
- <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/DE56:03.html#c-libfyaml-json">&nbsp;</a>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/DE56:03.html#rust-yamlrust-event">&nbsp;</a>
+</td>
+ <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DE56:03.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_diff "><a class="invisible" href="details/DE56:03.html#dotnet-yamldotnet-json">&nbsp;</a>
 </td>
@@ -23953,6 +24522,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/DE56:04.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DE56:04.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/DE56:04.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DE56:04.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -24038,6 +24609,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DE56:05.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/DE56:05.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DE56:05.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DE56:05.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -24121,6 +24694,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/JEF9:00.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JEF9:00.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/JEF9:00.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JEF9:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -24206,6 +24781,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/JEF9:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/JEF9:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/JEF9:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/JEF9:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -24289,6 +24866,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_diff "><a class="invisible" href="details/JEF9:02.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_diff "><a class="invisible" href="details/JEF9:02.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/JEF9:02.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_diff "><a class="invisible" href="details/JEF9:02.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -24374,6 +24953,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6XDY.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/6XDY.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/6XDY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_error "><a class="invisible" href="details/6XDY.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -24457,6 +25038,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/L383.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/L383.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/L383.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/L383.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -24542,6 +25125,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/XW4D.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/XW4D.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/XW4D.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/XW4D.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -24625,6 +25210,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/RZP5.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/RZP5.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/RZP5.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/RZP5.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -24710,6 +25297,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/KK5P.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/KK5P.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/KK5P.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_na "><a class="invisible" href="details/KK5P.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -24793,6 +25382,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/9KAX.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/9KAX.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/9KAX.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/9KAX.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -24878,6 +25469,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/NAT4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_diff "><a class="invisible" href="details/NAT4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/NAT4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/NAT4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -24961,6 +25554,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/CN3R.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/CN3R.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/CN3R.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/CN3R.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -25046,6 +25641,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_error "><a class="invisible" href="details/DC7X.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/DC7X.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DC7X.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DC7X.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -25129,6 +25726,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/LP6E.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/LP6E.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/LP6E.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/LP6E.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -25214,6 +25813,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/26DV.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/26DV.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/26DV.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/26DV.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -25297,6 +25898,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_error "><a class="invisible" href="details/FP8R.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/FP8R.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/FP8R.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/FP8R.html#c-libfyaml-json">&nbsp;</a>
 </td>
@@ -25382,6 +25985,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/DK3J.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_error "><a class="invisible" href="details/DK3J.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_json_ok "><a class="invisible" href="details/DK3J.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_json_ok "><a class="invisible" href="details/DK3J.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -25465,6 +26070,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-pyyaml-event color_ok "><a class="invisible" href="details/6PBE.html#py-pyyaml-event">&nbsp;</a>
 </td>
  <td class="result py-ruamel-event color_ok "><a class="invisible" href="details/6PBE.html#py-ruamel-event">&nbsp;</a>
+</td>
+ <td class="result rust-yamlrust-event color_ok "><a class="invisible" href="details/6PBE.html#rust-yamlrust-event">&nbsp;</a>
 </td>
  <td class="result c-libfyaml-json color_na "><a class="invisible" href="details/6PBE.html#c-libfyaml-json">&nbsp;</a>
 </td>

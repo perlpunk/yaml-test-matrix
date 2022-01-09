@@ -168,7 +168,65 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/LE5A.yaml">&test-L
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &lt;tag:yaml.org,2002:str&gt; &quot;a
+=VAL &#39;b
+=VAL &amp;1 &quot;c
+=ALI *1
+=VAL &lt;tag:yaml.org,2002:str&gt; :
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; &quot;a
+=VAL &#39;b
+=VAL &amp;1 &quot;c
+=ALI *1
+=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+SEQ</span>
+<span
+class="diff_line">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; &quot;a</span>
+<span
+class="">=VAL &#39;b</span>
+<span
+class="">=VAL &amp;1 &quot;c</span>
+<span
+class="">=ALI *1</span>
+<span
+class="">=VAL &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">[</span>

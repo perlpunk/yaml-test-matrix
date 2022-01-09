@@ -156,7 +156,89 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9DXL.yaml">&test-9
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :Mapping
+=VAL :Document
+-MAP
+-DOC
++DOC
+=VAL :
+-DOC
++DOC
++MAP
+=VAL :matches %
+=VAL :20
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :Mapping
+=VAL :Document
+-MAP
+-DOC
++DOC
+=VAL :~
+-DOC
++DOC
++MAP
+=VAL :matches %
+=VAL :20
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :Mapping</span>
+<span
+class="">=VAL :Document</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :matches %</span>
+<span
+class="">=VAL :20</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>

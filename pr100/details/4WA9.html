@@ -183,7 +183,75 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/4WA9.yaml">&test-4
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">          <div class="framework framework_box_error" id="raku-yamlish-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ
++MAP
+=VAL :aaa
+=VAL |xxx\n
+=VAL :bbb
+=VAL |xxx\n
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
++MAP
+=VAL :aaa
+=VAL |xxx
+
+=VAL :bbb
+=VAL |xxx
+
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+SEQ</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :aaa</span>
+<span
+class="diff_line">=VAL |xxx</span>
+<span
+class=""></span>
+<span
+class="">=VAL :bbb</span>
+<span
+class="">=VAL |xxx</span>
+<span
+class=""></span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="raku-yamlish-json">
 <h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
   in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959

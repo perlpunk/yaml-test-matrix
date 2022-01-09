@@ -85,7 +85,77 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/S3PD.yaml">&test-S
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :plain key
+=VAL :in-line value
+=VAL :
+=VAL :
+=VAL &quot;quoted key
++SEQ
+=VAL :entry
+-SEQ
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :plain key
+=VAL :in-line value
+=VAL :~
+=VAL :~
+=VAL &quot;quoted key
++SEQ
+=VAL :entry
+-SEQ
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :plain key</span>
+<span
+class="">=VAL :in-line value</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">=VAL :~</span>
+<span
+class="">=VAL &quot;quoted key</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :entry</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 2, column 1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
 </pre>
@@ -232,8 +302,8 @@ expected &lt;block end&gt;, but found &#39;:&#39;
     : # Both empty
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:649)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:644)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -517,8 +587,8 @@ expected &lt;block end&gt;, but found &#39;:&#39;
     : # Both empty
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:649)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:644)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)

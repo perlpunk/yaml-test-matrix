@@ -74,7 +74,61 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/2JQS.yaml">&test-2
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-pp-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :
+=VAL :a
+=VAL :
+=VAL :b
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :~
+=VAL :a
+=VAL :~
+=VAL :b
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">=VAL :~</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Duplicate key &#39;&#39; at /perl5/lib/perl5/YAML/PP/Parser.pm line 61.
  at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
@@ -94,19 +148,19 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/2JQS.yaml">&test-2
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 123, in construct_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 131, in construct_document
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 257, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 263, in construct_mapping
     if self.check_mapping_key(node, key_node, mapping, key, value):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 295, in check_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 294, in check_mapping_key
     raise DuplicateKeyError(*args)
 ruamel.yaml.constructor.DuplicateKeyError: while constructing a mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -119,9 +173,6 @@ found duplicate key &quot;None&quot; with value &quot;b&quot; (original value: &
 
 To suppress this check see:
     http://yaml.readthedocs.io/en/latest/api.html#duplicate-keys
-
-Duplicate keys will become an error in future releases, and are errors
-by default when using the new API.
 </pre>
  </div>
 
@@ -232,10 +283,10 @@ expected &lt;block end&gt;, but found &#39;:&#39;
     : a
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:649)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingFirstKey.produce(ParserImpl.java:628)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:644)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingFirstKey.produce(ParserImpl.java:622)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:281)
 	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:188)
 	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115)
@@ -427,19 +478,19 @@ expected &lt;block end&gt;, but found &#39;:&#39;
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 123, in construct_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 131, in construct_document
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 257, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 263, in construct_mapping
     if self.check_mapping_key(node, key_node, mapping, key, value):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 295, in check_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 294, in check_mapping_key
     raise DuplicateKeyError(*args)
 ruamel.yaml.constructor.DuplicateKeyError: while constructing a mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -452,9 +503,6 @@ found duplicate key &quot;None&quot; with value &quot;b&quot; (original value: &
 
 To suppress this check see:
     http://yaml.readthedocs.io/en/latest/api.html#duplicate-keys
-
-Duplicate keys will become an error in future releases, and are errors
-by default when using the new API.
 </pre>
 
  </div>
@@ -502,9 +550,9 @@ expected &lt;block end&gt;, but found &#39;:&#39;
     : a
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:649)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingFirstKey.produce(ParserImpl.java:628)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:644)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingFirstKey.produce(ParserImpl.java:622)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)

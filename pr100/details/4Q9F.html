@@ -175,7 +175,53 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/4Q9F.yaml">&test-4
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-tiny-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
+=VAL &gt;ab cd\nef\n\ngh\n
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
+=VAL &gt;ab cd
+ef
+
+gh
+
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">=VAL &gt;ab cd</span>
+<span
+class="">ef</span>
+<span
+class=""></span>
+<span
+class="">gh</span>
+<span
+class=""></span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-tiny-json">
 <h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">&quot;ab cd ef gh\n&quot;</span>

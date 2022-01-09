@@ -123,6 +123,68 @@ class="">-STR</span>
  </div>
 
 
+  <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :unquoted
+=VAL &quot;separate
+=VAL :http://foo.com
+=VAL :
+=VAL :omitted value
+=VAL :
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :unquoted
+=VAL &quot;separate
+=VAL :http://foo.com
+=VAL :~
+=VAL :omitted value
+=VAL :~
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :unquoted</span>
+<span
+class="">=VAL &quot;separate</span>
+<span
+class="">=VAL :http://foo.com</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">=VAL :omitted value</span>
+<span
+class="">=VAL :~</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
  <hr style="clear: both;">       <div class="framework framework_box_error" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR

@@ -124,7 +124,41 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/MUS6.yaml">&test-M
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="lua-lyaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
+=VAL :
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
+=VAL :~
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">{}</span>
@@ -151,14 +185,14 @@ expected a digit, but found 	(9)
     %YAML 	 1.1
           ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveNumber(ScannerImpl.java:1374)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1339)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1279)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:638)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:325)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:213)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveNumber(ScannerImpl.java:1395)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1360)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1300)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -177,15 +211,15 @@ expected a digit, but found 	(9)
     %YAML 	 1.1
           ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveNumber(ScannerImpl.java:1374)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1339)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1279)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:638)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:325)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:213)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveNumber(ScannerImpl.java:1395)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1360)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1300)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:93)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
@@ -347,26 +381,27 @@ expected a digit, but found &#39;\t&#39;
 
   <div class="framework framework_box_error" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+<span class="status_box color_error">&nbsp;</span>error <pre>+STR
+Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 176, in parse_stream_start
-    token.move_comment(self.scanner.peek_token())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+    if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 237, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 242, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 475, in fetch_directive
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 480, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 895, in scan_directive
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 900, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 942, in scan_yaml_directive_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 947, in scan_yaml_directive_value
     major = self.scan_yaml_directive_number(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 973, in scan_yaml_directive_number
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 978, in scan_yaml_directive_number
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -385,27 +420,27 @@ expected a digit, but found &#39;\t&#39;
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 975, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1096, in load_all
     while loader._constructor.check_data():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 100, in check_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 108, in check_data
     return self.composer.check_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 58, in check_node
-    if self.parser.check_event(StreamStartEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 60, in check_node
+    return not self.parser.check_event(StreamEndEvent)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 176, in parse_stream_start
-    token.move_comment(self.scanner.peek_token())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+    if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 237, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 242, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 475, in fetch_directive
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 480, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 895, in scan_directive
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 900, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 942, in scan_yaml_directive_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 947, in scan_yaml_directive_value
     major = self.scan_yaml_directive_number(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 973, in scan_yaml_directive_number
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 978, in scan_yaml_directive_number
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -424,27 +459,27 @@ expected a digit, but found &#39;\t&#39;
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 975, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1096, in load_all
     while loader._constructor.check_data():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 100, in check_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 108, in check_data
     return self.composer.check_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 58, in check_node
-    if self.parser.check_event(StreamStartEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 60, in check_node
+    return not self.parser.check_event(StreamEndEvent)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 176, in parse_stream_start
-    token.move_comment(self.scanner.peek_token())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+    if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 237, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 242, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 475, in fetch_directive
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 480, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 895, in scan_directive
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 900, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 942, in scan_yaml_directive_value
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 947, in scan_yaml_directive_value
     major = self.scan_yaml_directive_number(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 973, in scan_yaml_directive_number
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 978, in scan_yaml_directive_number
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:

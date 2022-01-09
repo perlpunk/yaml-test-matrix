@@ -120,7 +120,125 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/PW8X.yaml">&test-P
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &amp;1 :
+=VAL :a
++MAP
+=VAL &amp;2 :
+=VAL :a
+=VAL :b
+=VAL &amp;3 :
+-MAP
++MAP
+=VAL &amp;4 :
+=VAL &amp;5 :
+-MAP
++MAP
+=VAL &amp;6 :
+=VAL :
+-MAP
++MAP
+=VAL &amp;7 :
+=VAL &amp;8 :
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &amp;1 :
+=VAL :a
++MAP
+=VAL &amp;2 :
+=VAL :a
+=VAL :b
+=VAL &amp;3 :
+-MAP
++MAP
+=VAL &amp;4 :
+=VAL &amp;5 :
+-MAP
++MAP
+=VAL &amp;6 :
+=VAL :~
+-MAP
++MAP
+=VAL &amp;7 :
+=VAL &amp;8 :
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL &amp;1 :</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &amp;2 :</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">=VAL &amp;3 :</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &amp;4 :</span>
+<span
+class="">=VAL &amp;5 :</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &amp;6 :</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &amp;7 :</span>
+<span
+class="">=VAL &amp;8 :</span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 4, column 6): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
 </pre>
@@ -739,7 +857,7 @@ second occurrence
   <div class="framework framework_box_na" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>Error json.dumps: &lt;class &#39;TypeError&#39;&gt;
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 1, column 3:
     - &amp;a
@@ -748,7 +866,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
       ^ (line: 4)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
@@ -757,7 +875,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a
            ^ (line: 7)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a
@@ -788,7 +906,7 @@ TypeError: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[None, &#39;a&#39;, {None: &#39;a&#39;, &#39;b&#39;: None}, {None: None}, {None: None}, {None: None}]
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 1, column 3:
     - &amp;a
@@ -797,7 +915,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
       ^ (line: 4)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
@@ -806,7 +924,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a
            ^ (line: 7)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a

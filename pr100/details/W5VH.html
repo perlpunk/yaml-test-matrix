@@ -148,12 +148,12 @@ unexpected character found :(58)
     a: &amp;:@*!$&quot;&lt;foo&gt;: scalar a
         ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanAnchor(ScannerImpl.java:1500)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchAnchor(ScannerImpl.java:958)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:389)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanAnchor(ScannerImpl.java:1515)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchAnchor(ScannerImpl.java:978)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:410)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:660)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -172,12 +172,12 @@ unexpected character found :(58)
     a: &amp;:@*!$&quot;&lt;foo&gt;: scalar a
         ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanAnchor(ScannerImpl.java:1500)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchAnchor(ScannerImpl.java:958)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:389)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:665)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanAnchor(ScannerImpl.java:1515)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchAnchor(ScannerImpl.java:978)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:410)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:660)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -424,6 +424,17 @@ expected alphabetic or numeric character, but found &#39;:&#39;
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>+STR
++DOC
++MAP
+=VAL :a
+Error: ScanError { mark: Marker { index: 3, line: 1, col: 3 }, info: &quot;while scanning an anchor or alias, did not find expected alphabetic or numeric character&quot; }
 </pre>
  </div>
 

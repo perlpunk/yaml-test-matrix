@@ -220,8 +220,8 @@ expected &lt;block end&gt;, but found &#39;&lt;block mapping start&gt;&#39;
      wrong: 2
      ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:649)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:644)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -240,8 +240,8 @@ expected &lt;block end&gt;, but found &#39;&lt;block mapping start&gt;&#39;
      wrong: 2
      ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:649)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:644)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -616,11 +616,11 @@ expected &lt;block end&gt;, but found &#39;&lt;block mapping start&gt;&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 589, in parse_block_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 616, in parse_block_mapping_key
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a block mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -647,21 +647,21 @@ expected &lt;block end&gt;, but found &#39;&lt;block mapping start&gt;&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 138, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 143, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 211, in compose_mapping_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 216, in compose_mapping_node
     while not self.parser.check_event(MappingEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 589, in parse_block_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 616, in parse_block_mapping_key
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a block mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -680,21 +680,21 @@ expected &lt;block end&gt;, but found &#39;&lt;block mapping start&gt;&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 138, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 143, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 211, in compose_mapping_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 216, in compose_mapping_node
     while not self.parser.check_event(MappingEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 589, in parse_block_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 616, in parse_block_mapping_key
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a block mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
@@ -732,6 +732,21 @@ expected &lt;block end&gt;, but found &#39;&lt;block mapping start&gt;&#39;
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Error: ScanError { mark: Marker { index: 19, line: 3, col: 6 }, info: &quot;while parsing a block mapping, did not find expected key&quot; }
++STR
++DOC
++MAP
+=VAL :key
++MAP
+=VAL :ok
+=VAL :1
+-MAP
 </pre>
  </div>
 

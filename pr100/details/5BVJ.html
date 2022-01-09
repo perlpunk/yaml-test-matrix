@@ -188,7 +188,70 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/5BVJ.yaml">&test-5
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_na" id="hs-reference-yeast">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :literal
+=VAL |some\ntext\n
+=VAL :folded
+=VAL &gt;some text\n
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :literal
+=VAL |some
+text
+
+=VAL :folded
+=VAL &gt;some text
+
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :literal</span>
+<span
+class="diff_line">=VAL |some</span>
+<span
+class="">text</span>
+<span
+class=""></span>
+<span
+class="">=VAL :folded</span>
+<span
+class="">=VAL &gt;some text</span>
+<span
+class=""></span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">          <div class="framework framework_box_na" id="hs-reference-yeast">
 <h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
    1    0    0    0 +DOC |

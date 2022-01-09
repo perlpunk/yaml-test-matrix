@@ -125,7 +125,132 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/XW4D.yaml">&test-X
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-yaml-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :a
+=VAL &quot;double quotes
+=VAL :b
+=VAL :plain value
+=VAL :c
+=VAL :d
++SEQ
+=VAL :seq1
+-SEQ
++SEQ
+=VAL :seq2
+-SEQ
+=VAL :e
++SEQ &amp;1
++MAP
+=VAL :x
+=VAL :y
+-MAP
+-SEQ
+=VAL :block
+=VAL &gt;abcde\n
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :a
+=VAL &quot;double quotes
+=VAL :b
+=VAL :plain value
+=VAL :c
+=VAL :d
++SEQ
+=VAL :seq1
+-SEQ
++SEQ
+=VAL :seq2
+-SEQ
+=VAL :e
++SEQ &amp;1
++MAP
+=VAL :x
+=VAL :y
+-MAP
+-SEQ
+=VAL :block
+=VAL &gt;abcde
+
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">=VAL &quot;double quotes</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">=VAL :plain value</span>
+<span
+class="">=VAL :c</span>
+<span
+class="">=VAL :d</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :seq1</span>
+<span
+class="">-SEQ</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :seq2</span>
+<span
+class="">-SEQ</span>
+<span
+class="">=VAL :e</span>
+<span
+class="">+SEQ &amp;1</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :x</span>
+<span
+class="">=VAL :y</span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">=VAL :block</span>
+<span
+class="diff_line">=VAL &gt;abcde</span>
+<span
+class=""></span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-yaml-perl">
 <h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Inconsistent indentation level
    Code: YAML_PARSE_ERR_INCONSISTENT_INDENTATION

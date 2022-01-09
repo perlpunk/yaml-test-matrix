@@ -26,29 +26,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/YJV2.yaml">&test-Y
 <pre></pre>
 </div>
 <hr style="clear: both;">
-   <div class="framework framework_box_invalid_incorrect" id="c-libfyaml-event">
-<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+SEQ []
-=VAL :-
--SEQ
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="c-libfyaml-json">
-<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[
-  &quot;-&quot;
-]
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="c-libyaml-event">
+   <div class="framework framework_box_invalid_incorrect" id="c-libyaml-event">
 <h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
 +DOC
@@ -308,7 +286,45 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/YJV2.yaml">&test-Y
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
+  <div class="framework framework_box_invalid_incorrect" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
++DOC
++SEQ
+=VAL :-
+-SEQ
+-DOC
+-STR
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
+<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:2: error: plain scalar cannot start with &#39;-&#39; followed by ,[]{} (in flow context)
+[-]
+ ^~
+[NOT]: fy_fetch_plain_scalar() failed
+[NOT]: fy_fetch_tokens() failed
+[NOT]: failed to peek token
++STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:2: error: plain scalar cannot start with &#39;-&#39; followed by ,[]{} (in flow context)
+[-]
+ ^~
+[NOT]: fy_fetch_plain_scalar() failed
+[NOT]: fy_fetch_tokens() failed
+[NOT]: failed to peek token
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="hs-hsyaml-event">
 <h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parsing error near byte offset Pos {posByteOffset = 1, posCharOffset = 1, posLine = 1, posColumn = 1} (Unexpected &#39;-&#39;)
 +STR

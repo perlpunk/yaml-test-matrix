@@ -175,7 +175,59 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/6VJK.yaml">&test-6
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">          <div class="framework framework_box_error" id="perl-tiny-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
+=VAL &gt;Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
+=VAL &gt;Sammy Sosa completed another fine season with great stats.
+
+  63 Home Runs
+  0.288 Batting Average
+
+What a year!
+
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">=VAL &gt;Sammy Sosa completed another fine season with great stats.</span>
+<span
+class=""></span>
+<span
+class="">  63 Home Runs</span>
+<span
+class="">  0.288 Batting Average</span>
+<span
+class=""></span>
+<span
+class="">What a year!</span>
+<span
+class=""></span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-tiny-json">
 <h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML::Tiny failed to classify line &#39;&gt;&#39; at /yaml/bin/perl-tiny-json line 12.
 </pre>

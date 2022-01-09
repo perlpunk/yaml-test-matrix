@@ -176,7 +176,77 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/FBC9.yaml">&test-F
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="ruby-psych-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :safe
+=VAL :a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~ !&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~
+=VAL :safe question mark
+=VAL :?foo
+=VAL :safe colon
+=VAL ::foo
+=VAL :safe dash
+=VAL :-foo
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :safe
+=VAL :a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~ !&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~
+=VAL :safe question mark
+=VAL :?foo
+=VAL :safe colon
+=VAL ::foo
+=VAL :safe dash
+=VAL :-foo
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :safe</span>
+<span
+class="diff_line">=VAL :a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~ !&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~</span>
+<span
+class="">=VAL :safe question mark</span>
+<span
+class="">=VAL :?foo</span>
+<span
+class="">=VAL :safe colon</span>
+<span
+class="">=VAL ::foo</span>
+<span
+class="">=VAL :safe dash</span>
+<span
+class="">=VAL :-foo</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>

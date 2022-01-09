@@ -73,7 +73,7 @@ error, mapping<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/2G84.yaml">Source</a><br>
 <a href="../details/2G84:01.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">10</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">--- |10</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-3HFZ"><td class="title" colspan="4"><a href="#3HFZ">#</a><a name="3HFZ">&nbsp;</a>3HFZ - Invalid content after document end marker
@@ -891,9 +891,9 @@ comment, error, folded, scalar, whitespace<br>
 <a href="../details/S98Z.html">Test Results</a>
 </div></td>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="plainkey">empty block scalar</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
-</span><span class="indent"> </span><span class="eol">
-</span><span class="indent">  </span><span class="eol">
-</span><span class="indent">   </span><span class="eol">
+</span><span class="trailing_space"> </span><span class="eol">
+</span><span class="trailing_space">  </span><span class="eol">
+</span><span class="trailing_space">   </span><span class="eol">
 </span><span class="eol"> # comment
 </span></pre></div></td>
   </tr>
@@ -1057,9 +1057,9 @@ comment, error, folded, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
 <a href="../details/Y79Y:00.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="plainkey">foo</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
-</span><span class="eol"></span><span class="tab">	</span><span class="eol">
-</span><span class="plainkey">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">foo: |</span><span class="eol">
+</span><span class="default"></span><span class="tab">	</span><span class="eol">
+</span><span class="default">bar: 1</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-Y79Y:03"><td class="title" colspan="4"><a href="#Y79Y:03">#</a><a name="Y79Y:03">&nbsp;</a>Y79Y:03 - Tabs in various contexts
@@ -1084,7 +1084,7 @@ comment, error, folded, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
 <a href="../details/Y79Y:04.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="dash">-</span><span class="default"></span><span class="tab">	</span><span class="dash">-</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">-</span><span class="tab">	</span><span class="default">-</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-Y79Y:05"><td class="title" colspan="4"><a href="#Y79Y:05">#</a><a name="Y79Y:05">&nbsp;</a>Y79Y:05 - Tabs in various contexts
@@ -1095,7 +1095,7 @@ comment, error, folded, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
 <a href="../details/Y79Y:05.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="dash">-</span><span class="default"> </span><span class="tab">	</span><span class="dash">-</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">- </span><span class="tab">	</span><span class="default">-</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-YJV2"><td class="title" colspan="4"><a href="#YJV2">#</a><a name="YJV2">&nbsp;</a>YJV2 - Dash in flow sequence

@@ -153,7 +153,69 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/ZWK4.yaml">&test-Z
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :a
+=VAL :1
+=VAL :b
+=VAL :
+=VAL &amp;1 :c
+=VAL :3
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :a
+=VAL :1
+=VAL :b
+=VAL :~
+=VAL &amp;1 :c
+=VAL :3
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">=VAL :1</span>
+<span
+class="">=VAL :b</span>
+<span
+class="diff_line">=VAL :~</span>
+<span
+class="">=VAL &amp;1 :c</span>
+<span
+class="">=VAL :3</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>

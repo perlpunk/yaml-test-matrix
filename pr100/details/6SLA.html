@@ -169,7 +169,64 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/6SLA.yaml">&test-6
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL &quot;foo\nbar:baz\tx \\$%^&amp;*()x
+=VAL :23
+=VAL &#39;x\\ny:z\\tx $%^&amp;*()x
+=VAL :24
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL &quot;foo
+bar:baz	x \$%^&amp;*()x
+=VAL :23
+=VAL &#39;x\ny:z\tx $%^&amp;*()x
+=VAL :24
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="diff_line">=VAL &quot;foo</span>
+<span
+class="">bar:baz	x \$%^&amp;*()x</span>
+<span
+class="">=VAL :23</span>
+<span
+class="">=VAL &#39;x\ny:z\tx $%^&amp;*()x</span>
+<span
+class="">=VAL :24</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">parse error: Invalid numeric literal at line 1, column 3</span>

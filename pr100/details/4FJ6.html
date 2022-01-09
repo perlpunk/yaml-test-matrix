@@ -105,6 +105,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/4FJ6.yaml">&test-4
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
+  <div class="framework framework_box_ok" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
  <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-pp-event">
 <h3><a href="#perl-pp-event">perl-pp-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
@@ -185,49 +190,49 @@ found unhashable key
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 123, in construct_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 131, in construct_document
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 231, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 248, in construct_mapping
     key = self.construct_object(key_node, deep=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 146, in construct_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 154, in construct_object
     data = self.construct_non_recursive_object(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 188, in construct_non_recursive_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 196, in construct_non_recursive_object
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 717, in construct_yaml_seq
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 668, in construct_yaml_seq
     data.extend(self.construct_sequence(node))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in construct_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in construct_sequence
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in &lt;listcomp&gt;
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in &lt;listcomp&gt;
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 146, in construct_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 154, in construct_object
     data = self.construct_non_recursive_object(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 188, in construct_non_recursive_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 196, in construct_non_recursive_object
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 717, in construct_yaml_seq
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 668, in construct_yaml_seq
     data.extend(self.construct_sequence(node))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in construct_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in construct_sequence
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in &lt;listcomp&gt;
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in &lt;listcomp&gt;
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 146, in construct_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 154, in construct_object
     data = self.construct_non_recursive_object(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 188, in construct_non_recursive_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 196, in construct_non_recursive_object
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 257, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 263, in construct_mapping
     if self.check_mapping_key(node, key_node, mapping, key, value):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 267, in check_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 273, in check_mapping_key
     if key in mapping:
 TypeError: unhashable type: &#39;list&#39;
 </pre>
@@ -578,49 +583,49 @@ found unhashable key
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 123, in construct_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 131, in construct_document
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 231, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 248, in construct_mapping
     key = self.construct_object(key_node, deep=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 146, in construct_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 154, in construct_object
     data = self.construct_non_recursive_object(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 188, in construct_non_recursive_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 196, in construct_non_recursive_object
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 717, in construct_yaml_seq
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 668, in construct_yaml_seq
     data.extend(self.construct_sequence(node))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in construct_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in construct_sequence
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in &lt;listcomp&gt;
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in &lt;listcomp&gt;
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 146, in construct_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 154, in construct_object
     data = self.construct_non_recursive_object(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 188, in construct_non_recursive_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 196, in construct_non_recursive_object
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 717, in construct_yaml_seq
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 668, in construct_yaml_seq
     data.extend(self.construct_sequence(node))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in construct_sequence
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in construct_sequence
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 211, in &lt;listcomp&gt;
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 225, in &lt;listcomp&gt;
     return [self.construct_object(child, deep=deep) for child in node.value]
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 146, in construct_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 154, in construct_object
     data = self.construct_non_recursive_object(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 188, in construct_non_recursive_object
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 196, in construct_non_recursive_object
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 257, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 263, in construct_mapping
     if self.check_mapping_key(node, key_node, mapping, key, value):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 267, in check_mapping_key
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 273, in check_mapping_key
     if key in mapping:
 TypeError: unhashable type: &#39;list&#39;
 </pre>

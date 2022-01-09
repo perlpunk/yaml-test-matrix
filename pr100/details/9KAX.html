@@ -198,7 +198,181 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9KAX.yaml">&test-9
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">          <div class="framework framework_box_error" id="dotnet-yamldotnet-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
+=VAL &amp;1 &lt;tag:yaml.org,2002:str&gt; :scalar1
+-DOC
++DOC
+=VAL &amp;1 &lt;tag:yaml.org,2002:str&gt; :scalar2
+-DOC
++DOC
+=VAL &amp;1 &lt;tag:yaml.org,2002:str&gt; :scalar3
+-DOC
++DOC
++MAP &amp;1 &lt;tag:yaml.org,2002:map&gt;
+=VAL &amp;2 &lt;tag:yaml.org,2002:str&gt; :key5
+=VAL :value4
+-MAP
+-DOC
++DOC
++MAP
+=VAL :a6
+=VAL :1
+=VAL &amp;1 :b6
+=VAL :2
+-MAP
+-DOC
++DOC
++MAP &lt;tag:yaml.org,2002:map&gt;
+=VAL &amp;1 &lt;tag:yaml.org,2002:str&gt; :key8
+=VAL :value7
+-MAP
+-DOC
++DOC
++MAP &lt;tag:yaml.org,2002:map&gt;
+=VAL &amp;1 &lt;tag:yaml.org,2002:str&gt; :key10
+=VAL :value9
+-MAP
+-DOC
++DOC
+=VAL &amp;1 &lt;tag:yaml.org,2002:str&gt; :value11
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
+=VAL &amp;1 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :scalar1
+-DOC
++DOC
+=VAL &amp;2 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :scalar2
+-DOC
++DOC
+=VAL &amp;3 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :scalar3
+-DOC
++DOC
++MAP &amp;4
+=VAL &amp;5 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :key5
+=VAL :value4
+-MAP
+-DOC
++DOC
++MAP
+=VAL :a6
+=VAL :1
+=VAL &amp;6 :b6
+=VAL :2
+-MAP
+-DOC
++DOC
++MAP
+=VAL &amp;7 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :key8
+=VAL :value7
+-MAP
+-DOC
++DOC
++MAP
+=VAL &amp;8 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :key10
+=VAL :value9
+-MAP
+-DOC
++DOC
+=VAL &amp;9 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :value11
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">=VAL &amp;1 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :scalar1</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">=VAL &amp;2 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :scalar2</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">=VAL &amp;3 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :scalar3</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP &amp;4</span>
+<span
+class="">=VAL &amp;5 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :key5</span>
+<span
+class="">=VAL :value4</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :a6</span>
+<span
+class="">=VAL :1</span>
+<span
+class="">=VAL &amp;6 :b6</span>
+<span
+class="">=VAL :2</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &amp;7 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :key8</span>
+<span
+class="">=VAL :value7</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &amp;8 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :key10</span>
+<span
+class="">=VAL :value9</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">+DOC</span>
+<span
+class="">=VAL &amp;9 &lt;Tag(&quot;!!&quot;, &quot;str&quot;)&gt; :value11</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="dotnet-yamldotnet-json">
 <h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Unhandled exception. YamlDotNet.Core.YamlException: (Line: 5, Col: 1, Idx: 22) - (Line: 5, Col: 4, Idx: 25): Expected &#39;StreamEnd&#39;, got &#39;DocumentStart&#39; (at Line: 5, Col: 1, Idx: 22).
    at YamlDotNet.Core.ParserExtensions.Require[T](IParser parser)

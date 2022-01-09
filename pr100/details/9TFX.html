@@ -162,7 +162,44 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9TFX.yaml">&test-9
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="js-jsyaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
+=VAL &quot; 1st non-empty\n2nd non-empty 3rd non-empty 
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
+=VAL &quot; 1st non-empty
+2nd non-empty 3rd non-empty 
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">=VAL &quot; 1st non-empty</span>
+<span
+class="">2nd non-empty 3rd non-empty </span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">&quot; 1st non-empty\n2nd non-empty  3rd non-empty &quot;</span>

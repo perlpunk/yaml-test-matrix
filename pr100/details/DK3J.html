@@ -205,8 +205,8 @@ yaml: line 1: did not find expected &lt;document start&gt;
     line1
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:256)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -222,9 +222,9 @@ Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, 
     line1
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:256)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:89)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
@@ -387,6 +387,17 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>+STR
++DOC
+=VAL &gt;
+-DOC
+Error: ScanError { mark: Marker { index: 6, line: 2, col: 0 }, info: &quot;did not find expected &lt;document start&gt;&quot; }
 </pre>
  </div>
 

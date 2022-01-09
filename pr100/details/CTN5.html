@@ -198,11 +198,11 @@ expected the node content, but found &#39;,&#39;
     [ a, b, c, , ]
                ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:518)
+	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:510)
 	at org.yaml.snakeyaml.parser.ParserImpl.parseFlowNode(ParserImpl.java:400)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2600(ParserImpl.java:120)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:748)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl.access$2600(ParserImpl.java:121)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:771)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
 	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
 	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
@@ -221,11 +221,11 @@ expected the node content, but found &#39;,&#39;
     [ a, b, c, , ]
                ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:518)
+	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:510)
 	at org.yaml.snakeyaml.parser.ParserImpl.parseFlowNode(ParserImpl.java:400)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2600(ParserImpl.java:120)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:748)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl.access$2600(ParserImpl.java:121)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:771)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -581,15 +581,15 @@ expected the node content, but found &#39;,&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 668, in parse_flow_sequence_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 695, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 333, in parse_flow_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 348, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 493, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;,&#39;
@@ -611,25 +611,25 @@ expected the node content, but found &#39;,&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 136, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 179, in compose_sequence_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 668, in parse_flow_sequence_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 695, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 333, in parse_flow_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 348, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 493, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;,&#39;
@@ -645,25 +645,25 @@ expected the node content, but found &#39;,&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 136, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 179, in compose_sequence_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 668, in parse_flow_sequence_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 695, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 333, in parse_flow_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 348, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 493, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;,&#39;
@@ -698,6 +698,19 @@ expected the node content, but found &#39;,&#39;
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Error: ScanError { mark: Marker { index: 15, line: 2, col: 11 }, info: &quot;while parsing a node, did not find expected node content&quot; }
++STR
++DOC
++SEQ
+=VAL :a
+=VAL :b
+=VAL :c
 </pre>
  </div>
 

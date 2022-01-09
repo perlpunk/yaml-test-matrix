@@ -172,7 +172,165 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/C4HZ.yaml">&test-C
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="c-libfyaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ &lt;tag:clarkevans.com,2002:shape&gt;
++MAP &lt;tag:clarkevans.com,2002:circle&gt;
+=VAL :center
++MAP &amp;1
+=VAL :x
+=VAL :73
+=VAL :y
+=VAL :129
+-MAP
+=VAL :radius
+=VAL :7
+-MAP
++MAP &lt;tag:clarkevans.com,2002:line&gt;
+=VAL :start
+=ALI *1
+=VAL :finish
++MAP
+=VAL :x
+=VAL :89
+=VAL :y
+=VAL :102
+-MAP
+-MAP
++MAP &lt;tag:clarkevans.com,2002:label&gt;
+=VAL :start
+=ALI *1
+=VAL :color
+=VAL :0xFFEEBB
+=VAL :text
+=VAL :Pretty vector drawing.
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
++MAP
+=VAL :center
++MAP &amp;1
+=VAL :x
+=VAL :73
+=VAL :y
+=VAL :129
+-MAP
+=VAL :radius
+=VAL :7
+-MAP
++MAP
+=VAL :start
+=ALI *1
+=VAL :finish
++MAP
+=VAL :x
+=VAL :89
+=VAL :y
+=VAL :102
+-MAP
+-MAP
++MAP
+=VAL :start
+=ALI *1
+=VAL :color
+=VAL :0xFFEEBB
+=VAL :text
+=VAL :Pretty vector drawing.
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">+SEQ</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :center</span>
+<span
+class="">+MAP &amp;1</span>
+<span
+class="">=VAL :x</span>
+<span
+class="">=VAL :73</span>
+<span
+class="">=VAL :y</span>
+<span
+class="">=VAL :129</span>
+<span
+class="">-MAP</span>
+<span
+class="">=VAL :radius</span>
+<span
+class="">=VAL :7</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :start</span>
+<span
+class="">=ALI *1</span>
+<span
+class="">=VAL :finish</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :x</span>
+<span
+class="">=VAL :89</span>
+<span
+class="">=VAL :y</span>
+<span
+class="">=VAL :102</span>
+<span
+class="">-MAP</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :start</span>
+<span
+class="">=ALI *1</span>
+<span
+class="">=VAL :color</span>
+<span
+class="">=VAL :0xFFEEBB</span>
+<span
+class="">=VAL :text</span>
+<span
+class="">=VAL :Pretty vector drawing.</span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">[</span>
