@@ -25,6 +25,11 @@ sub minimal_events_for_framework {
     elsif ($type eq 'flow') {
         $args{no_flow_indicator} = 1;
     }
+    elsif ($type eq 'rust') {
+        $args{no_flow_indicator} = 1;
+        $args{anchors_to_numbers} = 1;
+        $args{no_explicit_doc} = 1;
+    }
     minimal_events(\%args, @events);
 }
 
@@ -133,7 +138,7 @@ sub generate_expected_output {
     my %expected;
 
     my @test_events = io->file("$dir/test.event")->chomp->encoding('utf-8')->slurp;
-    for my $typw (qw/ cpp flow /) {
+    for my $typw (qw/ rust cpp flow /) {
         my @minimal = minimal_events_for_framework($typw, @test_events);
         $expected{"minimal.$typw.event"} = join '', map { "$_\n" } @minimal;
     }

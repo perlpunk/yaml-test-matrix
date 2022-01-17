@@ -221,6 +221,13 @@ sub compare_tests {
                 $tests->{ $id }->{minimal_events} = \@test_events;
                 $tests->{ $id }->{transformed_events} = \@events;
             }
+            elsif ($view eq "rust-yamlrust.event") {
+                @test_events = io
+                    ->file("$matrixdir/expected/$id/minimal.rust.event")
+                    ->encoding('utf-8')->chomp->slurp;
+                $tests->{ $id }->{minimal_events} = \@test_events;
+                $tests->{ $id }->{transformed_events} = \@events;
+            }
             # These don't output flow collection information yet
             elsif ($view eq "dotnet-yamldotnet.event"
                 or $view eq "nim-nimyaml.event"
