@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>#RZP5 - Various Trailing Comments [1.3] - YAML Test Matrix</title>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="../css/yaml.css">
+<link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
+<link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
+</head>
+<body>
+
+<h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
+<h2><tt>--- <a
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/RZP5.yaml">&test-RZP5</a><br>
+&nbsp;&nbsp;Title: Various Trailing Comments [1.3]</br>
+&nbsp;&nbsp;Tags: [ 1.3-mod, anchor, comment, folded, mapping ]</tt></h2>
+
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double</span><span class="eol">
+</span><span class="default">  </span><span class="doublequoted">quotes</span><span class="doublequote">&quot;</span><span class="eol"> # lala
+</span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="default">plain</span><span class="eol">
+</span><span class="indent"> </span><span class="default">value</span><span class="eol">  # lala
+</span><span class="plainkey">c</span><span class="default">  </span><span class="colon">:</span><span class="eol"> #lala
+</span><span class="default">  </span><span class="default">d</span><span class="eol">
+</span><span class="question">?</span><span class="eol"> # lala
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">seq1</span><span class="eol">
+</span><span class="colon">:</span><span class="eol"> # lala
+</span><span class="default"> </span><span class="dash">-</span><span class="eol"> #lala
+</span><span class="default">  </span><span class="default">seq2</span><span class="eol">
+</span><span class="plainkey">e</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node</span><span class="eol"> # lala
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="plainkey">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="eol">
+</span><span class="plainkey">block</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol"> # lala
+</span><span class="indent">  </span><span class="block_scalar_content">abcde</span><span class="eol">
+</span></pre></div>
+<div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
++DOC
++MAP
+=VAL :a
+=VAL &quot;double quotes
+=VAL :b
+=VAL :plain value
+=VAL :c
+=VAL :d
++SEQ
+=VAL :seq1
+-SEQ
++SEQ
+=VAL :seq2
+-SEQ
+=VAL :e
++SEQ &amp;node
++MAP
+=VAL :x
+=VAL :y
+-MAP
+-SEQ
+=VAL :block
+=VAL &gt;abcde\n
+-MAP
+-DOC
+-STR
+</pre></div>
+<div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
+<pre></pre>
+</div>
+<hr style="clear: both;">
+   <div class="framework framework_box_ok" id="c-libfyaml-event">
+<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="c-libyaml-event">
+<h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="cpp-yamlcpp-event">
+<h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="dotnet-yamldotnet-event">
+<h3><a href="#dotnet-yamldotnet-event">dotnet-yamldotnet-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="hs-hsyaml-event">
+<h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="java-snakeyaml-event">
+<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="js-yaml-event">
+<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="nim-nimyaml-event">
+<h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-pp-event">
+<h3><a href="#perl-pp-event">perl-pp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-refparser-event">
+<h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-pyyaml-event">
+<h3><a href="#py-pyyaml-event">py-pyyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+ <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-yaml-perl">
+<h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Inconsistent indentation level
+   Code: YAML_PARSE_ERR_INCONSISTENT_INDENTATION
+   Line: 2
+   Document: 1
+ at /perl5/lib/perl5/YAML/Loader.pm line 804.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="py-pyyaml-py">
+<h3><a href="#py-pyyaml-py">py-pyyaml-py</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+    yield loader.get_data()
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+    return self.construct_document(self.get_node())
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 60, in construct_document
+    for dummy in generator:
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 413, in construct_yaml_map
+    value = self.construct_mapping(node)
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 218, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 142, in construct_mapping
+    &quot;found unhashable key&quot;, key_node.start_mark)
+yaml.constructor.ConstructorError: while constructing a mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
+    a: &quot;double
+    ^
+found unhashable key
+  in &quot;&lt;unicode string&gt;&quot;, line 8, column 2:
+     - seq1
+     ^
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &quot;a&quot;: &quot;double quotes&quot;,
+  &quot;b&quot;: &quot;plain value&quot;,
+  &quot;c&quot;: &quot;d&quot;,
+stdin:8:2: error: Non scalar keys are not allowed in JSON emit mode
+ - seq1
+ ^~~~~~
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="dotnet-yamldotnet-json">
+<h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&quot;a&quot;: &quot;double quotes&quot;, &quot;b&quot;: &quot;plain value&quot;, &quot;c&quot;: &quot;d&quot;, ? [&quot;seq1&quot;] : [&quot;seq2&quot;], &quot;e&quot;: [{&quot;x&quot;: &quot;y&quot;}], &quot;block&quot;: &quot;abcde\n&quot;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="go-yaml-json">
+<h3><a href="#go-yaml-json">go-yaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>yaml: invalid map key: []interface {}{&quot;seq1&quot;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="hs-hsyaml-json">
+<h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&quot;[\&quot;seq1\&quot;]&quot;:[&quot;seq2&quot;],&quot;a&quot;:&quot;double quotes&quot;,&quot;b&quot;:&quot;plain value&quot;,&quot;block&quot;:&quot;abcde\n&quot;,&quot;c&quot;:&quot;d&quot;,&quot;e&quot;:[{&quot;x&quot;:&quot;y&quot;}]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|a
+   1    1    1    1 -VAL |
+   1    1    1    1 -NODE|
+   1    1    1    1 =SYNX|:
+   1    2    2    2 =WSPC|.
+   1    3    3    3 +NODE|
+   1    3    3    3 +VAL |
+   1    3    3    3 =SYNX|&quot;
+   1    4    4    4 =TEXT|double
+   1   10   10   10 =FOLD|\x0a
+   2    0   11   11 =DENT|.
+   2    1   12   12 =WSPC|.
+   2    2   13   13 =TEXT|quotes
+   2    8   19   19 =SYNX|&quot;
+   2    9   20   20 -VAL |
+   2    9   20   20 -NODE|
+   2    9   20   20 =WSPC|.
+   2   10   21   21 +COMM|
+   2   10   21   21 =SYNX|#
+   2   11   22   22 =META|.lala
+   2   16   27   27 -COMM|
+   2   16   27   27 =EOL |\x0a
+   3    0   28   28 -PAIR|
+   3    0   28   28 +PAIR|
+   3    0   28   28 +NODE|
+   3    0   28   28 +VAL |
+   3    0   28   28 =TEXT|b
+   3    1   29   29 -VAL |
+   3    1   29   29 -NODE|
+   3    1   29   29 =SYNX|:
+   3    2   30   30 =WSPC|.
+   3    3   31   31 +NODE|
+   3    3   31   31 +VAL |
+   3    3   31   31 =TEXT|plain
+   3    8   36   36 =FOLD|\x0a
+   4    0   37   37 =DENT|.
+   4    1   38   38 =TEXT|value
+   4    6   43   43 -VAL |
+   4    6   43   43 -NODE|
+   4    6   43   43 =WSPC|..
+   4    8   45   45 +COMM|
+   4    8   45   45 =SYNX|#
+   4    9   46   46 =META|.lala
+   4   14   51   51 -COMM|
+   4   14   51   51 =EOL |\x0a
+   5    0   52   52 -PAIR|
+   5    0   52   52 +PAIR|
+   5    0   52   52 +NODE|
+   5    0   52   52 +VAL |
+   5    0   52   52 =TEXT|c
+   5    1   53   53 -VAL |
+   5    1   53   53 -NODE|
+   5    1   53   53 =WSPC|..
+   5    3   55   55 =SYNX|:
+   5    4   56   56 =WSPC|.
+   5    5   57   57 +COMM|
+   5    5   57   57 =SYNX|#
+   5    6   58   58 =META|lala
+   5   10   62   62 -COMM|
+   5   10   62   62 =EOL |\x0a
+   6    0   63   63 =DENT|.
+   6    1   64   64 =WSPC|.
+   6    2   65   65 +NODE|
+   6    2   65   65 +VAL |
+   6    2   65   65 =TEXT|d
+   6    3   66   66 -VAL |
+   6    3   66   66 -NODE|
+   6    3   66   66 =EOL |\x0a
+   7    0   67   67 -PAIR|
+   7    0   67   67 +PAIR|
+   7    0   67   67 =SYNX|?
+   7    1   68   68 +NODE|
+   7    1   68   68 =WSPC|.
+   7    2   69   69 +COMM|
+   7    2   69   69 =SYNX|#
+   7    3   70   70 =META|.lala
+   7    8   75   75 -COMM|
+   7    8   75   75 =EOL |\x0a
+   8    0   76   76 +SEQ |
+   8    0   76   76 =DENT|.
+   8    1   77   77 =SYNX|-
+   8    2   78   78 =WSPC|.
+   8    3   79   79 +NODE|
+   8    3   79   79 +VAL |
+   8    3   79   79 =TEXT|seq1
+   8    7   83   83 -VAL |
+   8    7   83   83 -NODE|
+   8    7   83   83 =EOL |\x0a
+   9    0   84   84 -SEQ |
+   9    0   84   84 -NODE|
+   9    0   84   84 =SYNX|:
+   9    1   85   85 +NODE|
+   9    1   85   85 =WSPC|.
+   9    2   86   86 +COMM|
+   9    2   86   86 =SYNX|#
+   9    3   87   87 =META|.lala
+   9    8   92   92 -COMM|
+   9    8   92   92 =EOL |\x0a
+  10    0   93   93 +SEQ |
+  10    0   93   93 =DENT|.
+  10    1   94   94 =SYNX|-
+  10    2   95   95 =WSPC|.
+  10    3   96   96 +COMM|
+  10    3   96   96 =SYNX|#
+  10    4   97   97 =META|lala
+  10    8  101  101 -COMM|
+  10    8  101  101 =EOL |\x0a
+  11    0  102  102 =DENT|..
+  11    2  104  104 +NODE|
+  11    2  104  104 +VAL |
+  11    2  104  104 =TEXT|seq2
+  11    6  108  108 -VAL |
+  11    6  108  108 -NODE|
+  11    6  108  108 =EOL |\x0a
+  12    0  109  109 -SEQ |
+  12    0  109  109 -NODE|
+  12    0  109  109 -PAIR|
+  12    0  109  109 +PAIR|
+  12    0  109  109 +NODE|
+  12    0  109  109 +VAL |
+  12    0  109  109 =TEXT|e
+  12    1  110  110 -VAL |
+  12    1  110  110 -NODE|
+  12    1  110  110 =SYNX|:
+  12    2  111  111 +NODE|
+  12    2  111  111 =WSPC|.
+  12    3  112  112 +PROP|
+  12    3  112  112 +ANCH|
+  12    3  112  112 =SYNX|&amp;
+  12    4  113  113 =META|node
+  12    8  117  117 -ANCH|
+  12    8  117  117 -PROP|
+  12    8  117  117 =WSPC|.
+  12    9  118  118 +COMM|
+  12    9  118  118 =SYNX|#
+  12   10  119  119 =META|.lala
+  12   15  124  124 -COMM|
+  12   15  124  124 =EOL |\x0a
+  13    0  125  125 +SEQ |
+  13    0  125  125 =DENT|.
+  13    1  126  126 =SYNX|-
+  13    2  127  127 =DENT|.
+  13    3  128  128 +NODE|
+  13    3  128  128 +MAP |
+  13    3  128  128 +PAIR|
+  13    3  128  128 +NODE|
+  13    3  128  128 +VAL |
+  13    3  128  128 =TEXT|x
+  13    4  129  129 -VAL |
+  13    4  129  129 -NODE|
+  13    4  129  129 =SYNX|:
+  13    5  130  130 =WSPC|.
+  13    6  131  131 +NODE|
+  13    6  131  131 +VAL |
+  13    6  131  131 =TEXT|y
+  13    7  132  132 -VAL |
+  13    7  132  132 -NODE|
+  13    7  132  132 =EOL |\x0a
+  14    0  133  133 -PAIR|
+  14    0  133  133 -MAP |
+  14    0  133  133 -NODE|
+  14    0  133  133 -SEQ |
+  14    0  133  133 -NODE|
+  14    0  133  133 -PAIR|
+  14    0  133  133 +PAIR|
+  14    0  133  133 +NODE|
+  14    0  133  133 +VAL |
+  14    0  133  133 =TEXT|block
+  14    5  138  138 -VAL |
+  14    5  138  138 -NODE|
+  14    5  138  138 =SYNX|:
+  14    6  139  139 +NODE|
+  14    6  139  139 =WSPC|.
+  14    7  140  140 +VAL |
+  14    7  140  140 =SYNX|&gt;
+  14    8  141  141 =WSPC|.
+  14    9  142  142 +COMM|
+  14    9  142  142 =SYNX|#
+  14   10  143  143 =META|.lala
+  14   15  148  148 -COMM|
+  14   15  148  148 =EOL |\x0a
+  15    0  149  149 =DENT|..
+  15    2  151  151 =TEXT|abcde
+  15    7  156  156 =NEWL|\x0a
+  16    0  157  157 -VAL |
+  16    0  157  157 -NODE|
+  16    0  157  157 -PAIR|
+  16    0  157  157 -MAP |
+  16    0  157  157 -NODE|
+  16    0  157  157 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="java-snakeyaml-json">
+<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &quot;a&quot;: &quot;double quotes&quot;,
+  &quot;b&quot;: &quot;plain value&quot;,
+  &quot;c&quot;: &quot;d&quot;,
+  &quot;[seq1]&quot;: [
+    &quot;seq2&quot;
+  ],
+  &quot;e&quot;: [
+    {
+      &quot;x&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;block&quot;: &quot;abcde\n&quot;
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="js-jsyaml-json">
+<h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&quot;a&quot;:&quot;double quotes&quot;,&quot;b&quot;:&quot;plain value&quot;,&quot;c&quot;:&quot;d&quot;,&quot;seq1&quot;:[&quot;seq2&quot;],&quot;e&quot;:[{&quot;x&quot;:&quot;y&quot;}],&quot;block&quot;:&quot;abcde\n&quot;}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="js-yaml-json">
+<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &quot;a&quot;: &quot;double quotes&quot;,
+  &quot;b&quot;: &quot;plain value&quot;,
+  &quot;c&quot;: &quot;d&quot;,
+  &quot;[ seq1 ]&quot;: [
+    &quot;seq2&quot;
+  ],
+  &quot;e&quot;: [
+    {
+      &quot;x&quot;: &quot;y&quot;
+    }
+  ],
+  &quot;block&quot;: &quot;abcde\n&quot;
+}
+(node:3482) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ seq1 ]&quot;. Set mapAsMap: true to use object keys.
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="lua-lyaml-json">
+<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>luajit: /yaml/bin/lua-lyaml-json:8: Cannot serialise table: table key must be a number or string
+stack traceback:
+	[C]: in function &#39;encode&#39;
+	/yaml/bin/lua-lyaml-json:8: in main chunk
+	[C]: at 0x55885b883f97
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-json">
+<h3><a href="#perl-pp-json">perl-pp-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+   &quot;[&#39;seq1&#39;]&quot; : [
+      &quot;seq2&quot;
+   ],
+   &quot;a&quot; : &quot;double quotes&quot;,
+   &quot;b&quot; : &quot;plain value&quot;,
+   &quot;block&quot; : &quot;abcde\n&quot;,
+   &quot;c&quot; : &quot;d&quot;,
+   &quot;e&quot; : [
+      {
+         &quot;x&quot; : &quot;y&quot;
+      }
+   ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
+<h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;[\&#39;seq1\&#39;]&#39; =&gt; [
+                    &#39;seq2&#39;
+                  ],
+  &#39;a&#39; =&gt; &#39;double quotes&#39;,
+  &#39;b&#39; =&gt; &#39;plain value&#39;,
+  &#39;block&#39; =&gt; &#39;abcde
+&#39;,
+  &#39;c&#39; =&gt; &#39;d&#39;,
+  &#39;e&#39; =&gt; [
+           {
+             &#39;x&#39; =&gt; &#39;y&#39;
+           }
+         ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pplibyaml-json">
+<h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+   &quot;[&#39;seq1&#39;]&quot; : [
+      &quot;seq2&quot;
+   ],
+   &quot;a&quot; : &quot;double quotes&quot;,
+   &quot;b&quot; : &quot;plain value&quot;,
+   &quot;block&quot; : &quot;abcde\n&quot;,
+   &quot;c&quot; : &quot;d&quot;,
+   &quot;e&quot; : [
+      {
+         &quot;x&quot; : &quot;y&quot;
+      }
+   ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pplibyaml-perl">
+<h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;[\&#39;seq1\&#39;]&#39; =&gt; [
+                    &#39;seq2&#39;
+                  ],
+  &#39;a&#39; =&gt; &#39;double quotes&#39;,
+  &#39;b&#39; =&gt; &#39;plain value&#39;,
+  &#39;block&#39; =&gt; &#39;abcde
+&#39;,
+  &#39;c&#39; =&gt; &#39;d&#39;,
+  &#39;e&#39; =&gt; [
+           {
+             &#39;x&#39; =&gt; &#39;y&#39;
+           }
+         ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-syck-json">
+<h3><a href="#perl-syck-json">perl-syck-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+   &quot;ARRAY(0x55693ffe15e8)&quot; : [
+      &quot;seq2&quot;
+   ],
+   &quot;a&quot; : &quot;double quotes&quot;,
+   &quot;b&quot; : &quot;plain value&quot;,
+   &quot;block&quot; : &quot;abcde\n&quot;,
+   &quot;c&quot; : &quot;d&quot;,
+   &quot;e&quot; : [
+      {
+         &quot;x&quot; : 1
+      }
+   ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-syck-perl">
+<h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;ARRAY(0x5558334cb450)&#39; =&gt; [
+                               &#39;seq2&#39;
+                             ],
+  &#39;a&#39; =&gt; &#39;double quotes&#39;,
+  &#39;b&#39; =&gt; &#39;plain value&#39;,
+  &#39;block&#39; =&gt; &#39;abcde
+&#39;,
+  &#39;c&#39; =&gt; &#39;d&#39;,
+  &#39;e&#39; =&gt; [
+           {
+             &#39;x&#39; =&gt; 1
+           }
+         ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-tiny-json">
+<h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>YAML::Tiny does not support a feature in line &#39;&quot;double&#39; at /yaml/bin/perl-tiny-json line 12.
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-xs-json">
+<h3><a href="#perl-xs-json">perl-xs-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+   &quot;ARRAY(0x55a7c64bd3c0)&quot; : [
+      &quot;seq2&quot;
+   ],
+   &quot;a&quot; : &quot;double quotes&quot;,
+   &quot;b&quot; : &quot;plain value&quot;,
+   &quot;block&quot; : &quot;abcde\n&quot;,
+   &quot;c&quot; : &quot;d&quot;,
+   &quot;e&quot; : [
+      {
+         &quot;x&quot; : &quot;y&quot;
+      }
+   ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-xs-perl">
+<h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;ARRAY(0x55ba192feec0)&#39; =&gt; [
+                               &#39;seq2&#39;
+                             ],
+  &#39;a&#39; =&gt; &#39;double quotes&#39;,
+  &#39;b&#39; =&gt; &#39;plain value&#39;,
+  &#39;block&#39; =&gt; &#39;abcde
+&#39;,
+  &#39;c&#39; =&gt; &#39;d&#39;,
+  &#39;e&#39; =&gt; [
+           {
+             &#39;x&#39; =&gt; &#39;y&#39;
+           }
+         ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-yaml-json">
+<h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>YAML Error: Inconsistent indentation level
+   Code: YAML_PARSE_ERR_INCONSISTENT_INDENTATION
+   Line: 2
+   Document: 1
+ at /perl5/lib/perl5/YAML/Loader.pm line 804.
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-pyyaml-json">
+<h3><a href="#py-pyyaml-json">py-pyyaml-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+    yield loader.get_data()
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+    return self.construct_document(self.get_node())
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 60, in construct_document
+    for dummy in generator:
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 413, in construct_yaml_map
+    value = self.construct_mapping(node)
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 218, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 142, in construct_mapping
+    &quot;found unhashable key&quot;, key_node.start_mark)
+yaml.constructor.ConstructorError: while constructing a mapping
+  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
+    a: &quot;double
+    ^
+found unhashable key
+  in &quot;&lt;unicode string&gt;&quot;, line 8, column 2:
+     - seq1
+     ^
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Error json.dumps: &lt;class &#39;TypeError&#39;&gt;
+Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    print(json.dumps(doc, sort_keys=True, skipkeys=True, indent=2))
+  File &quot;/usr/lib/python3.7/json/__init__.py&quot;, line 238, in dumps
+    **kw).encode(obj)
+  File &quot;/usr/lib/python3.7/json/encoder.py&quot;, line 201, in encode
+    chunks = list(chunks)
+  File &quot;/usr/lib/python3.7/json/encoder.py&quot;, line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File &quot;/usr/lib/python3.7/json/encoder.py&quot;, line 353, in _iterencode_dict
+    items = sorted(dct.items(), key=lambda kv: kv[0])
+TypeError: &#39;&lt;&#39; not supported between instances of &#39;tuple&#39; and &#39;str&#39;
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;a&#39;: &#39;double quotes&#39;,
+ &#39;b&#39;: &#39;plain value&#39;,
+ &#39;block&#39;: &#39;abcde\n&#39;,
+ &#39;c&#39;: &#39;d&#39;,
+ &#39;e&#39;: [{&#39;x&#39;: &#39;y&#39;}],
+ (&#39;seq1&#39;,): [&#39;seq2&#39;]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="ruby-psych-json">
+<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&quot;a&quot;:&quot;double quotes&quot;,&quot;b&quot;:&quot;plain value&quot;,&quot;c&quot;:&quot;d&quot;,&quot;[\&quot;seq1\&quot;]&quot;:[&quot;seq2&quot;],&quot;e&quot;:[{&quot;x&quot;:&quot;y&quot;}],&quot;block&quot;:&quot;abcde\n&quot;}
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_ni" id="perl-tiny-perl">
+<h3><a href="#perl-tiny-perl">perl-tiny-perl</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;&quot;double&#39; at /yaml/bin/perl-tiny-perl line 15.
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">        </body>
+</html>
+

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>#57H4 - Spec Example 8.22. Block Collection Nodes - YAML Test Matrix</title>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="../css/yaml.css">
+<link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
+<link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
+</head>
+<body>
+
+<h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
+<h2><tt>--- <a
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/57H4.yaml">&test-57H4</a><br>
+&nbsp;&nbsp;Title: Spec Example 8.22. Block Collection Nodes</br>
+&nbsp;&nbsp;Tags: [ mapping, sequence, tag ]</tt></h2>
+
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">sequence</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!seq</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">entry</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="tag">!!seq</span><span class="eol">
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">nested</span><span class="eol">
+</span><span class="plainkey">mapping</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!map</span><span class="eol">
+</span><span class="default"> </span><span class="plainkey">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="eol">
+</span></pre></div>
+<div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
++DOC
++MAP
+=VAL :sequence
++SEQ &lt;tag:yaml.org,2002:seq&gt;
+=VAL :entry
++SEQ &lt;tag:yaml.org,2002:seq&gt;
+=VAL :nested
+-SEQ
+-SEQ
+=VAL :mapping
++MAP &lt;tag:yaml.org,2002:map&gt;
+=VAL :foo
+=VAL :bar
+-MAP
+-MAP
+-DOC
+-STR
+</pre></div>
+<div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
+<pre>{<br>  &quot;mapping&quot;: {<br>    &quot;foo&quot;: &quot;bar&quot;<br>  },<br>  &quot;sequence&quot;: [<br>    &quot;entry&quot;,<br>    [<br>      &quot;nested&quot;<br>    ]<br>  ]<br>}<br></pre>
+</div>
+<hr style="clear: both;">
+   <div class="framework framework_box_ok" id="c-libfyaml-event">
+<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="c-libyaml-event">
+<h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="cpp-yamlcpp-event">
+<h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="dotnet-yamldotnet-event">
+<h3><a href="#dotnet-yamldotnet-event">dotnet-yamldotnet-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="hs-hsyaml-event">
+<h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="java-snakeyaml-event">
+<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="js-yaml-event">
+<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="nim-nimyaml-event">
+<h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-pp-event">
+<h3><a href="#perl-pp-event">perl-pp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-refparser-event">
+<h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-pyyaml-event">
+<h3><a href="#py-pyyaml-event">py-pyyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="go-yaml-json">
+<h3><a href="#go-yaml-json">go-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="hs-hsyaml-json">
+<h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="java-snakeyaml-json">
+<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="js-jsyaml-json">
+<h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="js-yaml-json">
+<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="lua-lyaml-json">
+<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-pp-json">
+<h3><a href="#perl-pp-json">perl-pp-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-pplibyaml-json">
+<h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-xs-json">
+<h3><a href="#perl-xs-json">perl-xs-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-yaml-json">
+<h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="py-pyyaml-json">
+<h3><a href="#py-pyyaml-json">py-pyyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="ruby-psych-json">
+<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">          <div class="framework framework_box_error" id="dotnet-yamldotnet-json">
+<h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Unhandled exception. YamlDotNet.Core.YamlException: (Line: 1, Col: 11, Idx: 10) - (Line: 2, Col: 2, Idx: 17): Encountered an unresolved tag &#39;tag:yaml.org,2002:seq&#39;
+   at YamlDotNet.Serialization.NodeTypeResolvers.PreventUnknownTagsNodeTypeResolver.YamlDotNet.Serialization.INodeTypeResolver.Resolve(NodeEvent nodeEvent, Type&amp; currentType)
+   at YamlDotNet.Serialization.ValueDeserializers.NodeValueDeserializer.GetTypeFromEvent(NodeEvent nodeEvent, Type currentType)
+   at YamlDotNet.Serialization.ValueDeserializers.NodeValueDeserializer.DeserializeValue(IParser parser, Type expectedType, SerializerState state, IValueDeserializer nestedObjectDeserializer)
+   at YamlDotNet.Serialization.ValueDeserializers.AliasValueDeserializer.DeserializeValue(IParser parser, Type expectedType, SerializerState state, IValueDeserializer nestedObjectDeserializer)
+   at YamlDotNet.Serialization.ValueDeserializers.NodeValueDeserializer.&lt;&gt;c__DisplayClass3_0.&lt;DeserializeValue&gt;b__0(IParser r, Type t)
+   at YamlDotNet.Serialization.NodeDeserializers.DictionaryNodeDeserializer.DeserializeHelper(Type tKey, Type tValue, IParser parser, Func`3 nestedObjectDeserializer, IDictionary result)
+   at YamlDotNet.Serialization.NodeDeserializers.DictionaryNodeDeserializer.YamlDotNet.Serialization.INodeDeserializer.Deserialize(IParser parser, Type expectedType, Func`3 nestedObjectDeserializer, Object&amp; value)
+   at YamlDotNet.Serialization.ValueDeserializers.NodeValueDeserializer.DeserializeValue(IParser parser, Type expectedType, SerializerState state, IValueDeserializer nestedObjectDeserializer)
+   at YamlDotNet.Serialization.ValueDeserializers.AliasValueDeserializer.DeserializeValue(IParser parser, Type expectedType, SerializerState state, IValueDeserializer nestedObjectDeserializer)
+   at YamlDotNet.Serialization.Deserializer.Deserialize(IParser parser, Type type)
+   at YamlDotNet.Serialization.Deserializer.Deserialize(TextReader input, Type type)
+   at YamlDotNet.Serialization.Deserializer.Deserialize(TextReader input)
+   at Program.Main(String[] commandLineArguments)
+Aborted (core dumped)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-syck-json">
+<h3><a href="#perl-syck-json">perl-syck-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 4, column 1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-syck-perl">
+<h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 4, column 1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
+  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
+  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 +NODE|
+   1    0    0    0 +MAP |
+   1    0    0    0 +PAIR|
+   1    0    0    0 +NODE|
+   1    0    0    0 +VAL |
+   1    0    0    0 =TEXT|sequence
+   1    8    8    8 -VAL |
+   1    8    8    8 -NODE|
+   1    8    8    8 =SYNX|:
+   1    9    9    9 +NODE|
+   1    9    9    9 =WSPC|.
+   1   10   10   10 +PROP|
+   1   10   10   10 +TAG |
+   1   10   10   10 +HAND|
+   1   10   10   10 =SYNX|!
+   1   11   11   11 =SYNX|!
+   1   12   12   12 -HAND|
+   1   12   12   12 =META|seq
+   1   15   15   15 -TAG |
+   1   15   15   15 -PROP|
+   1   15   15   15 =EOL |\x0a
+   2    0   16   16 +SEQ |
+   2    0   16   16 =SYNX|-
+   2    1   17   17 =WSPC|.
+   2    2   18   18 +NODE|
+   2    2   18   18 +VAL |
+   2    2   18   18 =TEXT|entry
+   2    7   23   23 -VAL |
+   2    7   23   23 -NODE|
+   2    7   23   23 =EOL |\x0a
+   3    0   24   24 =SYNX|-
+   3    1   25   25 +NODE|
+   3    1   25   25 =WSPC|.
+   3    2   26   26 +PROP|
+   3    2   26   26 +TAG |
+   3    2   26   26 +HAND|
+   3    2   26   26 =SYNX|!
+   3    3   27   27 =SYNX|!
+   3    4   28   28 -HAND|
+   3    4   28   28 =META|seq
+   3    7   31   31 -TAG |
+   3    7   31   31 -PROP|
+   3    7   31   31 =EOL |\x0a
+   4    0   32   32 +SEQ |
+   4    0   32   32 =DENT|.
+   4    1   33   33 =SYNX|-
+   4    2   34   34 =WSPC|.
+   4    3   35   35 +NODE|
+   4    3   35   35 +VAL |
+   4    3   35   35 =TEXT|nested
+   4    9   41   41 -VAL |
+   4    9   41   41 -NODE|
+   4    9   41   41 =EOL |\x0a
+   5    0   42   42 -SEQ |
+   5    0   42   42 -NODE|
+   5    0   42   42 -SEQ |
+   5    0   42   42 -NODE|
+   5    0   42   42 -PAIR|
+   5    0   42   42 +PAIR|
+   5    0   42   42 +NODE|
+   5    0   42   42 +VAL |
+   5    0   42   42 =TEXT|mapping
+   5    7   49   49 -VAL |
+   5    7   49   49 -NODE|
+   5    7   49   49 =SYNX|:
+   5    8   50   50 +NODE|
+   5    8   50   50 =WSPC|.
+   5    9   51   51 +PROP|
+   5    9   51   51 +TAG |
+   5    9   51   51 +HAND|
+   5    9   51   51 =SYNX|!
+   5   10   52   52 =SYNX|!
+   5   11   53   53 -HAND|
+   5   11   53   53 =META|map
+   5   14   56   56 -TAG |
+   5   14   56   56 -PROP|
+   5   14   56   56 =EOL |\x0a
+   6    0   57   57 +MAP |
+   6    0   57   57 =DENT|.
+   6    1   58   58 +PAIR|
+   6    1   58   58 +NODE|
+   6    1   58   58 +VAL |
+   6    1   58   58 =TEXT|foo
+   6    4   61   61 -VAL |
+   6    4   61   61 -NODE|
+   6    4   61   61 =SYNX|:
+   6    5   62   62 =WSPC|.
+   6    6   63   63 +NODE|
+   6    6   63   63 +VAL |
+   6    6   63   63 =TEXT|bar
+   6    9   66   66 -VAL |
+   6    9   66   66 -NODE|
+   6    9   66   66 =EOL |\x0a
+   7    0   67   67 -PAIR|
+   7    0   67   67 -MAP |
+   7    0   67   67 -NODE|
+   7    0   67   67 -PAIR|
+   7    0   67   67 -MAP |
+   7    0   67   67 -NODE|
+   7    0   67   67 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
+<h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;foo&#39; =&gt; &#39;bar&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;entry&#39;,
+                  [
+                    &#39;nested&#39;
+                  ]
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pplibyaml-perl">
+<h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;foo&#39; =&gt; &#39;bar&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;entry&#39;,
+                  [
+                    &#39;nested&#39;
+                  ]
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-xs-perl">
+<h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;foo&#39; =&gt; &#39;bar&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;entry&#39;,
+                  [
+                    &#39;nested&#39;
+                  ]
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-yaml-perl">
+<h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;mapping&#39; =&gt; {
+                 &#39;foo&#39; =&gt; &#39;bar&#39;
+               },
+  &#39;sequence&#39; =&gt; [
+                  &#39;entry&#39;,
+                  [
+                    &#39;nested&#39;
+                  ]
+                ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-pyyaml-py">
+<h3><a href="#py-pyyaml-py">py-pyyaml-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;mapping&#39;: {&#39;foo&#39;: &#39;bar&#39;}, &#39;sequence&#39;: [&#39;entry&#39;, [&#39;nested&#39;]]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;mapping&#39;: {&#39;foo&#39;: &#39;bar&#39;}, &#39;sequence&#39;: [&#39;entry&#39;, [&#39;nested&#39;]]}
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_ni" id="perl-tiny-json">
+<h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;!!seq&#39; at /yaml/bin/perl-tiny-json line 12.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_ni" id="perl-tiny-perl">
+<h3><a href="#perl-tiny-perl">perl-tiny-perl</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;!!seq&#39; at /yaml/bin/perl-tiny-perl line 15.
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">        </body>
+</html>
+

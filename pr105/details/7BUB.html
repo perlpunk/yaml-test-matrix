@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>#7BUB - Spec Example 2.10. Node for âSammy Sosaâ appears twice in this document - YAML Test Matrix</title>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="../css/yaml.css">
+<link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
+<link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
+</head>
+<body>
+
+<h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
+<h2><tt>--- <a
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/7BUB.yaml">&test-7BUB</a><br>
+&nbsp;&nbsp;Title: Spec Example 2.10. Node for âSammy Sosaâ appears twice in this document</br>
+&nbsp;&nbsp;Tags: [ alias, mapping, sequence, spec ]</tt></h2>
+
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">hr</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">Mark McGwire</span><span class="eol">
+</span><span class="eol">  # Following node labeled SS
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;SS</span><span class="default"> </span><span class="default">Sammy Sosa</span><span class="eol">
+</span><span class="plainkey">rbi</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="alias">*SS</span><span class="eol"> # Subsequent occurrence
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">Ken Griffey</span><span class="eol">
+</span></pre></div>
+<div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
++DOC ---
++MAP
+=VAL :hr
++SEQ
+=VAL :Mark McGwire
+=VAL &amp;SS :Sammy Sosa
+-SEQ
+=VAL :rbi
++SEQ
+=ALI *SS
+=VAL :Ken Griffey
+-SEQ
+-MAP
+-DOC
+-STR
+</pre></div>
+<div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
+<pre>{<br>  &quot;hr&quot;: [<br>    &quot;Mark McGwire&quot;,<br>    &quot;Sammy Sosa&quot;<br>  ],<br>  &quot;rbi&quot;: [<br>    &quot;Sammy Sosa&quot;,<br>    &quot;Ken Griffey&quot;<br>  ]<br>}<br></pre>
+</div>
+<hr style="clear: both;">
+   <div class="framework framework_box_ok" id="c-libfyaml-event">
+<h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="c-libyaml-event">
+<h3><a href="#c-libyaml-event">c-libyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="cpp-yamlcpp-event">
+<h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="dotnet-yamldotnet-event">
+<h3><a href="#dotnet-yamldotnet-event">dotnet-yamldotnet-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="hs-hsyaml-event">
+<h3><a href="#hs-hsyaml-event">hs-hsyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="java-snakeyaml-event">
+<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="js-yaml-event">
+<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="nim-nimyaml-event">
+<h3><a href="#nim-nimyaml-event">nim-nimyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-pp-event">
+<h3><a href="#perl-pp-event">perl-pp-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="perl-refparser-event">
+<h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-pyyaml-event">
+<h3><a href="#py-pyyaml-event">py-pyyaml-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+  <div class="framework framework_box_ok" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="c-libfyaml-json">
+<h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="dotnet-yamldotnet-json">
+<h3><a href="#dotnet-yamldotnet-json">dotnet-yamldotnet-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="go-yaml-json">
+<h3><a href="#go-yaml-json">go-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="hs-hsyaml-json">
+<h3><a href="#hs-hsyaml-json">hs-hsyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="java-snakeyaml-json">
+<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="js-jsyaml-json">
+<h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="js-yaml-json">
+<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="lua-lyaml-json">
+<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-pp-json">
+<h3><a href="#perl-pp-json">perl-pp-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-pplibyaml-json">
+<h3><a href="#perl-pplibyaml-json">perl-pplibyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-syck-json">
+<h3><a href="#perl-syck-json">perl-syck-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-xs-json">
+<h3><a href="#perl-xs-json">perl-xs-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="perl-yaml-json">
+<h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="py-pyyaml-json">
+<h3><a href="#py-pyyaml-json">py-pyyaml-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
+<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+  <div class="framework framework_box_json_ok" id="ruby-psych-json">
+<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
+<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
+
+
+ <hr style="clear: both;">             <div class="framework framework_box_na" id="hs-reference-yeast">
+<h3><a href="#hs-reference-yeast">hs-reference-yeast</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>Line  Col Char Byte Token|Content
+   1    0    0    0 +DOC |
+   1    0    0    0 =HEAD|---
+   1    3    3    3 +NODE|
+   1    3    3    3 =EOL |\x0a
+   2    0    4    4 +MAP |
+   2    0    4    4 +PAIR|
+   2    0    4    4 +NODE|
+   2    0    4    4 +VAL |
+   2    0    4    4 =TEXT|hr
+   2    2    6    6 -VAL |
+   2    2    6    6 -NODE|
+   2    2    6    6 =SYNX|:
+   2    3    7    7 +NODE|
+   2    3    7    7 =EOL |\x0a
+   3    0    8    8 +SEQ |
+   3    0    8    8 =DENT|..
+   3    2   10   10 =SYNX|-
+   3    3   11   11 =WSPC|.
+   3    4   12   12 +NODE|
+   3    4   12   12 +VAL |
+   3    4   12   12 =TEXT|Mark.McGwire
+   3   16   24   24 -VAL |
+   3   16   24   24 -NODE|
+   3   16   24   24 =EOL |\x0a
+   4    0   25   25 =WSPC|..
+   4    2   27   27 +COMM|
+   4    2   27   27 =SYNX|#
+   4    3   28   28 =META|.Following.node.labeled.SS
+   4   29   54   54 -COMM|
+   4   29   54   54 =EOL |\x0a
+   5    0   55   55 =DENT|..
+   5    2   57   57 =SYNX|-
+   5    3   58   58 =WSPC|.
+   5    4   59   59 +NODE|
+   5    4   59   59 +PROP|
+   5    4   59   59 +ANCH|
+   5    4   59   59 =SYNX|&amp;
+   5    5   60   60 =META|SS
+   5    7   62   62 -ANCH|
+   5    7   62   62 -PROP|
+   5    7   62   62 =WSPC|.
+   5    8   63   63 +VAL |
+   5    8   63   63 =TEXT|Sammy.Sosa
+   5   18   73   73 -VAL |
+   5   18   73   73 -NODE|
+   5   18   73   73 =EOL |\x0a
+   6    0   74   74 -SEQ |
+   6    0   74   74 -NODE|
+   6    0   74   74 -PAIR|
+   6    0   74   74 +PAIR|
+   6    0   74   74 +NODE|
+   6    0   74   74 +VAL |
+   6    0   74   74 =TEXT|rbi
+   6    3   77   77 -VAL |
+   6    3   77   77 -NODE|
+   6    3   77   77 =SYNX|:
+   6    4   78   78 +NODE|
+   6    4   78   78 =EOL |\x0a
+   7    0   79   79 +SEQ |
+   7    0   79   79 =DENT|..
+   7    2   81   81 =SYNX|-
+   7    3   82   82 =WSPC|.
+   7    4   83   83 +NODE|
+   7    4   83   83 +ALI |
+   7    4   83   83 =SYNX|*
+   7    5   84   84 =META|SS
+   7    7   86   86 -ALI |
+   7    7   86   86 -NODE|
+   7    7   86   86 =WSPC|.
+   7    8   87   87 +COMM|
+   7    8   87   87 =SYNX|#
+   7    9   88   88 =META|.Subsequent.occurrence
+   7   31  110  110 -COMM|
+   7   31  110  110 =EOL |\x0a
+   8    0  111  111 =DENT|..
+   8    2  113  113 =SYNX|-
+   8    3  114  114 =WSPC|.
+   8    4  115  115 +NODE|
+   8    4  115  115 +VAL |
+   8    4  115  115 =TEXT|Ken.Griffey
+   8   15  126  126 -VAL |
+   8   15  126  126 -NODE|
+   8   15  126  126 =EOL |\x0a
+   9    0  127  127 -SEQ |
+   9    0  127  127 -NODE|
+   9    0  127  127 -PAIR|
+   9    0  127  127 -MAP |
+   9    0  127  127 -NODE|
+   9    0  127  127 -DOC |
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pp-perl">
+<h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;hr&#39; =&gt; [
+            &#39;Mark McGwire&#39;,
+            &#39;Sammy Sosa&#39;
+          ],
+  &#39;rbi&#39; =&gt; [
+             &#39;Sammy Sosa&#39;,
+             &#39;Ken Griffey&#39;
+           ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-pplibyaml-perl">
+<h3><a href="#perl-pplibyaml-perl">perl-pplibyaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;hr&#39; =&gt; [
+            &#39;Mark McGwire&#39;,
+            &#39;Sammy Sosa&#39;
+          ],
+  &#39;rbi&#39; =&gt; [
+             &#39;Sammy Sosa&#39;,
+             &#39;Ken Griffey&#39;
+           ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-syck-perl">
+<h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;hr&#39; =&gt; [
+            &#39;Mark McGwire&#39;,
+            &#39;Sammy Sosa&#39;
+          ],
+  &#39;rbi&#39; =&gt; [
+             &#39;Sammy Sosa&#39;,
+             &#39;Ken Griffey&#39;
+           ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-xs-perl">
+<h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;hr&#39; =&gt; [
+            &#39;Mark McGwire&#39;,
+            &#39;Sammy Sosa&#39;
+          ],
+  &#39;rbi&#39; =&gt; [
+             ${\$VAR1-&gt;{&#39;hr&#39;}[1]},
+             &#39;Ken Griffey&#39;
+           ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="perl-yaml-perl">
+<h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  &#39;hr&#39; =&gt; [
+            &#39;Mark McGwire&#39;,
+            &#39;Sammy Sosa&#39;
+          ],
+  &#39;rbi&#39; =&gt; [
+             &#39;Sammy Sosa&#39;,
+             &#39;Ken Griffey&#39;
+           ]
+}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-pyyaml-py">
+<h3><a href="#py-pyyaml-py">py-pyyaml-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;hr&#39;: [&#39;Mark McGwire&#39;, &#39;Sammy Sosa&#39;], &#39;rbi&#39;: [&#39;Sammy Sosa&#39;, &#39;Ken Griffey&#39;]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{&#39;hr&#39;: [&#39;Mark McGwire&#39;, &#39;Sammy Sosa&#39;], &#39;rbi&#39;: [&#39;Sammy Sosa&#39;, &#39;Ken Griffey&#39;]}
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_na" id="raku-yamlish-raku">
+<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+<span class="status_box color_na">&nbsp;</span>na  <pre>{
+  hr  =&gt; [
+    &quot;Mark McGwire&quot;.Str,
+    &quot;Sammy Sosa&quot;.Str,
+  ],
+  rbi =&gt; [
+    &quot;Sammy Sosa&quot;.Str,
+    &quot;Ken Griffey&quot;.Str,
+  ],
+}
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_ni" id="perl-tiny-json">
+<h3><a href="#perl-tiny-json">perl-tiny-json</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;&amp;SS Sammy Sosa&#39; at /yaml/bin/perl-tiny-json line 12.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_ni" id="perl-tiny-perl">
+<h3><a href="#perl-tiny-perl">perl-tiny-perl</a></h3>
+<span class="status_box color_ni">&nbsp;</span>ni <pre>YAML::Tiny does not support a feature in line &#39;&amp;SS Sammy Sosa&#39; at /yaml/bin/perl-tiny-perl line 15.
+</pre>
+ </div>
+
+
+ <hr style="clear: both;">        </body>
+</html>
+
