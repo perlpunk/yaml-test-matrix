@@ -37,6 +37,10 @@ checked="checked" onchange="toggle_framework('dotnet-yamldotnet-event')">
 class="selector-event selector-hs" data-fw="hs-hsyaml-event"
 checked="checked" onchange="toggle_framework('hs-hsyaml-event')">
 <label for="fw-select-hs-hsyaml-event" >hs hsyaml</label><br>
+ <input type="checkbox" name="" value="1" id="fw-select-java-snakeengine-event"
+class="selector-event selector-java" data-fw="java-snakeengine-event"
+checked="checked" onchange="toggle_framework('java-snakeengine-event')">
+<label for="fw-select-java-snakeengine-event" >java snakeengine</label><br>
  <input type="checkbox" name="" value="1" id="fw-select-java-snakeyaml-event"
 class="selector-event selector-java" data-fw="java-snakeyaml-event"
 checked="checked" onchange="toggle_framework('java-snakeyaml-event')">
@@ -65,6 +69,10 @@ checked="checked" onchange="toggle_framework('py-pyyaml-event')">
 class="selector-event selector-py" data-fw="py-ruamel-event"
 checked="checked" onchange="toggle_framework('py-ruamel-event')">
 <label for="fw-select-py-ruamel-event" >py ruamel</label><br>
+ <input type="checkbox" name="" value="1" id="fw-select-rust-yamlrust-event"
+class="selector-event selector-rust" data-fw="rust-yamlrust-event"
+checked="checked" onchange="toggle_framework('rust-yamlrust-event')">
+<label for="fw-select-rust-yamlrust-event" >rust yamlrust</label><br>
  </div>
  <div class="selector">
 <input type="checkbox" name="type-json" value="1" id="type-json"
@@ -86,6 +94,10 @@ checked="checked" onchange="toggle_framework('go-yaml-json')">
 class="selector-json selector-hs" data-fw="hs-hsyaml-json"
 checked="checked" onchange="toggle_framework('hs-hsyaml-json')">
 <label for="fw-select-hs-hsyaml-json" >hs hsyaml</label><br>
+ <input type="checkbox" name="" value="1" id="fw-select-java-snakeengine-json"
+class="selector-json selector-java" data-fw="java-snakeengine-json"
+checked="checked" onchange="toggle_framework('java-snakeengine-json')">
+<label for="fw-select-java-snakeengine-json" >java snakeengine</label><br>
  <input type="checkbox" name="" value="1" id="fw-select-java-snakeyaml-json"
 class="selector-json selector-java" data-fw="java-snakeyaml-json"
 checked="checked" onchange="toggle_framework('java-snakeyaml-json')">
@@ -199,6 +211,7 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result cpp-yamlcpp-event">cpp<br>yamlcpp<br>event</td>
  <td class="result dotnet-yamldotnet-event">dotnet<br>yamldotnet<br>event</td>
  <td class="result hs-hsyaml-event">hs<br>hsyaml<br>event</td>
+ <td class="result java-snakeengine-event">java<br>snakeengine<br>event</td>
  <td class="result java-snakeyaml-event">java<br>snakeyaml<br>event</td>
  <td class="result js-yaml-event">js<br>yaml<br>event</td>
  <td class="result nim-nimyaml-event">nim<br>nimyaml<br>event</td>
@@ -206,10 +219,12 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result perl-refparser-event">perl<br>refparser<br>event</td>
  <td class="result py-pyyaml-event">py<br>pyyaml<br>event</td>
  <td class="result py-ruamel-event">py<br>ruamel<br>event</td>
+ <td class="result rust-yamlrust-event">rust<br>yamlrust<br>event</td>
  <td class="result c-libfyaml-json">c<br>libfyaml<br>json</td>
  <td class="result dotnet-yamldotnet-json">dotnet<br>yamldotnet<br>json</td>
  <td class="result go-yaml-json">go<br>yaml<br>json</td>
  <td class="result hs-hsyaml-json">hs<br>hsyaml<br>json</td>
+ <td class="result java-snakeengine-json">java<br>snakeengine<br>json</td>
  <td class="result java-snakeyaml-json">java<br>snakeyaml<br>json</td>
  <td class="result js-jsyaml-json">js<br>jsyaml<br>json</td>
  <td class="result js-yaml-json">js<br>yaml<br>json</td>
@@ -258,6 +273,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result hs-hsyaml-event"> <span class="status_box color_invalid_correct">&nbsp;</span>94<br>
 <br>
 </td>
+ <td class="result java-snakeengine-event"> <span class="status_box color_invalid_correct">&nbsp;</span>70<br>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>24<br>
+</td>
  <td class="result java-snakeyaml-event"> <span class="status_box color_invalid_correct">&nbsp;</span>78<br>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>16<br>
 </td>
@@ -279,6 +297,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result py-ruamel-event"> <span class="status_box color_invalid_correct">&nbsp;</span>77<br>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>17<br>
 </td>
+ <td class="result rust-yamlrust-event"> <span class="status_box color_invalid_correct">&nbsp;</span>66<br>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>28<br>
+</td>
  <td class="result c-libfyaml-json"> <span class="status_box color_invalid_correct">&nbsp;</span>90<br>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>4<br>
 </td>
@@ -290,6 +311,9 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-json"> <span class="status_box color_invalid_correct">&nbsp;</span>94<br>
 <br>
+</td>
+ <td class="result java-snakeengine-json"> <span class="status_box color_invalid_correct">&nbsp;</span>81<br>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>13<br>
 </td>
  <td class="result java-snakeyaml-json"> <span class="status_box color_invalid_correct">&nbsp;</span>81<br>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>13<br>
@@ -381,6 +405,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/SU74.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/SU74.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/SU74.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/SU74.html#js-yaml-event">&nbsp;</a>
@@ -395,6 +421,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/SU74.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/SU74.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/SU74.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/SU74.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -402,6 +430,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/SU74.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/SU74.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/SU74.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/SU74.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -465,6 +495,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/SY6V.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/SY6V.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/SY6V.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/SY6V.html#js-yaml-event">&nbsp;</a>
@@ -479,6 +511,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/SY6V.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/SY6V.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/SY6V.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/SY6V.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -486,6 +520,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/SY6V.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/SY6V.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/SY6V.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/SY6V.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -549,6 +585,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/SR86.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/SR86.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/SR86.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/SR86.html#js-yaml-event">&nbsp;</a>
@@ -563,6 +601,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/SR86.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/SR86.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/SR86.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/SR86.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -570,6 +610,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/SR86.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/SR86.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/SR86.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/SR86.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -633,6 +675,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/N4JP.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/N4JP.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/N4JP.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/N4JP.html#js-yaml-event">&nbsp;</a>
@@ -647,6 +691,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/N4JP.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/N4JP.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/N4JP.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/N4JP.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -654,6 +700,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/N4JP.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/N4JP.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/N4JP.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/N4JP.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -717,6 +765,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/U44R.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/U44R.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/U44R.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/U44R.html#js-yaml-event">&nbsp;</a>
@@ -731,6 +781,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/U44R.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/U44R.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/U44R.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/U44R.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -738,6 +790,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/U44R.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/U44R.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/U44R.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/U44R.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -801,6 +855,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/S98Z.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/S98Z.html#js-yaml-event">&nbsp;</a>
@@ -815,6 +871,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/S98Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/S98Z.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -822,6 +880,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/S98Z.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/S98Z.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -885,6 +945,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/5LLU.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/5LLU.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/5LLU.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/5LLU.html#js-yaml-event">&nbsp;</a>
@@ -899,6 +961,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/5LLU.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/5LLU.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/5LLU.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/5LLU.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -906,6 +970,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/5LLU.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/5LLU.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/5LLU.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/5LLU.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -969,6 +1035,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/BS4K.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/BS4K.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/BS4K.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/BS4K.html#js-yaml-event">&nbsp;</a>
@@ -983,6 +1051,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/BS4K.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/BS4K.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/BS4K.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/BS4K.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -990,6 +1060,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/BS4K.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/BS4K.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/BS4K.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/BS4K.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1053,6 +1125,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/8XDJ.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/8XDJ.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/8XDJ.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/8XDJ.html#js-yaml-event">&nbsp;</a>
@@ -1067,6 +1141,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/8XDJ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/8XDJ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/8XDJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/8XDJ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1074,6 +1150,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/8XDJ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/8XDJ.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/8XDJ.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/8XDJ.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1137,6 +1215,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/GDY7.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/GDY7.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/GDY7.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/GDY7.html#js-yaml-event">&nbsp;</a>
@@ -1151,6 +1231,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/GDY7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/GDY7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/GDY7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/GDY7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1158,6 +1240,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/GDY7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/GDY7.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/GDY7.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/GDY7.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1221,6 +1305,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/X4QW.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/X4QW.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/X4QW.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/X4QW.html#js-yaml-event">&nbsp;</a>
@@ -1235,6 +1321,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/X4QW.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/X4QW.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/X4QW.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/X4QW.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1242,6 +1330,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/X4QW.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/X4QW.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/X4QW.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/X4QW.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1305,6 +1395,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/SU5Z.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/SU5Z.html#js-yaml-event">&nbsp;</a>
@@ -1319,6 +1411,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/SU5Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/SU5Z.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1326,6 +1420,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/SU5Z.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/SU5Z.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1389,6 +1485,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/YJV2.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#js-yaml-event">&nbsp;</a>
@@ -1403,6 +1501,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/YJV2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1410,6 +1510,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/YJV2.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/YJV2.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1473,6 +1575,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9MMA.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/9MMA.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/9MMA.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/9MMA.html#js-yaml-event">&nbsp;</a>
@@ -1487,6 +1591,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/9MMA.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/9MMA.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9MMA.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9MMA.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1494,6 +1600,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/9MMA.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9MMA.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/9MMA.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/9MMA.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1557,6 +1665,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/MUS6:00.html#js-yaml-event">&nbsp;</a>
@@ -1571,6 +1681,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/MUS6:00.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/MUS6:00.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1578,6 +1690,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/MUS6:00.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/MUS6:00.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1641,6 +1755,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/MUS6:01.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/MUS6:01.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/MUS6:01.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/MUS6:01.html#js-yaml-event">&nbsp;</a>
@@ -1655,6 +1771,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/MUS6:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/MUS6:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/MUS6:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/MUS6:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1662,6 +1780,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/MUS6:01.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/MUS6:01.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/MUS6:01.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/MUS6:01.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1725,6 +1845,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/B63P.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/B63P.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/B63P.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/B63P.html#js-yaml-event">&nbsp;</a>
@@ -1739,6 +1861,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/B63P.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/B63P.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/B63P.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/B63P.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1746,6 +1870,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/B63P.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/B63P.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/B63P.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/B63P.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1809,6 +1935,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/HRE5.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/HRE5.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/HRE5.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/HRE5.html#js-yaml-event">&nbsp;</a>
@@ -1823,6 +1951,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/HRE5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/HRE5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/HRE5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/HRE5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1830,6 +1960,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/HRE5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/HRE5.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/HRE5.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/HRE5.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1893,6 +2025,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/CQ3W.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/CQ3W.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/CQ3W.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/CQ3W.html#js-yaml-event">&nbsp;</a>
@@ -1907,6 +2041,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/CQ3W.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/CQ3W.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/CQ3W.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/CQ3W.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1914,6 +2050,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/CQ3W.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/CQ3W.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/CQ3W.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/CQ3W.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -1977,6 +2115,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/SF5V.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/SF5V.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/SF5V.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/SF5V.html#js-yaml-event">&nbsp;</a>
@@ -1991,6 +2131,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/SF5V.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/SF5V.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/SF5V.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/SF5V.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -1998,6 +2140,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/SF5V.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/SF5V.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/SF5V.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/SF5V.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2061,6 +2205,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/H7TQ.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/H7TQ.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/H7TQ.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/H7TQ.html#js-yaml-event">&nbsp;</a>
@@ -2075,6 +2221,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/H7TQ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/H7TQ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/H7TQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/H7TQ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2082,6 +2230,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/H7TQ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/H7TQ.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/H7TQ.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/H7TQ.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2145,6 +2295,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/C2SP.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/C2SP.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/C2SP.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/C2SP.html#js-yaml-event">&nbsp;</a>
@@ -2159,6 +2311,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/C2SP.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/C2SP.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/C2SP.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/C2SP.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2166,6 +2320,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/C2SP.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/C2SP.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/C2SP.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/C2SP.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2229,6 +2385,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#js-yaml-event">&nbsp;</a>
@@ -2243,6 +2401,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2250,6 +2410,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/VJP3:00.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2313,6 +2475,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/T833.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/T833.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/T833.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/T833.html#js-yaml-event">&nbsp;</a>
@@ -2327,6 +2491,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/T833.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/T833.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/T833.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/T833.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2334,6 +2500,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/T833.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/T833.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/T833.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/T833.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2397,6 +2565,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9MAG.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/9MAG.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/9MAG.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9MAG.html#js-yaml-event">&nbsp;</a>
@@ -2411,6 +2581,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/9MAG.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/9MAG.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9MAG.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9MAG.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2418,6 +2590,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/9MAG.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9MAG.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/9MAG.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/9MAG.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2481,6 +2655,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/4H7K.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/4H7K.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/4H7K.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/4H7K.html#js-yaml-event">&nbsp;</a>
@@ -2495,6 +2671,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/4H7K.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/4H7K.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/4H7K.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/4H7K.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2502,6 +2680,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/4H7K.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/4H7K.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/4H7K.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/4H7K.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2565,6 +2745,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/CTN5.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/CTN5.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/CTN5.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/CTN5.html#js-yaml-event">&nbsp;</a>
@@ -2579,6 +2761,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/CTN5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/CTN5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/CTN5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/CTN5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2586,6 +2770,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/CTN5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/CTN5.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/CTN5.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/CTN5.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2649,6 +2835,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/6JTT.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/6JTT.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/6JTT.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/6JTT.html#js-yaml-event">&nbsp;</a>
@@ -2663,6 +2851,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/6JTT.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/6JTT.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/6JTT.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/6JTT.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2670,6 +2860,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/6JTT.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/6JTT.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/6JTT.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/6JTT.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2733,6 +2925,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/DK4H.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/DK4H.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/DK4H.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/DK4H.html#js-yaml-event">&nbsp;</a>
@@ -2747,6 +2941,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/DK4H.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/DK4H.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/DK4H.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/DK4H.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2754,6 +2950,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/DK4H.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/DK4H.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/DK4H.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/DK4H.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2817,6 +3015,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/ZXT5.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/ZXT5.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/ZXT5.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/ZXT5.html#js-yaml-event">&nbsp;</a>
@@ -2831,6 +3031,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/ZXT5.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/ZXT5.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/ZXT5.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/ZXT5.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2838,6 +3040,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/ZXT5.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/ZXT5.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/ZXT5.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/ZXT5.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2901,6 +3105,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/HU3P.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/HU3P.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/HU3P.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/HU3P.html#js-yaml-event">&nbsp;</a>
@@ -2915,6 +3121,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/HU3P.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/HU3P.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/HU3P.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/HU3P.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -2922,6 +3130,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/HU3P.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/HU3P.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/HU3P.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/HU3P.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -2985,6 +3195,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/G9HC.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/G9HC.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/G9HC.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/G9HC.html#js-yaml-event">&nbsp;</a>
@@ -2999,6 +3211,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/G9HC.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/G9HC.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/G9HC.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/G9HC.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3006,6 +3220,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/G9HC.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/G9HC.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/G9HC.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/G9HC.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3069,6 +3285,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/62EZ.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/62EZ.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/62EZ.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/62EZ.html#js-yaml-event">&nbsp;</a>
@@ -3083,6 +3301,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/62EZ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/62EZ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/62EZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/62EZ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3090,6 +3310,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/62EZ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/62EZ.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/62EZ.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/62EZ.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3153,6 +3375,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/U99R.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/U99R.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/U99R.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/U99R.html#js-yaml-event">&nbsp;</a>
@@ -3167,6 +3391,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/U99R.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/U99R.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/U99R.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/U99R.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3174,6 +3400,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/U99R.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/U99R.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/U99R.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/U99R.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3237,6 +3465,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/CVW2.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/CVW2.html#js-yaml-event">&nbsp;</a>
@@ -3251,6 +3481,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/CVW2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/CVW2.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3258,6 +3490,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/CVW2.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/CVW2.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3321,6 +3555,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9JBA.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9JBA.html#js-yaml-event">&nbsp;</a>
@@ -3335,6 +3571,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9JBA.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9JBA.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3342,6 +3580,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9JBA.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/9JBA.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3405,6 +3645,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/3HFZ.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/3HFZ.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/3HFZ.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/3HFZ.html#js-yaml-event">&nbsp;</a>
@@ -3419,6 +3661,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/3HFZ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/3HFZ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/3HFZ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/3HFZ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3426,6 +3670,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/3HFZ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/3HFZ.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/3HFZ.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/3HFZ.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3489,6 +3735,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/N782.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/N782.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/N782.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/N782.html#js-yaml-event">&nbsp;</a>
@@ -3503,6 +3751,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/N782.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/N782.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/N782.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/N782.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3510,6 +3760,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/N782.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/N782.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/N782.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/N782.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3573,6 +3825,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/RXY3.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/RXY3.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/RXY3.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/RXY3.html#js-yaml-event">&nbsp;</a>
@@ -3587,6 +3841,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/RXY3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/RXY3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/RXY3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/RXY3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3594,6 +3850,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/RXY3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/RXY3.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/RXY3.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/RXY3.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3657,6 +3915,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/5TRB.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/5TRB.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/5TRB.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/5TRB.html#js-yaml-event">&nbsp;</a>
@@ -3671,6 +3931,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/5TRB.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/5TRB.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/5TRB.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/5TRB.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3678,6 +3940,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/5TRB.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/5TRB.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/5TRB.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/5TRB.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3741,6 +4005,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/55WF.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/55WF.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/55WF.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/55WF.html#js-yaml-event">&nbsp;</a>
@@ -3755,6 +4021,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/55WF.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/55WF.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/55WF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/55WF.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3762,6 +4030,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/55WF.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/55WF.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/55WF.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/55WF.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3825,6 +4095,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/KS4U.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/KS4U.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/KS4U.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/KS4U.html#js-yaml-event">&nbsp;</a>
@@ -3839,6 +4111,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/KS4U.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/KS4U.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/KS4U.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/KS4U.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3846,6 +4120,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/KS4U.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/KS4U.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/KS4U.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/KS4U.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3909,6 +4185,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/BD7L.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/BD7L.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/BD7L.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/BD7L.html#js-yaml-event">&nbsp;</a>
@@ -3923,6 +4201,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/BD7L.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/BD7L.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/BD7L.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/BD7L.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -3930,6 +4210,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/BD7L.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/BD7L.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/BD7L.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/BD7L.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -3993,6 +4275,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/2CMS.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/2CMS.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/2CMS.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/2CMS.html#js-yaml-event">&nbsp;</a>
@@ -4007,6 +4291,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/2CMS.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/2CMS.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/2CMS.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/2CMS.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4014,6 +4300,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/2CMS.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/2CMS.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/2CMS.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/2CMS.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4077,6 +4365,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#js-yaml-event">&nbsp;</a>
@@ -4091,6 +4381,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4098,6 +4390,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/ZCZ6.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4161,6 +4455,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#js-yaml-event">&nbsp;</a>
@@ -4175,6 +4471,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4182,6 +4480,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/ZL4Z.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4245,6 +4545,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/TD5N.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/TD5N.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/TD5N.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/TD5N.html#js-yaml-event">&nbsp;</a>
@@ -4259,6 +4561,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/TD5N.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/TD5N.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/TD5N.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/TD5N.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4266,6 +4570,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/TD5N.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/TD5N.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/TD5N.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/TD5N.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4329,6 +4635,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9CWY.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/9CWY.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/9CWY.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9CWY.html#js-yaml-event">&nbsp;</a>
@@ -4343,6 +4651,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/9CWY.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/9CWY.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9CWY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9CWY.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4350,6 +4660,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/9CWY.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9CWY.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/9CWY.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/9CWY.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4413,6 +4725,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/6S55.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/6S55.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/6S55.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/6S55.html#js-yaml-event">&nbsp;</a>
@@ -4427,6 +4741,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/6S55.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/6S55.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/6S55.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/6S55.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4434,6 +4750,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/6S55.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/6S55.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/6S55.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/6S55.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4497,6 +4815,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/P2EQ.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/P2EQ.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/P2EQ.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/P2EQ.html#js-yaml-event">&nbsp;</a>
@@ -4511,6 +4831,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/P2EQ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/P2EQ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/P2EQ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/P2EQ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4518,6 +4840,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/P2EQ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/P2EQ.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/P2EQ.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/P2EQ.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4581,6 +4905,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/4EJS.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/4EJS.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/4EJS.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/4EJS.html#js-yaml-event">&nbsp;</a>
@@ -4595,6 +4921,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/4EJS.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/4EJS.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/4EJS.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/4EJS.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4602,6 +4930,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/4EJS.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/4EJS.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/4EJS.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/4EJS.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4665,6 +4995,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/LHL4.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/LHL4.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/LHL4.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/LHL4.html#js-yaml-event">&nbsp;</a>
@@ -4679,6 +5011,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/LHL4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/LHL4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/LHL4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/LHL4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4686,6 +5020,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/LHL4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/LHL4.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/LHL4.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/LHL4.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4749,6 +5085,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/S4GJ.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/S4GJ.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/S4GJ.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/S4GJ.html#js-yaml-event">&nbsp;</a>
@@ -4763,6 +5101,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/S4GJ.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/S4GJ.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/S4GJ.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/S4GJ.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4770,6 +5110,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/S4GJ.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/S4GJ.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/S4GJ.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/S4GJ.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4833,6 +5175,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/236B.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/236B.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/236B.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/236B.html#js-yaml-event">&nbsp;</a>
@@ -4847,6 +5191,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/236B.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/236B.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/236B.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/236B.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4854,6 +5200,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/236B.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/236B.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/236B.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/236B.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -4917,6 +5265,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/W9L4.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/W9L4.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/W9L4.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/W9L4.html#js-yaml-event">&nbsp;</a>
@@ -4931,6 +5281,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/W9L4.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/W9L4.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/W9L4.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/W9L4.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -4938,6 +5290,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/W9L4.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/W9L4.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/W9L4.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/W9L4.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5001,6 +5355,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/2G84:00.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/2G84:00.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/2G84:00.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/2G84:00.html#js-yaml-event">&nbsp;</a>
@@ -5015,6 +5371,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/2G84:00.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/2G84:00.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/2G84:00.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/2G84:00.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5022,6 +5380,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/2G84:00.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/2G84:00.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/2G84:00.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/2G84:00.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5085,6 +5445,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/2G84:01.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/2G84:01.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/2G84:01.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/2G84:01.html#js-yaml-event">&nbsp;</a>
@@ -5099,6 +5461,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/2G84:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/2G84:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/2G84:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/2G84:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5106,6 +5470,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/2G84:01.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/2G84:01.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/2G84:01.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/2G84:01.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5169,6 +5535,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9KBC.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/9KBC.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/9KBC.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9KBC.html#js-yaml-event">&nbsp;</a>
@@ -5183,6 +5551,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/9KBC.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/9KBC.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9KBC.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9KBC.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5190,6 +5560,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/9KBC.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9KBC.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/9KBC.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/9KBC.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5253,6 +5625,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/CXX2.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/CXX2.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/CXX2.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/CXX2.html#js-yaml-event">&nbsp;</a>
@@ -5267,6 +5641,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/CXX2.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/CXX2.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/CXX2.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/CXX2.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5274,6 +5650,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/CXX2.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/CXX2.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/CXX2.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/CXX2.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5337,6 +5715,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/7MNF.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/7MNF.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/7MNF.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/7MNF.html#js-yaml-event">&nbsp;</a>
@@ -5351,6 +5731,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/7MNF.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/7MNF.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/7MNF.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/7MNF.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5358,6 +5740,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/7MNF.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/7MNF.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/7MNF.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/7MNF.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5421,6 +5805,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/CML9.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/CML9.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/CML9.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/CML9.html#js-yaml-event">&nbsp;</a>
@@ -5435,6 +5821,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/CML9.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/CML9.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/CML9.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/CML9.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5442,6 +5830,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/CML9.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/CML9.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/CML9.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/CML9.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5505,6 +5895,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/EB22.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/EB22.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/EB22.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/EB22.html#js-yaml-event">&nbsp;</a>
@@ -5519,6 +5911,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/EB22.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/EB22.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/EB22.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/EB22.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5526,6 +5920,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/EB22.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/EB22.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/EB22.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/EB22.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5589,6 +5985,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/7LBH.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/7LBH.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/7LBH.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/7LBH.html#js-yaml-event">&nbsp;</a>
@@ -5603,6 +6001,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/7LBH.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/7LBH.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/7LBH.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/7LBH.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5610,6 +6010,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/7LBH.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/7LBH.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/7LBH.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/7LBH.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5673,6 +6075,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/G7JE.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/G7JE.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/G7JE.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/G7JE.html#js-yaml-event">&nbsp;</a>
@@ -5687,6 +6091,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/G7JE.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/G7JE.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/G7JE.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/G7JE.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5694,6 +6100,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/G7JE.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/G7JE.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/G7JE.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/G7JE.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5757,6 +6165,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/D49Q.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/D49Q.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/D49Q.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/D49Q.html#js-yaml-event">&nbsp;</a>
@@ -5771,6 +6181,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/D49Q.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/D49Q.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/D49Q.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/D49Q.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5778,6 +6190,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/D49Q.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/D49Q.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/D49Q.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/D49Q.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5841,6 +6255,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/JKF3.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/JKF3.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/JKF3.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/JKF3.html#js-yaml-event">&nbsp;</a>
@@ -5855,6 +6271,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/JKF3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/JKF3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/JKF3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/JKF3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5862,6 +6280,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/JKF3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/JKF3.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/JKF3.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/JKF3.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -5925,6 +6345,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9HCY.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/9HCY.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/9HCY.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9HCY.html#js-yaml-event">&nbsp;</a>
@@ -5939,6 +6361,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/9HCY.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/9HCY.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9HCY.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9HCY.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -5946,6 +6370,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/9HCY.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9HCY.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/9HCY.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/9HCY.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6009,6 +6435,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/GT5M.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/GT5M.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/GT5M.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/GT5M.html#js-yaml-event">&nbsp;</a>
@@ -6023,6 +6451,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/GT5M.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/GT5M.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/GT5M.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/GT5M.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6030,6 +6460,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/GT5M.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/GT5M.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/GT5M.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/GT5M.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6093,6 +6525,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/H7J7.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/H7J7.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/H7J7.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/H7J7.html#js-yaml-event">&nbsp;</a>
@@ -6107,6 +6541,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/H7J7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/H7J7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/H7J7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/H7J7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6114,6 +6550,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/H7J7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/H7J7.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/H7J7.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/H7J7.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6177,6 +6615,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/G5U8.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#js-yaml-event">&nbsp;</a>
@@ -6191,6 +6631,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/G5U8.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6198,6 +6640,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/G5U8.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/G5U8.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6261,6 +6705,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#js-yaml-event">&nbsp;</a>
@@ -6275,6 +6721,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6282,6 +6730,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/9MQT:01.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6345,6 +6795,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/4JVG.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/4JVG.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/4JVG.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/4JVG.html#js-yaml-event">&nbsp;</a>
@@ -6359,6 +6811,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/4JVG.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/4JVG.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/4JVG.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/4JVG.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6366,6 +6820,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/4JVG.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/4JVG.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/4JVG.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/4JVG.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6429,6 +6885,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/5U3A.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/5U3A.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/5U3A.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/5U3A.html#js-yaml-event">&nbsp;</a>
@@ -6443,6 +6901,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/5U3A.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/5U3A.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/5U3A.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/5U3A.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6450,6 +6910,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/5U3A.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/5U3A.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/5U3A.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/5U3A.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6513,6 +6975,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:000.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#js-yaml-event">&nbsp;</a>
@@ -6527,6 +6991,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6534,6 +7000,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:000.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6597,6 +7065,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:003.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:003.html#js-yaml-event">&nbsp;</a>
@@ -6611,6 +7081,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:003.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:003.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6618,6 +7090,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:003.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:003.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6681,6 +7155,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:004.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:004.html#js-yaml-event">&nbsp;</a>
@@ -6695,6 +7171,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:004.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:004.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6702,6 +7180,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:004.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6765,6 +7245,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:005.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:005.html#js-yaml-event">&nbsp;</a>
@@ -6779,6 +7261,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:005.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:005.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6786,6 +7270,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:005.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6849,6 +7335,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:006.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:006.html#js-yaml-event">&nbsp;</a>
@@ -6863,6 +7351,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:006.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:006.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:006.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6870,6 +7360,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:006.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -6933,6 +7425,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:007.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:007.html#js-yaml-event">&nbsp;</a>
@@ -6947,6 +7441,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:007.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:007.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -6954,6 +7450,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:007.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7017,6 +7515,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:008.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:008.html#js-yaml-event">&nbsp;</a>
@@ -7031,6 +7531,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:008.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:008.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:008.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7038,6 +7540,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:008.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7101,6 +7605,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:009.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:009.html#js-yaml-event">&nbsp;</a>
@@ -7115,6 +7621,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/Y79Y:009.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:009.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/Y79Y:009.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7122,6 +7630,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Y79Y:009.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7185,6 +7695,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/DK95:01.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/DK95:01.html#js-yaml-event">&nbsp;</a>
@@ -7199,6 +7711,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/DK95:01.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7206,6 +7720,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/DK95:01.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/DK95:01.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7269,6 +7785,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/DK95:06.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/DK95:06.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/DK95:06.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/DK95:06.html#js-yaml-event">&nbsp;</a>
@@ -7283,6 +7801,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/DK95:06.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/DK95:06.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/DK95:06.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/DK95:06.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7290,6 +7810,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/DK95:06.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/DK95:06.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/DK95:06.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/DK95:06.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7353,6 +7875,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/QLJ7.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/QLJ7.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/QLJ7.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/QLJ7.html#js-yaml-event">&nbsp;</a>
@@ -7367,6 +7891,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/QLJ7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/QLJ7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/QLJ7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/QLJ7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7374,6 +7900,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/QLJ7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/QLJ7.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/QLJ7.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/QLJ7.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7437,6 +7965,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/BF9H.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/BF9H.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/BF9H.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/BF9H.html#js-yaml-event">&nbsp;</a>
@@ -7451,6 +7981,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/BF9H.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/BF9H.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/BF9H.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/BF9H.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7458,6 +7990,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/BF9H.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/BF9H.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/BF9H.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/BF9H.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7521,6 +8055,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/Q4CL.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/Q4CL.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/Q4CL.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/Q4CL.html#js-yaml-event">&nbsp;</a>
@@ -7535,6 +8071,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/Q4CL.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/Q4CL.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/Q4CL.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/Q4CL.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7542,6 +8080,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/Q4CL.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/Q4CL.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/Q4CL.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/Q4CL.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7605,6 +8145,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/JY7Z.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/JY7Z.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/JY7Z.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/JY7Z.html#js-yaml-event">&nbsp;</a>
@@ -7619,6 +8161,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/JY7Z.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/JY7Z.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/JY7Z.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/JY7Z.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7626,6 +8170,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/JY7Z.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/JY7Z.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/JY7Z.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/JY7Z.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7689,6 +8235,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/DMG6.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/DMG6.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/DMG6.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/DMG6.html#js-yaml-event">&nbsp;</a>
@@ -7703,6 +8251,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/DMG6.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/DMG6.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/DMG6.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/DMG6.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7710,6 +8260,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/DMG6.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/DMG6.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/DMG6.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/DMG6.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7773,6 +8325,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/4HVU.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/4HVU.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/4HVU.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/4HVU.html#js-yaml-event">&nbsp;</a>
@@ -7787,6 +8341,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/4HVU.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/4HVU.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/4HVU.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/4HVU.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7794,6 +8350,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/4HVU.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/4HVU.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/4HVU.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/4HVU.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7857,6 +8415,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/EW3V.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/EW3V.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/EW3V.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/EW3V.html#js-yaml-event">&nbsp;</a>
@@ -7871,6 +8431,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/EW3V.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/EW3V.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/EW3V.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/EW3V.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7878,6 +8440,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/EW3V.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/EW3V.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/EW3V.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/EW3V.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -7941,6 +8505,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/9C9N.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/9C9N.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/9C9N.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/9C9N.html#js-yaml-event">&nbsp;</a>
@@ -7955,6 +8521,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/9C9N.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/9C9N.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/9C9N.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/9C9N.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -7962,6 +8530,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/9C9N.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/9C9N.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/9C9N.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/9C9N.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -8025,6 +8595,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/QB6E.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/QB6E.html#js-yaml-event">&nbsp;</a>
@@ -8039,6 +8611,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/QB6E.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/QB6E.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8046,6 +8620,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/QB6E.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/QB6E.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -8109,6 +8685,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/ZVH3.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_correct "><a class="invisible" href="details/ZVH3.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_correct "><a class="invisible" href="details/ZVH3.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/ZVH3.html#js-yaml-event">&nbsp;</a>
@@ -8123,6 +8701,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_correct "><a class="invisible" href="details/ZVH3.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_correct "><a class="invisible" href="details/ZVH3.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/ZVH3.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/ZVH3.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8130,6 +8710,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/ZVH3.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/ZVH3.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_correct "><a class="invisible" href="details/ZVH3.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_correct "><a class="invisible" href="details/ZVH3.html#java-snakeyaml-json">&nbsp;</a>
 </td>
@@ -8193,6 +8775,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result hs-hsyaml-event color_invalid_correct "><a class="invisible" href="details/RHX7.html#hs-hsyaml-event">&nbsp;</a>
 </td>
+ <td class="result java-snakeengine-event color_invalid_incorrect "><a class="invisible" href="details/RHX7.html#java-snakeengine-event">&nbsp;</a>
+</td>
  <td class="result java-snakeyaml-event color_invalid_incorrect "><a class="invisible" href="details/RHX7.html#java-snakeyaml-event">&nbsp;</a>
 </td>
  <td class="result js-yaml-event color_invalid_correct "><a class="invisible" href="details/RHX7.html#js-yaml-event">&nbsp;</a>
@@ -8207,6 +8791,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
 </td>
  <td class="result py-ruamel-event color_invalid_incorrect "><a class="invisible" href="details/RHX7.html#py-ruamel-event">&nbsp;</a>
 </td>
+ <td class="result rust-yamlrust-event color_invalid_incorrect "><a class="invisible" href="details/RHX7.html#rust-yamlrust-event">&nbsp;</a>
+</td>
  <td class="result c-libfyaml-json color_invalid_correct "><a class="invisible" href="details/RHX7.html#c-libfyaml-json">&nbsp;</a>
 </td>
  <td class="result dotnet-yamldotnet-json color_invalid_correct "><a class="invisible" href="details/RHX7.html#dotnet-yamldotnet-json">&nbsp;</a>
@@ -8214,6 +8800,8 @@ href="processors.html">Frameworks</a><br>Tests</th>
  <td class="result go-yaml-json color_invalid_correct "><a class="invisible" href="details/RHX7.html#go-yaml-json">&nbsp;</a>
 </td>
  <td class="result hs-hsyaml-json color_invalid_correct "><a class="invisible" href="details/RHX7.html#hs-hsyaml-json">&nbsp;</a>
+</td>
+ <td class="result java-snakeengine-json color_invalid_incorrect "><a class="invisible" href="details/RHX7.html#java-snakeengine-json">&nbsp;</a>
 </td>
  <td class="result java-snakeyaml-json color_invalid_incorrect "><a class="invisible" href="details/RHX7.html#java-snakeyaml-json">&nbsp;</a>
 </td>

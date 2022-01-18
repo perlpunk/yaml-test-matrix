@@ -113,6 +113,37 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9C9N.yaml">&test-9
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
++DOC ---
++MAP
+=VAL :flow
++SEQ []
+=VAL :a
+=VAL :b
+=VAL :c
+-SEQ
+-MAP
+-DOC
+-STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
+  &quot;flow&quot;: [
+    &quot;a&quot;,
+    &quot;b&quot;,
+    &quot;c&quot;
+  ]
+}
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -594,6 +625,19 @@ YAML      : &quot;b,\n&quot;
    Line: 3
    Document: 1
  at /perl5/lib/perl5/YAML/Loader.pm line 551.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Error: ScanError { mark: Marker { index: 15, line: 3, col: 1 }, info: &quot;simple key expected&quot; }
++STR
++DOC
++MAP
+=VAL :flow
++SEQ
+=VAL :a
 </pre>
  </div>
 

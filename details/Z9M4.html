@@ -57,6 +57,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/Z9M4.yaml">&test-Z
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
+  <div class="framework framework_box_ok" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
   <div class="framework framework_box_ok" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -147,7 +152,49 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/Z9M4.yaml">&test-Z
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="perl-syck-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &lt;tag:example.com,2000:app/foo&gt; &quot;bar
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++SEQ
+=VAL &lt;!e!foo&gt; &quot;bar
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+SEQ</span>
+<span
+class="diff_line">=VAL &lt;!e!foo&gt; &quot;bar</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="diff_line">&quot;%TAG !e! tag:example.com,2000:app/ --- - !e!foo \&quot;bar\&quot;&quot;</span>
@@ -155,7 +202,37 @@ class="diff_line">&quot;%TAG !e! tag:example.com,2000:app/ --- - !e!foo \&quot;b
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_error" id="perl-yaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_error" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:example.com,2000:app/foo; exception=Invalid tag: tag:example.com,2000:app/foo
+ in &#39;reader&#39;, line 3, column 3:
+    - !e!foo &quot;bar&quot;
+      ^
+
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequenceStep2(BaseConstructor.java:391)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequence(BaseConstructor.java:375)
+	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq.construct(SafeConstructor.java:534)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2000:app/foo
+	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
+	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
+	... 12 more
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-yaml-json">
 <h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Expected separator &#39;---&#39;
    Code: YAML_PARSE_ERR_NO_SEPARATOR
@@ -311,13 +388,13 @@ Aborted (core dumped)
     - !e!foo &quot;bar&quot;
       ^
 
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:336)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:230)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequenceStep2(BaseConstructor.java:391)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequence(BaseConstructor.java:375)
 	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq.construct(SafeConstructor.java:534)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:230)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
@@ -326,9 +403,9 @@ Aborted (core dumped)
 	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2000:app/foo
 	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:664)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:323)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:332)
+	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
 	... 12 more
 </pre>
  </div>

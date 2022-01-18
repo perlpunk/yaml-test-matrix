@@ -156,6 +156,48 @@ Aborted (core dumped)
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;]&#39;
+ in reader, line 2, column 13:
+    [ a, b, c ] ]
+                ^
+
+	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:292)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
+	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
+	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;]&#39;
+ in &#39;reader&#39;, line 2, column 13:
+    [ a, b, c ] ]
+                ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:90)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+[
+  &quot;a&quot;,
+  &quot;b&quot;,
+  &quot;c&quot;
+]
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;]&#39;
@@ -166,8 +208,8 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
 </pre>
  </div>
 
@@ -182,7 +224,7 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:89)
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:90)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
@@ -644,6 +686,21 @@ expected the node content, but found &#39;]&#39;
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Error: ScanError { mark: Marker { index: 16, line: 2, col: 12 }, info: &quot;did not find expected &lt;document start&gt;&quot; }
++STR
++DOC
++SEQ
+=VAL :a
+=VAL :b
+=VAL :c
+-SEQ
+-DOC
 </pre>
  </div>
 

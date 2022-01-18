@@ -135,6 +135,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/UGM3.yaml">&test-U
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
+  <div class="framework framework_box_ok" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
   <div class="framework framework_box_ok" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -215,7 +220,282 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/UGM3.yaml">&test-U
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">          <div class="framework framework_box_error" id="perl-yaml-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP &lt;tag:clarkevans.com,2002:invoice&gt;
+=VAL :invoice
+=VAL :34843
+=VAL :date
+=VAL :2001-01-23
+=VAL :bill-to
++MAP &amp;1
+=VAL :given
+=VAL :Chris
+=VAL :family
+=VAL :Dumars
+=VAL :address
++MAP
+=VAL :lines
+=VAL |458 Walkman Dr.\nSuite #292\n
+=VAL :city
+=VAL :Royal Oak
+=VAL :state
+=VAL :MI
+=VAL :postal
+=VAL :48046
+-MAP
+-MAP
+=VAL :ship-to
+=ALI *1
+=VAL :product
++SEQ
++MAP
+=VAL :sku
+=VAL :BL394D
+=VAL :quantity
+=VAL :4
+=VAL :description
+=VAL :Basketball
+=VAL :price
+=VAL :450.00
+-MAP
++MAP
+=VAL :sku
+=VAL :BL4438H
+=VAL :quantity
+=VAL :1
+=VAL :description
+=VAL :Super Hoop
+=VAL :price
+=VAL :2392.00
+-MAP
+-SEQ
+=VAL :tax
+=VAL :251.42
+=VAL :total
+=VAL :4443.52
+=VAL :comments
+=VAL :Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :invoice
+=VAL :34843
+=VAL :date
+=VAL :2001-01-23
+=VAL :bill-to
++MAP &amp;1
+=VAL :given
+=VAL :Chris
+=VAL :family
+=VAL :Dumars
+=VAL :address
++MAP
+=VAL :lines
+=VAL |458 Walkman Dr.\nSuite #292\n
+=VAL :city
+=VAL :Royal Oak
+=VAL :state
+=VAL :MI
+=VAL :postal
+=VAL :48046
+-MAP
+-MAP
+=VAL :ship-to
+=ALI *1
+=VAL :product
++SEQ
++MAP
+=VAL :sku
+=VAL :BL394D
+=VAL :quantity
+=VAL :4
+=VAL :description
+=VAL :Basketball
+=VAL :price
+=VAL :450.00
+-MAP
++MAP
+=VAL :sku
+=VAL :BL4438H
+=VAL :quantity
+=VAL :1
+=VAL :description
+=VAL :Super Hoop
+=VAL :price
+=VAL :2392.00
+-MAP
+-SEQ
+=VAL :tax
+=VAL :251.42
+=VAL :total
+=VAL :4443.52
+=VAL :comments
+=VAL :Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="diff_line">+MAP</span>
+<span
+class="">=VAL :invoice</span>
+<span
+class="">=VAL :34843</span>
+<span
+class="">=VAL :date</span>
+<span
+class="">=VAL :2001-01-23</span>
+<span
+class="">=VAL :bill-to</span>
+<span
+class="">+MAP &amp;1</span>
+<span
+class="">=VAL :given</span>
+<span
+class="">=VAL :Chris</span>
+<span
+class="">=VAL :family</span>
+<span
+class="">=VAL :Dumars</span>
+<span
+class="">=VAL :address</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :lines</span>
+<span
+class="">=VAL |458 Walkman Dr.\nSuite #292\n</span>
+<span
+class="">=VAL :city</span>
+<span
+class="">=VAL :Royal Oak</span>
+<span
+class="">=VAL :state</span>
+<span
+class="">=VAL :MI</span>
+<span
+class="">=VAL :postal</span>
+<span
+class="">=VAL :48046</span>
+<span
+class="">-MAP</span>
+<span
+class="">-MAP</span>
+<span
+class="">=VAL :ship-to</span>
+<span
+class="">=ALI *1</span>
+<span
+class="">=VAL :product</span>
+<span
+class="">+SEQ</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :sku</span>
+<span
+class="">=VAL :BL394D</span>
+<span
+class="">=VAL :quantity</span>
+<span
+class="">=VAL :4</span>
+<span
+class="">=VAL :description</span>
+<span
+class="">=VAL :Basketball</span>
+<span
+class="">=VAL :price</span>
+<span
+class="">=VAL :450.00</span>
+<span
+class="">-MAP</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :sku</span>
+<span
+class="">=VAL :BL4438H</span>
+<span
+class="">=VAL :quantity</span>
+<span
+class="">=VAL :1</span>
+<span
+class="">=VAL :description</span>
+<span
+class="">=VAL :Super Hoop</span>
+<span
+class="">=VAL :price</span>
+<span
+class="">=VAL :2392.00</span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">=VAL :tax</span>
+<span
+class="">=VAL :251.42</span>
+<span
+class="">=VAL :total</span>
+<span
+class="">=VAL :4443.52</span>
+<span
+class="">=VAL :comments</span>
+<span
+class="">=VAL :Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:clarkevans.com,2002:invoice; exception=Invalid tag: tag:clarkevans.com,2002:invoice
+ in &#39;reader&#39;, line 1, column 5:
+    --- !&lt;tag:clarkevans.com,2002:invoice&gt;
+        ^
+
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:clarkevans.com,2002:invoice
+	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
+	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
+	... 7 more
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="perl-yaml-json">
 <h3><a href="#perl-yaml-json">perl-yaml-json</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Expected separator &#39;---&#39;
    Code: YAML_PARSE_ERR_NO_SEPARATOR
@@ -672,8 +952,8 @@ Aborted (core dumped)
     --- !&lt;tag:clarkevans.com,2002:invoice&gt;
         ^
 
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:336)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:230)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
@@ -682,9 +962,9 @@ Aborted (core dumped)
 	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:clarkevans.com,2002:invoice
 	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:664)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:323)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:332)
+	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
 	... 7 more
 </pre>
  </div>

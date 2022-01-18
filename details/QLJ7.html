@@ -249,6 +249,32 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/QLJ7.yaml">&test-Q
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
++DOC
++MAP
+=VAL :a
+=VAL :b
+-MAP
+-DOC
++DOC
++MAP
+=VAL :c
+=VAL :d
+-MAP
+-DOC
++DOC
++MAP
+=VAL :e
+=VAL :f
+-MAP
+-DOC
+-STR
+</pre>
+ </div>
+
+
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:4:5: error: undefined tag prefix
@@ -361,15 +387,40 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
+  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while parsing a node
+ in reader, line 4, column 5:
+    --- !prefix!B
+        ^
+found undefined tag handle !prefix!
+ in reader, line 4, column 5:
+    --- !prefix!B
+        ^
+
+	at org.snakeyaml.engine.v2.parser.ParserImpl.parseNode(ParserImpl.java:486)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.access$1300(ParserImpl.java:130)
+	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseBlockNode.produce(ParserImpl.java:431)
+	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:355)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
+	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
+	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:example.com,2011:A; exception=Invalid tag: tag:example.com,2011:A
  in &#39;reader&#39;, line 2, column 5:
     --- !prefix!A
         ^
 
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:336)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:230)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
@@ -378,9 +429,34 @@ Aborted (core dumped)
 	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2011:A
 	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:664)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:323)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:332)
+	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
+	... 7 more
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
+<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:example.com,2011:A; exception=Invalid tag: tag:example.com,2011:A
+ in &#39;reader&#39;, line 2, column 5:
+    --- !prefix!A
+        ^
+
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2011:A
+	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
+	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
 	... 7 more
 </pre>
  </div>

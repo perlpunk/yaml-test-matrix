@@ -213,6 +213,66 @@ Aborted (core dumped)
  </div>
 
 
+  <div class="framework framework_box_error" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while scanning a directive
+ in reader, line 3, column 1:
+    %!PS-Adobe-2.0
+    ^
+expected alphabetic or numeric character, but found !(33)
+ in reader, line 3, column 2:
+    %!PS-Adobe-2.0
+     ^
+
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanDirectiveName(ScannerImpl.java:1241)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1198)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:601)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:298)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.peekToken(ScannerImpl.java:217)
+	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:325)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
+	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
+	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while scanning a directive
+ in &#39;reader&#39;, line 3, column 1:
+    %!PS-Adobe-2.0
+    ^
+expected alphabetic or numeric character, but found !(33)
+ in &#39;reader&#39;, line 3, column 2:
+    %!PS-Adobe-2.0
+     ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirectiveName(ScannerImpl.java:1342)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1297)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:274)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:287)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+</pre>
+ </div>
+
+
   <div class="framework framework_box_error" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while scanning a directive
@@ -224,16 +284,16 @@ expected alphabetic or numeric character, but found !(33)
     %!PS-Adobe-2.0
      ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirectiveName(ScannerImpl.java:1340)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirectiveName(ScannerImpl.java:1342)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1297)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:274)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:288)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:287)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
 </pre>
  </div>
 
@@ -249,20 +309,20 @@ expected alphabetic or numeric character, but found !(33)
     %!PS-Adobe-2.0
      ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirectiveName(ScannerImpl.java:1340)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirectiveName(ScannerImpl.java:1342)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1297)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:274)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:288)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:287)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
-	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:214)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:184)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
@@ -493,6 +553,16 @@ expected alphabetic or numeric character, but found &#39;!&#39;
 	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
 	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>+STR
++DOC
+=VAL |
+Error: ScanError { mark: Marker { index: 17, line: 3, col: 1 }, info: &quot;while scanning a directive, could not find expected directive name&quot; }
 </pre>
  </div>
 

@@ -77,6 +77,23 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/G9HC.yaml">&test-G
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
++DOC
++MAP
+=VAL :seq
++SEQ &amp;1
+=VAL :a
+=VAL :b
+-SEQ
+-MAP
+-DOC
+-STR
+</pre>
+ </div>
+
+
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:2: error: invalid anchor indent for sequence
@@ -181,6 +198,66 @@ Aborted (core dumped)
  </div>
 
 
+  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a simple key
+ in reader, line 3, column 1:
+    &amp;anchor
+    ^
+could not find expected &#39;:&#39;
+ in reader, line 4, column 1:
+    - a
+    ^
+
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:454)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:283)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.checkToken(ScannerImpl.java:193)
+	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:704)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
+	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
+	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a simple key
+ in &#39;reader&#39;, line 3, column 1:
+    &amp;anchor
+    ^
+could not find expected &#39;:&#39;
+ in &#39;reader&#39;, line 4, column 1:
+    - a
+    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:506)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:331)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:674)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
+	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:313)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:289)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a simple key
@@ -192,14 +269,14 @@ could not find expected &#39;:&#39;
     - a
     ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:505)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:506)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:331)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:660)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:674)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
 </pre>
  </div>
 
@@ -215,22 +292,22 @@ could not find expected &#39;:&#39;
     - a
     ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:505)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:506)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:331)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:660)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:674)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
-	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:214)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:184)
-	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:310)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:301)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:286)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:188)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
+	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:313)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:289)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)

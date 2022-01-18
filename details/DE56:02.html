@@ -84,6 +84,11 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/DE56.yaml">&test-D
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
+  <div class="framework framework_box_ok" id="rust-yamlrust-event">
+<h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
+<span class="status_box color_ok">&nbsp;</span>ok   </div>
+
+
  <hr style="clear: both;">    <div class="framework framework_box_json_ok" id="c-libfyaml-json">
 <h3><a href="#c-libfyaml-json">c-libfyaml-json</a></h3>
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
@@ -160,7 +165,64 @@ class="diff_line">&quot;3 trailing\\\t tab&quot;</span>
  </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_error" id="java-snakeyaml-event">
+ <hr style="clear: both;">    <div class="framework framework_box_error" id="java-snakeengine-event">
+<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while scanning a double-quoted scalar
+ in reader, line 1, column 1:
+    &quot;3 trailing\	
+    ^
+found unknown escape character 	(9)
+ in reader, line 1, column 13:
+    &quot;3 trailing\	
+                ^
+
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1841)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1777)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:975)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:959)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:387)
+	at org.snakeyaml.engine.v2.scanner.ScannerImpl.checkToken(ScannerImpl.java:193)
+	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:246)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
+	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
+	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
+	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="java-snakeengine-json">
+<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
+<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while scanning a double-quoted scalar
+ in &#39;reader&#39;, line 1, column 1:
+    &quot;3 trailing\	
+    ^
+found unknown escape character 	(9)
+ in &#39;reader&#39;, line 1, column 13:
+    &quot;3 trailing\	
+                ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1979)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1916)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:94)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_error" id="java-snakeyaml-event">
 <h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while scanning a double-quoted scalar
  in &#39;reader&#39;, line 1, column 1:
@@ -171,8 +233,8 @@ found unknown escape character 	(9)
     &quot;3 trailing\	
                 ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1980)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1919)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1979)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1916)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
@@ -180,8 +242,8 @@ found unknown escape character 	(9)
 	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
 </pre>
  </div>
 
@@ -197,8 +259,8 @@ found unknown escape character 	(9)
     &quot;3 trailing\	
                 ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1980)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1919)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarNonSpaces(ScannerImpl.java:1979)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1916)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDouble(ScannerImpl.java:1050)
 	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:436)
@@ -206,7 +268,7 @@ found unknown escape character 	(9)
 	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
 	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:93)
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:94)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
 	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
