@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/RHX7.tml">&test-RHX7</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/RHX7.yaml">&test-RHX7</a><br>
 &nbsp;&nbsp;Title: YAML directive without document end marker</br>
 &nbsp;&nbsp;Tags: [ directive, error ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-key: value
-%YAML 1.2
----
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">key: value</span><span class="eol">
+</span><span class="default">%YAML 1.2</span><span class="eol">
+</span><span class="default">---</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +MAP
@@ -400,10 +401,10 @@ key: value
     at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:14:21)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:51:15)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:54:15)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
 </pre>
  </div>
 
@@ -417,7 +418,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55f37285bf97
+	[C]: at 0x55c367ba8f97
 </pre>
  </div>
 
@@ -483,7 +484,7 @@ YAML      : &quot;%YAML 1.2&quot;
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 

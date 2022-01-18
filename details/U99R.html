@@ -5,18 +5,19 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/U99R.tml">&test-U99R</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/U99R.yaml">&test-U99R</a><br>
 &nbsp;&nbsp;Title: Invalid comma in tag</br>
 &nbsp;&nbsp;Tags: [ error, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- !!str, xxx
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">- !!str, xxx</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
@@ -287,8 +288,8 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Class not found: str,
 	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:669)
 	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:323)
@@ -347,11 +348,11 @@ YAMLParseError: Tags and anchors must be separated from the next token by white 
        ^
 
     at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveProps (/node/node_modules/yaml/dist/compose/resolve-props.js:114:9)
-    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:10:36)
+    at Object.resolveProps (/node/node_modules/yaml/dist/compose/resolve-props.js:116:9)
+    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:13:36)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:17:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
     at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
     at next (&lt;anonymous&gt;)
     at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
@@ -440,7 +441,7 @@ while scanning a tag at line: 1, column: 3
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 

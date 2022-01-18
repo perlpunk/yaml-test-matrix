@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/DK3J.tml">&test-DK3J</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/DK3J.yaml">&test-DK3J</a><br>
 &nbsp;&nbsp;Title: Zero indented block scalar with line that looks like a comment</br>
 &nbsp;&nbsp;Tags: [ comment, folded, scalar ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>--- &gt;
-line1
-# no comment
-line3
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="block_scalar_content">line1</span><span class="eol">
+</span><span class="block_scalar_content"># no comment</span><span class="eol">
+</span><span class="block_scalar_content">line3</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 =VAL &gt;line1 # no comment line3\n
@@ -204,11 +205,11 @@ yaml: line 1: did not find expected &lt;document start&gt;
     line1
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:256)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
 </pre>
  </div>
 
@@ -221,14 +222,14 @@ Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, 
     line1
     ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:256)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:89)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 </pre>
  </div>
 
@@ -242,7 +243,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55bd68620f97
+	[C]: at 0x561aafdddf97
 </pre>
  </div>
 
@@ -300,7 +301,7 @@ was found at document: 2, line: 2, column: 1
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
     while loader.check_event():
   File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
@@ -320,7 +321,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 129, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
     while loader.check_data():
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
@@ -344,7 +345,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 129, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
     while loader.check_data():
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()

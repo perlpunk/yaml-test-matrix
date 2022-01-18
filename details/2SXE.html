@@ -5,20 +5,21 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/2SXE.tml">&test-2SXE</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/2SXE.yaml">&test-2SXE</a><br>
 &nbsp;&nbsp;Title: Anchors With Colon in Name</br>
 &nbsp;&nbsp;Tags: [ 1.3-err, alias, edge, mapping ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>&amp;a: key: &amp;a value
-foo:
-  *a:
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="anchor">&amp;a:</span><span class="default"> </span><span class="plainkey">key</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="default"> </span><span class="default">value</span><span class="eol">
+</span><span class="plainkey">foo</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="alias">*a:</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -153,14 +154,14 @@ Parse error: mapping values are not allowed in this context
     &amp;a: key: &amp;a value
            ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:890)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:379)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:634)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:910)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:400)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:628)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
 </pre>
  </div>
 
@@ -172,11 +173,11 @@ Parse error: mapping values are not allowed in this context
     &amp;a: key: &amp;a value
            ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:890)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:379)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:634)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:910)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:400)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:628)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -190,8 +191,8 @@ Parse error: mapping values are not allowed in this context
 	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 </pre>
  </div>
 
@@ -233,7 +234,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55e338c02f97
+	[C]: at 0x55d966b3ef97
 </pre>
  </div>
 
@@ -308,7 +309,7 @@ was found at document: 1, line: 1, column: 8
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
     while loader.check_event():
   File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
@@ -333,7 +334,7 @@ yaml.scanner.ScannerError: mapping values are not allowed here
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -368,7 +369,7 @@ yaml.scanner.ScannerError: mapping values are not allowed here
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())

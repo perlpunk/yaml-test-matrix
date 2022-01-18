@@ -5,20 +5,21 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/V9D5.tml">&test-V9D5</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/V9D5.yaml">&test-V9D5</a><br>
 &nbsp;&nbsp;Title: Spec Example 8.19. Compact Block Mappings</br>
 &nbsp;&nbsp;Tags: [ complex-key, explicit-key, mapping, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- sun: yellow
-- ? earth: blue
-  : moon: white
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="default"> </span><span class="plainkey">sun</span><span class="colon">:</span><span class="default"> </span><span class="default">yellow</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="question">?</span><span class="default"> </span><span class="plainkey">earth</span><span class="colon">:</span><span class="default"> </span><span class="default">blue</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="plainkey">moon</span><span class="colon">:</span><span class="default"> </span><span class="default">white</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
@@ -116,7 +117,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/V9D5.tml">&test-V
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -145,17 +146,17 @@ found unhashable key
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 123, in construct_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 131, in construct_document
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 252, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 258, in construct_mapping
     key_node.start_mark,
 ruamel.yaml.constructor.ConstructorError: while constructing a mapping
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
@@ -343,7 +344,7 @@ stdin:2:5: error: Non scalar keys are not allowed in JSON emit mode
     }
   }
 ]
-(node:3219) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;{ earth: blue }&quot;. Set mapAsMap: true to use object keys.
+(node:3936) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;{ earth: blue }&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -355,7 +356,7 @@ stdin:2:5: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x558a3d1c5f97
+	[C]: at 0x55e518b45f97
 </pre>
 
  </div>
@@ -452,7 +453,7 @@ stack traceback:
       &quot;sun&quot; : &quot;yellow&quot;
    },
    {
-      &quot;HASH(0x5561dabcb3c0)&quot; : {
+      &quot;HASH(0x5601dc6a1408)&quot; : {
          &quot;moon&quot; : &quot;white&quot;
       }
    }
@@ -469,7 +470,7 @@ stack traceback:
     &#39;sun&#39; =&gt; &#39;yellow&#39;
   },
   {
-    &#39;HASH(0x55eed4649e80)&#39; =&gt; {
+    &#39;HASH(0x5629ae512f00)&#39; =&gt; {
                                 &#39;moon&#39; =&gt; &#39;white&#39;
                               }
   }
@@ -514,7 +515,7 @@ stack traceback:
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -544,17 +545,17 @@ found unhashable key
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 123, in construct_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 131, in construct_document
     for _dummy in generator:
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 723, in construct_yaml_map
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 674, in construct_yaml_map
     value = self.construct_mapping(node)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 440, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 445, in construct_mapping
     return BaseConstructor.construct_mapping(self, node, deep=deep)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 252, in construct_mapping
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 258, in construct_mapping
     key_node.start_mark,
 ruamel.yaml.constructor.ConstructorError: while constructing a mapping
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:

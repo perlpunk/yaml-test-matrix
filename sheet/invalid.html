@@ -54,6 +54,28 @@ error, mapping<br>
 </span><span class="default">  invalid: x</span><span class="eol">
 </span></pre></div></td>
   </tr>
+ <tr id="tr-title-2G84:00"><td class="title" colspan="4"><a href="#2G84:00">#</a><a name="2G84:00">&nbsp;</a>2G84:00 - Literal modifers
+</td></tr>
+<tr id="tr-content-2G84:00">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/2G84.yaml">Source</a><br>
+<a href="../details/2G84:00.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">--- |0</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-2G84:01"><td class="title" colspan="4"><a href="#2G84:01">#</a><a name="2G84:01">&nbsp;</a>2G84:01 - Literal modifers
+</td></tr>
+<tr id="tr-content-2G84:01">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/2G84.yaml">Source</a><br>
+<a href="../details/2G84:01.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">--- |10</span><span class="eol">
+</span></pre></div></td>
+  </tr>
  <tr id="tr-title-3HFZ"><td class="title" colspan="4"><a href="#3HFZ">#</a><a name="3HFZ">&nbsp;</a>3HFZ - Invalid content after document end marker
 </td></tr>
 <tr id="tr-content-3HFZ">
@@ -182,8 +204,8 @@ error, flow, mapping<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/62EZ.yaml">Source</a><br>
 <a href="../details/62EZ.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="doc_start">---</span><span class="eol">
-</span><span class="plainkey">x</span><span class="colon">:</span><span class="default"> </span><span class="flowmap_start">{</span><span class="default"> </span><span class="plainkey">y</span><span class="colon">:</span><span class="default"> </span><span class="plainkey">z</span><span class="default"> </span><span class="flowmap_end">}</span><span class="plainkey">in</span><span class="colon">:</span><span class="default"> </span><span class="default">valid</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">---</span><span class="eol">
+</span><span class="default">x: { y: z }in: valid</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-6JTT"><td class="title" colspan="4"><a href="#6JTT">#</a><a name="6JTT">&nbsp;</a>6JTT - Flow sequence without closing bracket
@@ -337,7 +359,20 @@ directive, error<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/9MMA.yaml">Source</a><br>
 <a href="../details/9MMA.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="yaml_directive">%YAML 1.2</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">%YAML 1.2</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-9MQT:01"><td class="title" colspan="4"><a href="#9MQT:01">#</a><a name="9MQT:01">&nbsp;</a>9MQT:01 - Scalar doc with &#39;...&#39; in content
+</td></tr>
+<tr id="tr-content-9MQT:01">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/9MQT.yaml">Source</a><br>
+<a href="../details/9MQT:01.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">--- &quot;a</span><span class="eol">
+</span><span class="default">... x</span><span class="eol">
+</span><span class="default">b&quot;</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-B63P"><td class="title" colspan="4"><a href="#B63P">#</a><a name="B63P">&nbsp;</a>B63P - Directive without document
@@ -490,6 +525,31 @@ error, flow, mapping, sequence<br>
 </span><span class="default">  : value ]</span><span class="eol">
 </span></pre></div></td>
   </tr>
+ <tr id="tr-title-DK95:01"><td class="title" colspan="4"><a href="#DK95:01">#</a><a name="DK95:01">&nbsp;</a>DK95:01 - Tabs that look like indentation
+</td></tr>
+<tr id="tr-content-DK95:01">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/DK95.yaml">Source</a><br>
+<a href="../details/DK95:01.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">foo: &quot;bar</span><span class="eol">
+</span><span class="default"></span><span class="tab">	</span><span class="default">baz&quot;</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-DK95:06"><td class="title" colspan="4"><a href="#DK95:06">#</a><a name="DK95:06">&nbsp;</a>DK95:06 - Tabs that look like indentation
+</td></tr>
+<tr id="tr-content-DK95:06">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/DK95.yaml">Source</a><br>
+<a href="../details/DK95:06.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">foo:</span><span class="eol">
+</span><span class="default">  a: 1</span><span class="eol">
+</span><span class="default">  </span><span class="tab">	</span><span class="default">b: 2</span><span class="eol">
+</span></pre></div></td>
+  </tr>
  <tr id="tr-title-DMG6"><td class="title" colspan="4"><a href="#DMG6">#</a><a name="DMG6">&nbsp;</a>DMG6 - Wrong indendation in Map
 </td></tr>
 <tr id="tr-content-DMG6">
@@ -528,6 +588,18 @@ error, indent, mapping<br>
 </div></td>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">k1: v1</span><span class="eol">
 </span><span class="default"> k2: v2</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-G5U8"><td class="title" colspan="4"><a href="#G5U8">#</a><a name="G5U8">&nbsp;</a>G5U8 - Plain dashes in flow sequence
+</td></tr>
+<tr id="tr-content-G5U8">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+flow, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/G5U8.yaml">Source</a><br>
+<a href="../details/G5U8.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">---</span><span class="eol">
+</span><span class="default">- [-, -]</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-G7JE"><td class="title" colspan="4"><a href="#G7JE">#</a><a name="G7JE">&nbsp;</a>G7JE - Multiline implicit keys
@@ -596,6 +668,18 @@ anchor, error, indent, tag<br>
 </span><span class="default">  a: b</span><span class="eol">
 </span></pre></div></td>
   </tr>
+ <tr id="tr-title-H7TQ"><td class="title" colspan="4"><a href="#H7TQ">#</a><a name="H7TQ">&nbsp;</a>H7TQ - Extra words on %YAML directive
+</td></tr>
+<tr id="tr-content-H7TQ">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+directive<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/H7TQ.yaml">Source</a><br>
+<a href="../details/H7TQ.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">%YAML 1.2 foo</span><span class="eol">
+</span><span class="default">---</span><span class="eol">
+</span></pre></div></td>
+  </tr>
  <tr id="tr-title-HRE5"><td class="title" colspan="4"><a href="#HRE5">#</a><a name="HRE5">&nbsp;</a>HRE5 - Double quoted scalar with escaped single quote
 </td></tr>
 <tr id="tr-content-HRE5">
@@ -619,6 +703,18 @@ error, mapping, scalar<br>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">key:</span><span class="eol">
 </span><span class="default">  word1 word2</span><span class="eol">
 </span><span class="default">  no: key</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-JKF3"><td class="title" colspan="4"><a href="#JKF3">#</a><a name="JKF3">&nbsp;</a>JKF3 - Multiline unidented double quoted block key
+</td></tr>
+<tr id="tr-content-JKF3">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+indent<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/JKF3.yaml">Source</a><br>
+<a href="../details/JKF3.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">- - &quot;bar</span><span class="eol">
+</span><span class="default">bar&quot;: x</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-JY7Z"><td class="title" colspan="4"><a href="#JY7Z">#</a><a name="JY7Z">&nbsp;</a>JY7Z - Trailing content that looks like a mapping
@@ -661,6 +757,32 @@ error, tag<br>
 </span><span class="default">!invalid{}tag scalar</span><span class="eol">
 </span></pre></div></td>
   </tr>
+ <tr id="tr-title-MUS6:00"><td class="title" colspan="4"><a href="#MUS6:00">#</a><a name="MUS6:00">&nbsp;</a>MUS6:00 - Directive variants
+</td></tr>
+<tr id="tr-content-MUS6:00">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/MUS6.yaml">Source</a><br>
+<a href="../details/MUS6:00.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">%YAML 1.1#...</span><span class="eol">
+</span><span class="default">---</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-MUS6:01"><td class="title" colspan="4"><a href="#MUS6:01">#</a><a name="MUS6:01">&nbsp;</a>MUS6:01 - Directive variants
+</td></tr>
+<tr id="tr-content-MUS6:01">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/MUS6.yaml">Source</a><br>
+<a href="../details/MUS6:01.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">%YAML 1.2</span><span class="eol">
+</span><span class="default">---</span><span class="eol">
+</span><span class="default">%YAML 1.2</span><span class="eol">
+</span><span class="default">---</span><span class="eol">
+</span></pre></div></td>
+  </tr>
  <tr id="tr-title-N4JP"><td class="title" colspan="4"><a href="#N4JP">#</a><a name="N4JP">&nbsp;</a>N4JP - Bad indentation in mapping
 </td></tr>
 <tr id="tr-content-N4JP">
@@ -696,8 +818,8 @@ error, flow, mapping, sequence<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/main/src/P2EQ.yaml">Source</a><br>
 <a href="../details/P2EQ.html">Test Results</a>
 </div></td>
-<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="doc_start">---</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="flowmap_start">{</span><span class="default"> </span><span class="plainkey">y</span><span class="colon">:</span><span class="default"> </span><span class="default">z</span><span class="default"> </span><span class="flowmap_end">}</span><span class="dash">-</span><span class="default"> </span><span class="default">invalid</span><span class="eol">
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">---</span><span class="eol">
+</span><span class="default">- { y: z }- invalid</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-Q4CL"><td class="title" colspan="4"><a href="#Q4CL">#</a><a name="Q4CL">&nbsp;</a>Q4CL - Trailing content after quoted value
@@ -794,9 +916,9 @@ comment, error, folded, scalar, whitespace<br>
 <a href="../details/S98Z.html">Test Results</a>
 </div></td>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="plainkey">empty block scalar</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
-</span><span class="indent"> </span><span class="eol">
-</span><span class="indent">  </span><span class="eol">
-</span><span class="indent">   </span><span class="eol">
+</span><span class="trailing_space"> </span><span class="eol">
+</span><span class="trailing_space">  </span><span class="eol">
+</span><span class="trailing_space">   </span><span class="eol">
 </span><span class="eol"> # comment
 </span></pre></div></td>
   </tr>
@@ -910,6 +1032,21 @@ error, tag<br>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">- !!str, xxx</span><span class="eol">
 </span></pre></div></td>
   </tr>
+ <tr id="tr-title-VJP3:00"><td class="title" colspan="4"><a href="#VJP3:00">#</a><a name="VJP3:00">&nbsp;</a>VJP3:00 - Flow collections over many lines
+</td></tr>
+<tr id="tr-content-VJP3:00">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/VJP3.yaml">Source</a><br>
+<a href="../details/VJP3:00.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">k: {</span><span class="eol">
+</span><span class="default">k</span><span class="eol">
+</span><span class="default">:</span><span class="eol">
+</span><span class="default">v</span><span class="eol">
+</span><span class="default">}</span><span class="eol">
+</span></pre></div></td>
+  </tr>
  <tr id="tr-title-W9L4"><td class="title" colspan="4"><a href="#W9L4">#</a><a name="W9L4">&nbsp;</a>W9L4 - Literal block scalar with more spaces in first line
 </td></tr>
 <tr id="tr-content-W9L4">
@@ -935,6 +1072,112 @@ comment, error, folded, whitespace<br>
 </div></td>
 <td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">block: &gt;# comment</span><span class="eol">
 </span><span class="default">  scalar</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:000"><td class="title" colspan="4"><a href="#Y79Y:000">#</a><a name="Y79Y:000">&nbsp;</a>Y79Y:000 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:000">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:000.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">foo: |</span><span class="eol">
+</span><span class="default"></span><span class="tab">	</span><span class="eol">
+</span><span class="default">bar: 1</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:003"><td class="title" colspan="4"><a href="#Y79Y:003">#</a><a name="Y79Y:003">&nbsp;</a>Y79Y:003 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:003">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:003.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">- [</span><span class="eol">
+</span><span class="default"></span><span class="tab">	</span><span class="default">foo,</span><span class="eol">
+</span><span class="default"> foo</span><span class="eol">
+</span><span class="default"> ]</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:004"><td class="title" colspan="4"><a href="#Y79Y:004">#</a><a name="Y79Y:004">&nbsp;</a>Y79Y:004 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:004">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:004.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">-</span><span class="tab">	</span><span class="default">-</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:005"><td class="title" colspan="4"><a href="#Y79Y:005">#</a><a name="Y79Y:005">&nbsp;</a>Y79Y:005 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:005">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:005.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">- </span><span class="tab">	</span><span class="default">-</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:006"><td class="title" colspan="4"><a href="#Y79Y:006">#</a><a name="Y79Y:006">&nbsp;</a>Y79Y:006 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:006">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:006.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">?</span><span class="tab">	</span><span class="default">-</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:007"><td class="title" colspan="4"><a href="#Y79Y:007">#</a><a name="Y79Y:007">&nbsp;</a>Y79Y:007 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:007">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:007.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">? -</span><span class="eol">
+</span><span class="default">:</span><span class="tab">	</span><span class="default">-</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:008"><td class="title" colspan="4"><a href="#Y79Y:008">#</a><a name="Y79Y:008">&nbsp;</a>Y79Y:008 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:008">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:008.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">?</span><span class="tab">	</span><span class="default">key:</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-Y79Y:009"><td class="title" colspan="4"><a href="#Y79Y:009">#</a><a name="Y79Y:009">&nbsp;</a>Y79Y:009 - Tabs in various contexts
+</td></tr>
+<tr id="tr-content-Y79Y:009">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/Y79Y.yaml">Source</a><br>
+<a href="../details/Y79Y:009.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">? key:</span><span class="eol">
+</span><span class="default">:</span><span class="tab">	</span><span class="default">key:</span><span class="eol">
+</span></pre></div></td>
+  </tr>
+ <tr id="tr-title-YJV2"><td class="title" colspan="4"><a href="#YJV2">#</a><a name="YJV2">&nbsp;</a>YJV2 - Dash in flow sequence
+</td></tr>
+<tr id="tr-content-YJV2">
+<td valign="top" class="info"><div class="info"><b>Tags:</b><br>
+flow, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/main/src/YJV2.yaml">Source</a><br>
+<a href="../details/YJV2.html">Test Results</a>
+</div></td>
+<td valign="top" class="yaml"><div class="yaml"><pre class="box"><span class="default">[-]</span><span class="eol">
 </span></pre></div></td>
   </tr>
  <tr id="tr-title-ZCZ6"><td class="title" colspan="4"><a href="#ZCZ6">#</a><a name="ZCZ6">&nbsp;</a>ZCZ6 - Invalid mapping in plain single line value

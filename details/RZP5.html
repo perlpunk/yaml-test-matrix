@@ -5,32 +5,33 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/RZP5.tml">&test-RZP5</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/RZP5.yaml">&test-RZP5</a><br>
 &nbsp;&nbsp;Title: Various Trailing Comments [1.3]</br>
 &nbsp;&nbsp;Tags: [ 1.3-mod, anchor, comment, folded, mapping ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>a: &quot;double
-  quotes&quot; # lala
-b: plain
- value  # lala
-c  : #lala
-  d
-? # lala
- - seq1
-: # lala
- - #lala
-  seq2
-e: &amp;node # lala
- - x: y
-block: &gt; # lala
-  abcde
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double</span><span class="eol">
+</span><span class="default">  </span><span class="doublequoted">quotes</span><span class="doublequote">&quot;</span><span class="eol"> # lala
+</span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="default">plain</span><span class="eol">
+</span><span class="indent"> </span><span class="default">value</span><span class="eol">  # lala
+</span><span class="plainkey">c</span><span class="default">  </span><span class="colon">:</span><span class="eol"> #lala
+</span><span class="default">  </span><span class="default">d</span><span class="eol">
+</span><span class="question">?</span><span class="eol"> # lala
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">seq1</span><span class="eol">
+</span><span class="colon">:</span><span class="eol"> # lala
+</span><span class="default"> </span><span class="dash">-</span><span class="eol"> #lala
+</span><span class="default">  </span><span class="default">seq2</span><span class="eol">
+</span><span class="plainkey">e</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node</span><span class="eol"> # lala
+</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="plainkey">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="eol">
+</span><span class="plainkey">block</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol"> # lala
+</span><span class="indent">  </span><span class="block_scalar_content">abcde</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -139,7 +140,7 @@ block: &gt; # lala
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -459,7 +460,7 @@ stdin:8:2: error: Non scalar keys are not allowed in JSON emit mode
   ],
   &quot;block&quot;: &quot;abcde\n&quot;
 }
-(node:2833) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ seq1 ]&quot;. Set mapAsMap: true to use object keys.
+(node:3484) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ seq1 ]&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -471,7 +472,7 @@ stdin:8:2: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x5643bd4baf97
+	[C]: at 0x564704a86f97
 </pre>
 
  </div>
@@ -566,7 +567,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x55b54c6a25e8)&quot; : [
+   &quot;ARRAY(0x55d87b2c85b8)&quot; : [
       &quot;seq2&quot;
    ],
    &quot;a&quot; : &quot;double quotes&quot;,
@@ -587,7 +588,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x559246019670)&#39; =&gt; [
+  &#39;ARRAY(0x56363de11450)&#39; =&gt; [
                                &#39;seq2&#39;
                              ],
   &#39;a&#39; =&gt; &#39;double quotes&#39;,
@@ -617,7 +618,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x55da17a06408)&quot; : [
+   &quot;ARRAY(0x56266eee03c0)&quot; : [
       &quot;seq2&quot;
    ],
    &quot;a&quot; : &quot;double quotes&quot;,
@@ -638,7 +639,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x557119ae6ec0)&#39; =&gt; [
+  &#39;ARRAY(0x557eb5a98f00)&#39; =&gt; [
                                &#39;seq2&#39;
                              ],
   &#39;a&#39; =&gt; &#39;double quotes&#39;,
@@ -674,7 +675,7 @@ stack traceback:
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())

@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/QB6E.tml">&test-QB6E</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/QB6E.yaml">&test-QB6E</a><br>
 &nbsp;&nbsp;Title: Wrong indented multiline quoted scalar</br>
 &nbsp;&nbsp;Tags: [ double, error, indent ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-quoted: &quot;a
-b
-c&quot;
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">quoted: &quot;a</span><span class="eol">
+</span><span class="default">b</span><span class="eol">
+</span><span class="default">c&quot;</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +MAP
@@ -292,9 +293,6 @@ quoted: &quot;a
         ^~
 b
 ~
-[NOT]: fy_fetch_flow_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 +STR
 +DOC ---
 +MAP
@@ -310,9 +308,6 @@ quoted: &quot;a
         ^~
 b
 ~
-[NOT]: fy_fetch_flow_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 </pre>
  </div>
 
@@ -423,10 +418,10 @@ quoted: &quot;a
     at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:22:21)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:79:19)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
 </pre>
  </div>
 
@@ -436,7 +431,7 @@ quoted: &quot;a
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
 Column    : 1
 Message   : Wrong indendation or missing closing quote &lt;&quot;&gt;
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 655
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 669
 YAML      : &quot;b&quot;
   at /yaml/bin/perl-pp-event line 25.
 +STR
@@ -452,7 +447,7 @@ YAML      : &quot;b&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
 Column    : 1
 Message   : Wrong indendation or missing closing quote &lt;&quot;&gt;
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 655
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 669
 YAML      : &quot;b&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -464,7 +459,7 @@ YAML      : &quot;b&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
 Column    : 1
 Message   : Wrong indendation or missing closing quote &lt;&quot;&gt;
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 655
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 669
 YAML      : &quot;b&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -473,7 +468,7 @@ YAML      : &quot;b&quot;
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 

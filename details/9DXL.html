@@ -5,24 +5,25 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/9DXL.tml">&test-9DXL</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/9DXL.yaml">&test-9DXL</a><br>
 &nbsp;&nbsp;Title: Spec Example 9.6. Stream [1.3]</br>
 &nbsp;&nbsp;Tags: [ 1.3-mod, header, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>Mapping: Document
----
-# Empty
-...
-%YAML 1.2
----
-matches %: 20
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">Mapping</span><span class="colon">:</span><span class="default"> </span><span class="default">Document</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="eol"># Empty
+</span><span class="doc_end">...</span><span class="eol">
+</span><span class="yaml_directive">%YAML 1.2</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">matches %</span><span class="colon">:</span><span class="default"> </span><span class="default">20</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -229,7 +230,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x56516134ff97
+	[C]: at 0x55fd41e9ff97
 </pre>
  </div>
 

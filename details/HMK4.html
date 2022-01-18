@@ -5,24 +5,25 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/HMK4.tml">&test-HMK4</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/HMK4.yaml">&test-HMK4</a><br>
 &nbsp;&nbsp;Title: Spec Example 2.16. Indentation determines scope</br>
 &nbsp;&nbsp;Tags: [ folded, literal, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>name: Mark McGwire
-accomplishment: &gt;
-  Mark set a major league
-  home run record in 1998.
-stats: |
-  65 Home Runs
-  0.278 Batting Average
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">name</span><span class="colon">:</span><span class="default"> </span><span class="default">Mark McGwire</span><span class="eol">
+</span><span class="plainkey">accomplishment</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Mark set a major league</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">home run record in 1998.</span><span class="eol">
+</span><span class="plainkey">stats</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">65 Home Runs</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">0.278 Batting Average</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

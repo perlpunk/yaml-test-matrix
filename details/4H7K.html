@@ -5,19 +5,20 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/4H7K.tml">&test-4H7K</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/4H7K.yaml">&test-4H7K</a><br>
 &nbsp;&nbsp;Title: Flow sequence with invalid extra closing bracket</br>
 &nbsp;&nbsp;Tags: [ error, flow, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-[ a, b, c ] ]
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">[ a, b, c ] ]</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +SEQ
@@ -53,9 +54,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/4H7K.tml">&test-4
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:13: error: flow sequence with invalid extra closing bracket
 [ a, b, c ] ]
             ^
-[NOT]: fy_fetch_flow_collection_mark_end() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 +STR
 +DOC ---
 </pre>
@@ -67,9 +65,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/4H7K.tml">&test-4
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:13: error: flow sequence with invalid extra closing bracket
 [ a, b, c ] ]
             ^
-[NOT]: fy_fetch_flow_collection_mark_end() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 </pre>
  </div>
 
@@ -168,11 +163,11 @@ Aborted (core dumped)
     [ a, b, c ] ]
                 ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:256)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
 </pre>
  </div>
 
@@ -184,14 +179,14 @@ Aborted (core dumped)
     [ a, b, c ] ]
                 ^
 
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:256)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:89)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 [
   &quot;a&quot;,
   &quot;b&quot;,
@@ -234,7 +229,7 @@ YAMLException: end of the stream or a document separator is expected (2:13)
             ^
 +STR
 +DOC ---
-+SEQ
++SEQ []
 =VAL :a
 =VAL :b
 =VAL :c
@@ -261,7 +256,7 @@ YAMLParseError: Unexpected flow-seq-end token in YAML stream: &quot;]&quot; at l
     at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
     at compose.next (&lt;anonymous&gt;)
     at Function.from (&lt;anonymous&gt;)
-    at Object.parseAllDocuments (/node/node_modules/yaml/dist/public-api.js:30:24)
+    at Object.parseAllDocuments (/node/node_modules/yaml/dist/public-api.js:28:24)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-yaml-json:7:19)
     at Module._compile (internal/modules/cjs/loader.js:778:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
@@ -279,7 +274,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x5629ff4d7f97
+	[C]: at 0x55a79ee93f97
 </pre>
  </div>
 
@@ -372,7 +367,7 @@ was found at , line: 2, column: 13
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 
@@ -454,7 +449,7 @@ was found at document: 2, line: 2, column: 13
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
     while loader.check_event():
   File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
@@ -481,7 +476,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 129, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
     while loader.check_data():
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
@@ -509,7 +504,7 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 129, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
     while loader.check_data():
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
@@ -533,13 +528,13 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 329, in parse_block_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 344, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 493, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a block node
 expected the node content, but found &#39;]&#39;
@@ -564,21 +559,21 @@ expected the node content, but found &#39;]&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 329, in parse_block_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 344, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 493, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a block node
 expected the node content, but found &#39;]&#39;
@@ -599,21 +594,21 @@ expected the node content, but found &#39;]&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 329, in parse_block_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 344, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 493, in parse_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a block node
 expected the node content, but found &#39;]&#39;

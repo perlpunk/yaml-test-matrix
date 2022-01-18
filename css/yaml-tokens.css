@@ -10,6 +10,10 @@ span.tag_directive { color: cyan; }
 span.tag { color: blue; }
 span.comment { color: grey; }
 span.eol { color: grey; }
+span.noeol {
+  border-left: 3px solid #ff9922;
+  border-right: 1px solid black;
+}
 span.alias { color: green; }
 span.singlequote { font-weight: bold; color: green; }
 span.doublequote { font-weight: bold; color: green; }

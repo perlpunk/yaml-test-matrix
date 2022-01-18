@@ -5,23 +5,24 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/W42U.tml">&test-W42U</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/W42U.yaml">&test-W42U</a><br>
 &nbsp;&nbsp;Title: Spec Example 8.15. Block Sequence Entry Types</br>
 &nbsp;&nbsp;Tags: [ comment, literal, sequence, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- # Empty
-- |
- block node
-- - one # Compact
-  - two # sequence
-- one: two # Compact mapping
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="eol"> # Empty
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">block node</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="eol"> # Compact
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="eol"> # sequence
+</span><span class="dash">-</span><span class="default"> </span><span class="plainkey">one</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="eol"> # Compact mapping
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ

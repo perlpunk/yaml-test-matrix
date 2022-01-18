@@ -5,24 +5,25 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/5TYM.tml">&test-5TYM</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/5TYM.yaml">&test-5TYM</a><br>
 &nbsp;&nbsp;Title: Spec Example 6.21. Local Tag Prefix</br>
 &nbsp;&nbsp;Tags: [ directive, local-tag, spec, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>%TAG !m! !my-
---- # Bulb here
-!m!light fluorescent
-...
-%TAG !m! !my-
---- # Color here
-!m!light green
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="tag_directive">%TAG !m! !my-</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol"> # Bulb here
+</span><span class="tag">!m!light</span><span class="default"> </span><span class="default">fluorescent</span><span class="eol">
+</span><span class="doc_end">...</span><span class="eol">
+</span><span class="tag_directive">%TAG !m! !my-</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol"> # Color here
+</span><span class="tag">!m!light</span><span class="default"> </span><span class="default">green</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 =VAL &lt;!my-light&gt; :fluorescent
@@ -369,8 +370,8 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: !my-light
 	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
 	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:664)

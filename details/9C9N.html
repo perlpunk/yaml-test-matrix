@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/9C9N.tml">&test-9C9N</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/9C9N.yaml">&test-9C9N</a><br>
 &nbsp;&nbsp;Title: Wrong indented flow sequence</br>
 &nbsp;&nbsp;Tags: [ error, flow, indent, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-flow: [a,
-b,
-c]
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">flow: [a,</span><span class="eol">
+</span><span class="default">b,</span><span class="eol">
+</span><span class="default">c]</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +MAP
@@ -343,9 +344,6 @@ c]
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: wrongly indented flow sequence
 b,
 ^
-[NOT]: fy_fetch_plain_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 +STR
 +DOC ---
 +MAP
@@ -361,9 +359,6 @@ b,
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: wrongly indented flow sequence
 b,
 ^
-[NOT]: fy_fetch_plain_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 </pre>
  </div>
 
@@ -456,15 +451,16 @@ Aborted (core dumped)
 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Expected flow sequence to end with ] at line 2, column 10:
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Flow sequence in block collection must be sufficiently indented and end with a ] at line 3, column 1:
 
 flow: [a,
-         ^
+b,
+^
 +STR
 +DOC ---
 +MAP
 =VAL :flow
-+SEQ
++SEQ []
 =VAL :a
 -SEQ
 </pre>
@@ -477,19 +473,20 @@ flow: [a,
   if (doc.errors.length !== 0) throw doc.errors[0]
                                ^
 
-YAMLParseError: Expected flow sequence to end with ] at line 2, column 10:
+YAMLParseError: Flow sequence in block collection must be sufficiently indented and end with a ] at line 3, column 1:
 
 flow: [a,
-         ^
+b,
+^
 
     at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:174:9)
+    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:182:9)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:21:42)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:79:19)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
     at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
     at next (&lt;anonymous&gt;)
 </pre>
@@ -560,7 +557,7 @@ YAML      : &quot;b,\n&quot;
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 

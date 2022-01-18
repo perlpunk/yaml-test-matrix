@@ -5,29 +5,30 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/26DV.tml">&test-26DV</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/26DV.yaml">&test-26DV</a><br>
 &nbsp;&nbsp;Title: Whitespace around colon in mappings</br>
 &nbsp;&nbsp;Tags: [ alias, mapping, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>&quot;top1&quot; : 
-  &quot;key1&quot; : &amp;alias1 scalar1
-&#39;top2&#39; : 
-  &#39;key2&#39; : &amp;alias2 scalar2
-top3: &amp;node3 
-  *alias1 : scalar3
-top4: 
-  *alias2 : scalar4
-top5   :    
-  scalar5
-top6: 
-  &amp;anchor6 &#39;key6&#39; : scalar6
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doublequote">&quot;</span><span class="doublequoted">top1</span><span class="doublequote">&quot;</span><span class="default"> </span><span class="colon">:</span><span class="trailing_space"> 
+</span><span class="default">  </span><span class="doublequote">&quot;</span><span class="doublequoted">key1</span><span class="doublequote">&quot;</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;alias1</span><span class="default"> </span><span class="default">scalar1</span><span class="eol">
+</span><span class="singlequote">&#39;</span><span class="singlequoted">top2</span><span class="singlequote">&#39;</span><span class="default"> </span><span class="colon">:</span><span class="trailing_space"> 
+</span><span class="default">  </span><span class="singlequote">&#39;</span><span class="singlequoted">key2</span><span class="singlequote">&#39;</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;alias2</span><span class="default"> </span><span class="default">scalar2</span><span class="eol">
+</span><span class="plainkey">top3</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node3</span><span class="trailing_space"> 
+</span><span class="default">  </span><span class="alias">*alias1</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">scalar3</span><span class="eol">
+</span><span class="plainkey">top4</span><span class="colon">:</span><span class="trailing_space"> 
+</span><span class="default">  </span><span class="alias">*alias2</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">scalar4</span><span class="eol">
+</span><span class="plainkey">top5</span><span class="default">   </span><span class="colon">:</span><span class="trailing_space">    
+</span><span class="default">  </span><span class="default">scalar5</span><span class="eol">
+</span><span class="plainkey">top6</span><span class="colon">:</span><span class="trailing_space"> 
+</span><span class="default">  </span><span class="anchor">&amp;anchor6</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted">key6</span><span class="singlequote">&#39;</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">scalar6</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

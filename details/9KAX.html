@@ -5,43 +5,44 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/9KAX.tml">&test-9KAX</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/9KAX.yaml">&test-9KAX</a><br>
 &nbsp;&nbsp;Title: Various combinations of tags and anchors</br>
 &nbsp;&nbsp;Tags: [ 1.3-err, anchor, mapping, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-&amp;a1
-!!str
-scalar1
----
-!!str
-&amp;a2
-scalar2
----
-&amp;a3
-!!str scalar3
----
-&amp;a4 !!map
-&amp;a5 !!str key5: value4
----
-a6: 1
-&amp;anchor6 b6: 2
----
-!!map
-&amp;a8 !!str key8: value7
----
-!!map
-!!str &amp;a10 key10: value9
----
-!!str &amp;a11
-value11
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doc_start">---</span><span class="eol">
+</span><span class="anchor">&amp;a1</span><span class="eol">
+</span><span class="tag">!!str</span><span class="eol">
+</span><span class="default">scalar1</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="tag">!!str</span><span class="eol">
+</span><span class="anchor">&amp;a2</span><span class="eol">
+</span><span class="default">scalar2</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="anchor">&amp;a3</span><span class="eol">
+</span><span class="tag">!!str</span><span class="default"> </span><span class="default">scalar3</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="anchor">&amp;a4</span><span class="default"> </span><span class="tag">!!map</span><span class="eol">
+</span><span class="anchor">&amp;a5</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="plainkey">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">value4</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">a6</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="eol">
+</span><span class="anchor">&amp;anchor6</span><span class="default"> </span><span class="plainkey">b6</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="tag">!!map</span><span class="eol">
+</span><span class="anchor">&amp;a8</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="plainkey">key8</span><span class="colon">:</span><span class="default"> </span><span class="default">value7</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="tag">!!map</span><span class="eol">
+</span><span class="tag">!!str</span><span class="default"> </span><span class="anchor">&amp;a10</span><span class="default"> </span><span class="plainkey">key10</span><span class="colon">:</span><span class="default"> </span><span class="default">value9</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="tag">!!str</span><span class="default"> </span><span class="anchor">&amp;a11</span><span class="eol">
+</span><span class="default">value11</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 =VAL &amp;a1 &lt;tag:yaml.org,2002:str&gt; :scalar1

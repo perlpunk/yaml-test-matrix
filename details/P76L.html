@@ -5,20 +5,21 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/P76L.tml">&test-P76L</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/P76L.yaml">&test-P76L</a><br>
 &nbsp;&nbsp;Title: Spec Example 6.19. Secondary Tag Handle</br>
 &nbsp;&nbsp;Tags: [ header, spec, tag, unknown-tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>%TAG !! tag:example.com,2000:app/
----
-!!int 1 - 3 # Interval, not integer
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="tag_directive">%TAG !! tag:example.com,2000:app/</span><span class="eol">
+</span><span class="doc_start">---</span><span class="eol">
+</span><span class="tag">!!int</span><span class="default"> </span><span class="default">1 - 3</span><span class="eol"> # Interval, not integer
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 =VAL &lt;tag:example.com,2000:app/int&gt; :1 - 3
@@ -298,8 +299,8 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2000:app/int
 	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
 	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:664)

@@ -5,22 +5,23 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/S98Z.tml">&test-S98Z</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/S98Z.yaml">&test-S98Z</a><br>
 &nbsp;&nbsp;Title: Block scalar with more spaces than first content line</br>
 &nbsp;&nbsp;Tags: [ comment, error, folded, scalar, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>empty block scalar: &gt;
- 
-  
-   
- # comment
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">empty block scalar</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="trailing_space"> </span><span class="eol">
+</span><span class="trailing_space">  </span><span class="eol">
+</span><span class="trailing_space">   </span><span class="eol">
+</span><span class="eol"> # comment
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -347,9 +348,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/S98Z.tml">&test-S
 ~~~
  # comment
 ~
-[NOT]: fy_fetch_block_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 +STR
 +DOC
 +MAP
@@ -369,9 +367,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/S98Z.tml">&test-S
 ~~~
  # comment
 ~
-[NOT]: fy_fetch_block_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 </pre>
  </div>
 
@@ -484,10 +479,10 @@ YAMLParseError: Block scalars with more-indented leading empty lines must use an
     at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:42:17)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
     at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:74:19)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:79:19)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
     at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
     at next (&lt;anonymous&gt;)
 </pre>
@@ -509,7 +504,7 @@ Error: unhandled exception: Leading all-spaces line contains too many spaces [Ya
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Spaces found after indent in auto-detect (5LLU) at /perl5/lib/perl5/YAML/Parser.pm line 4564, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Spaces found after indent in auto-detect (5LLU) at /perl5/lib/perl5/YAML/Parser.pm line 4588, &lt;&gt; line 1.
 </pre>
  </div>
 

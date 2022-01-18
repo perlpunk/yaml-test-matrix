@@ -5,22 +5,23 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/FH7J.tml">&test-FH7J</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/FH7J.yaml">&test-FH7J</a><br>
 &nbsp;&nbsp;Title: Tags on Empty Scalars</br>
 &nbsp;&nbsp;Tags: [ scalar, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- !!str
--
-  !!null : a
-  b: !!str
-- !!str : !!null
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="default"> </span><span class="tag">!!str</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="tag">!!null</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!str</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="tag">!!null</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
@@ -168,9 +169,9 @@ Aborted (core dumped)
 <span class="status_box color_na">&nbsp;</span>na  <pre>panic: interface conversion: interface {} is nil, not string
 
 goroutine 1 [running]:
-main.convert({0x4f7d40, 0xc00006e660})
+main.convert({0x4f7d40, 0xc00008c660})
 	/buildutils/go-yaml-json.go:17 +0x1c7
-main.convert({0x4f2260, 0xc00000c0d8})
+main.convert({0x4f2260, 0xc00009a0c0})
 	/buildutils/go-yaml-json.go:22 +0x1ec
 main.main()
 	/buildutils/go-yaml-json.go:45 +0x2a5
@@ -377,7 +378,7 @@ YAMLException: bad indentation of a sequence entry (3:10)
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x557479702f97
+	[C]: at 0x564f8d88df97
 </pre>
 
  </div>

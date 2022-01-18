@@ -5,25 +5,26 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/9U5K.tml">&test-9U5K</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/9U5K.yaml">&test-9U5K</a><br>
 &nbsp;&nbsp;Title: Spec Example 2.12. Compact Nested Mapping</br>
 &nbsp;&nbsp;Tags: [ mapping, sequence, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-# Products purchased
-- item    : Super Hoop
-  quantity: 1
-- item    : Basketball
-  quantity: 4
-- item    : Big Shoes
-  quantity: 1
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doc_start">---</span><span class="eol">
+</span><span class="eol"># Products purchased
+</span><span class="dash">-</span><span class="default"> </span><span class="plainkey">item</span><span class="default">    </span><span class="colon">:</span><span class="default"> </span><span class="default">Super Hoop</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="plainkey">item</span><span class="default">    </span><span class="colon">:</span><span class="default"> </span><span class="default">Basketball</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">4</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="plainkey">item</span><span class="default">    </span><span class="colon">:</span><span class="default"> </span><span class="default">Big Shoes</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +SEQ

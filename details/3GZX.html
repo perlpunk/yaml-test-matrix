@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/3GZX.tml">&test-3GZX</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/3GZX.yaml">&test-3GZX</a><br>
 &nbsp;&nbsp;Title: Spec Example 7.1. Alias Nodes</br>
 &nbsp;&nbsp;Tags: [ alias, mapping, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>First occurrence: &amp;anchor Foo
-Second occurrence: *anchor
-Override anchor: &amp;anchor Bar
-Reuse anchor: *anchor
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">First occurrence</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;anchor</span><span class="default"> </span><span class="default">Foo</span><span class="eol">
+</span><span class="plainkey">Second occurrence</span><span class="colon">:</span><span class="default"> </span><span class="alias">*anchor</span><span class="eol">
+</span><span class="plainkey">Override anchor</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;anchor</span><span class="default"> </span><span class="default">Bar</span><span class="eol">
+</span><span class="plainkey">Reuse anchor</span><span class="colon">:</span><span class="default"> </span><span class="alias">*anchor</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -184,7 +185,7 @@ Reuse anchor: *anchor
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -215,7 +216,7 @@ second occurrence
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -402,7 +403,7 @@ second occurrence
  &#39;Override anchor&#39;: &#39;Bar&#39;,
  &#39;Reuse anchor&#39;: &#39;Bar&#39;,
  &#39;Second occurrence&#39;: &#39;Foo&#39;}
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;anchor&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 1, column 19:
     First occurrence: &amp;anchor Foo

@@ -20,7 +20,6 @@ var data = {
       "footer" : 1,
       "header" : 1,
       "indent" : 1,
-      "jayt" : 1,
       "libyaml-err" : 1,
       "literal" : 1,
       "local-tag" : 1,
@@ -51,6 +50,16 @@ var data = {
             "error",
             "mapping"
          ]
+      },
+      "2G84:00" : {
+         "id" : "2G84:00",
+         "in_yaml" : "--- |0\n",
+         "tags" : []
+      },
+      "2G84:01" : {
+         "id" : "2G84:01",
+         "in_yaml" : "--- |10\n",
+         "tags" : []
       },
       "3HFZ" : {
          "id" : "3HFZ",
@@ -249,6 +258,11 @@ var data = {
             "error"
          ]
       },
+      "9MQT:01" : {
+         "id" : "9MQT:01",
+         "in_yaml" : "--- \"a\n... x\nb\"\n",
+         "tags" : []
+      },
       "B63P" : {
          "id" : "B63P",
          "in_yaml" : "%YAML 1.2\n...\n",
@@ -358,6 +372,16 @@ var data = {
             "sequence"
          ]
       },
+      "DK95:01" : {
+         "id" : "DK95:01",
+         "in_yaml" : "foo: \"bar\n\tbaz\"\n",
+         "tags" : []
+      },
+      "DK95:06" : {
+         "id" : "DK95:06",
+         "in_yaml" : "foo:\n  a: 1\n  \tb: 2\n",
+         "tags" : []
+      },
       "DMG6" : {
          "id" : "DMG6",
          "in_yaml" : "key:\n  ok: 1\n wrong: 2\n",
@@ -383,6 +407,14 @@ var data = {
             "error",
             "indent",
             "mapping"
+         ]
+      },
+      "G5U8" : {
+         "id" : "G5U8",
+         "in_yaml" : "---\n- [-, -]\n",
+         "tags" : [
+            "flow",
+            "sequence"
          ]
       },
       "G7JE" : {
@@ -430,6 +462,13 @@ var data = {
             "tag"
          ]
       },
+      "H7TQ" : {
+         "id" : "H7TQ",
+         "in_yaml" : "%YAML 1.2 foo\n---\n",
+         "tags" : [
+            "directive"
+         ]
+      },
       "HRE5" : {
          "id" : "HRE5",
          "in_yaml" : "---\ndouble: \"quoted \\' scalar\"\n",
@@ -446,6 +485,13 @@ var data = {
             "error",
             "mapping",
             "scalar"
+         ]
+      },
+      "JKF3" : {
+         "id" : "JKF3",
+         "in_yaml" : "- - \"bar\nbar\": x\n",
+         "tags" : [
+            "indent"
          ]
       },
       "JY7Z" : {
@@ -473,6 +519,16 @@ var data = {
             "error",
             "tag"
          ]
+      },
+      "MUS6:00" : {
+         "id" : "MUS6:00",
+         "in_yaml" : "%YAML 1.1#...\n---\n",
+         "tags" : []
+      },
+      "MUS6:01" : {
+         "id" : "MUS6:01",
+         "in_yaml" : "%YAML 1.2\n---\n%YAML 1.2\n---\n",
+         "tags" : []
       },
       "N4JP" : {
          "id" : "N4JP",
@@ -649,6 +705,11 @@ var data = {
             "tag"
          ]
       },
+      "VJP3:00" : {
+         "id" : "VJP3:00",
+         "in_yaml" : "k: {\nk\n:\nv\n}\n",
+         "tags" : []
+      },
       "W9L4" : {
          "id" : "W9L4",
          "in_yaml" : "---\nblock scalar: |\n     \n  more spaces at the beginning\n  are invalid\n",
@@ -666,6 +727,54 @@ var data = {
             "error",
             "folded",
             "whitespace"
+         ]
+      },
+      "Y79Y:000" : {
+         "id" : "Y79Y:000",
+         "in_yaml" : "foo: |\n\t\nbar: 1\n",
+         "tags" : []
+      },
+      "Y79Y:003" : {
+         "id" : "Y79Y:003",
+         "in_yaml" : "- [\n\tfoo,\n foo\n ]\n",
+         "tags" : []
+      },
+      "Y79Y:004" : {
+         "id" : "Y79Y:004",
+         "in_yaml" : "-\t-\n",
+         "tags" : []
+      },
+      "Y79Y:005" : {
+         "id" : "Y79Y:005",
+         "in_yaml" : "- \t-\n",
+         "tags" : []
+      },
+      "Y79Y:006" : {
+         "id" : "Y79Y:006",
+         "in_yaml" : "?\t-\n",
+         "tags" : []
+      },
+      "Y79Y:007" : {
+         "id" : "Y79Y:007",
+         "in_yaml" : "? -\n:\t-\n",
+         "tags" : []
+      },
+      "Y79Y:008" : {
+         "id" : "Y79Y:008",
+         "in_yaml" : "?\tkey:\n",
+         "tags" : []
+      },
+      "Y79Y:009" : {
+         "id" : "Y79Y:009",
+         "in_yaml" : "? key:\n:\tkey:\n",
+         "tags" : []
+      },
+      "YJV2" : {
+         "id" : "YJV2",
+         "in_yaml" : "[-]\n",
+         "tags" : [
+            "flow",
+            "sequence"
          ]
       },
       "ZCZ6" : {

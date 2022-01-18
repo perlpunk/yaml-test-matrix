@@ -5,28 +5,29 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/R4YG.tml">&test-R4YG</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/R4YG.yaml">&test-R4YG</a><br>
 &nbsp;&nbsp;Title: Spec Example 8.2. Block Indentation Indicator</br>
 &nbsp;&nbsp;Tags: [ folded, libyaml-err, literal, scalar, spec, upto-1.2, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- |
- detected
-- &gt;
- 
-  
-  # detected
-- |1
-  explicit
-- &gt;
- 	
- detected
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="trailing_space"> </span><span class="eol">
+</span><span class="trailing_space">  </span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">1</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content"> explicit</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
@@ -212,7 +213,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x562e3982af97
+	[C]: at 0x555fa9960f97
 </pre>
  </div>
 

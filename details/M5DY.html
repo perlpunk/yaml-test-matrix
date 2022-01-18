@@ -5,26 +5,27 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/M5DY.tml">&test-M5DY</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/M5DY.yaml">&test-M5DY</a><br>
 &nbsp;&nbsp;Title: Spec Example 2.11. Mapping between Sequences</br>
 &nbsp;&nbsp;Tags: [ complex-key, explicit-key, mapping, sequence, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>? - Detroit Tigers
-  - Chicago cubs
-:
-  - 2001-07-23
-
-? [ New York Yankees,
-    Atlanta Braves ]
-: [ 2001-07-02, 2001-08-12,
-    2001-08-14 ]
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">Detroit Tigers</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">Chicago cubs</span><span class="eol">
+</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">2001-07-23</span><span class="eol">
+</span><span class="eol">
+</span><span class="question">?</span><span class="default"> </span><span class="flowseq_start">[</span><span class="default"> </span><span class="default">New York Yankees</span><span class="flow_comma">,</span><span class="eol">
+</span><span class="default">    </span><span class="default">Atlanta Braves</span><span class="default"> </span><span class="flowseq_end">]</span><span class="eol">
+</span><span class="colon">:</span><span class="default"> </span><span class="flowseq_start">[</span><span class="default"> </span><span class="default">2001-07-02</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">2001-08-12</span><span class="flow_comma">,</span><span class="eol">
+</span><span class="default">    </span><span class="default">2001-08-14</span><span class="default"> </span><span class="flowseq_end">]</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -128,7 +129,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/M5DY.tml">&test-M
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -316,12 +317,12 @@ stdin:1:3: error: Non scalar keys are not allowed in JSON emit mode
 <h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &quot;[Detroit Tigers, Chicago cubs]&quot;: [
-    &quot;Jul 23, 2001, 12:00:00 AM&quot;
+    &quot;Jul 23, 2001 12:00:00 AM&quot;
   ],
   &quot;[New York Yankees, Atlanta Braves]&quot;: [
-    &quot;Jul 2, 2001, 12:00:00 AM&quot;,
-    &quot;Aug 12, 2001, 12:00:00 AM&quot;,
-    &quot;Aug 14, 2001, 12:00:00 AM&quot;
+    &quot;Jul 2, 2001 12:00:00 AM&quot;,
+    &quot;Aug 12, 2001 12:00:00 AM&quot;,
+    &quot;Aug 14, 2001 12:00:00 AM&quot;
   ]
 }
 </pre>
@@ -349,7 +350,7 @@ stdin:1:3: error: Non scalar keys are not allowed in JSON emit mode
     &quot;2001-08-14&quot;
   ]
 }
-(node:2401) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ Detroit Tigers, Chicago cubs ]&quot;. Set mapAsMap: true to use object keys.
+(node:2965) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ Detroit Tigers, Chicago cubs ]&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -361,7 +362,7 @@ stdin:1:3: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x55e4e166af97
+	[C]: at 0x56068b990f97
 </pre>
 
  </div>
@@ -438,10 +439,10 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x55573f849da0)&quot; : [
+   &quot;ARRAY(0x55db148b5e40)&quot; : [
       &quot;2001-07-23&quot;
    ],
-   &quot;ARRAY(0x55573f857480)&quot; : [
+   &quot;ARRAY(0x55db148c34e0)&quot; : [
       &quot;2001-07-02&quot;,
       &quot;2001-08-12&quot;,
       &quot;2001-08-14&quot;
@@ -455,10 +456,10 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x556146d0e0d8)&#39; =&gt; [
+  &#39;ARRAY(0x55c33cd8e008)&#39; =&gt; [
                                &#39;2001-07-23&#39;
                              ],
-  &#39;ARRAY(0x556146d20d40)&#39; =&gt; [
+  &#39;ARRAY(0x55c33cda0e10)&#39; =&gt; [
                                &#39;2001-07-02&#39;,
                                &#39;2001-08-12&#39;,
                                &#39;2001-08-14&#39;
@@ -480,12 +481,12 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x564b50e25e88)&quot; : [
+   &quot;ARRAY(0x55dbb2ab2ec8)&quot; : [
       &quot;2001-07-02&quot;,
       &quot;2001-08-12&quot;,
       &quot;2001-08-14&quot;
    ],
-   &quot;ARRAY(0x564b50e33420)&quot; : [
+   &quot;ARRAY(0x55dbb2ac0438)&quot; : [
       &quot;2001-07-23&quot;
    ]
 }
@@ -497,10 +498,10 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x55a563758a70)&#39; =&gt; [
+  &#39;ARRAY(0x55f45a6a8a70)&#39; =&gt; [
                                &#39;2001-07-23&#39;
                              ],
-  &#39;ARRAY(0x55a5639641d8)&#39; =&gt; [
+  &#39;ARRAY(0x55f45a8b4158)&#39; =&gt; [
                                &#39;2001-07-02&#39;,
                                &#39;2001-08-12&#39;,
                                &#39;2001-08-14&#39;
@@ -528,7 +529,7 @@ stack traceback:
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())

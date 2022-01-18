@@ -5,31 +5,32 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/C4HZ.tml">&test-C4HZ</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/C4HZ.yaml">&test-C4HZ</a><br>
 &nbsp;&nbsp;Title: Spec Example 2.24. Global Tags</br>
 &nbsp;&nbsp;Tags: [ alias, directive, local-tag, spec, tag ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>%TAG ! tag:clarkevans.com,2002:
---- !shape
-  # Use the ! handle for presenting
-  # tag:clarkevans.com,2002:circle
-- !circle
-  center: &amp;ORIGIN {x: 73, y: 129}
-  radius: 7
-- !line
-  start: *ORIGIN
-  finish: { x: 89, y: 102 }
-- !label
-  start: *ORIGIN
-  color: 0xFFEEBB
-  text: Pretty vector drawing.
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="tag_directive">%TAG ! tag:clarkevans.com,2002:</span><span class="eol">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="tag">!shape</span><span class="eol">
+</span><span class="eol">  # Use the ! handle for presenting
+</span><span class="eol">  # tag:clarkevans.com,2002:circle
+</span><span class="dash">-</span><span class="default"> </span><span class="tag">!circle</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">center</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;ORIGIN</span><span class="default"> </span><span class="flowmap_start">{</span><span class="plainkey">x</span><span class="colon">:</span><span class="default"> </span><span class="plainkey">73</span><span class="flow_comma">,</span><span class="default"> </span><span class="plainkey">y</span><span class="colon">:</span><span class="default"> </span><span class="default">129</span><span class="flowmap_end">}</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">radius</span><span class="colon">:</span><span class="default"> </span><span class="default">7</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="tag">!line</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">start</span><span class="colon">:</span><span class="default"> </span><span class="alias">*ORIGIN</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">finish</span><span class="colon">:</span><span class="default"> </span><span class="flowmap_start">{</span><span class="default"> </span><span class="plainkey">x</span><span class="colon">:</span><span class="default"> </span><span class="plainkey">89</span><span class="flow_comma">,</span><span class="default"> </span><span class="plainkey">y</span><span class="colon">:</span><span class="default"> </span><span class="default">102</span><span class="default"> </span><span class="flowmap_end">}</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="tag">!label</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">start</span><span class="colon">:</span><span class="default"> </span><span class="alias">*ORIGIN</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">color</span><span class="colon">:</span><span class="default"> </span><span class="default">0xFFEEBB</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">text</span><span class="colon">:</span><span class="default"> </span><span class="default">Pretty vector drawing.</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +SEQ &lt;tag:clarkevans.com,2002:shape&gt;
@@ -302,9 +303,9 @@ class="">]</span>
 <span class="status_box color_error">&nbsp;</span>error <pre>panic: interface conversion: interface {} is bool, not string
 
 goroutine 1 [running]:
-main.convert({0x4f7d40, 0xc00006e6c0})
+main.convert({0x4f7d40, 0xc0000706c0})
 	/buildutils/go-yaml-json.go:17 +0x1c7
-main.convert({0x4f7d40, 0xc00006e690})
+main.convert({0x4f7d40, 0xc000070690})
 	/buildutils/go-yaml-json.go:17 +0x145
 main.convert({0x4f2260, 0xc00000c0d8})
 	/buildutils/go-yaml-json.go:22 +0x1ec
@@ -719,8 +720,8 @@ Aborted (core dumped)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:clarkevans.com,2002:shape
 	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
 	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:664)

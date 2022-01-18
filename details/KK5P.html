@@ -5,33 +5,34 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/KK5P.tml">&test-KK5P</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/KK5P.yaml">&test-KK5P</a><br>
 &nbsp;&nbsp;Title: Various combinations of explicit block mappings</br>
 &nbsp;&nbsp;Tags: [ explicit-key, mapping, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>complex1:
-  ? - a
-complex2:
-  ? - a
-  : b
-complex3:
-  ? - a
-  : &gt;
-    b
-complex4:
-  ? &gt;
-    a
-  :
-complex5:
-  ? - a
-  : - b
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">complex1</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="plainkey">complex2</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="eol">
+</span><span class="plainkey">complex3</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">b</span><span class="eol">
+</span><span class="plainkey">complex4</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="eol">
+</span><span class="plainkey">complex5</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP
@@ -161,7 +162,7 @@ complex5:
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -512,7 +513,7 @@ stdin:15:5: error: Non scalar keys are not allowed in JSON emit mode
     ]
   }
 }
-(node:2260) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ a ]&quot;. Set mapAsMap: true to use object keys.
+(node:2769) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ a ]&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -524,7 +525,7 @@ stdin:15:5: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x563289c4ff97
+	[C]: at 0x55d03a7abf97
 </pre>
 
  </div>
@@ -658,19 +659,19 @@ stack traceback:
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
    &quot;complex1&quot; : {
-      &quot;ARRAY(0x55fde2096450)&quot; : null
+      &quot;ARRAY(0x55e719098450)&quot; : null
    },
    &quot;complex2&quot; : {
-      &quot;ARRAY(0x55fde2088e28)&quot; : &quot;b&quot;
+      &quot;ARRAY(0x55e71908ae68)&quot; : &quot;b&quot;
    },
    &quot;complex3&quot; : {
-      &quot;ARRAY(0x55fde20965e8)&quot; : &quot;b\n&quot;
+      &quot;ARRAY(0x55e7190985e8)&quot; : &quot;b\n&quot;
    },
    &quot;complex4&quot; : {
       &quot;a\n&quot; : null
    },
    &quot;complex5&quot; : {
-      &quot;ARRAY(0x55fde20964c8)&quot; : [
+      &quot;ARRAY(0x55e7190984c8)&quot; : [
          &quot;b&quot;
       ]
    }
@@ -684,13 +685,13 @@ stack traceback:
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
   &#39;complex1&#39; =&gt; {
-                  &#39;ARRAY(0x557987d5db00)&#39; =&gt; undef
+                  &#39;ARRAY(0x555719232b40)&#39; =&gt; undef
                 },
   &#39;complex2&#39; =&gt; {
-                  &#39;ARRAY(0x557987d5e100)&#39; =&gt; &#39;b&#39;
+                  &#39;ARRAY(0x555719233140)&#39; =&gt; &#39;b&#39;
                 },
   &#39;complex3&#39; =&gt; {
-                  &#39;ARRAY(0x557987febde8)&#39; =&gt; &#39;b
+                  &#39;ARRAY(0x5557194c0d68)&#39; =&gt; &#39;b
 &#39;
                 },
   &#39;complex4&#39; =&gt; {
@@ -698,7 +699,7 @@ stack traceback:
 &#39; =&gt; undef
                 },
   &#39;complex5&#39; =&gt; {
-                  &#39;ARRAY(0x557987febb90)&#39; =&gt; [
+                  &#39;ARRAY(0x5557194c0b10)&#39; =&gt; [
                                                &#39;b&#39;
                                              ]
                 }
@@ -725,7 +726,7 @@ stack traceback:
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())

@@ -5,34 +5,35 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/U3XV.tml">&test-U3XV</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/U3XV.yaml">&test-U3XV</a><br>
 &nbsp;&nbsp;Title: Node and Mapping Key Anchors</br>
 &nbsp;&nbsp;Tags: [ 1.3-err, anchor, comment ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-top1: &amp;node1
-  &amp;k1 key1: one
-top2: &amp;node2 # comment
-  key2: two
-top3:
-  &amp;k3 key3: three
-top4:
-  &amp;node4
-  &amp;k4 key4: four
-top5:
-  &amp;node5
-  key5: five
-top6: &amp;val6
-  six
-top7:
-  &amp;val7 seven
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">top1</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node1</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;k1</span><span class="default"> </span><span class="plainkey">key1</span><span class="colon">:</span><span class="default"> </span><span class="default">one</span><span class="eol">
+</span><span class="plainkey">top2</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node2</span><span class="eol"> # comment
+</span><span class="default">  </span><span class="plainkey">key2</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="eol">
+</span><span class="plainkey">top3</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;k3</span><span class="default"> </span><span class="plainkey">key3</span><span class="colon">:</span><span class="default"> </span><span class="default">three</span><span class="eol">
+</span><span class="plainkey">top4</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;node4</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;k4</span><span class="default"> </span><span class="plainkey">key4</span><span class="colon">:</span><span class="default"> </span><span class="default">four</span><span class="eol">
+</span><span class="plainkey">top5</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;node5</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">five</span><span class="eol">
+</span><span class="plainkey">top6</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;val6</span><span class="eol">
+</span><span class="default">  </span><span class="default">six</span><span class="eol">
+</span><span class="plainkey">top7</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;val7</span><span class="default"> </span><span class="default">seven</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +MAP

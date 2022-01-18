@@ -5,18 +5,19 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/SBG9.tml">&test-SBG9</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/SBG9.yaml">&test-SBG9</a><br>
 &nbsp;&nbsp;Title: Flow Sequence in Flow Mapping</br>
 &nbsp;&nbsp;Tags: [ complex-key, flow, mapping, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>{a: [b, c], [d, e]: f}
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="flowmap_start">{</span><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="flowseq_start">[</span><span class="plainkey">b</span><span class="flow_comma">,</span><span class="default"> </span><span class="plainkey">c</span><span class="flowseq_end">]</span><span class="flow_comma">,</span><span class="default"> </span><span class="flowseq_start">[</span><span class="plainkey">d</span><span class="flow_comma">,</span><span class="default"> </span><span class="plainkey">e</span><span class="flowseq_end">]</span><span class="colon">:</span><span class="default"> </span><span class="default">f</span><span class="flowmap_end">}</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP {}
@@ -114,7 +115,7 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SBG9.tml">&test-S
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -290,7 +291,7 @@ stdin:1:13: error: Non scalar keys are not allowed in JSON emit mode
   ],
   &quot;[ d, e ]&quot;: &quot;f&quot;
 }
-(node:2930) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ d, e ]&quot;. Set mapAsMap: true to use object keys.
+(node:3581) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;[ d, e ]&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -302,7 +303,7 @@ stdin:1:13: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x558ba3773f97
+	[C]: at 0x55c021b24f97
 </pre>
 
  </div>
@@ -367,7 +368,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x5588ac1c35d0)&quot; : &quot;f&quot;,
+   &quot;ARRAY(0x55610ddf55e8)&quot; : &quot;f&quot;,
    &quot;a&quot; : [
       &quot;b&quot;,
       &quot;c&quot;
@@ -381,7 +382,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x5622d9751608)&#39; =&gt; &#39;f&#39;,
+  &#39;ARRAY(0x561195148450)&#39; =&gt; &#39;f&#39;,
   &#39;a&#39; =&gt; [
            &#39;b&#39;,
            &#39;c&#39;
@@ -403,7 +404,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-json">
 <h3><a href="#perl-xs-json">perl-xs-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-   &quot;ARRAY(0x5631f0d2d3c0)&quot; : &quot;f&quot;,
+   &quot;ARRAY(0x55a3eb20c3f0)&quot; : &quot;f&quot;,
    &quot;a&quot; : [
       &quot;b&quot;,
       &quot;c&quot;
@@ -417,7 +418,7 @@ stack traceback:
   <div class="framework framework_box_na" id="perl-xs-perl">
 <h3><a href="#perl-xs-perl">perl-xs-perl</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>{
-  &#39;ARRAY(0x56409cdaf4f0)&#39; =&gt; &#39;f&#39;,
+  &#39;ARRAY(0x563bd4990470)&#39; =&gt; &#39;f&#39;,
   &#39;a&#39; =&gt; [
            &#39;b&#39;,
            &#39;c&#39;
@@ -445,7 +446,7 @@ stack traceback:
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())

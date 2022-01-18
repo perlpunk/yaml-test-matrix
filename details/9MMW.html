@@ -5,20 +5,21 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MMW.tml">&test-9MMW</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/9MMW.yaml">&test-9MMW</a><br>
 &nbsp;&nbsp;Title: Single Pair Implicit Entries</br>
 &nbsp;&nbsp;Tags: [ flow, mapping, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- [ YAML : separate ]
-- [ &quot;JSON like&quot;:adjacent ]
-- [ {JSON: like}:adjacent ]
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">- [ YAML : separate ]</span><span class="eol">
+</span><span class="default">- [ &quot;JSON like&quot;:adjacent ]</span><span class="eol">
+</span><span class="default">- [ {JSON: like}:adjacent ]</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
@@ -170,7 +171,7 @@ YAML      : &quot;:adjacent ]&quot;
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -207,11 +208,11 @@ found unhashable key
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 656, in parse_flow_sequence_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 683, in parse_flow_sequence_entry
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a flow sequence
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
@@ -230,25 +231,25 @@ expected &#39;,&#39; or &#39;]&#39;, but got &#39;&lt;scalar&gt;&#39;
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 136, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 180, in compose_sequence_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 185, in compose_sequence_node
     node.value.append(self.compose_node(node, index))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 136, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 179, in compose_sequence_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 656, in parse_flow_sequence_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 683, in parse_flow_sequence_entry
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a flow sequence
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
@@ -482,7 +483,7 @@ stdin:3:5: error: Non scalar keys are not allowed in JSON emit mode
     }
   ]
 ]
-(node:1227) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;{ JSON: like }&quot;. Set mapAsMap: true to use object keys.
+(node:1435) Warning: Keys with collection values will be stringified due to JS Object restrictions: &quot;{ JSON: like }&quot;. Set mapAsMap: true to use object keys.
 </pre>
 
  </div>
@@ -494,7 +495,7 @@ stdin:3:5: error: Non scalar keys are not allowed in JSON emit mode
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x562d0b14af97
+	[C]: at 0x55dca108ff97
 </pre>
 
  </div>
@@ -593,7 +594,7 @@ YAML      : &quot;:adjacent ]&quot;
    ],
    [
       {
-         &quot;HASH(0x555b7bb6e5d0)&quot; : &quot;adjacent&quot;
+         &quot;HASH(0x564b66e6d5d0)&quot; : &quot;adjacent&quot;
       }
    ]
 ]
@@ -617,7 +618,7 @@ YAML      : &quot;:adjacent ]&quot;
   ],
   [
     {
-      &#39;HASH(0x56075e0ccfd0)&#39; =&gt; &#39;adjacent&#39;
+      &#39;HASH(0x56238be7df10)&#39; =&gt; &#39;adjacent&#39;
     }
   ]
 ]
@@ -643,7 +644,7 @@ YAML      : &quot;:adjacent ]&quot;
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -670,25 +671,25 @@ found unhashable key
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 136, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 180, in compose_sequence_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 185, in compose_sequence_node
     node.value.append(self.compose_node(node, index))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 136, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 179, in compose_sequence_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 656, in parse_flow_sequence_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 683, in parse_flow_sequence_entry
     token.start_mark,
 ruamel.yaml.parser.ParserError: while parsing a flow sequence
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:

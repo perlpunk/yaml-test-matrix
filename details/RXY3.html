@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/RXY3.tml">&test-RXY3</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/RXY3.yaml">&test-RXY3</a><br>
 &nbsp;&nbsp;Title: Invalid document-end marker in single quoted string</br>
 &nbsp;&nbsp;Tags: [ error, footer, single ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-&#39;
-...
-&#39;
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">&#39;</span><span class="eol">
+</span><span class="default">...</span><span class="eol">
+</span><span class="default">&#39;</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 </pre></div>
@@ -88,9 +89,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/RXY3.tml">&test-R
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: invalid document-end marker in single-quoted scalar
 ...
 ^~~
-[NOT]: fy_fetch_flow_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 +STR
 +DOC ---
 </pre>
@@ -102,9 +100,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/RXY3.tml">&test-R
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:1: error: invalid document-end marker in single-quoted scalar
 ...
 ^~~
-[NOT]: fy_fetch_flow_scalar() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 </pre>
  </div>
 
@@ -206,18 +201,18 @@ found unexpected document separator
     ...
     ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarBreaks(ScannerImpl.java:2016)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarSpaces(ScannerImpl.java:1994)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1903)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1048)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchSingle(ScannerImpl.java:1023)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:411)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:304)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarBreaks(ScannerImpl.java:2031)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarSpaces(ScannerImpl.java:2009)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1918)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchSingle(ScannerImpl.java:1043)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:432)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:306)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
 </pre>
  </div>
 
@@ -233,15 +228,15 @@ found unexpected document separator
     ...
     ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarBreaks(ScannerImpl.java:2016)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarSpaces(ScannerImpl.java:1994)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1903)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1048)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchSingle(ScannerImpl.java:1023)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:411)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:304)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarBreaks(ScannerImpl.java:2031)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalarSpaces(ScannerImpl.java:2009)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanFlowScalar(ScannerImpl.java:1918)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFlowScalar(ScannerImpl.java:1068)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchSingle(ScannerImpl.java:1043)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:432)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:306)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
 	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
@@ -250,8 +245,8 @@ found unexpected document separator
 	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
 	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 </pre>
  </div>
 
@@ -318,7 +313,7 @@ YAMLParseError: Missing closing &#39;quote at line 2, column 2:
     at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:18:21)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:31:23)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
     at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
     at next (&lt;anonymous&gt;)
     at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
@@ -336,7 +331,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:443: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x558b623e1f97
+	[C]: at 0x55b3c8a14f97
 </pre>
  </div>
 
@@ -357,7 +352,7 @@ Error: unhandled exception: Illegal `...` within quoted scalar [YamlStreamError]
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
 Column    : 1
 Message   : Missing closing quote &lt;&#39;&gt; or invalid document marker
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 645
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 659
 YAML      : &quot;...&quot;
   at /yaml/bin/perl-pp-event line 25.
 +STR
@@ -371,7 +366,7 @@ YAML      : &quot;...&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
 Column    : 1
 Message   : Missing closing quote &lt;&#39;&gt; or invalid document marker
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 645
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 659
 YAML      : &quot;...&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -383,7 +378,7 @@ YAML      : &quot;...&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 3
 Column    : 1
 Message   : Missing closing quote &lt;&#39;&gt; or invalid document marker
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 645
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 659
 YAML      : &quot;...&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -416,7 +411,7 @@ while scanning a quoted scalar at line: 2, column: 1
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 
@@ -486,7 +481,7 @@ while scanning a quoted scalar at line: 2, column: 1
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
     while loader.check_event():
   File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
@@ -525,7 +520,7 @@ found unexpected document separator
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -570,7 +565,7 @@ found unexpected document separator
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -615,25 +610,25 @@ found unexpected document separator
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 261, in parse_document_content
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 273, in parse_document_content
     DirectiveToken, DocumentStartToken, DocumentEndToken, StreamEndToken
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 307, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 312, in fetch_more_tokens
     return self.fetch_single()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 725, in fetch_single
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 730, in fetch_single
     self.fetch_flow_scalar(style=&quot;&#39;&quot;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 738, in fetch_flow_scalar
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 743, in fetch_flow_scalar
     self.tokens.append(self.scan_flow_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1382, in scan_flow_scalar
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1399, in scan_flow_scalar
     chunks.extend(self.scan_flow_scalar_spaces(double, start_mark))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1485, in scan_flow_scalar_spaces
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1506, in scan_flow_scalar_spaces
     breaks = self.scan_flow_scalar_breaks(double, start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1510, in scan_flow_scalar_breaks
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1531, in scan_flow_scalar_breaks
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a quoted scalar
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -654,33 +649,33 @@ found unexpected document separator
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 261, in parse_document_content
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 273, in parse_document_content
     DirectiveToken, DocumentStartToken, DocumentEndToken, StreamEndToken
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 307, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 312, in fetch_more_tokens
     return self.fetch_single()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 725, in fetch_single
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 730, in fetch_single
     self.fetch_flow_scalar(style=&quot;&#39;&quot;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 738, in fetch_flow_scalar
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 743, in fetch_flow_scalar
     self.tokens.append(self.scan_flow_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1382, in scan_flow_scalar
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1399, in scan_flow_scalar
     chunks.extend(self.scan_flow_scalar_spaces(double, start_mark))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1485, in scan_flow_scalar_spaces
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1506, in scan_flow_scalar_spaces
     breaks = self.scan_flow_scalar_breaks(double, start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1510, in scan_flow_scalar_breaks
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1531, in scan_flow_scalar_breaks
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a quoted scalar
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -699,33 +694,33 @@ found unexpected document separator
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 976, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
     yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 106, in get_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 68, in get_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 101, in compose_document
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 111, in compose_node
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 261, in parse_document_content
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 273, in parse_document_content
     DirectiveToken, DocumentStartToken, DocumentEndToken, StreamEndToken
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 307, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 312, in fetch_more_tokens
     return self.fetch_single()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 725, in fetch_single
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 730, in fetch_single
     self.fetch_flow_scalar(style=&quot;&#39;&quot;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 738, in fetch_flow_scalar
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 743, in fetch_flow_scalar
     self.tokens.append(self.scan_flow_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1382, in scan_flow_scalar
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1399, in scan_flow_scalar
     chunks.extend(self.scan_flow_scalar_spaces(double, start_mark))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1485, in scan_flow_scalar_spaces
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1506, in scan_flow_scalar_spaces
     breaks = self.scan_flow_scalar_breaks(double, start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1510, in scan_flow_scalar_breaks
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1531, in scan_flow_scalar_breaks
     self.reader.get_mark(),
 ruamel.yaml.scanner.ScannerError: while scanning a quoted scalar
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:

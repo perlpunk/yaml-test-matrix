@@ -5,19 +5,20 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/8CWC.tml">&test-8CWC</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/8CWC.yaml">&test-8CWC</a><br>
 &nbsp;&nbsp;Title: Plain mapping key ending with colon</br>
 &nbsp;&nbsp;Tags: [ mapping, scalar ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-key ends with two colons::: value
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">---</span><span class="eol">
+</span><span class="default">key ends with two colons::: value</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +MAP
@@ -178,7 +179,7 @@ key ends with two colons::: value
 Line      : 2
 Column    : 25
 Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 377
 YAML      : &quot;::: value&quot;
   at /yaml/bin/perl-pp-event line 25.
 </pre>
@@ -190,7 +191,7 @@ YAML      : &quot;::: value&quot;
 <span class="status_box color_error">&nbsp;</span>error <pre>Line      : 2
 Column    : 25
 Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 377
 YAML      : &quot;::: value&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -202,7 +203,7 @@ YAML      : &quot;::: value&quot;
 <span class="status_box color_error">&nbsp;</span>error <pre>Line      : 2
 Column    : 25
 Message   : Invalid plain scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 366
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 377
 YAML      : &quot;::: value&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>

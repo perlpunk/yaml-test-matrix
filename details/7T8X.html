@@ -5,33 +5,34 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/7T8X.tml">&test-7T8X</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/7T8X.yaml">&test-7T8X</a><br>
 &nbsp;&nbsp;Title: Spec Example 8.10. Folded Lines - 8.13. Final Empty Lines</br>
 &nbsp;&nbsp;Tags: [ 1.3-err, comment, folded, scalar, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>&gt;
-
- folded
- line
-
- next
- line
-   * bullet
-
-   * list
-   * lines
-
- last
- line
-
-# Comment
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="folded">&gt;</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">folded</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">next</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">  * bullet</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">  * list</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">  * lines</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">last</span><span class="eol">
+</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol"># Comment
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 =VAL &gt;\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n

@@ -5,25 +5,26 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/XV9V.tml">&test-XV9V</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/XV9V.yaml">&test-XV9V</a><br>
 &nbsp;&nbsp;Title: Spec Example 6.5. Empty Lines [1.3]</br>
 &nbsp;&nbsp;Tags: [ 1.3-mod, literal, scalar, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>Folding:
-  &quot;Empty line
-
-  as a line feed&quot;
-Chomping: |
-  Clipped empty lines
- 
-
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">Folding</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line</span><span class="eol">
+</span><span class="eol">
+</span><span class="default">  </span><span class="doublequoted">as a line feed</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="plainkey">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Clipped empty lines</span><span class="eol">
+</span><span class="trailing_space"> 
+</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/PRH3.tml">&test-PRH3</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/PRH3.yaml">&test-PRH3</a><br>
 &nbsp;&nbsp;Title: Spec Example 7.9. Single Quoted Lines</br>
 &nbsp;&nbsp;Tags: [ scalar, single, spec, upto-1.2, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>&#39; 1st non-empty
-
- 2nd non-empty 
-	3rd non-empty &#39;
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="eol">
+</span><span class="eol">
+</span><span class="default"> </span><span class="singlequoted">2nd non-empty</span><span class="trailing_space"> 
+</span><span class="default"></span><span class="tab">	</span><span class="singlequoted">3rd non-empty </span><span class="singlequote">&#39;</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 =VAL &#39; 1st non-empty\n2nd non-empty 3rd non-empty 

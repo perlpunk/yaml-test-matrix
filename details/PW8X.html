@@ -5,29 +5,30 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/PW8X.tml">&test-PW8X</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/PW8X.yaml">&test-PW8X</a><br>
 &nbsp;&nbsp;Title: Anchors on Empty Scalars</br>
 &nbsp;&nbsp;Tags: [ anchor, explicit-key ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>- &amp;a
-- a
--
-  &amp;a : a
-  b: &amp;b
--
-  &amp;c : &amp;a
--
-  ? &amp;d
--
-  ? &amp;e
-  : &amp;a
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;a</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;b</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="anchor">&amp;c</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="anchor">&amp;d</span><span class="eol">
+</span><span class="dash">-</span><span class="eol">
+</span><span class="default">  </span><span class="question">?</span><span class="default"> </span><span class="anchor">&amp;e</span><span class="eol">
+</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +SEQ
@@ -143,7 +144,7 @@ YAML Error: Invalid element in map
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -512,7 +513,7 @@ YAMLException: bad indentation of a sequence entry (4:6)
 stack traceback:
 	[C]: in function &#39;encode&#39;
 	/yaml/bin/lua-lyaml-json:8: in main chunk
-	[C]: at 0x55bf5dbe6f97
+	[C]: at 0x555cf85f6f97
 </pre>
 
  </div>
@@ -704,7 +705,7 @@ YAML Error: Invalid element in map
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 130, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
     yield loader.get_data()
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
@@ -738,7 +739,7 @@ second occurrence
   <div class="framework framework_box_na" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>Error json.dumps: &lt;class &#39;TypeError&#39;&gt;
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 1, column 3:
     - &amp;a
@@ -747,7 +748,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
       ^ (line: 4)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
@@ -756,7 +757,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a
            ^ (line: 7)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a
@@ -787,7 +788,7 @@ TypeError: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[None, &#39;a&#39;, {None: &#39;a&#39;, &#39;b&#39;: None}, {None: None}, {None: None}, {None: None}]
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 1, column 3:
     - &amp;a
@@ -796,7 +797,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
       ^ (line: 4)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 4, column 3:
       &amp;a : a
@@ -805,7 +806,7 @@ second occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a
            ^ (line: 7)
   warnings.warn(ws, ReusedAnchorWarning)
-/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:131: ReusedAnchorWarning: 
+/python/lib/python3.7/site-packages/ruamel/yaml/composer.py:136: ReusedAnchorWarning: 
 found duplicate anchor &#39;a&#39;
 first occurrence   in &quot;&lt;unicode string&gt;&quot;, line 7, column 8:
       &amp;c : &amp;a

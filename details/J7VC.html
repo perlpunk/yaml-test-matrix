@@ -5,21 +5,22 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/J7VC.tml">&test-J7VC</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/J7VC.yaml">&test-J7VC</a><br>
 &nbsp;&nbsp;Title: Empty Lines Between Mapping Elements</br>
 &nbsp;&nbsp;Tags: [ mapping, whitespace ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>one: 2
-
-
-three: 4
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="plainkey">one</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="plainkey">three</span><span class="colon">:</span><span class="default"> </span><span class="default">4</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC
 +MAP

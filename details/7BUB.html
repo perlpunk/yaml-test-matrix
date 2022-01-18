@@ -5,25 +5,26 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/7BUB.tml">&test-7BUB</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/7BUB.yaml">&test-7BUB</a><br>
 &nbsp;&nbsp;Title: Spec Example 2.10. Node for âSammy Sosaâ appears twice in this document</br>
 &nbsp;&nbsp;Tags: [ alias, mapping, sequence, spec ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>---
-hr:
-  - Mark McGwire
-  # Following node labeled SS
-  - &amp;SS Sammy Sosa
-rbi:
-  - *SS # Subsequent occurrence
-  - Ken Griffey
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">hr</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">Mark McGwire</span><span class="eol">
+</span><span class="eol">  # Following node labeled SS
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;SS</span><span class="default"> </span><span class="default">Sammy Sosa</span><span class="eol">
+</span><span class="plainkey">rbi</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="alias">*SS</span><span class="eol"> # Subsequent occurrence
+</span><span class="default">  </span><span class="dash">-</span><span class="default"> </span><span class="default">Ken Griffey</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 +DOC ---
 +MAP

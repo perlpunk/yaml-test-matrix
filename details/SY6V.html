@@ -5,18 +5,19 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="../css/yaml.css">
 <link rel="stylesheet" type="text/css" href="../css/matrix.css">
+<link rel="stylesheet" type="text/css" href="../css/yaml-tokens.css">
 <link rel="icon" type="image/x-icon" href="http://www.yaml.io/favicon.ico">
 </head>
 <body>
 
 <h1><a href="../index.html"><tt># YAML Test Matrix</tt></a></h1>
 <h2><tt>--- <a
-href="https://github.com/yaml/yaml-test-suite/blob/master/test/SY6V.tml">&test-SY6V</a><br>
+href="https://github.com/yaml/yaml-test-suite/blob/master/src/SY6V.yaml">&test-SY6V</a><br>
 &nbsp;&nbsp;Title: Anchor before sequence entry on same line</br>
 &nbsp;&nbsp;Tags: [ anchor, error, sequence ]</tt></h2>
 
-<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre>&amp;anchor - sequence entry
-</pre></div>
+<div class="framework" id="yaml"><h3><a href="#yaml">YAML</a></h3><pre><span class="default">&amp;anchor - sequence entry</span><span class="eol">
+</span></pre></div>
 <div class="framework" id="events"><h3><a href="#events">Expected Events</a></h3><pre>+STR
 </pre></div>
 <div class="framework" id="json"><h3><a href="#json">Expected JSON</a></h3>
@@ -68,9 +69,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SY6V.tml">&test-S
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:9: error: illegal block sequence on the same line as anchor
 &amp;anchor - sequence entry
         ^
-[NOT]: fy_fetch_anchor_or_alias() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 +STR
 </pre>
  </div>
@@ -81,9 +79,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/test/SY6V.tml">&test-S
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:1:9: error: illegal block sequence on the same line as anchor
 &amp;anchor - sequence entry
         ^
-[NOT]: fy_fetch_anchor_or_alias() failed
-[NOT]: fy_fetch_tokens() failed
-[NOT]: failed to peek token
 </pre>
  </div>
 
@@ -176,14 +171,14 @@ Aborted (core dumped)
     &amp;anchor - sequence entry
             ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockEntry(ScannerImpl.java:797)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:336)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:213)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockEntry(ScannerImpl.java:818)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:357)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
 	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:111)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:119)
+	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:124)
+	at org.yaml.editor.Snake2Events.main(Snake2Events.java:132)
 </pre>
  </div>
 
@@ -195,17 +190,17 @@ Aborted (core dumped)
     &amp;anchor - sequence entry
             ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockEntry(ScannerImpl.java:797)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:336)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:213)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:155)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockEntry(ScannerImpl.java:818)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:357)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
 	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:93)
 	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
 	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:18)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:25)
+	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
+	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
 </pre>
  </div>
 
@@ -260,13 +255,13 @@ YAMLParseError: Unexpected scalar at node end at line 1, column 11:
 
     at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
     at Object.resolveEnd (/node/node_modules/yaml/dist/compose/resolve-end.js:31:21)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:34:27)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:35:27)
     at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
     at next (&lt;anonymous&gt;)
     at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
     at compose.next (&lt;anonymous&gt;)
     at Function.from (&lt;anonymous&gt;)
-    at Object.parseAllDocuments (/node/node_modules/yaml/dist/public-api.js:30:24)
+    at Object.parseAllDocuments (/node/node_modules/yaml/dist/public-api.js:28:24)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-yaml-json:7:19)
 </pre>
  </div>
@@ -281,7 +276,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55a901629f97
+	[C]: at 0x563ee0d56f97
 </pre>
  </div>
 
@@ -362,7 +357,7 @@ was found at , line: 1, column: 9
 
   <div class="framework framework_box_invalid_correct" id="perl-refparser-event">
 <h3><a href="#perl-refparser-event">perl-refparser-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4047, &lt;&gt; line 1.
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Parser finished before end of input at /perl5/lib/perl5/YAML/Parser.pm line 4056, &lt;&gt; line 1.
 </pre>
  </div>
 
@@ -430,7 +425,7 @@ was found at document: 1, line: 1, column: 9
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 75, in parse
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
     while loader.check_event():
   File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
@@ -456,7 +451,7 @@ yaml.scanner.ScannerError: sequence entries are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 129, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
     while loader.check_data():
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
@@ -485,7 +480,7 @@ yaml.scanner.ScannerError: sequence entries are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 129, in load_all
+  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
     while loader.check_data():
   File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
@@ -514,22 +509,23 @@ yaml.scanner.ScannerError: sequence entries are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
     for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 907, in parse
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
     while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 176, in parse_stream_start
-    token.move_comment(self.scanner.peek_token())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+    if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 275, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 280, in fetch_more_tokens
     return self.fetch_block_entry()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 569, in fetch_block_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 574, in fetch_block_entry
     None, None, &#39;sequence entries are not allowed here&#39;, self.reader.get_mark()
 ruamel.yaml.scanner.ScannerError: sequence entries are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
     &amp;anchor - sequence entry
             ^ (line: 1)
++STR
 </pre>
  </div>
 
@@ -539,21 +535,21 @@ ruamel.yaml.scanner.ScannerError: sequence entries are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 975, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1096, in load_all
     while loader._constructor.check_data():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 100, in check_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 108, in check_data
     return self.composer.check_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 58, in check_node
-    if self.parser.check_event(StreamStartEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 60, in check_node
+    return not self.parser.check_event(StreamEndEvent)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 176, in parse_stream_start
-    token.move_comment(self.scanner.peek_token())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+    if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 275, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 280, in fetch_more_tokens
     return self.fetch_block_entry()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 569, in fetch_block_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 574, in fetch_block_entry
     None, None, &#39;sequence entries are not allowed here&#39;, self.reader.get_mark()
 ruamel.yaml.scanner.ScannerError: sequence entries are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
@@ -568,21 +564,21 @@ ruamel.yaml.scanner.ScannerError: sequence entries are not allowed here
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
     for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 975, in load_all
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1096, in load_all
     while loader._constructor.check_data():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 100, in check_data
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 108, in check_data
     return self.composer.check_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 58, in check_node
-    if self.parser.check_event(StreamStartEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 140, in check_event
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 60, in check_node
+    return not self.parser.check_event(StreamEndEvent)
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 176, in parse_stream_start
-    token.move_comment(self.scanner.peek_token())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 183, in peek_token
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+    if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 275, in fetch_more_tokens
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 280, in fetch_more_tokens
     return self.fetch_block_entry()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 569, in fetch_block_entry
+  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 574, in fetch_block_entry
     None, None, &#39;sequence entries are not allowed here&#39;, self.reader.get_mark()
 ruamel.yaml.scanner.ScannerError: sequence entries are not allowed here
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 9:
