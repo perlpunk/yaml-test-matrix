@@ -241,13 +241,12 @@ sub compare_tests {
             elsif ($view eq "dotnet-yamldotnet.event"
                 or $view eq "nim-nimyaml.event"
                 or $view eq "hs-hsyaml.event"
-                or $view eq "perl-pp.event"
                 ) {
                 @test_events = io
                     ->file("$matrixdir/expected/$id/minimal.flow.event")
                     ->encoding('utf-8')->chomp->slurp;
                 $tests->{ $id }->{minimal_events} = \@test_events;
-                if ($view eq "hs-hsyaml.event" or $view eq 'perl-pp.event') {
+                if ($view eq "hs-hsyaml.event") {
                     @events = hsyaml_event_to_event(@events);
                     $tests->{ $id }->{transformed_events} = \@events;
                 }
