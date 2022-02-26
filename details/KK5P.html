@@ -149,7 +149,155 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/KK5P.yaml">&test-K
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="cpp-rapidyaml-event">
+<h3><a href="#cpp-rapidyaml-event">cpp-rapidyaml-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :complex1
++MAP
++SEQ
+=VAL :a
+-SEQ
+=VAL :
+-MAP
+=VAL :complex2
++MAP
++SEQ
+=VAL :a
+-SEQ
+=VAL :b
+-MAP
+=VAL :complex3
++MAP
++SEQ
+=VAL :a
+-SEQ
+=VAL :b\n
+-MAP
+=VAL :complex4
++MAP
+=VAL :a\n
+=VAL :
+-MAP
+=VAL :complex5
++MAP
++SEQ
+=VAL :a
+-SEQ
++SEQ
+=VAL :b
+-SEQ
+-MAP
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :complex1
++MAP
+-MAP
+=VAL :complex2
++MAP
+=VAL :- a
+=VAL :b
+-MAP
+=VAL :complex3
++MAP
+=VAL :- a
+=VAL :b\n
+-MAP
+=VAL :complex4
++MAP
+=VAL :a\n
+=VAL :
+-MAP
+=VAL :complex5
++MAP
+=VAL :- a
++SEQ
+=VAL :b
+-SEQ
+-MAP
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :complex1</span>
+<span
+class="">+MAP</span>
+<span
+class="diff_line">-MAP</span>
+<span
+class="">=VAL :complex2</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :- a</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">-MAP</span>
+<span
+class="">=VAL :complex3</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :- a</span>
+<span
+class="">=VAL &#39;b\n</span>
+<span
+class="">-MAP</span>
+<span
+class="">=VAL :complex4</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL &#39;a\n</span>
+<span
+class="">=VAL :</span>
+<span
+class="">-MAP</span>
+<span
+class="">=VAL :complex5</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :- a</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-MAP</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 3, column -1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
 </pre>

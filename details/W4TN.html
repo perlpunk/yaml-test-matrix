@@ -103,7 +103,53 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/W4TN.yaml">&test-W
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">    <div class="framework framework_box_diff" id="cpp-yamlcpp-event">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="cpp-rapidyaml-event">
+<h3><a href="#cpp-rapidyaml-event">cpp-rapidyaml-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC ---
+=VAL :%!PS-Adobe-2.0\n
+-DOC ...
++DOC ---
+=VAL :
+-DOC ...
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC ---
+=VAL :%!PS-Adobe-2.0\n
+-DOC
++DOC ---
+=VAL :
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC ---</span>
+<span
+class="">=VAL &#39;%!PS-Adobe-2.0\n</span>
+<span
+class="diff_line">-DOC</span>
+<span
+class="">+DOC ---</span>
+<span
+class="">=VAL :</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+  <div class="framework framework_box_diff" id="cpp-yamlcpp-event">
 <h3><a href="#cpp-yamlcpp-event">cpp-yamlcpp-event</a></h3>
 <span class="status_box color_diff">&nbsp;</span>diff <br>
 

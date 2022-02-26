@@ -123,7 +123,103 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/M5DY.yaml">&test-M
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-yaml-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="cpp-rapidyaml-event">
+<h3><a href="#cpp-rapidyaml-event">cpp-rapidyaml-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
++SEQ
+=VAL :Detroit Tigers
+=VAL :Chicago cubs
+-SEQ
++SEQ
+=VAL :2001-07-23
+-SEQ
++SEQ
+=VAL :New York Yankees
+=VAL :Atlanta Braves
+-SEQ
++SEQ
+=VAL :2001-07-02
+=VAL :2001-08-12
+=VAL :2001-08-14
+-SEQ
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL :- Detroit Tigers
+=VAL :
+=VAL :- Chicago cubs
++SEQ
+=VAL :2001-07-23
+-SEQ
+=VAL :[ New York Yankees, Atlanta Braves
+=VAL :
+=VAL :]
++SEQ
+=VAL :2001-07-02
+=VAL :2001-08-12
+=VAL :2001-08-14
+-SEQ
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="diff_line">=VAL :- Detroit Tigers</span>
+<span
+class="">=VAL :</span>
+<span
+class="">=VAL :- Chicago cubs</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :2001-07-23</span>
+<span
+class="">-SEQ</span>
+<span
+class="">=VAL :[ New York Yankees, Atlanta Braves</span>
+<span
+class="">=VAL :</span>
+<span
+class="">=VAL :]</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :2001-07-02</span>
+<span
+class="">=VAL :2001-08-12</span>
+<span
+class="">=VAL :2001-08-14</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-yaml-perl">
 <h3><a href="#perl-yaml-perl">perl-yaml-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>YAML Error: Inconsistent indentation level
    Code: YAML_PARSE_ERR_INCONSISTENT_INDENTATION

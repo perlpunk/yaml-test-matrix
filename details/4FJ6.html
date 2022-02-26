@@ -115,7 +115,123 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/4FJ6.yaml">&test-4
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-pp-event">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="cpp-rapidyaml-event">
+<h3><a href="#cpp-rapidyaml-event">cpp-rapidyaml-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC ---
++SEQ
++MAP
++SEQ
+=VAL :a
++SEQ
++MAP
++SEQ
++SEQ
+=VAL :b
+=VAL :c
+-SEQ
+-SEQ
+=VAL :d
+-MAP
+=VAL :e
+-SEQ
+-SEQ
+=VAL :23
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC ---
++SEQ
++SEQ
+=VAL :a
++SEQ
++SEQ
++SEQ
+=VAL :b
+=VAL :c
+-SEQ
+-SEQ
++MAP
+=VAL :
+=VAL :d
+-MAP
+=VAL :e
+-SEQ
+-SEQ
++MAP
+=VAL :
+=VAL :23
+-MAP
+-SEQ
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC ---</span>
+<span
+class="">+SEQ</span>
+<span
+class="diff_line">+SEQ</span>
+<span
+class="">=VAL :a</span>
+<span
+class="">+SEQ</span>
+<span
+class="">+SEQ</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :b</span>
+<span
+class="">=VAL :c</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-SEQ</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :</span>
+<span
+class="">=VAL :d</span>
+<span
+class="">-MAP</span>
+<span
+class="">=VAL :e</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-SEQ</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :</span>
+<span
+class="">=VAL :23</span>
+<span
+class="">-MAP</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pp-event">
 <h3><a href="#perl-pp-event">perl-pp-event</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>+STR
 +DOC ---

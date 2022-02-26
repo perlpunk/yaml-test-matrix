@@ -179,7 +179,109 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/U9NS.yaml">&test-U
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
- <hr style="clear: both;">       <div class="framework framework_box_json_diff" id="java-snakeengine-json">
+ <hr style="clear: both;">    <div class="framework framework_box_diff" id="cpp-rapidyaml-event">
+<h3><a href="#cpp-rapidyaml-event">cpp-rapidyaml-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC ---
++MAP
+=VAL :time
+=VAL :20:03:20
+=VAL :player
+=VAL :Sammy Sosa
+=VAL :action
+=VAL :strike (miss)
+-MAP
+-DOC ...
++DOC ---
++MAP
+=VAL :time
+=VAL :20:03:47
+=VAL :player
+=VAL :Sammy Sosa
+=VAL :action
+=VAL :grand slam
+-MAP
+-DOC ...
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC ---
++MAP
+=VAL :time
+=VAL :20:03:20
+=VAL :player
+=VAL :Sammy Sosa
+=VAL :action
+=VAL :strike (miss)
+-MAP
+-DOC
++DOC ---
++MAP
+=VAL :time
+=VAL :20:03:47
+=VAL :player
+=VAL :Sammy Sosa
+=VAL :action
+=VAL :grand slam
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC ---</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :time</span>
+<span
+class="">=VAL :20:03:20</span>
+<span
+class="">=VAL :player</span>
+<span
+class="">=VAL :Sammy Sosa</span>
+<span
+class="">=VAL :action</span>
+<span
+class="">=VAL :strike (miss)</span>
+<span
+class="">-MAP</span>
+<span
+class="diff_line">-DOC</span>
+<span
+class="">+DOC ---</span>
+<span
+class="">+MAP</span>
+<span
+class="">=VAL :time</span>
+<span
+class="">=VAL :20:03:47</span>
+<span
+class="">=VAL :player</span>
+<span
+class="">=VAL :Sammy Sosa</span>
+<span
+class="">=VAL :action</span>
+<span
+class="">=VAL :grand slam</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">    <div class="framework framework_box_json_diff" id="java-snakeengine-json">
 <h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
 <span class="status_box color_json_diff">&nbsp;</span>json_diff  <pre><span
 class="">{</span>

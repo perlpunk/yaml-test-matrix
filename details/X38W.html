@@ -110,7 +110,86 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/X38W.yaml">&test-X
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-pp-perl">
+ <hr style="clear: both;">       <div class="framework framework_box_diff" id="cpp-rapidyaml-event">
+<h3><a href="#cpp-rapidyaml-event">cpp-rapidyaml-event</a></h3>
+<span class="status_box color_diff">&nbsp;</span>diff <br>
+
+ Minimal Events:
+<pre>
++STR
++DOC
++MAP
++SEQ &amp;a
+=VAL :a
+=VAL &amp;b :b
+-SEQ
+=ALI *b
+=ALI *a
++SEQ
+=VAL :c
+=ALI *b
+=VAL :d
+-SEQ
+-MAP
+-DOC
+-STR</pre>
+  Transformed Events:
+<pre>
++STR
++DOC
++MAP
+=VAL &amp;a :[a
+=VAL :
+=VAL &amp;b :b]
+=ALI *b
+=ALI *a
++SEQ
+=VAL :c
+=ALI *b
+=VAL :d
+-SEQ
+-MAP
+-DOC
+-STR</pre>
+ Got Events:
+<pre><span
+class="">+STR</span>
+<span
+class="">+DOC</span>
+<span
+class="">+MAP</span>
+<span
+class="diff_line">=VAL &amp;a :[a</span>
+<span
+class="">=VAL :</span>
+<span
+class="">=VAL &amp;b :b]</span>
+<span
+class="">=ALI *b</span>
+<span
+class="">=ALI *a</span>
+<span
+class="">+SEQ</span>
+<span
+class="">=VAL :c</span>
+<span
+class="">=ALI *b</span>
+<span
+class="">=VAL :d</span>
+<span
+class="">-SEQ</span>
+<span
+class="">-MAP</span>
+<span
+class="">-DOC</span>
+<span
+class="">-STR</span>
+</pre>
+
+ </div>
+
+
+ <hr style="clear: both;">       <div class="framework framework_box_error" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Duplicate key &#39;[&#39;a&#39;,&#39;b&#39;]&#39; at /perl5/lib/perl5/YAML/PP/Parser.pm line 61.
  at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
