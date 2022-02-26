@@ -10,6 +10,7 @@ use base 'Exporter';
 our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
     hsyaml_event_to_event
+    rapidyaml_event_to_event
     generate_expected_output
     load_csv gather_tags
 /;
@@ -21,6 +22,10 @@ sub minimal_events_for_framework {
         $args{anchors_to_numbers} = 1;
         $args{no_explicit_doc} = 1;
         $args{no_quoting_style} = 1;
+    }
+    elsif ($type eq 'rapid') {
+        $args{no_quoting_style} = 1;
+        $args{no_flow_indicator} = 1;
     }
     elsif ($type eq 'flow') {
         $args{no_flow_indicator} = 1;
@@ -100,6 +105,14 @@ sub hsyaml_event_to_event {
     return @events;
 }
 
+sub rapidyaml_event_to_event {
+    my (@events) = @_;
+    for my $event (@events) {
+        $event =~ s/^(\=VAL (&\S+ )?(<[^>]+> )?)["']/$1:/;
+    }
+    return @events;
+}
+
 sub gather_tags {
     my ($dir) = @_;
     my %tags;
@@ -138,7 +151,7 @@ sub generate_expected_output {
     my %expected;
 
     my @test_events = io->file("$dir/test.event")->chomp->encoding('utf-8')->slurp;
-    for my $typw (qw/ rust cpp flow /) {
+    for my $typw (qw/ rust cpp flow rapid /) {
         my @minimal = minimal_events_for_framework($typw, @test_events);
         $expected{"minimal.$typw.event"} = join '', map { "$_\n" } @minimal;
     }
